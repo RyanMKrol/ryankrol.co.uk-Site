@@ -13,9 +13,10 @@ A project intended to be forked when starting new Node projects.
     - Name
     - Description
     - Scripts
+ - Update your project's README, it will be a copy of this one!
     
 # Dependencies
-- Node v11.14.0
-- NPM v6.4.1
-- Babel v6.26.0
+- Node - v11.14.0
+- NPM - v6.4.1
+- Babel - v6.26.0
 - Babel preset - es2015
