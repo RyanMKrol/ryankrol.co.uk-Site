@@ -1,8 +1,5 @@
 version: 0.0
 os: linux
-files:
-  - source: /
-    destination: /home/ec2-user/ryankrol.co.uk
 hooks:
   AfterInstall:
     - location: scripts/build_server.sh
