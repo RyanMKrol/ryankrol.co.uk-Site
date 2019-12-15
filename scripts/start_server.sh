@@ -13,18 +13,8 @@ echo "About to start the app."
 pm2 start lib/app.js
 echo "Finished starting the app."
 pm2 save
-pm2 list
-pm2 list
-pm2 list
-pm2 list
-pm2 list
-pm2 list
-pm2 list
-pm2 list
-pm2 list
-pm2 list
-pm2 list
-pm2 list
+
+curl localhost:3000
 echo "Saved the state of pm2."
 cd /home/ec2-user
 echo "Deleting the repository."
