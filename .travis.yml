@@ -7,3 +7,6 @@ deploy:
   script: bash scripts/deploy $AES_PASS
   on:
     branch: master
+branches:
+  only:
+  - master
