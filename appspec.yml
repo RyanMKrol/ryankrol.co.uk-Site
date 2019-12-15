@@ -4,10 +4,11 @@ files:
   - source: /
     destination: /home/ec2-user/ryankrol.co.uk
 hooks:
-  AfterInstall:
+  Install:
     - location: scripts/build_server.sh
       timeout: 3000
       runas: root
+  ApplicationStart:
     - location: scripts/start_server.sh
-      timeout: 1500
+      timeout: 3000
       runas: root

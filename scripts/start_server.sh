@@ -8,5 +8,7 @@ export NVM_DIR="/home/ec2-user/.nvm"
 
 cd /home/ec2-user/ryankrol.co.uk
 pm2 start lib/app.js
+echo "Finished starting the app."
 cd /home/ec2-user
+echo "Deleting the repository."
 rm -rf ryankrol.co.uk
