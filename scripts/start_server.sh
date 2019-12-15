@@ -7,6 +7,6 @@ export NVM_DIR="/home/ec2-user/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 cd /home/ec2-user/ryankrol.co.uk
-pm2 lib/app.js
+pm2 start lib/app.js
 cd /home/ec2-user
 rm -rf ryankrol.co.uk
