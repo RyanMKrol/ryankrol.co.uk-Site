@@ -3,8 +3,8 @@ os: linux
 hooks:
   AfterInstall:
     - location: scripts/build_server
-      timeout: 300
+      timeout: 3000
       runas: root
-  - location: scripts/start_server
-      timeout: 300
+    - location: scripts/start_server
+      timeout: 1500
       runas: root
