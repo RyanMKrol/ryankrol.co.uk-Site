@@ -1,0 +1,13 @@
+# This script will sit on the host you want to deploy the site too.
+# This should live wherever the home directory is
+
+cd ~
+git clone https://github.com/RyanMKrol/ryankrol.co.uk.git
+cd ryankrol.co.uk
+npm install
+npm run build
+pm2 delete 0
+pm2 start lib/app.js
+pm2 save
+cd ~
+rm -rf ryankrol.co.uk

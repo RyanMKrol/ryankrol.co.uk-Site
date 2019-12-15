@@ -1,6 +1,6 @@
-AES_PASS=$1
+# This script is used by travis to deploy our site to an ec2 host.
 
-echo "what AES password are we trying to use here: $AES_PASS"
+AES_PASS=$1
 
 openssl aes-256-cbc -d -a -in credentials/awsKeypair.pem.enc -out credentials/awsKeypair.pem -k $AES_PASS
 
