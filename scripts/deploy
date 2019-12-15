@@ -1,0 +1,7 @@
+AES_PASS=$1
+
+openssl enc -aes-256-cbc -d -in credentials/awsKeypair.pem.enc -out credentials/awsKeypair.pem -k $AES_PASS
+
+chmod 400 credentials/awsKeypair.pem
+
+ssh -o "StrictHostKeyChecking no" -i credentials/awsKeypair.pem  ec2-user@ec2-52-15-208-254.us-east-2.compute.amazonaws.com "bash ~/deploy_site"
