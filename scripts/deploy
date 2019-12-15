@@ -2,7 +2,7 @@ AES_PASS=$1
 
 echo "what AES password are we trying to use here: $AES_PASS"
 
-openssl enc -aes-256-cbc -d -in credentials/awsKeypair.pem.enc -out credentials/awsKeypair.pem -k $AES_PASS
+openssl aes-256-cbc -d -a -in credentials/awsKeypair.pem.enc -out credentials/awsKeypair.pem -k $AES_PASS
 
 chmod 400 credentials/awsKeypair.pem
 
