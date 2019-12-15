@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel --presets es2015 -d lib/ src",
-    "start": "npm run-script build && node lib/app.js"
+    "start": "node lib/app.js"
   },
   "dependencies": {
     "express": "^4.17.0"

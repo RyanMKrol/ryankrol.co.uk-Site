@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+hooks:
+  AfterInstall:
+    - location: scripts/build_server.js
+      timeout: 300
+      runas: root
+  - location: scripts/start_server.js
+      timeout: 300
+      runas: root
