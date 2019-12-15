@@ -6,4 +6,7 @@ source /home/ec2-user/.bash_profile
 export NVM_DIR="/home/ec2-user/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+cd /home/ec2-user/ryankrol.co.uk
 npm run start
+cd /home/ec2-user
+rm -rf ryankrol.co.uk
