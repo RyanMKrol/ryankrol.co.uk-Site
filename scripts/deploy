@@ -1,6 +1,6 @@
 AES_PASS=$1
 
-openssl enc -aes-256-cbc -d -in credentials/awsKeypair.pem.enc -out credentials/awsKeypair.pem -k $AES_PASS
+openssl enc -aes-256-cbc -d -in credentials/awsKeypair.pem.enc -out credentials/awsKeypair.pem -k "$AES_PASS"
 
 chmod 400 credentials/awsKeypair.pem
 
