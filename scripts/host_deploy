@@ -7,7 +7,7 @@ cd ryankrol.co.uk
 npm install
 npm run build
 pm2 delete 0
-pm2 start lib/app.js
+pm2 node_modules/react-scripts/scripts/start --name ryankrol_site
 pm2 save
 cd ~
 rm -rf ryankrol.co.uk

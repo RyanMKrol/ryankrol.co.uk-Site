@@ -1,20 +1,26 @@
-//Load HTTP module
-const http = require("http");
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-// set this to '' when using on server
-const hostname = '';
-const port = 3000;
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
 
-//Create HTTP server and listen on port 3000 for requests
-const server = http.createServer((req, res) => {
-
-  //Set the response HTTP header with HTTP status and Content type
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello Pluto\n');
-});
-
-//listen for request on port 3000, and as a callback function have the port listened on logged
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+export default App;
