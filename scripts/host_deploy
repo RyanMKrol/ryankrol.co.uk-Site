@@ -2,12 +2,11 @@
 # This should live wherever the home directory is
 
 cd ~
+rm -rf ryankrol.co.uk
 git clone https://github.com/RyanMKrol/ryankrol.co.uk.git
 cd ryankrol.co.uk
 npm install
 npm run build
 pm2 delete 0
-pm2 start lib/app.js
+pm2 start node_modules/react-scripts/scripts/start.js --name ryankrol_site --wait-ready
 pm2 save
-cd ~
-rm -rf ryankrol.co.uk
