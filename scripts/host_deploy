@@ -8,5 +8,5 @@ cd ryankrol.co.uk
 npm install
 npm run build
 pm2 delete 0
-pm2 start node_modules/react-scripts/scripts/start.js --name ryankrol_site --wait-ready
+pm2 serve build --port 3000
 pm2 save
