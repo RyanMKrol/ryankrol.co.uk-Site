@@ -9,8 +9,10 @@ class Header extends Component {
       <div className="Header">
         <div className="links-container">
           <div className="links">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <div className="links-inner-container">
+              <Link className="header-link" to="/">Home</Link>
+              <Link className="header-link" to="/about">About</Link>
+            </div>
           </div>
         </div>
       </div>

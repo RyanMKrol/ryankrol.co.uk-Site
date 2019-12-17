@@ -1,5 +1,5 @@
 .Header {
-  height: 30%;
+  height: 220px;
   width: 100%;
   background-color: #FDD023;
   position: relative;
@@ -10,8 +10,8 @@
   height: 100%;
   bottom: 0;
   margin: 0 auto;
-  background-color: black;
-  color: white;
+  background-color: #555;
+  color: #FDD023;
 }
 
 .links-container {
@@ -19,4 +19,20 @@
   height: 30%;
   position: absolute;
   bottom: 0;
+}
+.links-inner-container {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-link {
+  margin: auto 0;
+  padding: 0 20px;
 }
