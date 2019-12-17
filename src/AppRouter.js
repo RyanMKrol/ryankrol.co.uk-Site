@@ -8,6 +8,7 @@ import {
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 import './AppRouter.css';
 
@@ -26,6 +27,7 @@ export default function AppRouter() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </Router>
     </div>
   )
