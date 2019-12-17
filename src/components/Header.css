@@ -3,6 +3,9 @@
   width: 100%;
   background-color: #FDD023;
   position: relative;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #FDD023;
 }
 
 .links {
