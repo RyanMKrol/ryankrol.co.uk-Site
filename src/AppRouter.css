@@ -1,13 +1,13 @@
 #root-container {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   background-color: #CCC;
 }
 
 .page-body {
+  flex: 1;
   width: 90%;
-  height: 100%;
   margin: 0 auto;
   background-color: white;
 }
