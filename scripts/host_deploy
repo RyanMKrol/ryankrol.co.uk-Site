@@ -5,8 +5,9 @@ cd ~
 rm -rf ryankrol.co.uk
 git clone https://github.com/RyanMKrol/ryankrol.co.uk.git
 cd ryankrol.co.uk
+git pull
 npm install
 npm run build
 pm2 delete 0
-pm2 serve build --port 3000
+pm2 start runSite.js --name ryankrol.co.uk
 pm2 save
