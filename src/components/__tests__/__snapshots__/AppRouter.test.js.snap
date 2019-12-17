@@ -23,6 +23,7 @@ exports[`renders router only when rendered 1`] = `
         </Route>
       </Switch>
     </div>
+    <Footer />
   </BrowserRouter>
 </div>
 `;
