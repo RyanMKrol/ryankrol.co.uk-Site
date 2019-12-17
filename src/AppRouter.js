@@ -8,7 +8,7 @@ import {
 import Home from "./pages/Home"
 import About from "./pages/About"
 
-export default function BasicExample() {
+export default function AppRouter() {
   return (
     <Router>
       <div>

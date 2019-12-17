@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders welcome message 1`] = `
+<div>
+  <div
+    className="Home"
+  >
+    <header
+      className="Home-header"
+    >
+      <ul>
+        <li>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about"
+            onClick={[Function]}
+          >
+            About
+          </a>
+        </li>
+      </ul>
+      <img
+        alt="logo"
+        className="Home-logo"
+        src="logo.svg"
+      />
+      <p>
+        Home Page - Under Development!
+      </p>
+    </header>
+  </div>
+</div>
+`;
