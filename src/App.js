@@ -1,18 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom"
 
-function App() {
+import Home from "./pages/Home"
+import About from "./pages/About"
+
+export default function BasicExample() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Under Development!
-        </p>
-      </header>
-    </div>
-  );
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  )
 }
-
-export default App;
