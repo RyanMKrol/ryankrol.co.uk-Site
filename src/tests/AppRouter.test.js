@@ -1,12 +1,14 @@
-import React from 'react';
-import { shallow, mount } from 'enzyme';
-import renderer from 'react-test-renderer';
+import React from 'react'
+import { shallow, mount } from 'enzyme'
+import toJson from 'enzyme-to-json'
 
-import AppRouter from './../AppRouter';
+import AppRouter from './../AppRouter'
 
-it('renders welcome message', () => {
-    const appRouter = renderer
-        .create(<AppRouter />)
-        .toJSON();
-    expect(appRouter).toMatchSnapshot();
-});
+it('renders router only when rendered', () => {
+    const appRouter = shallow(<AppRouter />)
+    expect(toJson(appRouter)).toMatchSnapshot()
+})
+
+it('does not crash when rendered', () => {
+    expect(() => mount(<AppRouter />)).not.toThrow()
+})
