@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders router only when rendered 1`] = `
+<div
+  id="root-container"
+>
+  <BrowserRouter>
+    <Header />
+    <div
+      className="page-body"
+    >
+      <Switch>
+        <Route
+          exact={true}
+          path="/"
+        >
+          <Home />
+        </Route>
+        <Route
+          path="/about"
+        >
+          <About />
+        </Route>
+      </Switch>
+    </div>
+  </BrowserRouter>
+</div>
+`;
