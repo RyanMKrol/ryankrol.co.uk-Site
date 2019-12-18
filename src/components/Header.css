@@ -34,6 +34,7 @@
   padding: 0 20px;
 }
 
+/* Basic styles for links in header */
 a {
   position: relative;
 
@@ -44,7 +45,9 @@ a {
   outline: none;
   text-decoration: none;
 }
-a:before {
+
+/* Styles around the underlining present on links in the header */
+a:before, .currentPage:before {
   content: '';
   position: absolute;
 
@@ -60,6 +63,8 @@ a:before {
 
   transition: 0.4s;
 }
-a:hover:before {
+
+/* Transition to a wide border */
+a:hover:before, .currentPage:before {
   width: 80%;
 }
