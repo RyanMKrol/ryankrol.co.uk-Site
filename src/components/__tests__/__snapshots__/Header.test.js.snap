@@ -1,6 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders router only when rendered 1`] = `
+exports[`creates the correct current page links with generateHeaderLinks, passing through / as current page 1`] = `
+Array [
+  <ForwardRef
+    className="currentPage header-link hover"
+    to="/"
+  >
+    Home
+  </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/about"
+  >
+    About
+  </ForwardRef>,
+]
+`;
+
+exports[`creates the correct current page links with generateHeaderLinks, passing through /about as current page 1`] = `
+Array [
+  <ForwardRef
+    className=" header-link hover"
+    to="/"
+  >
+    Home
+  </ForwardRef>,
+  <ForwardRef
+    className="currentPage header-link hover"
+    to="/about"
+  >
+    About
+  </ForwardRef>,
+]
+`;
+
+exports[`creates the correct current page links with generateHeaderLinks, passing through an unsupported destination current page 1`] = `
+Array [
+  <ForwardRef
+    className=" header-link hover"
+    to="/"
+  >
+    Home
+  </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/about"
+  >
+    About
+  </ForwardRef>,
+]
+`;
+
+exports[`renders header correctly with no currentPage being passed through 1`] = `
 <div
   className="Header"
 >
@@ -14,13 +65,15 @@ exports[`renders router only when rendered 1`] = `
         className="links-inner-container"
       >
         <Link
-          className="header-link hover hover-3"
+          className=" header-link hover"
+          key="/"
           to="/"
         >
           Home
         </Link>
         <Link
-          className="header-link hover hover-3"
+          className=" header-link hover"
+          key="/about"
           to="/about"
         >
           About

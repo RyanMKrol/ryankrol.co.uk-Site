@@ -5,7 +5,7 @@ exports[`renders router only when rendered 1`] = `
   id="root-container"
 >
   <BrowserRouter>
-    <Header />
+    <withRouter(Header) />
     <div
       className="page-body"
     >
