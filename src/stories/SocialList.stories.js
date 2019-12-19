@@ -6,12 +6,8 @@ export default {
   title: 'SocialList',
 };
 
-export const toStorybook = () => (
+export const normal = () => (
   <div style={{display: "flex"}}>
     <SocialList />
   </div>
 )
-
-toStorybook.story = {
-  name: 'Normal',
-}
