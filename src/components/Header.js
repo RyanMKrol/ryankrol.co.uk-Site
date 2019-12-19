@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from "react-router-dom"
 
+import SocialList from './SocialList'
+
 import './Header.css';
 
 const HEADER_ITEMS = [
@@ -40,10 +42,15 @@ class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <div className="links-container">
-          <div className="links">
-            <div className="links-inner-container">
-              {this.generateHeaderLinks(this.props)}
+        <div className="header-content">
+          <div className="social-container">
+            <SocialList />
+          </div>
+          <div className="links-container">
+            <div className="links">
+              <div className="links-inner-container">
+                {this.generateHeaderLinks(this.props)}
+              </div>
             </div>
           </div>
         </div>

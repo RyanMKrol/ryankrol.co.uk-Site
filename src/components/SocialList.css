@@ -1,0 +1,14 @@
+.SocialList {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.socialListItem {
+  margin: 10px;
+}
+
+.socialListLink {
+  color: white;
+  outline: none;
+  text-decoration: none;
+}
