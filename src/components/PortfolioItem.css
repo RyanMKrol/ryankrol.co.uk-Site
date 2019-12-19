@@ -4,12 +4,15 @@
   align-items: center;
 
   padding: 8px;
+
+  min-height: 200px;
 }
 
 .portfolio-item-description {
   display: flex;
   vertical-align: middle;
 
+  flex: 1;
   padding: 0 8px;
 }
 .portfolio-item-image {
