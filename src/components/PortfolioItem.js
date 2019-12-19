@@ -3,18 +3,29 @@ import React, { Component } from 'react'
 import './PortfolioItem.css';
 
 class PortfolioItem extends Component {
+  constructor(props) {
+    super()
+
+    this.portfolioMedia = props.portfolioMedia
+    this.portfolioDescription = props.portfolioDescription
+    this.portfolioHeader = props.portfolioHeader
+  }
+
   render() {
     return (
       <div className="PortfolioItem">
-        <div className="portfolio-item-description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Sed nisi lacus sed viverra tellus. Morbi tincidunt ornare massa eget egestas. Pharetra magna ac placerat vestibulum. Et molestie ac feugiat sed lectus vestibulum mattis. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Non pulvinar neque laoreet suspendisse interdum consectetur. Tempus quam pellentesque nec nam aliquam sem et. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Sed faucibus turpis in eu. Habitant morbi tristique senectus et netus et malesuada fames ac.
-          </p>
+        <div className="portfolio-item-header">
+          <h3>
+            {this.portfolioHeader}
+          </h3>
         </div>
-        <div className="portfolio-item-image">
-          <p>
-            Text that will eventually be an image
-          </p>
+        <div className="portfolio-item-content">
+          <div className="portfolio-item-description">
+            {this.portfolioDescription}
+          </div>
+          <div className="portfolio-item-image">
+            {this.portfolioMedia}
+          </div>
         </div>
       </div>
     )
