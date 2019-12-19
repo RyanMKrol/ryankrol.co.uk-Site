@@ -38,7 +38,7 @@ class Header extends Component {
   render() {
     return (
       <div className="Header">
-      <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet" />
         <div className="header-content">
           <div className="social-container">
             <SocialList />
