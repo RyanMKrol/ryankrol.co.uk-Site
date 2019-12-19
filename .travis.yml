@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - 13.3.0
-script: echo "npm test temporarily disabled"
+script: npm run test
 deploy:
   provider: script
   script: bash scripts/deploy $AES_PASS
