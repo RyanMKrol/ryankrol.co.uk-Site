@@ -1,3 +1,21 @@
 .PortfolioItem {
   display: flex;
+  text-align: left;
+  align-items: center;
+
+  padding: 8px;
+}
+
+.portfolio-item-description {
+  display: flex;
+  vertical-align: middle;
+
+  padding: 0 8px;
+}
+.portfolio-item-image {
+  display: flex;
+  vertical-align: middle;
+
+  min-width: 35%;
+  padding: 0 8px;
 }
