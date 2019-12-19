@@ -17,10 +17,6 @@ const HEADER_ITEMS = [
 ]
 
 class Header extends Component {
-  constructor(props: Object) {
-    super()
-  }
-
   generateHeaderLinks(props) {
     return HEADER_ITEMS.map((linkItem => {
       const activeClass = linkItem.destinationPage === props.location.pathname ?
