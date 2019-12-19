@@ -6,6 +6,9 @@
   padding: 8px;
 
   min-height: 200px;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  border-bottom-color: #CCC;
 }
 
 .portfolio-item-description {
