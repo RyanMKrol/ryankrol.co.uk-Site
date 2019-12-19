@@ -3,7 +3,7 @@ import { Link, withRouter } from "react-router-dom"
 
 import SocialList from './SocialList'
 
-import './Header.css';
+import './Header.css'
 
 const HEADER_ITEMS = [
   {
@@ -14,13 +14,13 @@ const HEADER_ITEMS = [
     destinationPage: "/about",
     content: "About",
   },
+  {
+    destinationPage: "/portfolio",
+    content: "Portfolio",
+  },
 ]
 
 class Header extends Component {
-  constructor(props: Object) {
-    super()
-  }
-
   generateHeaderLinks(props) {
     return HEADER_ITEMS.map((linkItem => {
       const activeClass = linkItem.destinationPage === props.location.pathname ?
@@ -42,6 +42,7 @@ class Header extends Component {
   render() {
     return (
       <div className="Header">
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet" />
         <div className="header-content">
           <div className="social-container">
             <SocialList />

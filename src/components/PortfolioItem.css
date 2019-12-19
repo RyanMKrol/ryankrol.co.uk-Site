@@ -1,0 +1,29 @@
+.PortfolioItem {
+  text-align: left;
+
+  padding: 12px 8px;
+
+  min-height: 200px;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  border-bottom-color: #CCC;
+}
+
+.portfolio-item-content {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-item-header {}
+
+.portfolio-item-description {
+  flex: 1;
+  padding: 0 8px;
+}
+
+.portfolio-item-image {
+  text-align: center;
+
+  width: 35%;
+  padding: 0 8px;
+}

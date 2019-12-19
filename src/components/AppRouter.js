@@ -5,8 +5,12 @@ import {
   Route,
 } from "react-router-dom"
 
-import Home from "./../pages/Home"
-import About from "./../pages/About"
+import {
+  Home,
+  About,
+  Portfolio,
+} from "./../pages"
+
 import Header from "./Header"
 import Footer from "./Footer"
 
@@ -24,6 +28,9 @@ export default function AppRouter() {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/portfolio">
+              <Portfolio />
             </Route>
           </Switch>
         </div>

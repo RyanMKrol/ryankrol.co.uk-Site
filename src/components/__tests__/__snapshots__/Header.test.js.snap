@@ -14,6 +14,12 @@ Array [
   >
     About
   </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/portfolio"
+  >
+    Portfolio
+  </ForwardRef>,
 ]
 `;
 
@@ -30,6 +36,12 @@ Array [
     to="/about"
   >
     About
+  </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/portfolio"
+  >
+    Portfolio
   </ForwardRef>,
 ]
 `;
@@ -48,6 +60,12 @@ Array [
   >
     About
   </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/portfolio"
+  >
+    Portfolio
+  </ForwardRef>,
 ]
 `;
 
@@ -55,6 +73,10 @@ exports[`renders header correctly with no currentPage being passed through 1`] =
 <div
   className="Header"
 >
+  <link
+    href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
+    rel="stylesheet"
+  />
   <div
     className="header-content"
   >
@@ -85,6 +107,13 @@ exports[`renders header correctly with no currentPage being passed through 1`] =
             to="/about"
           >
             About
+          </Link>
+          <Link
+            className=" header-link hover"
+            key="/portfolio"
+            to="/portfolio"
+          >
+            Portfolio
           </Link>
         </div>
       </div>
