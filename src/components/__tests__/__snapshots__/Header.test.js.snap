@@ -56,28 +56,37 @@ exports[`renders header correctly with no currentPage being passed through 1`] =
   className="Header"
 >
   <div
-    className="links-container"
+    className="header-content"
   >
     <div
-      className="links"
+      className="social-container"
+    >
+      <SocialList />
+    </div>
+    <div
+      className="links-container"
     >
       <div
-        className="links-inner-container"
+        className="links"
       >
-        <Link
-          className=" header-link hover"
-          key="/"
-          to="/"
+        <div
+          className="links-inner-container"
         >
-          Home
-        </Link>
-        <Link
-          className=" header-link hover"
-          key="/about"
-          to="/about"
-        >
-          About
-        </Link>
+          <Link
+            className=" header-link hover"
+            key="/"
+            to="/"
+          >
+            Home
+          </Link>
+          <Link
+            className=" header-link hover"
+            key="/about"
+            to="/about"
+          >
+            About
+          </Link>
+        </div>
       </div>
     </div>
   </div>
