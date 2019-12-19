@@ -14,6 +14,10 @@ const HEADER_ITEMS = [
     destinationPage: "/about",
     content: "About",
   },
+  {
+    destinationPage: "/portfolio",
+    content: "Portfolio",
+  },
 ]
 
 class Header extends Component {
