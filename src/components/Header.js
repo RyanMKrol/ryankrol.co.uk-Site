@@ -3,7 +3,7 @@ import { Link, withRouter } from "react-router-dom"
 
 import SocialList from './SocialList'
 
-import './Header.css';
+import './Header.css'
 
 const HEADER_ITEMS = [
   {
