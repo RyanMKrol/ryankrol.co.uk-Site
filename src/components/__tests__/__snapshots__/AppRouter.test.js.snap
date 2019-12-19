@@ -21,6 +21,11 @@ exports[`renders router only when rendered 1`] = `
         >
           <About />
         </Route>
+        <Route
+          path="/portfolio"
+        >
+          <Portfolio />
+        </Route>
       </Switch>
     </div>
     <Footer />
