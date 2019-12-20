@@ -4,6 +4,8 @@ import toJson from 'enzyme-to-json'
 
 import SocialList from './../SocialList'
 
+// Render Tests
+
 it('renders SocialList correctly', () => {
     const socialList = shallow(
       <SocialList />)

@@ -1,24 +1,12 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from "react-router-dom"
-
+import {
+  Link,
+  withRouter
+} from "react-router-dom"
 import SocialList from './SocialList'
+import { HEADER_ITEMS } from './../data/HeaderData'
 
 import './Header.css'
-
-const HEADER_ITEMS = [
-  {
-    destinationPage: "/",
-    content: "Home",
-  },
-  {
-    destinationPage: "/about",
-    content: "About",
-  },
-  {
-    destinationPage: "/portfolio",
-    content: "Portfolio",
-  },
-]
 
 class Header extends Component {
   generateHeaderLinks(props) {

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders About only when rendered 1`] = `
+<div
+  className="page-body"
+>
+  <div
+    className="About"
+  >
+    <img
+      alt="logo"
+      className="About-logo"
+      src="logo.svg"
+    />
+    <p>
+      About Page - Under Development!
+    </p>
+  </div>
+</div>
+`;

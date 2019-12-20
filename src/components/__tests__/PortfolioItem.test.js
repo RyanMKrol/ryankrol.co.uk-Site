@@ -12,6 +12,8 @@ const defaultArgs = {
   </p>)
 }
 
+// Render Tests
+
 it('renders PortfolioItem correctly', () => {
     const portfolioItem = shallow(
       <PortfolioItem {...defaultArgs}/>)

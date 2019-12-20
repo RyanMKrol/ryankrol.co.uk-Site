@@ -6,11 +6,13 @@ import './Home.css';
 
 function Home() {
   return (
-    <div className="Home">
-      <img src={logo} className="Home-logo" alt="logo" />
-      <p>
-        Home Page - Under Development!
-      </p>
+    <div className="page-body">
+      <div className="Home">
+        <img src={logo} className="Home-logo" alt="logo" />
+        <p>
+          Home Page - Under Development!
+        </p>
+      </div>
     </div>
   );
 }

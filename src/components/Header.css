@@ -22,6 +22,7 @@
   height: 100%;
   bottom: 0;
   background-color: #555;
+  overflow-x: scroll;
 }
 
 .links-container {

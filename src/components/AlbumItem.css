@@ -1,0 +1,30 @@
+.AlbumItem {
+  padding: 15px;
+  max-width: 300px;
+}
+
+.album-item-thumbnail {
+
+}
+
+.album-item-image {
+  max-width: 95%;
+}
+
+.album-item-title {
+  max-width: 95%;
+}
+
+.album-item-link {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+
+.album-item-artist {
+  color: #555;
+}
+
+.album-item-album-name {
+  color: #888;
+}
