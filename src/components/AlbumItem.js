@@ -29,8 +29,12 @@ class AlbumItem extends Component {
           </a>
         </div>
         <div className="album-item-title">
-          <a href={this.albumLink}>
-            {this.artist} - {this.albumName}
+          <a className="album-item-link" href={this.albumLink}>
+            <h3>
+              <span className="album-item-artist">{this.artist}</span>
+               -
+              <span className="album-item-album-name">{this.albumName}</span>
+            </h3>
           </a>
         </div>
       </div>
