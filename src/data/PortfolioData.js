@@ -25,6 +25,4 @@ const PORTFOLIO_ITEM_CONTENT = [
   }
 ]
 
-export {
-  PORTFOLIO_ITEM_CONTENT
-}
+export { PORTFOLIO_ITEM_CONTENT }

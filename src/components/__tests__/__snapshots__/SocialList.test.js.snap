@@ -6,6 +6,7 @@ exports[`renders SocialList correctly 1`] = `
 >
   <span
     className="socialListItem"
+    key="https://www.facebook.com/krol.ryan"
   >
     <a
       className="socialListLink"
@@ -46,6 +47,7 @@ exports[`renders SocialList correctly 1`] = `
   </span>
   <span
     className="socialListItem"
+    key="https://github.com/RyanMKrol"
   >
     <a
       className="socialListLink"
@@ -86,6 +88,7 @@ exports[`renders SocialList correctly 1`] = `
   </span>
   <span
     className="socialListItem"
+    key="https://www.instagram.com/gingerdude/"
   >
     <a
       className="socialListLink"
@@ -126,6 +129,7 @@ exports[`renders SocialList correctly 1`] = `
   </span>
   <span
     className="socialListItem"
+    key="https://www.linkedin.com/in/ryan-krol-265308a2"
   >
     <a
       className="socialListLink"
@@ -166,6 +170,7 @@ exports[`renders SocialList correctly 1`] = `
   </span>
   <span
     className="socialListItem"
+    key="https://open.spotify.com/playlist/37i9dQZF1Et9XpQOerWV6B"
   >
     <a
       className="socialListLink"

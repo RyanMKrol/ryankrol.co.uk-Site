@@ -13,6 +13,4 @@ const HEADER_ITEMS = [
   },
 ]
 
-export {
-  HEADER_ITEMS
-}
+export { HEADER_ITEMS }
