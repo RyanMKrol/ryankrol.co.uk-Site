@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Home only when rendered 1`] = `
+<div
+  className="Home"
+>
+  <img
+    alt="logo"
+    className="Home-logo"
+    src="logo.svg"
+  />
+  <p>
+    Home Page - Under Development!
+  </p>
+</div>
+`;
