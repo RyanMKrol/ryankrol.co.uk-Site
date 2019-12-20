@@ -22,7 +22,6 @@ export default function AppRouter() {
     <div id="root-container">
       <Router>
         <Header />
-        <div className="page-body">
           <Switch>
             <Route exact path="/">
               <Home />
@@ -37,7 +36,6 @@ export default function AppRouter() {
               <Music />
             </Route>
           </Switch>
-        </div>
         <Footer />
       </Router>
     </div>
