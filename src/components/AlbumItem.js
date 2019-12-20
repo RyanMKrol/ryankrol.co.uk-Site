@@ -9,6 +9,10 @@ class AlbumItem extends Component {
     this.artist = props.artist
     this.albumName = props.albumName
     this.thumbnail = props.thumbnail
+
+    if (!(this.artist && this.albumName && this.thumbnail)) {
+      throw new Error('Did not pass all required args for rendering AlbumItem')
+    }
   }
 
   render() {

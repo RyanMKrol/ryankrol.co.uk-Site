@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders AlbumItem correctly 1`] = `
+<div
+  className="AlbumItem"
+>
+  <div
+    className="album-item-thumbnail"
+  >
+    <img
+      className="album-item-image"
+      src="test-thumbnail"
+    />
+  </div>
+  <div
+    className="album-item-title"
+  >
+    test-artist
+     - 
+    test-albumName
+  </div>
+</div>
+`;
