@@ -18,7 +18,7 @@ function generatePortfolioItems() {
 
 function Portfolio() {
   return (
-    <div className="container">
+    <div className="page-body">
       <div className="Portfolio">
         {generatePortfolioItems()}
       </div>

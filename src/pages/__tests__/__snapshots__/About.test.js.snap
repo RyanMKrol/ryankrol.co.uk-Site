@@ -2,7 +2,7 @@
 
 exports[`renders About only when rendered 1`] = `
 <div
-  className="container"
+  className="page-body"
 >
   <div
     className="About"
