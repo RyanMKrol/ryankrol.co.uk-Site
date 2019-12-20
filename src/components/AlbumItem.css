@@ -1,5 +1,6 @@
 .AlbumItem {
-
+  padding: 15px;
+  max-width: 300px;
 }
 
 .album-item-thumbnail {
@@ -7,5 +8,5 @@
 }
 
 .album-item-title {
-
+  max-width: 95%;
 }
