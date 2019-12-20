@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Img from 'react-image'
 
 import './AlbumItem.css';
 
@@ -15,7 +16,7 @@ class AlbumItem extends Component {
     return (
       <div className="AlbumItem">
         <div className="album-item-thumbnail">
-          A Thumbnail - {this.thumbnail}
+          <img src={this.thumbnail} />
         </div>
         <div className="album-item-title">
           {this.artist} - {this.albumName}
