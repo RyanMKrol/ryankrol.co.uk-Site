@@ -31,6 +31,7 @@ const PORTFOLIO_ITEM_CONTENT = [
 function generatePortfolioItems() {
   return PORTFOLIO_ITEM_CONTENT.map((item) =>
     <PortfolioItem
+      key={item.portfolioHeader}
       portfolioMedia={item.portfolioMedia}
       portfolioDescription={item.portfolioDescription}
       portfolioHeader={item.portfolioHeader}
