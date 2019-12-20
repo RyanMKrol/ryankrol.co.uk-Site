@@ -2,10 +2,10 @@ import React, {
   Component
 } from 'react'
 import fetch from "node-fetch"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
-
-import logo from './../assets/logo.svg';
+import { AlbumItem } from './../components'
 
 import './Music.css';
 
@@ -28,12 +28,21 @@ class Music extends Component {
     })
   }
 
+  generateAlbumLinks() {
+    return this.state.albums.map((album) => (
+      <AlbumItem
+        artist={album.artist}
+        albumName={album.albumName}
+        thumbnail={album.thumbnail}
+      />
+    ))
+  }
+
   render() {
-    console.log(this.state)
-    const albumsLoaded = false
+    const albumsLoaded = this.state.albums !== undefined
 
     const content = albumsLoaded ?
-      <p>Albums have loaded</p> :
+      this.generateAlbumLinks() :
       <FontAwesomeIcon
         className ="fa-spin"
         icon={faCircleNotch}
