@@ -20,6 +20,12 @@ Array [
   >
     Portfolio
   </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/music"
+  >
+    Music
+  </ForwardRef>,
 ]
 `;
 
@@ -43,6 +49,12 @@ Array [
   >
     Portfolio
   </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/music"
+  >
+    Music
+  </ForwardRef>,
 ]
 `;
 
@@ -65,6 +77,12 @@ Array [
     to="/portfolio"
   >
     Portfolio
+  </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/music"
+  >
+    Music
   </ForwardRef>,
 ]
 `;
@@ -114,6 +132,13 @@ exports[`renders header correctly with no currentPage being passed through 1`] =
             to="/portfolio"
           >
             Portfolio
+          </Link>
+          <Link
+            className=" header-link hover"
+            key="/music"
+            to="/music"
+          >
+            Music
           </Link>
         </div>
       </div>

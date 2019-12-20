@@ -6,28 +6,29 @@ exports[`renders router only when rendered 1`] = `
 >
   <BrowserRouter>
     <withRouter(Header) />
-    <div
-      className="page-body"
-    >
-      <Switch>
-        <Route
-          exact={true}
-          path="/"
-        >
-          <Home />
-        </Route>
-        <Route
-          path="/about"
-        >
-          <About />
-        </Route>
-        <Route
-          path="/portfolio"
-        >
-          <Portfolio />
-        </Route>
-      </Switch>
-    </div>
+    <Switch>
+      <Route
+        exact={true}
+        path="/"
+      >
+        <Home />
+      </Route>
+      <Route
+        path="/about"
+      >
+        <About />
+      </Route>
+      <Route
+        path="/portfolio"
+      >
+        <Portfolio />
+      </Route>
+      <Route
+        path="/music"
+      >
+        <Music />
+      </Route>
+    </Switch>
     <Footer />
   </BrowserRouter>
 </div>
