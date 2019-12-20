@@ -34,6 +34,7 @@ class Music extends Component {
         artist={album.artist}
         albumName={album.albumName}
         thumbnail={album.thumbnail}
+        albumLink={album.albumLink}
       />
     ))
   }

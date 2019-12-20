@@ -8,6 +8,7 @@ const defaultArgs = {
   artist: 'test-artist',
   albumName: 'test-albumName',
   thumbnail: 'test-thumbnail',
+  albumLink: 'test-albumLink',
 }
 
 // Render Tests

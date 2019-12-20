@@ -7,17 +7,25 @@ exports[`renders AlbumItem correctly 1`] = `
   <div
     className="album-item-thumbnail"
   >
-    <img
-      className="album-item-image"
-      src="test-thumbnail"
-    />
+    <a
+      href="test-albumLink"
+    >
+      <img
+        className="album-item-image"
+        src="test-thumbnail"
+      />
+    </a>
   </div>
   <div
     className="album-item-title"
   >
-    test-artist
-     - 
-    test-albumName
+    <a
+      href="test-albumLink"
+    >
+      test-artist
+       - 
+      test-albumName
+    </a>
   </div>
 </div>
 `;

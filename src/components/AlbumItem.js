@@ -9,8 +9,9 @@ class AlbumItem extends Component {
     this.artist = props.artist
     this.albumName = props.albumName
     this.thumbnail = props.thumbnail
+    this.albumLink = props.albumLink
 
-    if (!(this.artist && this.albumName && this.thumbnail)) {
+    if (!(this.artist && this.albumName && this.thumbnail && this.albumLink)) {
       throw new Error('Did not pass all required args for rendering AlbumItem')
     }
   }
@@ -19,10 +20,14 @@ class AlbumItem extends Component {
     return (
       <div className="AlbumItem">
         <div className="album-item-thumbnail">
-          <img className="album-item-image" src={this.thumbnail} />
+          <a href={this.albumLink}>
+            <img className="album-item-image" src={this.thumbnail} />
+          </a>
         </div>
         <div className="album-item-title">
-          {this.artist} - {this.albumName}
+          <a href={this.albumLink}>
+            {this.artist} - {this.albumName}
+          </a>
         </div>
       </div>
     )
