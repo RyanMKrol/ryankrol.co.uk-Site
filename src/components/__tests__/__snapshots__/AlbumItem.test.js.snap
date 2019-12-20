@@ -11,6 +11,7 @@ exports[`renders AlbumItem correctly 1`] = `
       href="test-albumLink"
     >
       <img
+        alt="test-artist - test-albumName"
         className="album-item-image"
         src="test-thumbnail"
       />
@@ -20,11 +21,22 @@ exports[`renders AlbumItem correctly 1`] = `
     className="album-item-title"
   >
     <a
+      className="album-item-link"
       href="test-albumLink"
     >
-      test-artist
-       - 
-      test-albumName
+      <h3>
+        <span
+          className="album-item-artist"
+        >
+          test-artist
+        </span>
+        -
+        <span
+          className="album-item-album-name"
+        >
+          test-albumName
+        </span>
+      </h3>
     </a>
   </div>
 </div>
