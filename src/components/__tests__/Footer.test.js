@@ -4,7 +4,9 @@ import toJson from 'enzyme-to-json'
 
 import Footer from './../Footer'
 
-it('renders router only when rendered', () => {
+// Render Tests
+
+it('renders footer only when rendered', () => {
     const footer = shallow(<Footer />)
     expect(toJson(footer)).toMatchSnapshot()
 })
