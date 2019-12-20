@@ -30,7 +30,7 @@ exports[`renders AlbumItem correctly 1`] = `
         >
           test-artist
         </span>
-        -
+         - 
         <span
           className="album-item-album-name"
         >
