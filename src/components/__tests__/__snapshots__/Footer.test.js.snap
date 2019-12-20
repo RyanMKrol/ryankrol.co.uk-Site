@@ -5,9 +5,3 @@ exports[`renders footer only when rendered 1`] = `
   className="Footer"
 />
 `;
-
-exports[`renders router only when rendered 1`] = `
-<div
-  className="Footer"
-/>
-`;
