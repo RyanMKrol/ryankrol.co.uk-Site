@@ -19,7 +19,7 @@ class Music extends Component {
       albums: undefined
     }
 
-    const albumData = fetch(ALBUM_API_ENDPOINT).then((response) => {
+    fetch(ALBUM_API_ENDPOINT).then((response) => {
       return response.json()
     }).then((albumData) => {
       this.setState({
@@ -31,6 +31,7 @@ class Music extends Component {
   generateAlbumLinks() {
     return this.state.albums.map((album) => (
       <AlbumItem
+        key={album.albumLink}
         artist={album.artist}
         albumName={album.albumName}
         thumbnail={album.thumbnail}

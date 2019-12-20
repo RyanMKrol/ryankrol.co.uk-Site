@@ -21,7 +21,11 @@ class AlbumItem extends Component {
       <div className="AlbumItem">
         <div className="album-item-thumbnail">
           <a href={this.albumLink}>
-            <img className="album-item-image" src={this.thumbnail} />
+            <img
+              className="album-item-image"
+              src={this.thumbnail}
+              alt={`${this.artist} - ${this.albumName}`}
+            />
           </a>
         </div>
         <div className="album-item-title">
