@@ -9,6 +9,7 @@ const defaultArgs = {
   albumName: 'test-albumName',
   thumbnail: 'test-thumbnail',
   albumLink: 'test-albumLink',
+  playcount: 'test-playcount',
 }
 
 // Render Tests
