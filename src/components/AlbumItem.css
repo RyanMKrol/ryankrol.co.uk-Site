@@ -1,30 +1,43 @@
 .AlbumItem {
   padding: 15px;
   max-width: 300px;
+  text-align: left;
+  background-color: #eee;
+  margin: 10px;
+  padding-bottom: 0;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 14px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .album-item-thumbnail {
-
+  text-align: center;
+  align-items: center;
 }
 
 .album-item-image {
-  max-width: 95%;
+  max-width: 100%;
+  display: flex;
+  margin: auto;
+  border-radius: 5px;
 }
 
-.album-item-title {
-  max-width: 95%;
+.album-information {
+  display: flex;
+  flex: 1;
 }
 
-.album-item-link {
-  text-decoration: none;
-  outline: none;
-  color: black;
+.album-information-content {
+  margin: auto 0;
+  padding: 16px 0;
 }
 
-.album-item-artist {
+.album-information-key {
   color: #555;
 }
 
-.album-item-album-name {
+.album-information-value {
   color: #888;
 }

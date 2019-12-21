@@ -19,6 +19,7 @@ class AlbumItem extends Component {
   render() {
     return (
       <div className="AlbumItem">
+      <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet" />
         <div className="album-item-thumbnail">
           <a href={this.albumLink}>
             <img
@@ -28,14 +29,15 @@ class AlbumItem extends Component {
             />
           </a>
         </div>
-        <div className="album-item-title">
-          <a className="album-item-link" href={this.albumLink}>
-            <h3>
-              <span className="album-item-artist">{this.artist}</span>
-              {" - "}
-              <span className="album-item-album-name">{this.albumName}</span>
-            </h3>
-          </a>
+        <div className="album-information">
+          <p className="album-information-content">
+            <span className="album-information-key">Artist - </span>
+            <span className="album-information-value">{this.artist}</span><br />
+            <span className="album-information-key">Album - </span>
+            <span className="album-information-value">{this.albumName}</span><br />
+            <span className="album-information-key">Plays - </span>
+            <span className="album-information-value">50</span>
+          </p>
         </div>
       </div>
     )
