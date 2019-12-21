@@ -4,6 +4,10 @@ exports[`renders AlbumItem correctly 1`] = `
 <div
   className="AlbumItem"
 >
+  <link
+    href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap"
+    rel="stylesheet"
+  />
   <div
     className="album-item-thumbnail"
   >
@@ -18,26 +22,44 @@ exports[`renders AlbumItem correctly 1`] = `
     </a>
   </div>
   <div
-    className="album-item-title"
+    className="album-information"
   >
-    <a
-      className="album-item-link"
-      href="test-albumLink"
+    <p
+      className="album-information-content"
     >
-      <h3>
-        <span
-          className="album-item-artist"
-        >
-          test-artist
-        </span>
-         - 
-        <span
-          className="album-item-album-name"
-        >
-          test-albumName
-        </span>
-      </h3>
-    </a>
+      <span
+        className="album-information-key"
+      >
+        Artist - 
+      </span>
+      <span
+        className="album-information-value"
+      >
+        test-artist
+      </span>
+      <br />
+      <span
+        className="album-information-key"
+      >
+        Album - 
+      </span>
+      <span
+        className="album-information-value"
+      >
+        test-albumName
+      </span>
+      <br />
+      <span
+        className="album-information-key"
+      >
+        Plays - 
+      </span>
+      <span
+        className="album-information-value"
+      >
+        50
+      </span>
+    </p>
   </div>
 </div>
 `;
