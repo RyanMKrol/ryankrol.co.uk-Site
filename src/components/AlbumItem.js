@@ -10,8 +10,9 @@ class AlbumItem extends Component {
     this.albumName = props.albumName
     this.thumbnail = props.thumbnail
     this.albumLink = props.albumLink
+    this.playcount = props.playcount
 
-    if (!(this.artist && this.albumName && this.thumbnail && this.albumLink)) {
+    if (!(this.artist && this.albumName && this.thumbnail && this.albumLink && this.playcount)) {
       throw new Error('Did not pass all required args for rendering AlbumItem')
     }
   }
@@ -36,7 +37,7 @@ class AlbumItem extends Component {
             <span className="album-information-key">Album - </span>
             <span className="album-information-value">{this.albumName}</span><br />
             <span className="album-information-key">Plays - </span>
-            <span className="album-information-value">50</span>
+            <span className="album-information-value">{this.playcount}</span>
           </p>
         </div>
       </div>

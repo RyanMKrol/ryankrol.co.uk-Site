@@ -36,13 +36,13 @@ class Music extends Component {
         albumName={album.albumName}
         thumbnail={album.thumbnail}
         albumLink={album.albumLink}
+        playcount={album.playcount}
       />
     ))
   }
 
   render() {
     const albumsLoaded = this.state.albums !== undefined
-
     const content = albumsLoaded ?
       this.generateAlbumLinks() :
       <FontAwesomeIcon
