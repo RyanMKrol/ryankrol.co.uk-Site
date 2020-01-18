@@ -32,7 +32,7 @@ class BookItem extends Component {
           <p className="book-information-content">
             <span className="book-information-key">Title - </span>
             <span className="book-information-value">{this.title}</span><br />
-            <span className="book-information-key">Authors - </span>
+            <span className="book-information-key">{this.props.authors.length > 1 ? 'Authors' : 'Author'} - </span>
             <span className="book-information-value">{this.authors}</span><br />
             <span className="book-information-key">ISBN - </span>
             <span className="book-information-value">{this.isbn}</span>
