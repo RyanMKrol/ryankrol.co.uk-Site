@@ -23,7 +23,7 @@ class Music extends Component {
     })
   }
 
-  generateAlbumLinks() {
+  generateAlbumItems() {
     return this.state.albums.map((album) => (
       <AlbumItem
         key={album.albumLink}
@@ -37,9 +37,8 @@ class Music extends Component {
   }
 
   render() {
-    const albumsLoaded = this.state.albums !== undefined
-    const content = albumsLoaded ?
-      this.generateAlbumLinks() :
+    const content = (typeof this.state.albums !== "undefined") ?
+      this.generateAlbumItems() :
       <LoadingIcon />
 
     return (

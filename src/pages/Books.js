@@ -1,45 +1,44 @@
 import React, { Component } from 'react'
-import { AlbumItem, LoadingIcon } from './../components'
+import { BookItem, LoadingIcon } from './../components'
 import fetch from "node-fetch"
 
 import './Books.css';
 
-const ALBUM_API_ENDPOINT = "http://www.ryankrol.co.uk/api/albums"
+const BOOKS_API_ENDPOINT = "http://www.ryankrol.co.uk/api/books"
 
 class Books extends Component {
   constructor() {
     super()
 
     this.state = {
-      albums: undefined
+      books: undefined
     }
 
-    fetch(ALBUM_API_ENDPOINT).then((response) => {
+    fetch(BOOKS_API_ENDPOINT).then((response) => {
       return response.json()
-    }).then((albumData) => {
+    }).then((booksData) => {
       this.setState({
-        albums: albumData
+        books: booksData
       })
     })
   }
 
-  generateAlbumLinks() {
-    return this.state.albums.map((album) => (
-      <AlbumItem
-        key={album.albumLink}
-        artist={album.artist}
-        albumName={album.albumName}
-        thumbnail={album.thumbnail}
-        albumLink={album.albumLink}
-        playcount={album.playcount}
+  generateBookItems() {
+    return this.state.books.map((book) => (
+      <BookItem
+        key={book.bookId}
+        title={book.title}
+        authors={book.authors}
+        images={book.images}
+        isbn={book.isbn}
+        bookId={book.bookId}
       />
     ))
   }
 
   render() {
-    const albumsLoaded = this.state.albums !== undefined
-    const content = albumsLoaded ?
-      this.generateAlbumLinks() :
+    const content = (typeof this.state.books !== 'undefined') ?
+      this.generateBookItems() :
       <LoadingIcon />
 
     return (
