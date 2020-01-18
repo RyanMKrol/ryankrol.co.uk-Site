@@ -10,6 +10,7 @@ import {
   About,
   Portfolio,
   Music,
+  Books,
 } from "./../pages"
 
 import Header from "./Header"
@@ -34,6 +35,9 @@ export default function AppRouter() {
             </Route>
             <Route path="/music">
               <Music />
+            </Route>
+            <Route path="/books">
+              <Books />
             </Route>
           </Switch>
         <Footer />

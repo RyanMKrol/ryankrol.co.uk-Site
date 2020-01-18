@@ -1,0 +1,44 @@
+.BookItem {
+  padding: 15px;
+  width: 220px;
+  text-align: left;
+  background-color: #eee;
+  margin: 10px;
+  padding-bottom: 0;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 14px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-item-thumbnail {
+  text-align: center;
+  align-items: center;
+}
+
+.book-item-image {
+  max-width: 100%;
+  height: 200px;
+  display: flex;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.book-information {
+  display: flex;
+  flex: 1;
+}
+
+.book-information-content {
+  margin: auto 0;
+  padding: 16px 0;
+}
+
+.book-information-key {
+  color: #555;
+}
+
+.book-information-value {
+  color: #888;
+}

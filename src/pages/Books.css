@@ -1,4 +1,4 @@
-.Music {
+.Books {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -11,7 +11,7 @@
   flex-wrap: wrap;
 }
 
-.music-page-body {
+.books-page-body {
   display:flex;
   flex-flow: column;
   text-align: center;

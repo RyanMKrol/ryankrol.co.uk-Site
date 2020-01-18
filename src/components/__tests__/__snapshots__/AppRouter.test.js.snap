@@ -28,6 +28,11 @@ exports[`renders router only when rendered 1`] = `
       >
         <Music />
       </Route>
+      <Route
+        path="/books"
+      >
+        <Books />
+      </Route>
     </Switch>
     <Footer />
   </BrowserRouter>

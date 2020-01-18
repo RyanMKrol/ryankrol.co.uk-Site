@@ -1,11 +1,6 @@
-import React, {
-  Component
-} from 'react'
+import React, { Component } from 'react'
+import { AlbumItem, LoadingIcon } from './../components'
 import fetch from "node-fetch"
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
-import { AlbumItem } from './../components'
 
 import './Music.css';
 
@@ -28,7 +23,7 @@ class Music extends Component {
     })
   }
 
-  generateAlbumLinks() {
+  generateAlbumItems() {
     return this.state.albums.map((album) => (
       <AlbumItem
         key={album.albumLink}
@@ -42,14 +37,9 @@ class Music extends Component {
   }
 
   render() {
-    const albumsLoaded = this.state.albums !== undefined
-    const content = albumsLoaded ?
-      this.generateAlbumLinks() :
-      <FontAwesomeIcon
-        className ="fa-spin"
-        icon={faCircleNotch}
-        size="6x"
-      />
+    const content = (typeof this.state.albums !== "undefined") ?
+      this.generateAlbumItems() :
+      <LoadingIcon />
 
     return (
       <div className="music-page-body">
