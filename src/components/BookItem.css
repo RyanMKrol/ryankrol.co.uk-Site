@@ -23,6 +23,9 @@
   display: flex;
   margin: auto;
   border-radius: 5px;
+  border-style: solid;
+  border-color: #FDD023;
+  border-width: 8px;
 }
 
 .book-information {
