@@ -23,18 +23,3 @@
 
   flex: 1;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .loading {
-    animation: Books-logo-spin infinite 1.3s linear;
-  }
-}
-
-@keyframes Books-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

@@ -23,18 +23,3 @@
 
   flex: 1;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .loading {
-    animation: Music-logo-spin infinite 1.3s linear;
-  }
-}
-
-@keyframes Music-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
