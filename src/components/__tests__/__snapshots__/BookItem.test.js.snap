@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders BookItem correctly 1`] = `
+<div
+  className="BookItem"
+>
+  <link
+    href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap"
+    rel="stylesheet"
+  />
+  <div
+    className="book-item-thumbnail"
+  >
+    <img
+      alt="test-title - test-authors"
+      className="book-item-image"
+    />
+  </div>
+  <div
+    className="book-information"
+  >
+    <p
+      className="book-information-content"
+    >
+      <span
+        className="book-information-key"
+      >
+        Title - 
+      </span>
+      <span
+        className="book-information-value"
+      >
+        test-title
+      </span>
+      <br />
+      <span
+        className="book-information-key"
+      >
+        Authors - 
+      </span>
+      <span
+        className="book-information-value"
+      >
+        test-authors
+      </span>
+      <br />
+      <span
+        className="book-information-key"
+      >
+        ISBN - 
+      </span>
+      <span
+        className="book-information-value"
+      >
+        test-isbn
+      </span>
+    </p>
+  </div>
+</div>
+`;
