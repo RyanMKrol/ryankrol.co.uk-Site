@@ -17,8 +17,9 @@ class Books extends Component {
     fetch(BOOKS_API_ENDPOINT).then((response) => {
       return response.json()
     }).then((booksData) => {
+
       this.setState({
-        books: booksData
+        books: booksData.sort(bookComparator)
       })
     })
   }
@@ -51,5 +52,14 @@ class Books extends Component {
   }
 }
 
+// sort books first by the series they belong to, and by the number in
+// that series if two books belong to the same series
+function bookComparator(bookA, bookB) {
+  if(bookA.series === bookB.series) {
+    return bookA.numberInSeries < bookB.numberInSeries ? -1 : 1
+  } else {
+    return bookA.series > bookB.series ? 1 : -1
+  }
+}
 
 export default Books;
