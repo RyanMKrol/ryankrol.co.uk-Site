@@ -25,7 +25,7 @@ exports[`renders BookItem correctly with a single author 1`] = `
       <span
         className="book-information-key"
       >
-        Title - 
+        Title -
       </span>
       <span
         className="book-information-value"
@@ -37,7 +37,7 @@ exports[`renders BookItem correctly with a single author 1`] = `
         className="book-information-key"
       >
         Author
-         - 
+         -
       </span>
       <span
         className="book-information-value"
@@ -48,12 +48,16 @@ exports[`renders BookItem correctly with a single author 1`] = `
       <span
         className="book-information-key"
       >
-        ISBN - 
+        ISBN -
       </span>
       <span
         className="book-information-value"
       >
-        test-isbn
+        <a
+          href="https://www.amazon.co.uk/s?k=test-isbn"
+        >
+          test-isbn
+        </a>
       </span>
     </p>
   </div>
@@ -85,7 +89,7 @@ exports[`renders BookItem correctly with multiple authors 1`] = `
       <span
         className="book-information-key"
       >
-        Title - 
+        Title -
       </span>
       <span
         className="book-information-value"
@@ -97,7 +101,7 @@ exports[`renders BookItem correctly with multiple authors 1`] = `
         className="book-information-key"
       >
         Authors
-         - 
+         -
       </span>
       <span
         className="book-information-value"
@@ -108,12 +112,16 @@ exports[`renders BookItem correctly with multiple authors 1`] = `
       <span
         className="book-information-key"
       >
-        ISBN - 
+        ISBN -
       </span>
       <span
         className="book-information-value"
       >
-        test-isbn
+        <a
+          href="https://www.amazon.co.uk/s?k=test-isbn"
+        >
+          test-isbn
+        </a>
       </span>
     </p>
   </div>

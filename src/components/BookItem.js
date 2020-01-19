@@ -11,6 +11,7 @@ class BookItem extends Component {
     this.images = props.images
     this.isbn = props.isbn
     this.bookId = props.bookId
+    this.link = `https://www.amazon.co.uk/s?k=${this.isbn}`
 
     if (!(this.title && this.authors && this.images && this.isbn)) {
       throw new Error('Did not pass all required args for rendering BookItem')
@@ -35,7 +36,7 @@ class BookItem extends Component {
             <span className="book-information-key">{this.props.authors.length > 1 ? 'Authors' : 'Author'} - </span>
             <span className="book-information-value">{this.authors}</span><br />
             <span className="book-information-key">ISBN - </span>
-            <span className="book-information-value">{this.isbn}</span>
+            <span className="book-information-value"><a href={this.link}>{this.isbn}</a></span>
           </p>
         </div>
       </div>
