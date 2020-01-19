@@ -8,8 +8,47 @@ exports[`renders Portfolio only when rendered 1`] = `
     className="Portfolio"
   >
     <PortfolioItem
+      key="ryankrol.co.uk"
+      portfolioDescription="Of course this site lives in my portfolio too! Having spent 2 years at Amazon, I've had the opportunity to work with prominent front-end technologies that enabled me to make my own website (no more using templates found online). With my experience in React, I built this site from scratch using a React front-end with an Express server on the backend to fetch data that powers certain pages (check out my music and book tastes!). I was also able to use skills that I don't have the opportunity to at work, e.g. setting up infrastructure in AWS (EC2 for hosts, Route53 for DNS binding), setting up the the reverse proxy with Nginx, setting up my own APIs from scratch with Express."
+      portfolioHeader="ryankrol.co.uk"
+      portfolioItemLink="https://github.com/RyanMKrol/ryankrol.co.uk"
+      portfolioMedia={
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                640,
+                512,
+                Array [],
+                "f121",
+                "M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z",
+              ],
+              "iconName": "code",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size="6x"
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      }
+    />
+    <PortfolioItem
       key="SwiftToolbox"
-      portfolioDescription="SwiftToolbox is a project I started when I started using Swift more in my personal projects. I found myself repeating code across projects, so I thought it would be a good idea to have a package to share utilities I made to prevent code duplication."
+      portfolioDescription="SwiftToolbox is a project I started when I started using the Swift language more in my personal projects. I found myself repeating code across projects, so I thought it would be a good idea to have a package to share utilities I made to prevent code duplication, and make updating multiple projects at once easier. These utilities include: API calls, sending emails, setting up configuration, API response parsing, etc."
       portfolioHeader="SwiftToolbox"
       portfolioItemLink="https://github.com/RyanMKrol/SwiftToolbox"
       portfolioMedia={
@@ -28,6 +67,123 @@ exports[`renders Portfolio only when rendered 1`] = `
                 "M502.63 214.63l-45.25-45.25c-6-6-14.14-9.37-22.63-9.37H384V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v80H77.25c-8.49 0-16.62 3.37-22.63 9.37L9.37 214.63c-6 6-9.37 14.14-9.37 22.63V320h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-82.75c0-8.48-3.37-16.62-9.37-22.62zM320 160H192V96h128v64zm64 208c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H192v16c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H0v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96H384v16z",
               ],
               "iconName": "toolbox",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size="6x"
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      }
+    />
+    <PortfolioItem
+      key="ConcertFinder"
+      portfolioDescription="Living in London, there are a tonne of events happening everyday; it's hard to keep up with what I might be interested in. To help solve this problem, I made a project that tracks what I'm listening to, and then recommends upcoming concerts based on those listening habits! This utilises the LastFM API to track my listening activity, and then the Songkick API to find upcoming concerts. The project uses travis to test and deploy the code to the server, which then sets up a cron job to send you a weekly digest of upcoming events."
+      portfolioHeader="ConcertFinder"
+      portfolioItemLink="https://github.com/RyanMKrol/ConcertFinder"
+      portfolioMedia={
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f7a6",
+                "M502.63 39L473 9.37a32 32 0 0 0-45.26 0L381.46 55.7a35.14 35.14 0 0 0-8.53 13.79L360.77 106l-76.26 76.26c-12.16-8.76-25.5-15.74-40.1-19.14-33.45-7.78-67-.88-89.88 22a82.45 82.45 0 0 0-20.24 33.47c-6 18.56-23.21 32.69-42.15 34.46-23.7 2.27-45.73 11.45-62.61 28.44C-16.11 327-7.9 409 47.58 464.45S185 528 230.56 482.52c17-16.88 26.16-38.9 28.45-62.71 1.76-18.85 15.89-36.13 34.43-42.14a82.6 82.6 0 0 0 33.48-20.25c22.87-22.88 29.74-56.36 22-89.75-3.39-14.64-10.37-28-19.16-40.2L406 151.23l36.48-12.16a35.14 35.14 0 0 0 13.79-8.53l46.33-46.32a32 32 0 0 0 .03-45.22zM208 352a48 48 0 1 1 48-48 48 48 0 0 1-48 48z",
+              ],
+              "iconName": "guitar",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size="6x"
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      }
+    />
+    <PortfolioItem
+      key="WheresMyMoney?!"
+      portfolioDescription="Living in London, everything is crazy expensive. Realising this, I wanted to make a little utility that helps me figure out where my money is going every month, and get a handle on my finances. My solution is basic, but is configurable enough to be used by anybody. It takes in a CSV file, and a user-defined config that is used to bucket your purchases and see where your money went!"
+      portfolioHeader="WheresMyMoney?!"
+      portfolioItemLink="https://github.com/RyanMKrol/WheresMyMoney"
+      portfolioMedia={
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                384,
+                512,
+                Array [],
+                "f543",
+                "M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z",
+              ],
+              "iconName": "receipt",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size="6x"
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      }
+    />
+    <PortfolioItem
+      key="TheBestOfToronto"
+      portfolioDescription="Between 2015-16, I lived in Toronto, Canada. There were so many options for things to do that I was spoiled for choice, and would often spend more time deliberating on what was available, instead of just getting out there and doing something! Seeing this problem, I wanted a way to cut through the noise, and make a decision quickly so I made a website to choose for me. This would poll a popular Toronto blog which maintained hundreds of 'Best-Of' lists, and then pick one at random for me to do!"
+      portfolioHeader="TheBestOfToronto"
+      portfolioItemLink="https://github.com/RyanMKrol/TheBestOfToronto"
+      portfolioMedia={
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                448,
+                512,
+                Array [],
+                "f073",
+                "M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z",
+              ],
+              "iconName": "calendar-alt",
               "prefix": "fas",
             }
           }
