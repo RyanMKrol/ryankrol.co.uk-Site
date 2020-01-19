@@ -21,7 +21,6 @@ class BookItem extends Component {
   render() {
     return (
       <div className="BookItem">
-      <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet" />
         <div className="book-item-thumbnail">
           <img
             className="book-item-image"

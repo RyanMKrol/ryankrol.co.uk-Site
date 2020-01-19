@@ -4,10 +4,6 @@ exports[`renders BookItem correctly with a single author 1`] = `
 <div
   className="BookItem"
 >
-  <link
-    href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap"
-    rel="stylesheet"
-  />
   <div
     className="book-item-thumbnail"
   >
@@ -68,10 +64,6 @@ exports[`renders BookItem correctly with multiple authors 1`] = `
 <div
   className="BookItem"
 >
-  <link
-    href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap"
-    rel="stylesheet"
-  />
   <div
     className="book-item-thumbnail"
   >
