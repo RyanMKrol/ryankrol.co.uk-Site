@@ -31,13 +31,25 @@ exports[`renders PortfolioItem correctly 1`] = `
     className="portfolio-project-link"
   >
     <span
-      className="portfolio-link"
+      className="portfolio-item-link"
     >
       Check out the source code 
-      <a>
+      <a
+        href="http://example.com"
+      >
         here
       </a>
       !
+    </span>
+  </div>
+  <div
+    className="portfolio-project-tags"
+  >
+    <span
+      className="portfolio-item-tag"
+      key="Example Item - example tag"
+    >
+      example tag
     </span>
   </div>
 </div>

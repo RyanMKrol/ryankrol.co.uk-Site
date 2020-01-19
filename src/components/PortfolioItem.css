@@ -31,3 +31,10 @@
 .portfolio-project-link {
   margin: 10px 0;
 }
+
+.portfolio-item-tag {
+  margin-right: 6px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background-color: #ddd;
+}

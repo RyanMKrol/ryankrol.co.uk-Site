@@ -10,6 +10,20 @@ class PortfolioItem extends Component {
     this.portfolioDescription = props.portfolioDescription
     this.portfolioHeader = props.portfolioHeader
     this.portfolioItemLink = props.portfolioItemLink
+    this.portfolioItemTags = props.portfolioItemTags
+  }
+
+  generateTags() {
+    return this.portfolioItemTags.map((tag) => {
+      return (
+        <span
+          key={`${this.portfolioHeader} - ${tag}`}
+          className="portfolio-item-tag"
+        >
+          {tag}
+        </span>
+      )
+    })
   }
 
   render() {
@@ -29,7 +43,10 @@ class PortfolioItem extends Component {
           </div>
         </div>
         <div className="portfolio-project-link">
-          <span className="portfolio-link">Check out the source code <a href={this.portfolioItemLink}>here</a>!</span>
+          <span className="portfolio-item-link">Check out the source code <a href={this.portfolioItemLink}>here</a>!</span>
+        </div>
+        <div className="portfolio-project-tags">
+          {this.generateTags()}
         </div>
       </div>
     )
