@@ -9,6 +9,7 @@ class PortfolioItem extends Component {
     this.portfolioMedia = props.portfolioMedia
     this.portfolioDescription = props.portfolioDescription
     this.portfolioHeader = props.portfolioHeader
+    this.portfolioItemLink = props.portfolioItemLink
   }
 
   render() {
@@ -27,6 +28,7 @@ class PortfolioItem extends Component {
             {this.portfolioMedia}
           </div>
         </div>
+        <span className="portfolio-link">Check it out <a href={this.portfolioItemLink}>here</a>!</span>
       </div>
     )
   }
