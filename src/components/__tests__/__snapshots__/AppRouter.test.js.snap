@@ -11,12 +11,13 @@ exports[`renders router only when rendered 1`] = `
         exact={true}
         path="/"
       >
-        <Home />
-      </Route>
-      <Route
-        path="/about"
-      >
-        <About />
+        <Redirect
+          to={
+            Object {
+              "pathname": "/portfolio",
+            }
+          }
+        />
       </Route>
       <Route
         path="/portfolio"

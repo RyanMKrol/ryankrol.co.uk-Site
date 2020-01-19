@@ -3,18 +3,6 @@
 exports[`creates the correct current page links with generateHeaderLinks, passing through / as current page 1`] = `
 Array [
   <ForwardRef
-    className="currentPage header-link hover"
-    to="/"
-  >
-    Home
-  </ForwardRef>,
-  <ForwardRef
-    className=" header-link hover"
-    to="/about"
-  >
-    About
-  </ForwardRef>,
-  <ForwardRef
     className=" header-link hover"
     to="/portfolio"
   >
@@ -39,18 +27,6 @@ exports[`creates the correct current page links with generateHeaderLinks, passin
 Array [
   <ForwardRef
     className=" header-link hover"
-    to="/"
-  >
-    Home
-  </ForwardRef>,
-  <ForwardRef
-    className="currentPage header-link hover"
-    to="/about"
-  >
-    About
-  </ForwardRef>,
-  <ForwardRef
-    className=" header-link hover"
     to="/portfolio"
   >
     Portfolio
@@ -72,18 +48,6 @@ Array [
 
 exports[`creates the correct current page links with generateHeaderLinks, passing through an unsupported destination current page 1`] = `
 Array [
-  <ForwardRef
-    className=" header-link hover"
-    to="/"
-  >
-    Home
-  </ForwardRef>,
-  <ForwardRef
-    className=" header-link hover"
-    to="/about"
-  >
-    About
-  </ForwardRef>,
   <ForwardRef
     className=" header-link hover"
     to="/portfolio"
@@ -126,20 +90,6 @@ exports[`renders header correctly with no currentPage being passed through 1`] =
         <div
           className="links-inner-container"
         >
-          <Link
-            className=" header-link hover"
-            key="/"
-            to="/"
-          >
-            Home
-          </Link>
-          <Link
-            className=" header-link hover"
-            key="/about"
-            to="/about"
-          >
-            About
-          </Link>
           <Link
             className=" header-link hover"
             key="/portfolio"

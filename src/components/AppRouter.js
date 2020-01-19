@@ -3,11 +3,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom"
 
 import {
   Home,
-  About,
   Portfolio,
   Music,
   Books,
@@ -25,10 +25,11 @@ export default function AppRouter() {
         <Header />
           <Switch>
             <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
+            <Redirect
+              to={{
+                pathname: "/portfolio",
+              }}
+            />
             </Route>
             <Route path="/portfolio">
               <Portfolio />
