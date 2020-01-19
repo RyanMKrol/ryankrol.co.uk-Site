@@ -28,7 +28,9 @@ class PortfolioItem extends Component {
             {this.portfolioMedia}
           </div>
         </div>
-        <span className="portfolio-link">Check it out <a href={this.portfolioItemLink}>here</a>!</span>
+        <div className="portfolio-project-link">
+          <span className="portfolio-link">Check out the source code <a href={this.portfolioItemLink}>here</a>!</span>
+        </div>
       </div>
     )
   }

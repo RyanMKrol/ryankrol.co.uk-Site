@@ -27,14 +27,18 @@ exports[`renders PortfolioItem correctly 1`] = `
       </p>
     </div>
   </div>
-  <span
-    className="portfolio-link"
+  <div
+    className="portfolio-project-link"
   >
-    Check it out 
-    <a>
-      here
-    </a>
-    !
-  </span>
+    <span
+      className="portfolio-link"
+    >
+      Check out the source code 
+      <a>
+        here
+      </a>
+      !
+    </span>
+  </div>
 </div>
 `;
