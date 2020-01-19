@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom"
 
 import {
@@ -24,7 +25,11 @@ export default function AppRouter() {
         <Header />
           <Switch>
             <Route exact path="/">
-              <Home />
+            <Redirect
+              to={{
+                pathname: "/portfolio",
+              }}
+            />
             </Route>
             <Route path="/portfolio">
               <Portfolio />
