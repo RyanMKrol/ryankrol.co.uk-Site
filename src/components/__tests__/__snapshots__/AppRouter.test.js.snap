@@ -14,11 +14,6 @@ exports[`renders router only when rendered 1`] = `
         <Home />
       </Route>
       <Route
-        path="/about"
-      >
-        <About />
-      </Route>
-      <Route
         path="/portfolio"
       >
         <Portfolio />

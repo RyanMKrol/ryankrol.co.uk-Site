@@ -7,7 +7,6 @@ import {
 
 import {
   Home,
-  About,
   Portfolio,
   Music,
   Books,
@@ -26,9 +25,6 @@ export default function AppRouter() {
           <Switch>
             <Route exact path="/">
               <Home />
-            </Route>
-            <Route path="/about">
-              <About />
             </Route>
             <Route path="/portfolio">
               <Portfolio />
