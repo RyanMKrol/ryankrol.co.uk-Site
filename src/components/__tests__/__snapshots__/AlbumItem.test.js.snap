@@ -4,10 +4,6 @@ exports[`renders AlbumItem correctly 1`] = `
 <div
   className="AlbumItem"
 >
-  <link
-    href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap"
-    rel="stylesheet"
-  />
   <div
     className="album-item-thumbnail"
   >

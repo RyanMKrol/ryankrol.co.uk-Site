@@ -109,10 +109,6 @@ exports[`renders header correctly with no currentPage being passed through 1`] =
 <div
   className="Header"
 >
-  <link
-    href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
-    rel="stylesheet"
-  />
   <div
     className="header-content"
   >

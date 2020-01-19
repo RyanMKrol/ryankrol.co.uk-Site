@@ -20,7 +20,6 @@ class AlbumItem extends Component {
   render() {
     return (
       <div className="AlbumItem">
-      <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet" />
         <div className="album-item-thumbnail">
           <a href={this.albumLink}>
             <img

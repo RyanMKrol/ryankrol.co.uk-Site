@@ -12,6 +12,8 @@ function generatePortfolioItems() {
       portfolioMedia={item.portfolioMedia}
       portfolioDescription={item.portfolioDescription}
       portfolioHeader={item.portfolioHeader}
+      portfolioItemLink={item.portfolioItemLink}
+      portfolioItemTags={item.portfolioItemTags}
     />
   )
 }
