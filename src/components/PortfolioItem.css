@@ -1,7 +1,7 @@
 .PortfolioItem {
   text-align: left;
 
-  padding: 12px 8px;
+  padding: 12px 20px;
 
   min-height: 200px;
   border-bottom-style: dashed;
@@ -24,6 +24,10 @@
 .portfolio-item-image {
   text-align: center;
 
-  width: 35%;
+  width: 180px;
   padding: 0 8px;
+}
+
+.portfolio-project-link {
+  margin: 10px 0;
 }
