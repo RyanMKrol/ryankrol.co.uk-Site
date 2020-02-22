@@ -1,5 +1,5 @@
 const MOVIES_PAGE_DATA = {
-  summary: "These are the movies in my movie library!",
+  summary: "Check out what movies are in my library!",
 }
 
 export { MOVIES_PAGE_DATA }
