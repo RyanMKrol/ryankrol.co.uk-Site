@@ -11,6 +11,7 @@ import {
   Portfolio,
   Music,
   Books,
+  Movies,
 } from "./../pages"
 
 import Header from "./Header"
@@ -31,14 +32,17 @@ export default function AppRouter() {
               }}
             />
             </Route>
-            <Route path="/portfolio">
-              <Portfolio />
+            <Route path="/books">
+              <Books />
+            </Route>
+            <Route path="/movies">
+              <Movies />
             </Route>
             <Route path="/music">
               <Music />
             </Route>
-            <Route path="/books">
-              <Books />
+            <Route path="/portfolio">
+              <Portfolio />
             </Route>
           </Switch>
         <Footer />

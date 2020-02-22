@@ -20,6 +20,12 @@ Array [
   >
     Books
   </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/movies"
+  >
+    Movies
+  </ForwardRef>,
 ]
 `;
 
@@ -43,6 +49,12 @@ Array [
   >
     Books
   </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/movies"
+  >
+    Movies
+  </ForwardRef>,
 ]
 `;
 
@@ -65,6 +77,12 @@ Array [
     to="/books"
   >
     Books
+  </ForwardRef>,
+  <ForwardRef
+    className=" header-link hover"
+    to="/movies"
+  >
+    Movies
   </ForwardRef>,
 ]
 `;
@@ -110,6 +128,13 @@ exports[`renders header correctly with no currentPage being passed through 1`] =
             to="/books"
           >
             Books
+          </Link>
+          <Link
+            className=" header-link hover"
+            key="/movies"
+            to="/movies"
+          >
+            Movies
           </Link>
         </div>
       </div>

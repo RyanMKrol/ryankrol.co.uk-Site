@@ -11,6 +11,10 @@ const HEADER_ITEMS = [
     destinationPage: "/books",
     content: "Books",
   },
+  {
+    destinationPage: "/movies",
+    content: "Movies",
+  },
 ]
 
 export { HEADER_ITEMS }

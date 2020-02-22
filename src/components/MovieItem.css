@@ -1,0 +1,43 @@
+.MovieItem {
+  padding: 15px;
+  max-width: 300px;
+  text-align: left;
+  background-color: #eee;
+  margin: 10px;
+  padding-bottom: 0;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 14px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-item-thumbnail {
+  text-align: center;
+  align-items: center;
+}
+
+.movie-item-image {
+  max-width: 200px;
+  display: flex;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.movie-information {
+  display: flex;
+  flex: 1;
+}
+
+.movie-information-content {
+  margin: auto 0;
+  padding: 16px 0;
+}
+
+.movie-information-key {
+  color: #555;
+}
+
+.movie-information-value {
+  color: #888;
+}
