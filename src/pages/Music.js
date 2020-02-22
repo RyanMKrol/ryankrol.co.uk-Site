@@ -26,29 +26,31 @@ class Music extends Component {
   }
 
   generateAlbumItems() {
-    return (typeof this.state.albums !== "undefined") ?
-      this.state.albums.map((album) => (
-        <AlbumItem
-          key={album.albumLink}
-          artist={album.artist}
-          albumName={album.albumName}
-          thumbnail={album.thumbnail}
-          albumLink={album.albumLink}
-          playcount={album.playcount}
-        />
-      ))
-      : <LoadingIcon />
+    if (typeof this.state.albums === "undefined") {
+      return <LoadingIcon />
+    }
+
+    return this.state.albums.map((album) => (
+      <AlbumItem
+        key={album.albumLink}
+        artist={album.artist}
+        albumName={album.albumName}
+        thumbnail={album.thumbnail}
+        albumLink={album.albumLink}
+        playcount={album.playcount}
+      />
+    ))
   }
 
-  generateMusicSummary() {
-    const albumSummary = (typeof this.state.albums !== "undefined") ?
-      MUSIC_PAGE_DATA.summary:
-      null
+  generatePageSummary() {
+    if (typeof this.state.albums === "undefined") {
+      return null
+    }
 
     return (
       <div className="music-page-summary">
         <h3>
-          {albumSummary}
+          {MUSIC_PAGE_DATA.summary}
         </h3>
       </div>
     )
@@ -56,12 +58,12 @@ class Music extends Component {
 
   render() {
     const content = this.generateAlbumItems()
-    const albumSummary = this.generateMusicSummary()
+    const pageSummary = this.generatePageSummary()
 
     return (
       <div className="music-page-body">
         <div className="Music">
-          {albumSummary}
+          {pageSummary}
           {content}
         </div>
       </div>
