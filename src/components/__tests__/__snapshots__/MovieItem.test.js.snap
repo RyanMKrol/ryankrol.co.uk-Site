@@ -8,6 +8,7 @@ exports[`renders MovieItem correctly 1`] = `
     className="movie-item-thumbnail"
   >
     <img
+      alt="test-movieName"
       className="movie-item-image"
       src="test-movieThumbnail"
     />

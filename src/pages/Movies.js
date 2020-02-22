@@ -32,7 +32,7 @@ class Movies extends Component {
 
     return this.state.movies.map((movie) => (
       <MovieItem
-        key={movie.movieLink}
+        key={movie.imdbID}
         movieName={movie.Title}
         movieThumbnail={movie.Poster}
         movieRuntime={movie.Runtime}

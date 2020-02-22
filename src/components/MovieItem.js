@@ -23,6 +23,7 @@ class MovieItem extends Component {
           <img
             className="movie-item-image"
             src={this.movieThumbnail}
+            alt={this.movieName}
           />
         </div>
         <div className="movie-information">
