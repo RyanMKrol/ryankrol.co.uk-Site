@@ -20,9 +20,14 @@ exports[`renders router only when rendered 1`] = `
         />
       </Route>
       <Route
-        path="/portfolio"
+        path="/books"
       >
-        <Portfolio />
+        <Books />
+      </Route>
+      <Route
+        path="/movies"
+      >
+        <Movies />
       </Route>
       <Route
         path="/music"
@@ -30,9 +35,9 @@ exports[`renders router only when rendered 1`] = `
         <Music />
       </Route>
       <Route
-        path="/books"
+        path="/portfolio"
       >
-        <Books />
+        <Portfolio />
       </Route>
     </Switch>
     <Footer />
