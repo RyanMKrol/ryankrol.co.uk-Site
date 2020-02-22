@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { BookItem, LoadingIcon } from './../components'
 import fetch from "node-fetch"
+
+import { BookItem, LoadingIcon } from './../components'
+import { BOOKS_PAGE_DATA } from './../data/BooksPageData'
 
 import './Books.css';
 
@@ -25,6 +27,10 @@ class Books extends Component {
   }
 
   generateBookItems() {
+    if (typeof this.state.books === "undefined") {
+      return <LoadingIcon />
+    }
+
     return this.state.books.map((book) => (
       <BookItem
         key={book.bookId}
@@ -37,14 +43,28 @@ class Books extends Component {
     ))
   }
 
+  generatePageSummary() {
+    if (typeof this.state.books === "undefined") {
+      return null
+    }
+
+    return (
+      <div className="books-page-summary">
+        <h3>
+          {BOOKS_PAGE_DATA.summary}
+        </h3>
+      </div>
+    )
+  }
+
   render() {
-    const content = (typeof this.state.books !== 'undefined') ?
-      this.generateBookItems() :
-      <LoadingIcon />
+    const content = this.generateBookItems()
+    const pageSummary = this.generatePageSummary()
 
     return (
       <div className="books-page-body">
         <div className="Books">
+          {pageSummary}
           {content}
         </div>
       </div>
