@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { PortfolioItem } from './../components'
-import { PORTFOLIO_ITEM_CONTENT } from './../data/PortfolioData'
+import { PORTFOLIO_PAGE_DATA } from './../data/PortfolioData'
 
 import './Portfolio.css'
 
 function generatePortfolioItems() {
-  return PORTFOLIO_ITEM_CONTENT.map((item) =>
+  return PORTFOLIO_PAGE_DATA.portfolioItems.map((item) =>
     <PortfolioItem
       key={item.portfolioHeader}
       portfolioMedia={item.portfolioMedia}
@@ -18,10 +18,21 @@ function generatePortfolioItems() {
   )
 }
 
+function generatePageSummary() {
+  return (
+    <div className="portfolio-page-summary">
+      <h3>
+        {PORTFOLIO_PAGE_DATA.summary}
+      </h3>
+    </div>
+  )
+}
+
 function Portfolio() {
   return (
     <div className="page-body">
       <div className="Portfolio">
+        {generatePageSummary()}
         {generatePortfolioItems()}
       </div>
     </div>

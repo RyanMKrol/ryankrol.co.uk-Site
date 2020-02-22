@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { MovieItem, LoadingIcon } from './../components'
 import fetch from "node-fetch"
+
+import { MovieItem, LoadingIcon } from './../components'
+import { MOVIES_PAGE_DATA } from './../data/MoviesPageData'
 
 import './Movies.css';
 
@@ -24,6 +26,10 @@ class Movies extends Component {
   }
 
   generateMovieItems() {
+    if (typeof this.state.movies === "undefined") {
+      return <LoadingIcon />
+    }
+
     return this.state.movies.map((movie) => (
       <MovieItem
         key={movie.movieLink}
@@ -35,14 +41,28 @@ class Movies extends Component {
     ))
   }
 
+  generatePageSummary() {
+    if (typeof this.state.movies === "undefined") {
+      return null
+    }
+
+    return (
+      <div className="movies-page-summary">
+        <h3>
+          {MOVIES_PAGE_DATA.summary}
+        </h3>
+      </div>
+    )
+  }
+
   render() {
-    const content = (typeof this.state.movies !== "undefined") ?
-      this.generateMovieItems() :
-      <LoadingIcon />
+    const content = this.generateMovieItems()
+    const pageSummary = this.generatePageSummary()
 
     return (
       <div className="movies-page-body">
         <div className="Movies">
+          {pageSummary}
           {content}
         </div>
       </div>

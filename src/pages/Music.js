@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { AlbumItem, LoadingIcon } from './../components'
 import fetch from "node-fetch"
+
+import { AlbumItem, LoadingIcon } from './../components'
+import { MUSIC_PAGE_DATA } from './../data/MusicPageData'
 
 import './Music.css';
 
@@ -24,6 +26,10 @@ class Music extends Component {
   }
 
   generateAlbumItems() {
+    if (typeof this.state.albums === "undefined") {
+      return <LoadingIcon />
+    }
+
     return this.state.albums.map((album) => (
       <AlbumItem
         key={album.albumLink}
@@ -36,14 +42,28 @@ class Music extends Component {
     ))
   }
 
+  generatePageSummary() {
+    if (typeof this.state.albums === "undefined") {
+      return null
+    }
+
+    return (
+      <div className="music-page-summary">
+        <h3>
+          {MUSIC_PAGE_DATA.summary}
+        </h3>
+      </div>
+    )
+  }
+
   render() {
-    const content = (typeof this.state.albums !== "undefined") ?
-      this.generateAlbumItems() :
-      <LoadingIcon />
+    const content = this.generateAlbumItems()
+    const pageSummary = this.generatePageSummary()
 
     return (
       <div className="music-page-body">
         <div className="Music">
+          {pageSummary}
           {content}
         </div>
       </div>
