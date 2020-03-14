@@ -8,6 +8,15 @@
   border-bottom-color: #FDD023;
 }
 
+.header-name {
+  font-family: 'Bungee Shade', cursive;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 76px;
+  justify-content: center;
+}
+
 .header-content {
   width: 90%;
   margin: 0 auto;

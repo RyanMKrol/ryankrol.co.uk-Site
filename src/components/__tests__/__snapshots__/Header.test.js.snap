@@ -100,6 +100,11 @@ exports[`renders header correctly with no currentPage being passed through 1`] =
       <SocialList />
     </div>
     <div
+      className="header-name"
+    >
+      Ryan Krol
+    </div>
+    <div
       className="links-container"
     >
       <div

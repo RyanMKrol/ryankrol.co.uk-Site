@@ -34,6 +34,9 @@ class Header extends Component {
           <div className="social-container">
             <SocialList />
           </div>
+          <div className="header-name">
+            Ryan Krol
+          </div>
           <div className="links-container">
             <div className="links">
               <div className="links-inner-container">
