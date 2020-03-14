@@ -39,7 +39,7 @@ const SOCIAL_LIST_ITEMS = [
     />)
   },
   {
-    link: "https://open.spotify.com/playlist/37i9dQZF1Et9XpQOerWV6B",
+    link: "https://open.spotify.com/playlist/1n2Wuu0Ca4INGcFRcbavZS?si=oLvTTTKuQJCzlkcEXmdREA",
     icon: (<FontAwesomeIcon
       icon={faSpotify}
       size="lg"
