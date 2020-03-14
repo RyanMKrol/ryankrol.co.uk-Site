@@ -6,6 +6,8 @@ import {
   faBell,
   faCalendarAlt,
   faCode,
+  faTerminal,
+  faDollarSign,
 } from '@fortawesome/free-solid-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -26,12 +28,36 @@ const PORTFOLIO_PAGE_DATA = {
       portfolioItemTags: ["react", "aws", "ec2", "route53", "express", "node", "website", "javascript", "frontend"],
     },
     {
+      portfolioHeader: "create-noodle-app",
+      portfolioItemLink: "https://github.com/RyanMKrol/create-noodle-app",
+      portfolioDescription: "I made this project to speed up my ability to stand up projects from scratch instead of going through a repetetive cycle of copying code from a template, and then manually updating all of the boilerplate myself. This CLI tool allows you to choose the type of project you want to create, give it a name, and then programatically sets up the boilerplate for the project you want to start. This currently supports: 1. a basic app, 2. an npm package app, 3. an API app, 4. a react website app, 5. a typescript react website app. Feel free to try it out - `npm install -g create-noodle-app; create-noodle-app`",
+      portfolioMedia: (
+        <FontAwesomeIcon
+          icon={faTerminal}
+          size="6x"
+        />
+      ),
+      portfolioItemTags: ["node", "template", "javascript", "devops"],
+    },
+    {
       portfolioHeader: "SwiftToolbox",
       portfolioItemLink: "https://github.com/RyanMKrol/SwiftToolbox",
         portfolioDescription: "SwiftToolbox is a project I started when I started using the Swift language more in my personal projects. I found myself repeating code across projects, so I thought it would be a good idea to have a package to share utilities I made to prevent code duplication, and make updating multiple projects at once easier. These utilities include API calls, sending emails, setting up configuration, API response parsing, etc.",
       portfolioMedia: (
         <FontAwesomeIcon
           icon={faToolbox}
+          size="6x"
+        />
+      ),
+      portfolioItemTags: ["swift", "backend", "utils"],
+    },
+    {
+      portfolioHeader: "Stock Price Data Site",
+      portfolioItemLink: "https://github.com/RyanMKrol/StockPriceData-Site",
+        portfolioDescription: "This site is something I created to help me choose which stocks to target when considering what to invest in! Currently the site is pretty simple and just presents a heatmap of stock data for 1/3/6 month, and 1/2 year time periods, but the technical challenges presented in harvesting and updating this data were fun to work through, and have enabled me to create a tool that I've struggled to find elsewhere.",
+      portfolioMedia: (
+        <FontAwesomeIcon
+          icon={faDollarSign}
           size="6x"
         />
       ),
@@ -48,6 +74,18 @@ const PORTFOLIO_PAGE_DATA = {
         />
       ),
       portfolioItemTags: ["swift", "backend", "tools"],
+    },
+    {
+      portfolioHeader: "ConcertFinderNode",
+      portfolioItemLink: "https://github.com/RyanMKrol/ConcertFinderNode",
+      portfolioDescription: "Same as above, but in Node!",
+      portfolioMedia: (
+        <FontAwesomeIcon
+          icon={faGuitar}
+          size="6x"
+        />
+      ),
+      portfolioItemTags: ["node", "backend", "tools"],
     },
     {
       portfolioHeader: "SneakersNotificationCenter",
