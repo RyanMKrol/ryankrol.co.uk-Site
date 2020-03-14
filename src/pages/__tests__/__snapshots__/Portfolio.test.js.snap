@@ -67,6 +67,53 @@ exports[`renders Portfolio only when rendered 1`] = `
       }
     />
     <PortfolioItem
+      key="create-noodle-app"
+      portfolioDescription="I made this project to speed up my ability to stand up projects from scratch instead of going through a repetetive cycle of copying code from a template, and then manually updating all of the boilerplate myself. This CLI tool allows you to choose the type of project you want to create, give it a name, and then programatically sets up the boilerplate for the project you want to start. This currently supports: 1. a basic app, 2. an npm package app, 3. an API app, 4. a react website app, 5. a typescript react website app. Feel free to try it out - \`npm install -g create-noodle-app; create-noodle-app\`"
+      portfolioHeader="create-noodle-app"
+      portfolioItemLink="https://github.com/RyanMKrol/create-noodle-app"
+      portfolioItemTags={
+        Array [
+          "node",
+          "template",
+          "javascript",
+          "devops",
+        ]
+      }
+      portfolioMedia={
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                640,
+                512,
+                Array [],
+                "f120",
+                "M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z",
+              ],
+              "iconName": "terminal",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size="6x"
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      }
+    />
+    <PortfolioItem
       key="SwiftToolbox"
       portfolioDescription="SwiftToolbox is a project I started when I started using the Swift language more in my personal projects. I found myself repeating code across projects, so I thought it would be a good idea to have a package to share utilities I made to prevent code duplication, and make updating multiple projects at once easier. These utilities include API calls, sending emails, setting up configuration, API response parsing, etc."
       portfolioHeader="SwiftToolbox"
@@ -113,6 +160,52 @@ exports[`renders Portfolio only when rendered 1`] = `
       }
     />
     <PortfolioItem
+      key="Stock Price Data Site"
+      portfolioDescription="This site is something I created to help me choose which stocks to target when considering what to invest in! Currently the site is pretty simple and just presents a heatmap of stock data for 1/3/6 month, and 1/2 year time periods, but the technical challenges presented in harvesting and updating this data were fun to work through, and have enabled me to create a tool that I've struggled to find elsewhere."
+      portfolioHeader="Stock Price Data Site"
+      portfolioItemLink="https://github.com/RyanMKrol/StockPriceData-Site"
+      portfolioItemTags={
+        Array [
+          "swift",
+          "backend",
+          "utils",
+        ]
+      }
+      portfolioMedia={
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                288,
+                512,
+                Array [],
+                "f155",
+                "M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z",
+              ],
+              "iconName": "dollar-sign",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size="6x"
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      }
+    />
+    <PortfolioItem
       key="ConcertFinder"
       portfolioDescription="Living in London, there are a tonne of events happening every day; it's hard to keep up with what I might be interested in. To help solve this problem, I made a project that tracks what I'm listening to, and then recommends upcoming concerts based on those listening habits! This utilises the LastFM API to track my listening activity, and then the Songkick API to find upcoming concerts. The project uses travis to test and deploy the code to the server, which then sets up a cron job to send you a weekly digest of upcoming events."
       portfolioHeader="ConcertFinder"
@@ -120,6 +213,52 @@ exports[`renders Portfolio only when rendered 1`] = `
       portfolioItemTags={
         Array [
           "swift",
+          "backend",
+          "tools",
+        ]
+      }
+      portfolioMedia={
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f7a6",
+                "M502.63 39L473 9.37a32 32 0 0 0-45.26 0L381.46 55.7a35.14 35.14 0 0 0-8.53 13.79L360.77 106l-76.26 76.26c-12.16-8.76-25.5-15.74-40.1-19.14-33.45-7.78-67-.88-89.88 22a82.45 82.45 0 0 0-20.24 33.47c-6 18.56-23.21 32.69-42.15 34.46-23.7 2.27-45.73 11.45-62.61 28.44C-16.11 327-7.9 409 47.58 464.45S185 528 230.56 482.52c17-16.88 26.16-38.9 28.45-62.71 1.76-18.85 15.89-36.13 34.43-42.14a82.6 82.6 0 0 0 33.48-20.25c22.87-22.88 29.74-56.36 22-89.75-3.39-14.64-10.37-28-19.16-40.2L406 151.23l36.48-12.16a35.14 35.14 0 0 0 13.79-8.53l46.33-46.32a32 32 0 0 0 .03-45.22zM208 352a48 48 0 1 1 48-48 48 48 0 0 1-48 48z",
+              ],
+              "iconName": "guitar",
+              "prefix": "fas",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size="6x"
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      }
+    />
+    <PortfolioItem
+      key="ConcertFinderNode"
+      portfolioDescription="Same as above, but in Node!"
+      portfolioHeader="ConcertFinderNode"
+      portfolioItemLink="https://github.com/RyanMKrol/ConcertFinderNode"
+      portfolioItemTags={
+        Array [
+          "node",
           "backend",
           "tools",
         ]
