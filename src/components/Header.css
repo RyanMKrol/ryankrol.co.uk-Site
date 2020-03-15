@@ -2,7 +2,7 @@
   height: 240px;
   width: 100%;
   background-color: #FDD023;
-  position: relative;
+  display: flex;
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #FDD023;
@@ -11,34 +11,41 @@
 .header-name {
   font-family: 'Bungee Shade', cursive;
   display: flex;
-  flex-direction: row;
   align-items: center;
   font-size: 76px;
   justify-content: center;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .header-name {
+    font-size: 46px;
+  }
 }
 
 .header-content {
   width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .social-container {
-  right: 0;
   display: flex;
 }
 
 .links {
   height: 100%;
+  width:100%;
   bottom: 0;
   background-color: #555;
   overflow-x: scroll;
 }
 
 .links-container {
-  width: 90%;
+  width: 100%;
   height: 30%;
-  position: absolute;
-  bottom: 0;
+  align-self: flex-end;
 }
 .links-inner-container {
   width: 100%;
