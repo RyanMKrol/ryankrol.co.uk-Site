@@ -170,11 +170,11 @@ exports[`renders SocialList correctly 1`] = `
   </span>
   <span
     className="socialListItem"
-    key="https://open.spotify.com/playlist/37i9dQZF1Et9XpQOerWV6B"
+    key="https://open.spotify.com/playlist/1n2Wuu0Ca4INGcFRcbavZS?si=oLvTTTKuQJCzlkcEXmdREA"
   >
     <a
       className="socialListLink"
-      href="https://open.spotify.com/playlist/37i9dQZF1Et9XpQOerWV6B"
+      href="https://open.spotify.com/playlist/1n2Wuu0Ca4INGcFRcbavZS?si=oLvTTTKuQJCzlkcEXmdREA"
     >
       <FontAwesomeIcon
         border={false}
