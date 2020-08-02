@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import fetch from "node-fetch"
+import fetch from 'node-fetch'
 
 import { AlbumItem, LoadingIcon } from './../components'
 import { MUSIC_PAGE_DATA } from './../data/MusicPageData'
+import baseEndpoint from './../utils'
 
-import './Music.css';
+import './Music.css'
 
-const ALBUM_API_ENDPOINT = "http://www.ryankrol.co.uk/api/albums"
+const ALBUM_API_ENDPOINT = `${baseEndpoint()}/albums`
 
 class Music extends Component {
   constructor() {
@@ -16,21 +17,23 @@ class Music extends Component {
       albums: undefined
     }
 
-    fetch(ALBUM_API_ENDPOINT).then((response) => {
-      return response.json()
-    }).then((albumData) => {
-      this.setState({
-        albums: albumData
+    fetch(ALBUM_API_ENDPOINT)
+      .then(response => {
+        return response.json()
       })
-    })
+      .then(albumData => {
+        this.setState({
+          albums: albumData
+        })
+      })
   }
 
   generateAlbumItems() {
-    if (typeof this.state.albums === "undefined") {
+    if (typeof this.state.albums === 'undefined') {
       return <LoadingIcon />
     }
 
-    return this.state.albums.map((album) => (
+    return this.state.albums.map(album => (
       <AlbumItem
         key={album.albumLink}
         artist={album.artist}
@@ -43,15 +46,13 @@ class Music extends Component {
   }
 
   generatePageSummary() {
-    if (typeof this.state.albums === "undefined") {
+    if (typeof this.state.albums === 'undefined') {
       return null
     }
 
     return (
       <div className="music-page-summary">
-        <h3>
-          {MUSIC_PAGE_DATA.summary}
-        </h3>
+        <h3>{MUSIC_PAGE_DATA.summary}</h3>
       </div>
     )
   }
@@ -67,9 +68,8 @@ class Music extends Component {
           {content}
         </div>
       </div>
-    );
+    )
   }
 }
 
-
-export default Music;
+export default Music

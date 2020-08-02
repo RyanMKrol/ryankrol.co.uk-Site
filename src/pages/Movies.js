@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import fetch from "node-fetch"
+import fetch from 'node-fetch'
 
 import { MovieItem, LoadingIcon } from './../components'
 import { MOVIES_PAGE_DATA } from './../data/MoviesPageData'
+import baseEndpoint from './../utils'
 
-import './Movies.css';
+import './Movies.css'
 
-const ALBUM_API_ENDPOINT = "http://www.ryankrol.co.uk/api/movies"
+const MOVIES_API_ENDPOINT = `${baseEndpoint()}/movies`
 
 class Movies extends Component {
   constructor() {
@@ -16,21 +17,23 @@ class Movies extends Component {
       movies: undefined
     }
 
-    fetch(ALBUM_API_ENDPOINT).then((response) => {
-      return response.json()
-    }).then((movieData) => {
-      this.setState({
-        movies: movieData
+    fetch(MOVIES_API_ENDPOINT)
+      .then(response => {
+        return response.json()
       })
-    })
+      .then(movieData => {
+        this.setState({
+          movies: movieData
+        })
+      })
   }
 
   generateMovieItems() {
-    if (typeof this.state.movies === "undefined") {
+    if (typeof this.state.movies === 'undefined') {
       return <LoadingIcon />
     }
 
-    return this.state.movies.map((movie) => (
+    return this.state.movies.map(movie => (
       <MovieItem
         key={movie.imdbID}
         movieName={movie.Title}
@@ -42,15 +45,13 @@ class Movies extends Component {
   }
 
   generatePageSummary() {
-    if (typeof this.state.movies === "undefined") {
+    if (typeof this.state.movies === 'undefined') {
       return null
     }
 
     return (
       <div className="movies-page-summary">
-        <h3>
-          {MOVIES_PAGE_DATA.summary}
-        </h3>
+        <h3>{MOVIES_PAGE_DATA.summary}</h3>
       </div>
     )
   }
@@ -66,9 +67,8 @@ class Movies extends Component {
           {content}
         </div>
       </div>
-    );
+    )
   }
 }
 
-
-export default Movies;
+export default Movies
