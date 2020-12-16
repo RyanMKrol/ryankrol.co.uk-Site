@@ -2,88 +2,88 @@
 
 exports[`creates the correct current page links with generateHeaderLinks, passing through / as current page 1`] = `
 Array [
-  <ForwardRef
+  <Link
     className=" header-link hover"
     to="/portfolio"
   >
     Portfolio
-  </ForwardRef>,
-  <ForwardRef
+  </Link>,
+  <Link
     className=" header-link hover"
     to="/music"
   >
     Music
-  </ForwardRef>,
-  <ForwardRef
+  </Link>,
+  <Link
     className=" header-link hover"
     to="/books"
   >
     Books
-  </ForwardRef>,
-  <ForwardRef
+  </Link>,
+  <Link
     className=" header-link hover"
     to="/movies"
   >
     Movies
-  </ForwardRef>,
+  </Link>,
 ]
 `;
 
 exports[`creates the correct current page links with generateHeaderLinks, passing through /about as current page 1`] = `
 Array [
-  <ForwardRef
+  <Link
     className=" header-link hover"
     to="/portfolio"
   >
     Portfolio
-  </ForwardRef>,
-  <ForwardRef
+  </Link>,
+  <Link
     className=" header-link hover"
     to="/music"
   >
     Music
-  </ForwardRef>,
-  <ForwardRef
+  </Link>,
+  <Link
     className=" header-link hover"
     to="/books"
   >
     Books
-  </ForwardRef>,
-  <ForwardRef
+  </Link>,
+  <Link
     className=" header-link hover"
     to="/movies"
   >
     Movies
-  </ForwardRef>,
+  </Link>,
 ]
 `;
 
 exports[`creates the correct current page links with generateHeaderLinks, passing through an unsupported destination current page 1`] = `
 Array [
-  <ForwardRef
+  <Link
     className=" header-link hover"
     to="/portfolio"
   >
     Portfolio
-  </ForwardRef>,
-  <ForwardRef
+  </Link>,
+  <Link
     className=" header-link hover"
     to="/music"
   >
     Music
-  </ForwardRef>,
-  <ForwardRef
+  </Link>,
+  <Link
     className=" header-link hover"
     to="/books"
   >
     Books
-  </ForwardRef>,
-  <ForwardRef
+  </Link>,
+  <Link
     className=" header-link hover"
     to="/movies"
   >
     Movies
-  </ForwardRef>,
+  </Link>,
 ]
 `;
 

@@ -1,5 +1,5 @@
 const MUSIC_PAGE_DATA = {
-  summary: "Check out what I've been listening to for the past month!",
+  summary: "Check out what music I'm into!",
 }
 
 export { MUSIC_PAGE_DATA }
