@@ -4,20 +4,20 @@ import baseEndpoint from './../utils'
 
 import './MovieRatingsForm.css'
 
-const MOVIE_RATINGS_CONFIG = [
-  { itemName: 'title', itemTitle: 'Title', itemType: 'text', required: 1 },
-  { itemName: 'gist', itemTitle: 'Gist', itemType: 'text', required: 1 },
-  { itemName: 'craftsmanship', itemTitle: 'Craftsmanship', itemType: 'number', required: 1 },
-  { itemName: 'characters', itemTitle: 'Characters', itemType: 'number', required: 1 },
-  { itemName: 'story', itemTitle: 'Story', itemType: 'number', required: 1 },
-  { itemName: 'sound', itemTitle: 'Sound', itemType: 'number', required: 1 },
-  { itemName: 'blind', itemTitle: 'Blind', itemType: 'number', required: 1 },
-  { itemName: 'thoughts', itemTitle: 'Thoughts', itemType: 'text', required: 0 },
-  { itemName: 'notableScenes', itemTitle: 'Notable Scenes', itemType: 'text', required: 0 },
-  { itemName: 'password', itemTitle: 'password', itemType: 'password', required: 1 }
-]
-
 const RATINGS_API_ENDPOINT = `${baseEndpoint()}/ratings`
+const DEFAULT_RANGE_FIELD_VALUE = 50
+const RANGE_TYPE = 'range'
+
+const MOVIE_RATINGS_CONFIG = [
+  { itemName: 'title', itemTitle: 'Title', itemType: 'text' },
+  { itemName: 'gist', itemTitle: 'The Gist', itemType: 'text' },
+  { itemName: 'craftsmanship', itemTitle: 'Craftsmanship', itemType: RANGE_TYPE },
+  { itemName: 'characters', itemTitle: 'Characters', itemType: RANGE_TYPE },
+  { itemName: 'story', itemTitle: 'Story', itemType: RANGE_TYPE },
+  { itemName: 'sound', itemTitle: 'Sound', itemType: RANGE_TYPE },
+  { itemName: 'blind', itemTitle: 'Blind Score', itemType: RANGE_TYPE },
+  { itemName: 'password', itemTitle: 'password', itemType: 'password' }
+]
 
 class CustomError extends Component {
   constructor(args) {
@@ -42,17 +42,28 @@ function generateField(fieldName, fieldTitle, fieldType) {
   )
 }
 
+function generateRangeField(fieldName, fieldTitle, currentValue) {
+  return (
+    <div className="form-item">
+      {fieldTitle} - {currentValue}
+      <br />
+      <Field type={RANGE_TYPE} name={fieldName} min="0" max="100" />
+      <ErrorMessage name={fieldName} component={CustomError} />
+    </div>
+  )
+}
+
 const MovieRatingsForm = () => (
   <div>
     <h1>Rate a movie!</h1>
     <Formik
       initialValues={MOVIE_RATINGS_CONFIG.reduce((acc, item) => {
-        acc[item.itemName] = ''
+        acc[item.itemName] = item.itemType === RANGE_TYPE ? DEFAULT_RANGE_FIELD_VALUE : ''
         return acc
       }, {})}
       validate={values =>
         MOVIE_RATINGS_CONFIG.reduce((acc, item) => {
-          if (item.required && !values[item.itemName]) {
+          if (!values[item.itemName]) {
             acc[item.itemName] = 'Required'
           }
           return acc
@@ -69,12 +80,13 @@ const MovieRatingsForm = () => (
           .then(() => setSubmitting(false))
       }}
     >
-      {({ isSubmitting }) => (
+      {({ isSubmitting, values }) => (
         <Form className="movie-ratings-form">
           {MOVIE_RATINGS_CONFIG.map(item =>
-            generateField(item.itemName, item.itemTitle, item.itemType)
+            item.itemType === RANGE_TYPE
+              ? generateRangeField(item.itemName, item.itemTitle, values[item.itemName])
+              : generateField(item.itemName, item.itemTitle, item.itemType)
           )}
-
           <div className="form-item">
             <button type="submit" disabled={isSubmitting}>
               Submit

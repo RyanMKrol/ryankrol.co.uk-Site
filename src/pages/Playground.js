@@ -7,7 +7,9 @@ import './Playground.css'
 function Playground() {
   return (
     <div className="page-body">
-      <div className="Playground">Put whatever you like here when working with new ideas!</div>
+      <div className="Playground">
+        <MovieRatingsForm />
+      </div>
     </div>
   )
 }
