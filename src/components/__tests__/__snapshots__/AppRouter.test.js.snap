@@ -39,6 +39,11 @@ exports[`renders router only when rendered 1`] = `
       >
         <Portfolio />
       </Route>
+      <Route
+        path="/playground"
+      >
+        <Playground />
+      </Route>
     </Switch>
     <Footer />
   </BrowserRouter>
