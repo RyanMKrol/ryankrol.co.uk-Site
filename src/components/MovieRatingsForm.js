@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import baseEndpoint from './../utils'
 
 import './MovieRatingsForm.css'
 
-const movieRatingsConfig = [
+const MOVIE_RATINGS_CONFIG = [
   { itemName: 'title', itemTitle: 'Title', itemType: 'text', required: 1 },
   { itemName: 'gist', itemTitle: 'Gist', itemType: 'text', required: 1 },
   { itemName: 'craftsmanship', itemTitle: 'Craftsmanship', itemType: 'number', required: 1 },
@@ -15,6 +16,8 @@ const movieRatingsConfig = [
   { itemName: 'notableScenes', itemTitle: 'Notable Scenes', itemType: 'text', required: 0 },
   { itemName: 'password', itemTitle: 'password', itemType: 'password', required: 1 }
 ]
+
+const RATINGS_API_ENDPOINT = `${baseEndpoint()}/ratings`
 
 class CustomError extends Component {
   constructor(args) {
@@ -43,12 +46,12 @@ const MovieRatingsForm = () => (
   <div>
     <h1>Rate a movie!</h1>
     <Formik
-      initialValues={movieRatingsConfig.reduce((acc, item) => {
+      initialValues={MOVIE_RATINGS_CONFIG.reduce((acc, item) => {
         acc[item.itemName] = ''
         return acc
       }, {})}
       validate={values =>
-        movieRatingsConfig.reduce((acc, item) => {
+        MOVIE_RATINGS_CONFIG.reduce((acc, item) => {
           if (item.required && !values[item.itemName]) {
             acc[item.itemName] = 'Required'
           }
@@ -56,15 +59,19 @@ const MovieRatingsForm = () => (
         }, {})
       }
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2))
-          setSubmitting(false)
-        }, 400)
+        fetch(RATINGS_API_ENDPOINT, {
+          method: 'post',
+          body: JSON.stringify(values),
+          headers: { 'Content-Type': 'application/json' }
+        })
+          .then(res => res.json())
+          .then(json => window.alert(json.message))
+          .then(() => setSubmitting(false))
       }}
     >
       {({ isSubmitting }) => (
         <Form className="movie-ratings-form">
-          {movieRatingsConfig.map(item =>
+          {MOVIE_RATINGS_CONFIG.map(item =>
             generateField(item.itemName, item.itemTitle, item.itemType)
           )}
 
