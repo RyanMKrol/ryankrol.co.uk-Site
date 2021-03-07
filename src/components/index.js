@@ -1,4 +1,5 @@
 export { default as AlbumItem } from './AlbumItem'
+export { default as AlbumRatingsForm } from './AlbumRatingsForm'
 export { default as AppRouter } from './AppRouter'
 export { default as BookItem } from './BookItem'
 export { default as Footer } from './Footer'
