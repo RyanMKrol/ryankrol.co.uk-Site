@@ -12,7 +12,8 @@ const ALBUM_RATINGS_CONFIG = [
   { itemName: 'title', itemTitle: 'Album Title', itemType: 'text' },
   { itemName: 'artist', itemTitle: 'Artist', itemType: 'text' },
   { itemName: 'rating', itemTitle: 'Rating', itemType: RANGE_TYPE },
-  { itemName: 'highlights', itemTitle: 'highlight', itemType: 'text' }
+  { itemName: 'highlights', itemTitle: 'highlight', itemType: 'text' },
+  { itemName: 'password', itemTitle: 'password', itemType: 'password' }
 ]
 
 class CustomError extends Component {
