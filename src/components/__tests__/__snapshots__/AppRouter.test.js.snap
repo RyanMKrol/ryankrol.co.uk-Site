@@ -44,6 +44,16 @@ exports[`renders router only when rendered 1`] = `
       >
         <Playground />
       </Route>
+      <Route
+        path="/ratings/movie"
+      >
+        <MovieRatings />
+      </Route>
+      <Route
+        path="/ratings/album"
+      >
+        <AlbumRatings />
+      </Route>
     </Switch>
     <Footer />
   </BrowserRouter>

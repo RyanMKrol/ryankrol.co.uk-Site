@@ -2,21 +2,17 @@ import React, { Component } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import baseEndpoint from './../utils'
 
-import './MovieRatingsForm.css'
+import './AlbumRatingsForm.css'
 
-const RATINGS_API_ENDPOINT = `${baseEndpoint()}/ratings/movie`
+const RATINGS_API_ENDPOINT = `${baseEndpoint()}/ratings/album`
 const DEFAULT_RANGE_FIELD_VALUE = 50
 const RANGE_TYPE = 'range'
 
-const MOVIE_RATINGS_CONFIG = [
-  { itemName: 'title', itemTitle: 'Title', itemType: 'text' },
-  { itemName: 'gist', itemTitle: 'The Gist', itemType: 'text' },
-  { itemName: 'craftsmanship', itemTitle: 'Craftsmanship', itemType: RANGE_TYPE },
-  { itemName: 'characters', itemTitle: 'Characters', itemType: RANGE_TYPE },
-  { itemName: 'story', itemTitle: 'Story', itemType: RANGE_TYPE },
-  { itemName: 'sound', itemTitle: 'Sound', itemType: RANGE_TYPE },
-  { itemName: 'blind', itemTitle: 'Blind Score', itemType: RANGE_TYPE },
-  { itemName: 'password', itemTitle: 'password', itemType: 'password' }
+const ALBUM_RATINGS_CONFIG = [
+  { itemName: 'title', itemTitle: 'Album Title', itemType: 'text' },
+  { itemName: 'artist', itemTitle: 'Artist', itemType: 'text' },
+  { itemName: 'rating', itemTitle: 'Rating', itemType: RANGE_TYPE },
+  { itemName: 'highlights', itemTitle: 'highlight', itemType: 'text' }
 ]
 
 class CustomError extends Component {
@@ -53,16 +49,16 @@ function generateRangeField(fieldName, fieldTitle, currentValue) {
   )
 }
 
-const MovieRatingsForm = () => (
+const AlbumRatingsForm = () => (
   <div>
-    <h1>Rate a movie!</h1>
+    <h1>Rate an Album!</h1>
     <Formik
-      initialValues={MOVIE_RATINGS_CONFIG.reduce((acc, item) => {
+      initialValues={ALBUM_RATINGS_CONFIG.reduce((acc, item) => {
         acc[item.itemName] = item.itemType === RANGE_TYPE ? DEFAULT_RANGE_FIELD_VALUE : ''
         return acc
       }, {})}
       validate={values =>
-        MOVIE_RATINGS_CONFIG.reduce((acc, item) => {
+        ALBUM_RATINGS_CONFIG.reduce((acc, item) => {
           if (!values[item.itemName]) {
             acc[item.itemName] = 'Required'
           }
@@ -81,8 +77,8 @@ const MovieRatingsForm = () => (
       }}
     >
       {({ isSubmitting, values }) => (
-        <Form className="movie-ratings-form">
-          {MOVIE_RATINGS_CONFIG.map(item =>
+        <Form className="album-ratings-form">
+          {ALBUM_RATINGS_CONFIG.map(item =>
             item.itemType === RANGE_TYPE
               ? generateRangeField(item.itemName, item.itemTitle, values[item.itemName])
               : generateField(item.itemName, item.itemTitle, item.itemType)
@@ -98,4 +94,4 @@ const MovieRatingsForm = () => (
   </div>
 )
 
-export default MovieRatingsForm
+export default AlbumRatingsForm

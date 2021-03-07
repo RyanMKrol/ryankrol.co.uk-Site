@@ -1,12 +1,7 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
-import { Playground, Portfolio, Music, Books, Movies } from './../pages'
+import { Playground, Portfolio, Music, Books, Movies, MovieRatings, AlbumRatings } from './../pages'
 
 import Header from './Header'
 import Footer from './Footer'
@@ -40,6 +35,12 @@ export default function AppRouter() {
           </Route>
           <Route path="/playground">
             <Playground />
+          </Route>
+          <Route path="/ratings/movie">
+            <MovieRatings />
+          </Route>
+          <Route path="/ratings/album">
+            <AlbumRatings />
           </Route>
         </Switch>
         <Footer />
