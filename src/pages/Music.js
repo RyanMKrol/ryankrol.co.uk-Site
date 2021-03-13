@@ -3,27 +3,27 @@ import fetch from 'node-fetch'
 
 import { AlbumItem, LoadingIcon } from './../components'
 import { MUSIC_PAGE_DATA } from './../data/MusicPageData'
-import baseEndpoint from './../utils'
+import { apiUtils } from './../utils'
 
 import './Music.css'
 
-const ALBUM_API_ENDPOINT = `${baseEndpoint()}/albums`
+const ALBUM_API_ENDPOINT = `${apiUtils.default()}/albums`
 
 class Music extends Component {
   constructor() {
     super()
 
     this.state = {
-      albums: undefined
+      albums: undefined,
     }
 
     fetch(ALBUM_API_ENDPOINT)
-      .then(response => {
+      .then((response) => {
         return response.json()
       })
-      .then(albumData => {
+      .then((albumData) => {
         this.setState({
-          albums: albumData
+          albums: albumData,
         })
       })
   }
@@ -33,7 +33,7 @@ class Music extends Component {
       return <LoadingIcon />
     }
 
-    return this.state.albums.map(album => (
+    return this.state.albums.map((album) => (
       <AlbumItem
         key={album.albumLink}
         artist={album.artist}

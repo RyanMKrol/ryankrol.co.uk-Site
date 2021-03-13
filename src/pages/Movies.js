@@ -3,27 +3,27 @@ import fetch from 'node-fetch'
 
 import { MovieItem, LoadingIcon } from './../components'
 import { MOVIES_PAGE_DATA } from './../data/MoviesPageData'
-import baseEndpoint from './../utils'
+import { apiUtils } from './../utils'
 
 import './Movies.css'
 
-const MOVIES_API_ENDPOINT = `${baseEndpoint()}/movies`
+const MOVIES_API_ENDPOINT = `${apiUtils.default()}/movies`
 
 class Movies extends Component {
   constructor() {
     super()
 
     this.state = {
-      movies: undefined
+      movies: undefined,
     }
 
     fetch(MOVIES_API_ENDPOINT)
-      .then(response => {
+      .then((response) => {
         return response.json()
       })
-      .then(movieData => {
+      .then((movieData) => {
         this.setState({
-          movies: movieData
+          movies: movieData,
         })
       })
   }
@@ -33,7 +33,7 @@ class Movies extends Component {
       return <LoadingIcon />
     }
 
-    return this.state.movies.map(movie => (
+    return this.state.movies.map((movie) => (
       <MovieItem
         key={movie.imdbID}
         movieName={movie.Title}

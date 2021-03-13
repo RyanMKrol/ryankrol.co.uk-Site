@@ -3,27 +3,27 @@ import fetch from 'node-fetch'
 
 import { BookItem, LoadingIcon } from './../components'
 import { BOOKS_PAGE_DATA } from './../data/BooksPageData'
-import baseEndpoint from './../utils'
+import { apiUtils } from './../utils'
 
 import './Books.css'
 
-const BOOKS_API_ENDPOINT = `${baseEndpoint()}/books`
+const BOOKS_API_ENDPOINT = `${apiUtils.default()}/books`
 
 class Books extends Component {
   constructor() {
     super()
 
     this.state = {
-      books: undefined
+      books: undefined,
     }
 
     fetch(BOOKS_API_ENDPOINT)
-      .then(response => {
+      .then((response) => {
         return response.json()
       })
-      .then(booksData => {
+      .then((booksData) => {
         this.setState({
-          books: booksData.sort(bookComparator)
+          books: booksData.sort(bookComparator),
         })
       })
   }
@@ -33,7 +33,7 @@ class Books extends Component {
       return <LoadingIcon />
     }
 
-    return this.state.books.map(book => (
+    return this.state.books.map((book) => (
       <BookItem
         key={book.bookId}
         title={book.title}
