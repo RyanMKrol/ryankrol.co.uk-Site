@@ -10,7 +10,8 @@ const ALBUM_RATINGS_CONFIG = [
   { itemName: 'title', itemTitle: 'Album Title', itemType: 'text' },
   { itemName: 'artist', itemTitle: 'Artist', itemType: 'text' },
   { itemName: 'rating', itemTitle: 'Rating', itemType: ratingsFormUtils.RANGE_TYPE },
-  { itemName: 'highlights', itemTitle: 'highlight', itemType: 'text' },
+  { itemName: 'highlights', itemTitle: 'Highlights', itemType: 'text' },
+  { itemName: 'mood', itemTitle: 'Mood', itemType: 'text' },
   { itemName: 'password', itemTitle: 'password', itemType: ratingsFormUtils.PASSWORD_TYPE },
 ]
 
