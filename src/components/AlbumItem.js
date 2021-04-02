@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './AlbumItem.css';
 
@@ -66,5 +67,12 @@ class AlbumItem extends Component {
     );
   }
 }
+
+AlbumItem.propTypes = {
+  albumName: PropTypes.string,
+  thumbnail: PropTypes.string,
+  albumLink: PropTypes.string,
+  playcount: PropTypes.number,
+};
 
 export default AlbumItem;

@@ -53,7 +53,7 @@ exports[`renders AlbumItem correctly 1`] = `
       <span
         className="album-information-value"
       >
-        test-playcount
+        1
       </span>
     </p>
   </div>
