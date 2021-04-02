@@ -4,6 +4,6 @@
 set -e;
 
 # build script
-npm run build;
+# npm run build;
 npx sort-package-json package.json;
 git add package.json;

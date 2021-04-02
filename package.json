@@ -6,7 +6,8 @@
     "start-dev": "REACT_APP_LOCAL_API=1 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/ --ext .js"
   },
   "husky": {
     "hooks": {
@@ -47,6 +48,9 @@
   },
   "devDependencies": {
     "enzyme-to-json": "^3.4.3",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsdoc": "^30.4.1",
     "husky": "^4.2.5"
   }
 }
