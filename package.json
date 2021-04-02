@@ -1,7 +1,33 @@
 {
   "name": "ryankrol.co.uk",
-  "version": "0.0.1",
-  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "start-dev": "REACT_APP_LOCAL_API=1 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./scripts/husky"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
@@ -19,35 +45,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^4.0.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "start-dev": "REACT_APP_LOCAL_API=1 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.2.8",
-    "@storybook/addon-links": "^5.2.8",
-    "@storybook/addons": "^5.2.8",
-    "@storybook/react": "^5.2.8",
-    "enzyme-to-json": "^3.4.3"
+    "enzyme-to-json": "^3.4.3",
+    "husky": "^4.2.5"
   }
 }
