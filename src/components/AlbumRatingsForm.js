@@ -20,51 +20,53 @@ const ALBUM_RATINGS_CONFIG = [
 /**
  * UI Component representing a form to input album ratings
  *
- * @returns {React.Component} The UI component
+ * @returns {string} The UI component
  */
-const AlbumRatingsForm = () => (
-  <div>
-    <h1>Rate an Album!</h1>
-    <Formik
-      initialValues={ALBUM_RATINGS_CONFIG.reduce((acc, item) => {
-        acc[item.itemName] = item.itemType === ratingsFormUtils.RANGE_TYPE ? DEFAULT_RANGE_FIELD_VALUE : '';
-        return acc;
-      }, {})}
-      validate={(values) => ALBUM_RATINGS_CONFIG.reduce((acc, item) => {
-        if (!values[item.itemName]) {
-          acc[item.itemName] = 'Required';
+function AlbumRatingsForm() {
+  return (
+    <div>
+      <h1>Rate an Album!</h1>
+      <Formik
+        initialValues={ALBUM_RATINGS_CONFIG.reduce((acc, item) => {
+          acc[item.itemName] = item.itemType === ratingsFormUtils.RANGE_TYPE ? DEFAULT_RANGE_FIELD_VALUE : '';
+          return acc;
+        }, {})}
+        validate={(values) => ALBUM_RATINGS_CONFIG.reduce((acc, item) => {
+          if (!values[item.itemName]) {
+            acc[item.itemName] = 'Required';
+          }
+          return acc;
+        }, {})
         }
-        return acc;
-      }, {})
-      }
-      onSubmit={(values, { setSubmitting }) => {
-        fetch(RATINGS_API_ENDPOINT, {
-          method: 'post',
-          body: JSON.stringify(values),
-          headers: { 'Content-Type': 'application/json' },
-        })
-          .then((res) => res.json())
-          .then((json) => window.alert(json.message))
-          .then(() => setSubmitting(false));
-      }}
-    >
-      {({ isSubmitting, values }) => (
-        <Form className="album-ratings-form">
-          {ALBUM_RATINGS_CONFIG.map((item) => ratingsFormUtils.generateField(
-            item.itemName,
-            item.itemTitle,
-            item.itemType,
-            values[item.itemName],
-          ))}
-          <div key="form-submit" className="form-item">
-            <button type="submit" disabled={isSubmitting}>
-              Submit
-            </button>
-          </div>
-        </Form>
-      )}
-    </Formik>
-  </div>
-);
+        onSubmit={(values, { setSubmitting }) => {
+          fetch(RATINGS_API_ENDPOINT, {
+            method: 'post',
+            body: JSON.stringify(values),
+            headers: { 'Content-Type': 'application/json' },
+          })
+            .then((res) => res.json())
+            .then((json) => window.alert(json.message))
+            .then(() => setSubmitting(false));
+        }}
+      >
+        {({ isSubmitting, values }) => (
+          <Form className="album-ratings-form">
+            {ALBUM_RATINGS_CONFIG.map((item) => ratingsFormUtils.generateField(
+              item.itemName,
+              item.itemTitle,
+              item.itemType,
+              values[item.itemName],
+            ))}
+            <div key="form-submit" className="form-item">
+              <button type="submit" disabled={isSubmitting}>
+                Submit
+              </button>
+            </div>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
+}
 
 export default AlbumRatingsForm;

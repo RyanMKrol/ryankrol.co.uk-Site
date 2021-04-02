@@ -44,7 +44,7 @@ class BookItem extends Component {
   /**
    * Render method
    *
-   * @returns {React.Component} The JSX representing the component
+   * @returns {string} The JSX representing the component
    */
   render() {
     return (

@@ -33,7 +33,8 @@ exports[`renders BookItem correctly with a single author 1`] = `
         className="book-information-key"
       >
         Author
-         - 
+         -
+         
       </span>
       <span
         className="book-information-value"
@@ -93,7 +94,8 @@ exports[`renders BookItem correctly with multiple authors 1`] = `
         className="book-information-key"
       >
         Authors
-         - 
+         -
+         
       </span>
       <span
         className="book-information-value"

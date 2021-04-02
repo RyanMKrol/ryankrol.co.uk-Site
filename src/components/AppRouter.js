@@ -15,7 +15,7 @@ import './AppRouter.css';
 /**
  * Component representing all of the routing for the site
  *
- * @returns {React.Component} The UI component
+ * @returns {string} The UI component
  */
 function AppRouter() {
   return (

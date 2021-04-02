@@ -7,10 +7,10 @@ import './AlbumItem.css';
  * Object representing the props to an AlbumItem
  *
  * @typedef {object} AlbumItemProps
- * @property {string} albumName - Name of the album
- * @property {string} thumbnail - Thumbnail for the album
- * @property {string} albumLink - Link to the album
- * @property {number} playcount - Number of plays for the album
+ * @property {string} albumName Name of the album
+ * @property {string} thumbnail Thumbnail for the album
+ * @property {string} albumLink Link to the album
+ * @property {number} playcount Number of plays for the album
  */
 
 /**
@@ -37,7 +37,7 @@ class AlbumItem extends Component {
   /**
    * Render method
    *
-   * @returns {React.Component} The JSX representing the component
+   * @returns {string} The JSX representing the component
    */
   render() {
     return (
