@@ -25,7 +25,7 @@ import './BookItem.css';
  */
 class BookItem extends Component {
   /**
-   * @param {BookItemProps} props Props needed to render a BookItem
+   * @param {BookItemProps} props Arguments to build the widget
    */
   constructor(props) {
     super();
