@@ -1,14 +1,23 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import React from 'react';
+import {
+  BrowserRouter as Router, Switch, Route, Redirect,
+} from 'react-router-dom';
 
-import { Playground, Portfolio, Music, Books, Movies, MovieRatings, AlbumRatings } from './../pages'
+import {
+  Playground, Portfolio, Music, Books, Movies, MovieRatings, AlbumRatings,
+} from '../pages';
 
-import Header from './Header'
-import Footer from './Footer'
+import Header from './Header';
+import Footer from './Footer';
 
-import './AppRouter.css'
+import './AppRouter.css';
 
-export default function AppRouter() {
+/**
+ * Component representing all of the routing for the site
+ *
+ * @returns {React.Component} The UI component
+ */
+function AppRouter() {
   return (
     <div id="root-container">
       <Router>
@@ -17,7 +26,7 @@ export default function AppRouter() {
           <Route exact path="/">
             <Redirect
               to={{
-                pathname: '/portfolio'
+                pathname: '/portfolio',
               }}
             />
           </Route>
@@ -46,5 +55,7 @@ export default function AppRouter() {
         <Footer />
       </Router>
     </div>
-  )
+  );
 }
+
+export default AppRouter;
