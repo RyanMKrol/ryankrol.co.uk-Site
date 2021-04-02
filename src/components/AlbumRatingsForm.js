@@ -1,10 +1,12 @@
-import React from 'react'
-import { Formik, Form } from 'formik'
-import { apiUtils, ratingsFormUtils } from './../utils'
-import './AlbumRatingsForm.css'
+/* eslint-disable no-alert */
 
-const RATINGS_API_ENDPOINT = `${apiUtils.default()}/ratings/album`
-const DEFAULT_RANGE_FIELD_VALUE = 50
+import React from 'react';
+import { Formik, Form } from 'formik';
+import { apiUtils, ratingsFormUtils } from '../utils';
+import './AlbumRatingsForm.css';
+
+const RATINGS_API_ENDPOINT = `${apiUtils.default()}/ratings/album`;
+const DEFAULT_RANGE_FIELD_VALUE = 50;
 
 const ALBUM_RATINGS_CONFIG = [
   { itemName: 'title', itemTitle: 'Album Title', itemType: 'text' },
@@ -13,24 +15,27 @@ const ALBUM_RATINGS_CONFIG = [
   { itemName: 'highlights', itemTitle: 'Highlights', itemType: 'text' },
   { itemName: 'mood', itemTitle: 'Mood', itemType: 'text' },
   { itemName: 'password', itemTitle: 'password', itemType: ratingsFormUtils.PASSWORD_TYPE },
-]
+];
 
+/**
+ * UI Component representing a form to input album ratings
+ *
+ * @returns {React.Component} The UI component
+ */
 const AlbumRatingsForm = () => (
   <div>
     <h1>Rate an Album!</h1>
     <Formik
       initialValues={ALBUM_RATINGS_CONFIG.reduce((acc, item) => {
-        acc[item.itemName] =
-          item.itemType === ratingsFormUtils.RANGE_TYPE ? DEFAULT_RANGE_FIELD_VALUE : ''
-        return acc
+        acc[item.itemName] = item.itemType === ratingsFormUtils.RANGE_TYPE ? DEFAULT_RANGE_FIELD_VALUE : '';
+        return acc;
       }, {})}
-      validate={(values) =>
-        ALBUM_RATINGS_CONFIG.reduce((acc, item) => {
-          if (!values[item.itemName]) {
-            acc[item.itemName] = 'Required'
-          }
-          return acc
-        }, {})
+      validate={(values) => ALBUM_RATINGS_CONFIG.reduce((acc, item) => {
+        if (!values[item.itemName]) {
+          acc[item.itemName] = 'Required';
+        }
+        return acc;
+      }, {})
       }
       onSubmit={(values, { setSubmitting }) => {
         fetch(RATINGS_API_ENDPOINT, {
@@ -40,19 +45,17 @@ const AlbumRatingsForm = () => (
         })
           .then((res) => res.json())
           .then((json) => window.alert(json.message))
-          .then(() => setSubmitting(false))
+          .then(() => setSubmitting(false));
       }}
     >
       {({ isSubmitting, values }) => (
         <Form className="album-ratings-form">
-          {ALBUM_RATINGS_CONFIG.map((item) =>
-            ratingsFormUtils.generateField(
-              item.itemName,
-              item.itemTitle,
-              item.itemType,
-              values[item.itemName]
-            )
-          )}
+          {ALBUM_RATINGS_CONFIG.map((item) => ratingsFormUtils.generateField(
+            item.itemName,
+            item.itemTitle,
+            item.itemType,
+            values[item.itemName],
+          ))}
           <div key="form-submit" className="form-item">
             <button type="submit" disabled={isSubmitting}>
               Submit
@@ -62,6 +65,6 @@ const AlbumRatingsForm = () => (
       )}
     </Formik>
   </div>
-)
+);
 
-export default AlbumRatingsForm
+export default AlbumRatingsForm;

@@ -1,2 +1,4 @@
-export * as ratingsFormUtils from './ratingsFormUtils'
-export * as apiUtils from './apiUtils'
+import * as ratingsFormUtils from './ratingsFormUtils';
+import * as apiUtils from './apiUtils';
+
+export { ratingsFormUtils, apiUtils };
