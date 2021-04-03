@@ -1,20 +1,20 @@
 const HEADER_ITEMS = [
   {
-    destinationPage: "/portfolio",
-    content: "Portfolio",
+    destinationPage: '/portfolio',
+    content: 'Portfolio',
   },
   {
-    destinationPage: "/music",
-    content: "Music",
+    destinationPage: '/music',
+    content: 'Music',
   },
   {
-    destinationPage: "/books",
-    content: "Books",
+    destinationPage: '/books',
+    content: 'Books',
   },
   {
-    destinationPage: "/movies",
-    content: "Movies",
+    destinationPage: '/movies',
+    content: 'Movies',
   },
-]
+];
 
-export { HEADER_ITEMS }
+export default HEADER_ITEMS;

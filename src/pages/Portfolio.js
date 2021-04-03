@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { PortfolioItem } from './../components'
-import { PORTFOLIO_PAGE_DATA } from './../data/PortfolioData'
+import { PORTFOLIO_PAGE_DATA } from './../data'
 
 import './Portfolio.css'
 

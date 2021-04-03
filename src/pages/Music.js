@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import fetch from 'node-fetch'
 
 import { AlbumItem, LoadingIcon } from './../components'
-import { MUSIC_PAGE_DATA } from './../data/MusicPageData'
+import { MUSIC_PAGE_DATA } from './../data'
 import { apiUtils } from './../utils'
 
 import './Music.css'

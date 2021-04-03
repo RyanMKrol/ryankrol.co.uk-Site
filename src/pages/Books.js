@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import fetch from 'node-fetch'
 
 import { BookItem, LoadingIcon } from './../components'
-import { BOOKS_PAGE_DATA } from './../data/BooksPageData'
+import { BOOKS_PAGE_DATA } from './../data'
 import { apiUtils } from './../utils'
 
 import './Books.css'

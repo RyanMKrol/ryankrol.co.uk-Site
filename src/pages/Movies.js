@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import fetch from 'node-fetch'
 
 import { MovieItem, LoadingIcon } from './../components'
-import { MOVIES_PAGE_DATA } from './../data/MoviesPageData'
+import { MOVIES_PAGE_DATA } from './../data'
 import { apiUtils } from './../utils'
 
 import './Movies.css'

@@ -1,5 +1,5 @@
 const BOOKS_PAGE_DATA = {
-  summary: "Check out the books on my ever-growing reading list!",
-}
+  summary: 'Check out the books on my ever-growing reading list!',
+};
 
-export { BOOKS_PAGE_DATA }
+export default BOOKS_PAGE_DATA;
