@@ -2,7 +2,7 @@ import React from 'react';
 import Portfolio from './Portfolio';
 
 export default {
-  title: 'Portfolio',
+  title: 'Pages/Portfolio',
 };
 
 /**

@@ -2,7 +2,7 @@ import React from 'react';
 import AlbumItem from './AlbumItem';
 
 export default {
-  title: 'AlbumItem',
+  title: 'Components/AlbumItem',
 };
 
 /**

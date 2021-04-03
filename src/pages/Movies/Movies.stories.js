@@ -2,7 +2,7 @@ import React from 'react';
 import Movies from './Movies';
 
 export default {
-  title: 'Movies',
+  title: 'Pages/Movies',
 };
 
 /**

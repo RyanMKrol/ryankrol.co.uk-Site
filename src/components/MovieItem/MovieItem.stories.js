@@ -2,7 +2,7 @@ import React from 'react';
 import MovieItem from './MovieItem';
 
 export default {
-  title: 'MovieItem',
+  title: 'Components/MovieItem',
 };
 
 /**

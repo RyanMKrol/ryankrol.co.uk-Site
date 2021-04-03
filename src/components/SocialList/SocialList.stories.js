@@ -2,7 +2,7 @@ import React from 'react';
 import SocialList from './SocialList';
 
 export default {
-  title: 'SocialList',
+  title: 'Components/SocialList',
 };
 
 /**

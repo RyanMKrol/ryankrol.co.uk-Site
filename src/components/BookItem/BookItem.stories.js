@@ -2,7 +2,7 @@ import React from 'react';
 import BookItem from './BookItem';
 
 export default {
-  title: 'BookItem',
+  title: 'Components/BookItem',
 };
 
 /**
