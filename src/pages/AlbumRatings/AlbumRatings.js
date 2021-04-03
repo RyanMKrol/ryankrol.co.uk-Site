@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AlbumRatingsForm } from '../components';
+import { AlbumRatingsForm } from '../../components';
 
 import './AlbumRatings.css';
 

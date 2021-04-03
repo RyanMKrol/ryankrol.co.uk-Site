@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MovieRatingsForm } from '../components';
+import { MovieRatingsForm } from '../../components';
 
 import './MovieRatings.css';
 

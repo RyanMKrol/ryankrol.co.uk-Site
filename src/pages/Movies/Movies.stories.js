@@ -1,8 +1,8 @@
 import React from 'react';
-import Music from '../pages/Music';
+import Movies from './Movies';
 
 export default {
-  title: 'Music',
+  title: 'Movies',
 };
 
 /**
@@ -10,4 +10,4 @@ export default {
  *
  * @returns {string} JSX for the component I want to display
  */
-export const normal = () => <Music />;
+export const normal = () => <Movies />;
