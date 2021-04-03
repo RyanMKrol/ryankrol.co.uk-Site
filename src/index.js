@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import {
   BrowserRouter as Router, Switch, Route, Redirect,
 } from 'react-router-dom';
-
 import {
   Playground, Portfolio, Music, Books, Movies, MovieRatings, AlbumRatings,
 } from './pages';
-
 import { Footer, Header } from './components';
 
 import './index.css';
