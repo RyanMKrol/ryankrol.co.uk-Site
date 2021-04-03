@@ -1,30 +1,31 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-import { SOCIAL_LIST_ITEMS } from './../data/SocialListData'
+import { SOCIAL_LIST_ITEMS } from '../data/SocialListData';
 
 import './SocialList.css';
 
-class SocialList extends Component {
-  generateSocialListLinks() {
-    return SOCIAL_LIST_ITEMS.map((item) => (
-      <span className="socialListItem" key={item.link}>
-        <a
-          className="socialListLink"
-          href={item.link}
-        >
-          {item.icon}
-        </a>
-      </span>
-    ))
-  }
-
-  render() {
-    return (
-      <div className="SocialList">
-        {this.generateSocialListLinks()}
-      </div>
-    )
-  }
+/**
+ * Generates the links in the social bar
+ *
+ * @returns {string} HTML representing the links in the social bar
+ */
+function generateSocialListLinks() {
+  return SOCIAL_LIST_ITEMS.map((item) => (
+    <span className="socialListItem" key={item.link}>
+      <a className="socialListLink" href={item.link}>
+        {item.icon}
+      </a>
+    </span>
+  ));
 }
 
-export default SocialList
+/**
+ * Class representing a UI component for the SocialList
+ *
+ * @returns {string} The JSX representing the component
+ */
+function SocialList() {
+  return <div className="SocialList">{generateSocialListLinks()}</div>;
+}
+
+export default SocialList;
