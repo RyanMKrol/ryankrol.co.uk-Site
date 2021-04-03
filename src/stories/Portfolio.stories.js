@@ -1,10 +1,13 @@
-import React from 'react'
-import Portfolio from './../pages/Portfolio'
+import React from 'react';
+import Portfolio from '../pages/Portfolio';
 
 export default {
   title: 'Portfolio',
 };
 
-export const normal = () => (
-  <Portfolio />
-)
+/**
+ * default story
+ *
+ * @returns {string} JSX for the component I want to display
+ */
+export const normal = () => <Portfolio />;

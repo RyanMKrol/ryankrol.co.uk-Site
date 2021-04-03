@@ -1,10 +1,13 @@
-import React from 'react'
-import Movies from './../pages/Movies'
+import React from 'react';
+import Movies from '../pages/Movies';
 
 export default {
   title: 'Movies',
 };
 
-export const normal = () => (
-  <Movies />
-)
+/**
+ * default story
+ *
+ * @returns {string} JSX for the component I want to display
+ */
+export const normal = () => <Movies />;
