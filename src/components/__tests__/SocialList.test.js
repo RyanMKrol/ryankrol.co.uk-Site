@@ -1,17 +1,16 @@
-import React from 'react'
-import { shallow, mount } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import React from 'react';
+import { shallow, mount } from 'enzyme';
+import toJson from 'enzyme-to-json';
 
-import SocialList from './../SocialList'
+import SocialList from '../SocialList';
 
 // Render Tests
 
 it('renders SocialList correctly', () => {
-    const socialList = shallow(
-      <SocialList />)
-    expect(toJson(socialList)).toMatchSnapshot()
-})
+  const socialList = shallow(<SocialList />);
+  expect(toJson(socialList)).toMatchSnapshot();
+});
 
 it('renders SocialList without throwing', () => {
-    expect(() => mount(<SocialList />)).not.toThrow()
-})
+  expect(() => mount(<SocialList />)).not.toThrow();
+});
