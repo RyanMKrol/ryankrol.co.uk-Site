@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import PortfolioItem from '../PortfolioItem';
+import PortfolioItem from './PortfolioItem';
 
 const defaultArgs = {
   portfolioMedia: <p>Text that will eventually be an image</p>,

@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { Formik, Form } from 'formik';
-import { apiUtils } from '../utils';
-import { RANGE_TYPE, PASSWORD_TYPE, generateField } from '../utils/ratingsFormUtils';
+import { apiUtils, ratingsFormUtils } from '../../utils';
 
 import './MovieRatingsForm.css';
 
@@ -13,12 +12,12 @@ const DEFAULT_RANGE_FIELD_VALUE = 50;
 const MOVIE_RATINGS_CONFIG = [
   { itemName: 'title', itemTitle: 'Title', itemType: 'text' },
   { itemName: 'gist', itemTitle: 'The Gist', itemType: 'text' },
-  { itemName: 'craftsmanship', itemTitle: 'Craftsmanship', itemType: RANGE_TYPE },
-  { itemName: 'characters', itemTitle: 'Characters', itemType: RANGE_TYPE },
-  { itemName: 'story', itemTitle: 'Story', itemType: RANGE_TYPE },
-  { itemName: 'sound', itemTitle: 'Sound', itemType: RANGE_TYPE },
-  { itemName: 'blind', itemTitle: 'Blind Score', itemType: RANGE_TYPE },
-  { itemName: 'password', itemTitle: 'password', itemType: PASSWORD_TYPE },
+  { itemName: 'craftsmanship', itemTitle: 'Craftsmanship', itemType: ratingsFormUtils.RANGE_TYPE },
+  { itemName: 'characters', itemTitle: 'Characters', itemType: ratingsFormUtils.RANGE_TYPE },
+  { itemName: 'story', itemTitle: 'Story', itemType: ratingsFormUtils.RANGE_TYPE },
+  { itemName: 'sound', itemTitle: 'Sound', itemType: ratingsFormUtils.RANGE_TYPE },
+  { itemName: 'blind', itemTitle: 'Blind Score', itemType: ratingsFormUtils.RANGE_TYPE },
+  { itemName: 'password', itemTitle: 'password', itemType: ratingsFormUtils.PASSWORD_TYPE },
 ];
 
 /**
@@ -32,7 +31,9 @@ function MovieRatingsForm() {
       <h1>Rate a movie!</h1>
       <Formik
         initialValues={MOVIE_RATINGS_CONFIG.reduce((acc, item) => {
-          acc[item.itemName] = item.itemType === RANGE_TYPE ? DEFAULT_RANGE_FIELD_VALUE : '';
+          acc[item.itemName] = item.itemType === ratingsFormUtils.RANGE_TYPE
+            ? DEFAULT_RANGE_FIELD_VALUE
+            : '';
           return acc;
         }, {})}
         validate={(values) => MOVIE_RATINGS_CONFIG.reduce((acc, item) => {
@@ -55,7 +56,7 @@ function MovieRatingsForm() {
       >
         {({ isSubmitting, values }) => (
           <Form className="movie-ratings-form">
-            {MOVIE_RATINGS_CONFIG.map((item) => generateField(
+            {MOVIE_RATINGS_CONFIG.map((item) => ratingsFormUtils.generateField(
               item.itemName,
               item.itemTitle,
               item.itemType,

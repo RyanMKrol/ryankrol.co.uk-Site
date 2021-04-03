@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import SocialList from './SocialList';
-import { HEADER_ITEMS } from '../data';
+import { SocialList } from '..';
+import { HEADER_ITEMS } from '../../data';
 
 import './Header.css';
 

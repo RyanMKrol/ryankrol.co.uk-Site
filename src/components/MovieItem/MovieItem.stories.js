@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieItem from '../components/MovieItem';
+import MovieItem from './MovieItem';
 
 export default {
   title: 'MovieItem',

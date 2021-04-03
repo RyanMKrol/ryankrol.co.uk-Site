@@ -1,5 +1,5 @@
 import React from 'react';
-import BookItem from '../components/BookItem';
+import BookItem from './BookItem';
 
 export default {
   title: 'BookItem',

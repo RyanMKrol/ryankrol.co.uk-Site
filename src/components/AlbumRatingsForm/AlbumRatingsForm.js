@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Formik, Form } from 'formik';
-import { apiUtils, ratingsFormUtils } from '../utils';
+import { apiUtils, ratingsFormUtils } from '../../utils';
 import './AlbumRatingsForm.css';
 
 const RATINGS_API_ENDPOINT = `${apiUtils.default()}/ratings/album`;

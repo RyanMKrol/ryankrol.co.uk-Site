@@ -1,8 +1,9 @@
 import React from 'react';
-import Footer from '../components/Footer';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Header from './Header';
 
 export default {
-  title: 'Footer',
+  title: 'Header',
 };
 
 /**
@@ -11,7 +12,7 @@ export default {
  * @returns {string} JSX for the component I want to display
  */
 export const normal = () => (
-  <div style={{ 'background-color': 'black' }}>
-    <Footer />
-  </div>
+  <Router>
+    <Header />
+  </Router>
 );

@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialList from '../components/SocialList';
+import SocialList from './SocialList';
 
 export default {
   title: 'SocialList',

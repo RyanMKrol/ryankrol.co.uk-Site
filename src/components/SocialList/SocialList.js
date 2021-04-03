@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SOCIAL_LIST_ITEMS } from '../data';
+import { SOCIAL_LIST_ITEMS } from '../../data';
 
 import './SocialList.css';
 

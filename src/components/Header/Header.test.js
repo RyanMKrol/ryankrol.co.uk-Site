@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import { BrowserRouter as Router } from 'react-router-dom';
-import Header from '../Header';
+import Header from './Header';
 
 // Render Tests
 
