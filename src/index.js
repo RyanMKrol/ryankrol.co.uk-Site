@@ -4,7 +4,13 @@ import {
   BrowserRouter as Router, Switch, Route, Redirect,
 } from 'react-router-dom';
 import {
-  Playground, Portfolio, Music, Books, Movies, MovieRatings, AlbumRatings,
+  Playground,
+  Portfolio,
+  Music,
+  Books,
+  Movies,
+  MovieRatingsInput,
+  AlbumRatingsInput,
 } from './pages';
 import { Footer, Header } from './components';
 
@@ -44,10 +50,10 @@ function AppRouter() {
             <Playground />
           </Route>
           <Route path="/ratings/movie">
-            <MovieRatings />
+            <MovieRatingsInput />
           </Route>
           <Route path="/ratings/album">
-            <AlbumRatings />
+            <AlbumRatingsInput />
           </Route>
         </Switch>
         <Footer />

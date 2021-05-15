@@ -2,21 +2,21 @@ import React from 'react';
 
 import { MovieRatingsForm } from '../../components';
 
-import './MovieRatings.css';
+import './MovieRatingsInput.css';
 
 /**
  * Page for gathering Movie ratings
  *
  * @returns {string} HTML for Album ratings page
  */
-function MovieRatings() {
+function MovieRatingsInput() {
   return (
     <div className="page-body">
-      <div className="MovieRatings">
+      <div className="MovieRatingsInput">
         <MovieRatingsForm />
       </div>
     </div>
   );
 }
 
-export default MovieRatings;
+export default MovieRatingsInput;

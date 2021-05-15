@@ -2,21 +2,21 @@ import React from 'react';
 
 import { AlbumRatingsForm } from '../../components';
 
-import './AlbumRatings.css';
+import './AlbumRatingsInput.css';
 
 /**
  * Page for gathering Album ratings
  *
  * @returns {string} HTML for Album ratings page
  */
-function AlbumRatings() {
+function AlbumRatingsInput() {
   return (
     <div className="page-body">
-      <div className="AlbumRatings">
+      <div className="AlbumRatingsInput">
         <AlbumRatingsForm />
       </div>
     </div>
   );
 }
 
-export default AlbumRatings;
+export default AlbumRatingsInput;
