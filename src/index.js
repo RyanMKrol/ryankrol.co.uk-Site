@@ -10,7 +10,9 @@ import {
   Books,
   Movies,
   MovieRatingsInput,
+  MovieRatingsView,
   AlbumRatingsInput,
+  AlbumRatingsView,
 } from './pages';
 import { Footer, Header } from './components';
 
@@ -49,11 +51,17 @@ function AppRouter() {
           <Route path="/playground">
             <Playground />
           </Route>
-          <Route path="/ratings/movie">
+          <Route path="/ratings/movie/new">
             <MovieRatingsInput />
           </Route>
-          <Route path="/ratings/album">
+          <Route path="/ratings/movie">
+            <MovieRatingsView />
+          </Route>
+          <Route path="/ratings/album/new">
             <AlbumRatingsInput />
+          </Route>
+          <Route path="/ratings/album">
+            <AlbumRatingsView />
           </Route>
         </Switch>
         <Footer />
