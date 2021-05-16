@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders AlbumRatingsItem correctly 1`] = `
+<div
+  className="AlbumRatingsItem"
+>
+  <p
+    className="album-ratings-item-content"
+  >
+    <span
+      className="album-ratings-item-key"
+    >
+      Artist - 
+    </span>
+    <span
+      className="album-ratings-item-value"
+    >
+      Gorillaz
+    </span>
+    <br />
+    <span
+      className="album-ratings-item-key"
+    >
+      Album - 
+    </span>
+    <span
+      className="album-ratings-item-value"
+    >
+      Demon Days
+    </span>
+    <br />
+    <span
+      className="album-ratings-item-key"
+    >
+      Album - 
+    </span>
+    <span
+      className="album-ratings-item-value"
+    >
+      15-03-21
+    </span>
+    <br />
+    <span
+      className="album-ratings-item-key"
+    >
+      Album - 
+    </span>
+    <span
+      className="album-ratings-item-value"
+    >
+      Dirty Harry, Feel Good Inc.
+    </span>
+    <br />
+    <span
+      className="album-ratings-item-key"
+    >
+      Album - 
+    </span>
+    <span
+      className="album-ratings-item-value"
+    >
+      Upbeat
+    </span>
+    <br />
+    <span
+      className="album-ratings-item-key"
+    >
+      Plays - 
+    </span>
+    <span
+      className="album-ratings-item-value"
+    >
+      84
+    </span>
+  </p>
+</div>
+`;
