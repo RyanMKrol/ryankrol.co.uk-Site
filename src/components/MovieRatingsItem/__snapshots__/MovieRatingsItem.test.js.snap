@@ -5,95 +5,83 @@ exports[`renders MovieRatingsItem correctly 1`] = `
   className="MovieRatingsItem"
 >
   <p
-    className="album-ratings-item-content"
+    className="movie-ratings-item-content"
   >
-    <br />
     <span
-      className="album-ratings-item-key"
+      className="movie-ratings-item-key"
     >
       Title - 
     </span>
     <span
-      className="album-ratings-item-value"
+      className="movie-ratings-item-value"
     >
       300
     </span>
     <br />
     <span
-      className="album-ratings-item-key"
+      className="movie-ratings-item-key"
     >
       Blind - 
     </span>
     <span
-      className="album-ratings-item-value"
+      className="movie-ratings-item-value"
     >
       86
     </span>
     <br />
     <span
-      className="album-ratings-item-key"
+      className="movie-ratings-item-key"
     >
       Characters - 
     </span>
     <span
-      className="album-ratings-item-value"
+      className="movie-ratings-item-value"
     >
       81
     </span>
     <br />
     <span
-      className="album-ratings-item-key"
+      className="movie-ratings-item-key"
     >
       Craftsmanship - 
     </span>
     <span
-      className="album-ratings-item-value"
+      className="movie-ratings-item-value"
     >
       83
     </span>
     <br />
     <span
-      className="album-ratings-item-key"
+      className="movie-ratings-item-key"
     >
       Sound - 
     </span>
     <span
-      className="album-ratings-item-value"
+      className="movie-ratings-item-value"
     >
       81
     </span>
     <br />
     <span
-      className="album-ratings-item-key"
+      className="movie-ratings-item-key"
     >
       Story - 
     </span>
     <span
-      className="album-ratings-item-value"
+      className="movie-ratings-item-value"
     >
       89
     </span>
     <br />
     <span
-      className="album-ratings-item-key"
+      className="movie-ratings-item-key"
     >
       Gist - 
     </span>
     <span
-      className="album-ratings-item-value"
+      className="movie-ratings-item-value"
     >
       300 Spartans dunk on a Persian weirdo
-    </span>
-    <br />
-    <span
-      className="album-ratings-item-key"
-    >
-      Date - 
-    </span>
-    <span
-      className="album-ratings-item-value"
-    >
-      07-04-2021
     </span>
   </p>
 </div>

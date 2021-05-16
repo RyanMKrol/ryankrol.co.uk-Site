@@ -21,7 +21,7 @@ exports[`renders AlbumRatingsItem correctly 1`] = `
     <span
       className="album-ratings-item-key"
     >
-      Album - 
+      Title - 
     </span>
     <span
       className="album-ratings-item-value"
@@ -32,7 +32,7 @@ exports[`renders AlbumRatingsItem correctly 1`] = `
     <span
       className="album-ratings-item-key"
     >
-      Album - 
+      Date - 
     </span>
     <span
       className="album-ratings-item-value"
@@ -43,7 +43,7 @@ exports[`renders AlbumRatingsItem correctly 1`] = `
     <span
       className="album-ratings-item-key"
     >
-      Album - 
+      Highlights - 
     </span>
     <span
       className="album-ratings-item-value"
@@ -54,7 +54,7 @@ exports[`renders AlbumRatingsItem correctly 1`] = `
     <span
       className="album-ratings-item-key"
     >
-      Album - 
+      Mood - 
     </span>
     <span
       className="album-ratings-item-value"
@@ -65,7 +65,7 @@ exports[`renders AlbumRatingsItem correctly 1`] = `
     <span
       className="album-ratings-item-key"
     >
-      Plays - 
+      Rating - 
     </span>
     <span
       className="album-ratings-item-value"
