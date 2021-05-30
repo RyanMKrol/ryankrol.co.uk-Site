@@ -7,7 +7,7 @@ import { apiUtils } from '../../utils';
 
 import './Music.css';
 
-const ALBUM_API_ENDPOINT = `${apiUtils.default()}/albums`;
+const ALBUM_API_ENDPOINT = `${apiUtils.default()}/listens`;
 
 /**
  * Page to display my music
