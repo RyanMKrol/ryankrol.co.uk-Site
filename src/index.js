@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router, Switch, Route, Redirect,
 } from 'react-router-dom';
-import Playground from './pages';
-import Header from './components';
+import { Playground, MusicSubPage } from './pages';
+import { Header, PageSection } from './components';
 
 import './index.css';
 
@@ -18,20 +18,23 @@ function AppRouter() {
     <div id="root-container">
       <Router>
         <Header />
-        <div className="page-container">
-          <Switch>
-            <Route exact path="/">
-              <Redirect
-                to={{
-                  pathname: '/playground',
-                }}
-              />
-            </Route>
-            <Route path="/playground">
+        <Switch>
+          <Route exact path="/">
+            <Redirect
+              to={{
+                pathname: '/playground',
+              }}
+            />
+          </Route>
+          <Route path="/playground">
+            <PageSection>
               <Playground />
-            </Route>
-          </Switch>
-        </div>
+            </PageSection>
+            <PageSection title="Music">
+              <MusicSubPage />
+            </PageSection>
+          </Route>
+        </Switch>
       </Router>
     </div>
   );
