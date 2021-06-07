@@ -38,3 +38,8 @@ p {
 .highlighted {
   color: #64ffda;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

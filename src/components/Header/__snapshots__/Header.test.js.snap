@@ -12,12 +12,16 @@ exports[`renders header correctly 1`] = `
   <div
     className="links"
   >
-    <Link
+    <HeaderItem
+      content="portfolio"
+      destination="/portfolio"
       key="/portfolio"
-      to="/portfolio"
-    >
-      portfolio
-    </Link>
+    />
+    <HeaderItem
+      content="music"
+      destination="/music"
+      key="/music"
+    />
   </div>
 </div>
 `;

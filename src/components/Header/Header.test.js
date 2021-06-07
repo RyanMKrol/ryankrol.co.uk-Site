@@ -1,6 +1,9 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import {
+  render, screen, fireEvent, waitFor,
+} from '@testing-library/react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './Header';
@@ -16,4 +19,29 @@ it('renders header without throwing', () => {
         <Header />
       </Router>,
   )).not.toThrow();
+});
+
+it('highlighted class is applied on hover', () => {
+  render(
+    <Router>
+      <Header />
+    </Router>,
+  );
+
+  fireEvent.mouseOver(screen.getByText('portfolio'));
+
+  expect(screen.getByText('portfolio').className.includes('highlighted')).toBeTruthy();
+});
+
+it('highlighted class is removed after hover', () => {
+  render(
+    <Router>
+      <Header />
+    </Router>,
+  );
+
+  fireEvent.mouseOver(screen.getByText('portfolio'));
+  fireEvent.mouseLeave(screen.getByText('portfolio'));
+
+  expect(screen.getByText('portfolio').className.includes('highlighted')).toBeFalsy();
 });
