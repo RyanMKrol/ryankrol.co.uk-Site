@@ -54,6 +54,7 @@ class HeaderItem extends Component {
         onMouseLeave={this.handleHover}
         to={this.props.destination}
       >
+        <span className="highlighted">{this.props.index}. </span>
         {this.props.content}
       </Link>
     );
@@ -65,11 +66,12 @@ class HeaderItem extends Component {
  *
  * @returns {React.Component} JSX for link items
  */
-const generateHeaderLinks = () => HEADER_ITEMS.map((linkItem) => (
+const generateHeaderLinks = () => HEADER_ITEMS.map((linkItem, index) => (
     <HeaderItem
       key={linkItem.destination}
       content={linkItem.title}
       destination={linkItem.destination}
+      index={index + 1}
     />
 ));
 
@@ -80,9 +82,11 @@ const generateHeaderLinks = () => HEADER_ITEMS.map((linkItem) => (
  */
 function Header() {
   return (
-    <div className={styles.container}>
-      <div className={`${styles.logo} highlighted`}>RK</div>
-      <div className={styles.links}>{generateHeaderLinks()}</div>
+    <div className={styles.outer}>
+      <div className={styles.container}>
+        <div className={`${styles.logo} highlighted`}>RK</div>
+        <div className={styles.links}>{generateHeaderLinks()}</div>
+      </div>
     </div>
   );
 }

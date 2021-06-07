@@ -2,26 +2,32 @@
 
 exports[`renders header correctly 1`] = `
 <div
-  className="container"
+  className="outer"
 >
   <div
-    className="logo highlighted"
+    className="container"
   >
-    RK
-  </div>
-  <div
-    className="links"
-  >
-    <HeaderItem
-      content="portfolio"
-      destination="/portfolio"
-      key="/portfolio"
-    />
-    <HeaderItem
-      content="music"
-      destination="/music"
-      key="/music"
-    />
+    <div
+      className="logo highlighted"
+    >
+      RK
+    </div>
+    <div
+      className="links"
+    >
+      <HeaderItem
+        content="portfolio"
+        destination="/portfolio"
+        index={1}
+        key="/portfolio"
+      />
+      <HeaderItem
+        content="music"
+        destination="/music"
+        index={2}
+        key="/music"
+      />
+    </div>
   </div>
 </div>
 `;
