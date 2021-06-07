@@ -29,7 +29,7 @@ const generateHeaderLinks = () => HEADER_ITEMS.map((linkItem) => (
 function Header() {
   return (
     <div className={styles.container}>
-      <div className={styles.logo}>RK</div>
+      <div className={`${styles.logo} highlighted`}>RK</div>
       <div className={styles.links}>{generateHeaderLinks()}</div>
     </div>
   );

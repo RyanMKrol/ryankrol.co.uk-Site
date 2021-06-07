@@ -1,5 +1,7 @@
 body {
   background-color: #0a192f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .page {
@@ -8,9 +10,10 @@ body {
 }
 
 .heading {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 700;
+
   margin: 0;
 }
 

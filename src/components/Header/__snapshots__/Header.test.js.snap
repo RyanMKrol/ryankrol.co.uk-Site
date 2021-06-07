@@ -5,7 +5,7 @@ exports[`renders header correctly 1`] = `
   className="container"
 >
   <div
-    className="logo"
+    className="logo highlighted"
   >
     RK
   </div>
