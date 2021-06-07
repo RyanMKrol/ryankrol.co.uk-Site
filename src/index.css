@@ -1,15 +1,22 @@
+/* general body styling */
 body {
   background-color: #0a192f;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Amiko', sans-serif;
 }
 
-.page {
+/* general page styles */
+.page-container {
   width: 55%;
   margin: auto;
 }
 
-.heading {
+/* font styles */
+h1,
+h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 48px;
   font-weight: 700;
@@ -17,17 +24,15 @@ body {
   margin: 0;
 }
 
+.light,
 h1 {
   color: #ccd6f6;
 }
 
-h2 {
-  color: #8892b0;
-}
-
+.regular,
+h2,
 p {
   color: #8892b0;
-  font-family: 'Amiko', sans-serif;
 }
 
 .highlighted {

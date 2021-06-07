@@ -18,18 +18,20 @@ function AppRouter() {
     <div id="root-container">
       <Router>
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Redirect
-              to={{
-                pathname: '/playground',
-              }}
-            />
-          </Route>
-          <Route path="/playground">
-            <Playground />
-          </Route>
-        </Switch>
+        <div className="page-container">
+          <Switch>
+            <Route exact path="/">
+              <Redirect
+                to={{
+                  pathname: '/playground',
+                }}
+              />
+            </Route>
+            <Route path="/playground">
+              <Playground />
+            </Route>
+          </Switch>
+        </div>
       </Router>
     </div>
   );

@@ -21,9 +21,9 @@ class Playground extends Component {
    */
   render() {
     return (
-      <div className="page">
-        <h1 className="heading">Ryan Krol.</h1>
-        <h2 className="heading">Here's my new design</h2>
+      <div>
+        <h1>Ryan Krol.</h1>
+        <h2>Here's my new design</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           <span className="highlighted">sed do eiusmod tempor incididunt ut</span> labore et dolore

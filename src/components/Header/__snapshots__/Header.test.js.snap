@@ -16,7 +16,7 @@ exports[`renders header correctly 1`] = `
       key="/portfolio"
       to="/portfolio"
     >
-      Portfolio
+      portfolio
     </Link>
   </div>
 </div>

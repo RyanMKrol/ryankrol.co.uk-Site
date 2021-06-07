@@ -6,7 +6,7 @@ import styles from './Header.module.css';
 const HEADER_ITEMS = [
   {
     destination: '/portfolio',
-    title: 'Portfolio',
+    title: 'portfolio',
   },
 ];
 

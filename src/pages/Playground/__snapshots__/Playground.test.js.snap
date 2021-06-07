@@ -1,17 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders playground correctly 1`] = `
-<div
-  className="page"
->
-  <h1
-    className="heading"
-  >
+<div>
+  <h1>
     Ryan Krol.
   </h1>
-  <h2
-    className="heading"
-  >
+  <h2>
     Here's my new design
   </h2>
   <p>
