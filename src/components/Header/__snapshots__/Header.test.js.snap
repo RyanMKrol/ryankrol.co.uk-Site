@@ -1,149 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`creates the correct current page links with generateHeaderLinks, passing through / as current page 1`] = `
-Array [
-  <Link
-    className=" header-link hover"
-    to="/portfolio"
-  >
-    Portfolio
-  </Link>,
-  <Link
-    className=" header-link hover"
-    to="/music"
-  >
-    Music
-  </Link>,
-  <Link
-    className=" header-link hover"
-    to="/books"
-  >
-    Books
-  </Link>,
-  <Link
-    className=" header-link hover"
-    to="/movies"
-  >
-    Movies
-  </Link>,
-]
-`;
-
-exports[`creates the correct current page links with generateHeaderLinks, passing through /about as current page 1`] = `
-Array [
-  <Link
-    className=" header-link hover"
-    to="/portfolio"
-  >
-    Portfolio
-  </Link>,
-  <Link
-    className=" header-link hover"
-    to="/music"
-  >
-    Music
-  </Link>,
-  <Link
-    className=" header-link hover"
-    to="/books"
-  >
-    Books
-  </Link>,
-  <Link
-    className=" header-link hover"
-    to="/movies"
-  >
-    Movies
-  </Link>,
-]
-`;
-
-exports[`creates the correct current page links with generateHeaderLinks, passing through an unsupported destination current page 1`] = `
-Array [
-  <Link
-    className=" header-link hover"
-    to="/portfolio"
-  >
-    Portfolio
-  </Link>,
-  <Link
-    className=" header-link hover"
-    to="/music"
-  >
-    Music
-  </Link>,
-  <Link
-    className=" header-link hover"
-    to="/books"
-  >
-    Books
-  </Link>,
-  <Link
-    className=" header-link hover"
-    to="/movies"
-  >
-    Movies
-  </Link>,
-]
-`;
-
-exports[`renders header correctly with no currentPage being passed through 1`] = `
+exports[`renders header correctly 1`] = `
 <div
-  className="Header"
+  className="container"
 >
   <div
-    className="header-content"
+    className="logo"
   >
-    <div
-      className="social-container"
+    RK
+  </div>
+  <div
+    className="links"
+  >
+    <Link
+      key="/portfolio"
+      to="/portfolio"
     >
-      <SocialList />
-    </div>
-    <div
-      className="header-name"
-    >
-      Ryan Krol
-    </div>
-    <div
-      className="links-container"
-    >
-      <div
-        className="links"
-      >
-        <div
-          className="links-inner-container"
-        >
-          <Link
-            className=" header-link hover"
-            key="/portfolio"
-            to="/portfolio"
-          >
-            Portfolio
-          </Link>
-          <Link
-            className=" header-link hover"
-            key="/music"
-            to="/music"
-          >
-            Music
-          </Link>
-          <Link
-            className=" header-link hover"
-            key="/books"
-            to="/books"
-          >
-            Books
-          </Link>
-          <Link
-            className=" header-link hover"
-            key="/movies"
-            to="/movies"
-          >
-            Movies
-          </Link>
-        </div>
-      </div>
-    </div>
+      Portfolio
+    </Link>
   </div>
 </div>
 `;

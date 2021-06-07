@@ -1,71 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { SocialList } from '..';
-import { HEADER_ITEMS } from '../../data';
 
-import './Header.css';
+import styles from './Header.module.css';
+
+const HEADER_ITEMS = [
+  {
+    destination: '/portfolio',
+    title: 'Portfolio',
+  },
+];
 
 /**
- * Object representing the location of the page
+ * Generates the header links
  *
- * @typedef {object} LocationObject
- * @property {string} pathname What URL the page is currently on
+ * @returns {React.Component} JSX for link items
  */
+const generateHeaderLinks = () => HEADER_ITEMS.map((linkItem) => (
+    <Link key={linkItem.destination} to={linkItem.destination}>
+      {linkItem.title}
+    </Link>
+));
 
 /**
- * Object representing the props to the Header
+ * Component for rendering common page heading
  *
- * @typedef {object} HeaderProps
- * @property {LocationObject} location Object representing the current URL
+ * @returns {React.Component} JSX Header component
  */
-
-/**
- * Class representing a UI component for an album
- */
-class Header extends Component {
-  /**
-   * Generates the links used in the header
-   *
-   * @returns {string} HTML markup for the header link
-   */
-  generateHeaderLinks() {
-    return HEADER_ITEMS.map((linkItem) => {
-      const activeClass = linkItem.destinationPage === this.props.location.pathname ? 'currentPage' : '';
-
-      return (
-        <Link
-          key={linkItem.destinationPage}
-          className={`${activeClass} header-link hover`}
-          to={linkItem.destinationPage}
-        >
-          {linkItem.content}
-        </Link>
-      );
-    });
-  }
-
-  /**
-   * Render method
-   *
-   * @returns {React.Component} The JSX representing the component
-   */
-  render() {
-    return (
-      <div className="Header">
-        <div className="header-content">
-          <div className="social-container">
-            <SocialList />
-          </div>
-          <div className="header-name">Ryan Krol</div>
-          <div className="links-container">
-            <div className="links">
-              <div className="links-inner-container">{this.generateHeaderLinks()}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+function Header() {
+  return (
+    <div className={styles.container}>
+      <div className={styles.logo}>RK</div>
+      <div className={styles.links}>{generateHeaderLinks()}</div>
+    </div>
+  );
 }
 
 export default withRouter(Header);

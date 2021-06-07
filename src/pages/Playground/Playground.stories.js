@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import Header from './Header';
+import Playground from './Playground';
 
 export default {
-  title: 'Components/Header',
+  title: 'Pages/Playground',
 };
 
 /**
  * default story
  *
- * @returns {React.Component} JSX for the Header
+ * @returns {React.Component} JSX for the Playground
  */
 export const normal = () => (
   <Router>
-    <Header />
+    <Playground />
   </Router>
 );

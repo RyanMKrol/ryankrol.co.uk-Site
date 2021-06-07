@@ -1,12 +1,1 @@
-export { default as AlbumItem } from './AlbumItem';
-export { default as AlbumRatingsForm } from './AlbumRatingsForm';
-export { default as AlbumRatingsItem } from './AlbumRatingsItem';
-export { default as BookItem } from './BookItem';
-export { default as Footer } from './Footer';
-export { default as Header } from './Header';
-export { default as LoadingIcon } from './LoadingIcon';
-export { default as MovieItem } from './MovieItem';
-export { default as MovieRatingsForm } from './MovieRatingsForm';
-export { default as MovieRatingsItem } from './MovieRatingsItem';
-export { default as PortfolioItem } from './PortfolioItem';
-export { default as SocialList } from './SocialList';
+export { default } from './Header';

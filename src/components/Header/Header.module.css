@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.logo {
+  color: red;
+}
+
+.links {
+  display: flex;
+  margin-left: auto;
+}

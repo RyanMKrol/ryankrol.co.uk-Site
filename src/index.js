@@ -3,25 +3,15 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router, Switch, Route, Redirect,
 } from 'react-router-dom';
-import {
-  Playground,
-  Portfolio,
-  Music,
-  Books,
-  Movies,
-  MovieRatingsInput,
-  MovieRatingsView,
-  AlbumRatingsInput,
-  AlbumRatingsView,
-} from './pages';
-import { Footer, Header } from './components';
+import Playground from './pages';
+import Header from './components';
 
 import './index.css';
 
 /**
  * Component representing all of the routing for the site
  *
- * @returns {string} The UI component
+ * @returns {React.Component} JSX for the entire app
  */
 function AppRouter() {
   return (
@@ -32,39 +22,14 @@ function AppRouter() {
           <Route exact path="/">
             <Redirect
               to={{
-                pathname: '/portfolio',
+                pathname: '/playground',
               }}
             />
-          </Route>
-          <Route path="/books">
-            <Books />
-          </Route>
-          <Route path="/movies">
-            <Movies />
-          </Route>
-          <Route path="/music">
-            <Music />
-          </Route>
-          <Route path="/portfolio">
-            <Portfolio />
           </Route>
           <Route path="/playground">
             <Playground />
           </Route>
-          <Route path="/ratings/movie/new">
-            <MovieRatingsInput />
-          </Route>
-          <Route path="/ratings/movie">
-            <MovieRatingsView />
-          </Route>
-          <Route path="/ratings/album/new">
-            <AlbumRatingsInput />
-          </Route>
-          <Route path="/ratings/album">
-            <AlbumRatingsView />
-          </Route>
         </Switch>
-        <Footer />
       </Router>
     </div>
   );
