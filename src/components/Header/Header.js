@@ -84,7 +84,9 @@ function Header() {
   return (
     <div className={styles.outer}>
       <div className={styles.container}>
-        <div className={`${styles.logo} highlighted`}>RK</div>
+        <Link className={`${styles.logo} highlighted`} to={'/'}>
+          RK
+        </Link>
         <div className={styles.links}>{generateHeaderLinks()}</div>
       </div>
     </div>
