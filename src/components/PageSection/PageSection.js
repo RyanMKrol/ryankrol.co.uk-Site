@@ -6,6 +6,7 @@ import styles from './PageSection.module.css';
  * Generates the section title
  *
  * @param {string} title The title of the section
+ * @returns {React.Component} JSX for section title
  */
 function generateSectionTitle(title) {
   return title ? <h1 className={styles.title}>{title}</h1> : null;
@@ -19,7 +20,7 @@ function generateSectionTitle(title) {
  */
 function PageSection(props) {
   return (
-    <div className="section">
+    <div className={styles.section}>
       {generateSectionTitle(props.title)}
       <div className="page-container">{props.children}</div>
     </div>

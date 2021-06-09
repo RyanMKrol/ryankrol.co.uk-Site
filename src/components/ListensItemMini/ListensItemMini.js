@@ -24,6 +24,8 @@ class ListensItemMini extends Component {
 
   /**
    * Render method
+   *
+   * @returns {React.Component} JSX ListensItemMini component
    */
   render() {
     return (

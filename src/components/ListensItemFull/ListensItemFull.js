@@ -26,6 +26,8 @@ class ListensItemFull extends Component {
 
   /**
    * Render method
+   *
+   * @returns {React.Component} JSX ListensItemFull component
    */
   render() {
     return (
