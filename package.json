@@ -69,15 +69,16 @@
   "jest": {
     "coverageThreshold": {
       "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
+        "branches": 95,
+        "functions": 95,
+        "lines": 95,
         "statements": -10
       }
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      ".*.stories.js"
+      ".*.stories.js",
+      ".*.test.js.snap"
     ]
   }
 }
