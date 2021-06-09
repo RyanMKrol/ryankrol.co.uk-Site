@@ -21,14 +21,14 @@ class MovieRatingsItem extends Component {
     this.title = props.title;
 
     if (
-      !this.date
-      || !this.sound
-      || !this.blind
-      || !this.craftsmanship
-      || !this.gist
-      || !this.characters
-      || !this.story
-      || !this.title
+      typeof this.date === 'undefined'
+      || typeof this.sound === 'undefined'
+      || typeof this.blind === 'undefined'
+      || typeof this.craftsmanship === 'undefined'
+      || typeof this.gist === 'undefined'
+      || typeof this.characters === 'undefined'
+      || typeof this.story === 'undefined'
+      || typeof this.title === 'undefined'
     ) {
       throw new Error('Could not create MovieRatingsItem');
     }
