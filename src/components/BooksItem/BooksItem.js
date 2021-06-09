@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import styles from './BooksItem.module.css';
-
 /**
  * A component representing a books item
  */
