@@ -8,7 +8,7 @@ import {
 import { BrowserRouter as Router } from 'react-router-dom';
 import PageSection from './PageSection';
 
-import { MOCK_WITH_TITLE, MOCK_WITHOUT_TITLE } from './__mocks__';
+import { MOCK_WITH_TITLE, MOCK_WITHOUT_TITLE } from './__mocks__/PageSectionMocks';
 
 it('renders page section correctly without a title', () => {
   const pageSection = shallow(MOCK_WITHOUT_TITLE);

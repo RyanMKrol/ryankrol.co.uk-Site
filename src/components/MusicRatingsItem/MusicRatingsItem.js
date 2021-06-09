@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 /**
- * A component representing all information about a "listens" item
+ * A component representing an album ratings item
  */
 class MusicRatingsItem extends Component {
   /**

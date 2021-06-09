@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MOCK_WITH_TITLE, MOCK_WITHOUT_TITLE } from './__mocks__';
+import { MOCK_WITH_TITLE, MOCK_WITHOUT_TITLE } from './__mocks__/PageSectionMocks';
 
 export default {
   title: 'Components/PageSection',

@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json';
 
 import MusicRatingsItem from './MusicRatingsItem';
 
-import DEFAULT_MOCK from './__mocks__';
+import DEFAULT_MOCK from './__mocks__/MusicRatingsItemMocks';
 
 it('renders MusicRatingsItem without issue', () => {
   const listensItem = shallow(DEFAULT_MOCK);

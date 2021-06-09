@@ -57,8 +57,6 @@ class DataCollection extends Component {
       ? this.state.data.map((item) => (this.outputSize === 'full' ? <FullItem {...item} /> : <MiniItem {...item} />))
       : null;
 
-    console.log(this.state.data);
-    console.log(collectionData);
     return (
       <div>
         <div className={styles.collection}>{collectionData}</div>

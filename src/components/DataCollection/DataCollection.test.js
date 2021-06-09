@@ -10,7 +10,7 @@ import {
   REDUCED_OUTPUT_LISTENS_MOCK,
   EXAMPLE_LISTENS_MOCK_ONE,
   EXAMPLE_LISTENS_MOCK_TWO,
-} from './__mocks__';
+} from './__mocks__/DataCollectionMocks';
 
 jest.mock('node-fetch');
 

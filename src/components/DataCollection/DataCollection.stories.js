@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { REDUCED_OUTPUT_LISTENS_MOCK, FULL_OUTPUT_LISTENS_MOCK } from './__mocks__';
+import {
+  REDUCED_OUTPUT_LISTENS_MOCK,
+  FULL_OUTPUT_LISTENS_MOCK,
+} from './__mocks__/DataCollectionMocks';
 
 export default {
   title: 'Components/DataCollection',

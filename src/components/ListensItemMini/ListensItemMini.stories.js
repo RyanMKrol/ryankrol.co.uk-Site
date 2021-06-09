@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DEFAULT_MOCK from './__mocks__';
+import DEFAULT_MOCK from './__mocks__/ListensItemMiniMocks';
 
 export default {
   title: 'Components/ListensItemMini',

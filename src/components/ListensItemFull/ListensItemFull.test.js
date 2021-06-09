@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json';
 
 import ListensItemFull from './ListensItemFull';
 
-import DEFAULT_MOCK from './__mocks__';
+import DEFAULT_MOCK from './__mocks__/ListensItemFullMocks';
 
 it('renders ListensItemFull without issue', () => {
   const listensItem = shallow(DEFAULT_MOCK);

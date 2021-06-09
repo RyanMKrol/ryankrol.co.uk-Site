@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MovieRatingsItem without issue 1`] = `
+<div>
+  <span
+    className="highlighted"
+  >
+    Date:
+  </span>
+  <span>
+    03-05-2021
+  </span>
+  <br />
+  <span
+    className="highlighted"
+  >
+    Sound:
+  </span>
+  <span>
+    79
+  </span>
+  <br />
+  <span
+    className="highlighted"
+  >
+    Blind:
+  </span>
+  <span>
+    89
+  </span>
+  <br />
+  <span
+    className="highlighted"
+  >
+    Craftsmanship:
+  </span>
+  <span>
+    82
+  </span>
+  <br />
+  <span
+    className="highlighted"
+  >
+    Gist:
+  </span>
+  <span>
+    A Somali pirate is the captain now
+  </span>
+  <br />
+  <span
+    className="highlighted"
+  >
+    Characters:
+  </span>
+  <span>
+    86
+  </span>
+  <br />
+  <span
+    className="highlighted"
+  >
+    Story:
+  </span>
+  <span>
+    87
+  </span>
+  <br />
+  <span
+    className="highlighted"
+  >
+    Title:
+  </span>
+  <span>
+    Captain Phillips
+  </span>
+  <br />
+</div>
+`;
