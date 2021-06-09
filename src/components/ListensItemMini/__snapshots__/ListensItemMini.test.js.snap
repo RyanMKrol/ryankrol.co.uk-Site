@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ListensItemMini without issue 1`] = `
+<a
+  className="listensMiniLink"
+  href="https://www.last.fm/music/Kendrick+Lamar/DAMN."
+>
+  <img
+    alt="DAMN"
+    className="listensItemMiniImage"
+    src="https://lastfm.freetls.fastly.net/i/u/300x300/243a7444e2d59ff9b38e123f7267e3be.jpg"
+  />
+</a>
+`;
