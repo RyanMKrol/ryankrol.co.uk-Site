@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MoviesItem without issue 1`] = `
+<div>
+  <img
+    alt="About a Boy"
+    src="https://m.media-amazon.com/images/M/MV5BMTQ2Mzg4MDAzNV5BMl5BanBnXkFtZTgwMjcxNTYxMTE@._V1_SX300.jpg"
+  />
+  <span
+    className="highlighted"
+  >
+    Name:
+  </span>
+  <span>
+    About a Boy
+  </span>
+  <br />
+  <span
+    className="highlighted"
+  >
+    Runtime:
+  </span>
+  <span>
+    101 min
+  </span>
+  <br />
+  <span
+    className="highlighted"
+  >
+    ReleaseDate:
+  </span>
+  <span>
+    2002
+  </span>
+  <br />
+</div>
+`;
