@@ -22,3 +22,9 @@
 .link {
   margin: 8px;
 }
+
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+}
