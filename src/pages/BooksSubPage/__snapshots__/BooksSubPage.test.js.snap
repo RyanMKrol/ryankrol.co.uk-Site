@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders playground correctly 1`] = `
+<div
+  className="container"
+>
+  <h2>
+    My never-ending reading list!
+  </h2>
+  <br />
+  <DataCollection
+    endpoint="http://www.ryankrol.co.uk/api/books"
+    itemTag={[Function]}
+    outputSize={20}
+  />
+  <Link
+    className="seeMore"
+    to="/ReadingList"
+  >
+    <h2>
+      ...
+    </h2>
+  </Link>
+</div>
+`;
