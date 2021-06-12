@@ -46,6 +46,8 @@ class RatingsGraph extends Component {
             ],
           }}
           options={{
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
               legend: {
                 display: false,

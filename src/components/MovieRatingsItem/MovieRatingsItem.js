@@ -42,9 +42,9 @@ class MovieRatingsItem extends Component {
     const ratingsGraphData = {
       [`Overall: ${this.blind}`]: this.blind,
       [`Sound: ${this.sound}`]: this.sound,
+      [`Story: ${this.story}`]: this.story,
       [`Craftsmanship: ${this.craftsmanship}`]: this.craftsmanship,
       [`Characters: ${this.characters}`]: this.characters,
-      [`Story: ${this.story}`]: this.story,
     };
 
     this.labels = Object.keys(ratingsGraphData);
@@ -58,12 +58,20 @@ class MovieRatingsItem extends Component {
    */
   render() {
     return (
-      <div className={styles.container}>
-        <div className={styles.thumbnailContainer}>
-          <img className={styles.thumbnail} src={this.thumbnail} alt={this.title} />
-        </div>
-        <div className={styles.chart}>
-          <RatingsGraph data={this.data} labels={this.labels} />
+      <div className={styles.outerContainer}>
+        <div className={styles.container}>
+          <div>
+            <p className={styles.titleContent}>{this.title}</p>
+            <div className={styles.titleUnderline} />
+          </div>
+          <div className={styles.content}>
+            <div className={styles.thumbnailContainer}>
+              <img className={styles.thumbnail} src={this.thumbnail} alt={this.title} />
+            </div>
+            <div>
+              <RatingsGraph data={this.data} labels={this.labels} />
+            </div>
+          </div>
         </div>
       </div>
     );

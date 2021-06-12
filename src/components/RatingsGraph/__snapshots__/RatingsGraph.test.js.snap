@@ -31,11 +31,13 @@ exports[`renders RatingsGraph without issue 1`] = `
     }
     options={
       Object {
+        "maintainAspectRatio": false,
         "plugins": Object {
           "legend": Object {
             "display": false,
           },
         },
+        "responsive": true,
         "scales": Object {
           "r": Object {
             "angleLines": Object {

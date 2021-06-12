@@ -2,40 +2,56 @@
 
 exports[`renders MovieRatingsItem without issue 1`] = `
 <div
-  className="container"
+  className="outerContainer"
 >
   <div
-    className="thumbnailContainer"
+    className="container"
   >
-    <img
-      alt="Captain Phillips"
-      className="thumbnail"
-      src="https://m.media-amazon.com/images/M/MV5BODhiZWRhMjctNDUyMS00NmUwLTgwYmItMjJhOWNkZWQ3ZTQxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
-    />
-  </div>
-  <div
-    className="chart"
-  >
-    <RatingsGraph
-      data={
-        Array [
-          89,
-          79,
-          82,
-          86,
-          87,
-        ]
-      }
-      labels={
-        Array [
-          "Overall: 89",
-          "Sound: 79",
-          "Craftsmanship: 82",
-          "Characters: 86",
-          "Story: 87",
-        ]
-      }
-    />
+    <div>
+      <p
+        className="titleContent"
+      >
+        Captain Phillips
+      </p>
+      <div
+        className="titleUnderline"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="thumbnailContainer"
+      >
+        <img
+          alt="Captain Phillips"
+          className="thumbnail"
+          src="https://m.media-amazon.com/images/M/MV5BODhiZWRhMjctNDUyMS00NmUwLTgwYmItMjJhOWNkZWQ3ZTQxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+        />
+      </div>
+      <div>
+        <RatingsGraph
+          data={
+            Array [
+              89,
+              79,
+              87,
+              82,
+              86,
+            ]
+          }
+          labels={
+            Array [
+              "Overall: 89",
+              "Sound: 79",
+              "Story: 87",
+              "Craftsmanship: 82",
+              "Characters: 86",
+            ]
+          }
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;
