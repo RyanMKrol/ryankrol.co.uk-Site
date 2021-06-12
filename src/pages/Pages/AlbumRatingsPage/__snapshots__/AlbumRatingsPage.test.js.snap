@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders AlbumRatingsPage correctly 1`] = `
+<div
+  className="container"
+>
+  <h2>
+    Albums I've Listened To
+  </h2>
+  <br />
+  <DataCollection
+    endpoint="http://www.ryankrol.co.uk/api/ratings/album"
+    itemTag={[Function]}
+    sorter={[Function]}
+  />
+</div>
+`;
