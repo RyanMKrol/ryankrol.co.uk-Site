@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import styles from './MoviesItem.module.css';
+
 /**
  * A component representing a books item
  */
@@ -33,17 +35,8 @@ class MoviesItem extends Component {
    */
   render() {
     return (
-      <div>
-        <img src={this.thumbnail} alt={this.name} />
-        <span className="highlighted">Name:</span>
-        <span>{this.name}</span>
-        <br />
-        <span className="highlighted">Runtime:</span>
-        <span>{this.runtime}</span>
-        <br />
-        <span className="highlighted">ReleaseDate:</span>
-        <span>{this.releaseDate}</span>
-        <br />
+      <div className={styles.container}>
+        <img className={styles.thumbnail} src={this.thumbnail} alt={this.name} />
       </div>
     );
   }
