@@ -27,7 +27,7 @@ class MovieRatingsPage extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h2>Movies I've Watched</h2>
+        <h2>Movies I've watched</h2>
         <br />
         <DataCollection
           endpoint={this.endpoint}

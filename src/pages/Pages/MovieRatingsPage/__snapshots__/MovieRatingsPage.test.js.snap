@@ -5,7 +5,7 @@ exports[`renders MovieRatingsPage correctly 1`] = `
   className="container"
 >
   <h2>
-    Movies I've Watched
+    Movies I've watched
   </h2>
   <br />
   <DataCollection

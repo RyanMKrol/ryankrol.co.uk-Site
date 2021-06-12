@@ -28,16 +28,24 @@ function AppRouter() {
         <Header />
         <Switch>
           <Route path="/ReadingList">
-            <BooksPage />
+            <PageSection title="Books">
+              <BooksPage />
+            </PageSection>
           </Route>
           <Route path="/MoviesList">
-            <MoviesPage />
+            <PageSection title="Movies">
+              <MoviesPage />
+            </PageSection>
           </Route>
           <Route path="/AlbumRatings">
-            <AlbumRatingsPage />
+            <PageSection title="Ratings">
+              <AlbumRatingsPage />
+            </PageSection>
           </Route>
           <Route path="/MovieRatings">
-            <MovieRatingsPage />
+            <PageSection title="Ratings">
+              <MovieRatingsPage />
+            </PageSection>
           </Route>
           <Route path="/">
             <PageSection>

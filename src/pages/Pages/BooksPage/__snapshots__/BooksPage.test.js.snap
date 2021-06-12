@@ -5,7 +5,7 @@ exports[`renders BooksPage correctly 1`] = `
   className="container"
 >
   <h2>
-    My never-ending reading list!
+    Books that I may one day read
   </h2>
   <br />
   <DataCollection

@@ -27,7 +27,7 @@ class AlbumRatingsPage extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h2>Albums I've Listened To</h2>
+        <h2>Albums I've listened to</h2>
         <br />
         <DataCollection
           endpoint={this.endpoint}

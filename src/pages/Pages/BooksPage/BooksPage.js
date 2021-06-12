@@ -26,7 +26,7 @@ class BooksPage extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h2>My never-ending reading list!</h2>
+        <h2>Books that I may one day read</h2>
         <br />
         <DataCollection endpoint={this.endpoint} itemTag={BooksItem} />
       </div>
