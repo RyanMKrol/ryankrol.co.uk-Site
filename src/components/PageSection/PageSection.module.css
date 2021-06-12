@@ -3,3 +3,9 @@
   font-size: 150px;
   user-select: none;
 }
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 90px;
+  }
+}
