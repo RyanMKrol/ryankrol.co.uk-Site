@@ -21,6 +21,7 @@ class DataCollection extends Component {
     this.outputSize = props.outputSize;
     this.endpoint = props.endpoint;
     this.itemTag = props.itemTag;
+    this.sorter = props.sorter;
   }
 
   /**
@@ -29,7 +30,15 @@ class DataCollection extends Component {
    * @returns {Promise<JSON>} The data from the API
    */
   fetchData() {
-    return fetch(this.endpoint).then((response) => response.json());
+    return fetch(this.endpoint)
+      .then((response) => response.json())
+      .then((data) => {
+        if (this.sorter) {
+          return data.sort(this.sorter);
+        }
+
+        return data;
+      });
   }
 
   /**

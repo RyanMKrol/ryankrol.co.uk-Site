@@ -14,6 +14,23 @@ const REDUCED_OUTPUT_MOCK = (
   />
 );
 
+const REDUCED_OUTPUT_MOCK_WITH_SORTER = (
+  <DataCollection
+    endpoint={'http://ryankrol.co.uk/api/listens'}
+    itemTag={ListensItemFull}
+    sorter={(a, b) => {
+      if (a.playcount < b.playcount) {
+        return 1;
+      }
+      if (a.playcount > b.playcount) {
+        return -1;
+      }
+
+      return 0;
+    }}
+  />
+);
+
 const EXAMPLE_LISTENS_MOCK_ONE = {
   albumLink: 'test-albumLink-one',
   albumName: 'test-albumName-one',
@@ -33,6 +50,7 @@ const EXAMPLE_LISTENS_MOCK_TWO = {
 export {
   FULL_OUTPUT_MOCK,
   REDUCED_OUTPUT_MOCK,
+  REDUCED_OUTPUT_MOCK_WITH_SORTER,
   EXAMPLE_LISTENS_MOCK_ONE,
   EXAMPLE_LISTENS_MOCK_TWO,
 };
