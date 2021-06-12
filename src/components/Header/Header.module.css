@@ -23,7 +23,7 @@
   margin: 8px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .links {
     display: none;
   }

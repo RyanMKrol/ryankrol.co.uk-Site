@@ -5,14 +5,6 @@ import styles from './Header.module.css';
 
 const HEADER_ITEMS = [
   {
-    destination: '/portfolio',
-    title: 'portfolio',
-  },
-  {
-    destination: '/music',
-    title: 'music',
-  },
-  {
     destination: '/ReadingList',
     title: 'reading list',
   },

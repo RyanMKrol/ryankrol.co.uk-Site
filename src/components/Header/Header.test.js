@@ -28,9 +28,9 @@ it('highlighted class is applied on hover', () => {
     </Router>,
   );
 
-  fireEvent.mouseOver(screen.getByText('portfolio'));
+  fireEvent.mouseOver(screen.getByText('reading list'));
 
-  expect(screen.getByText('portfolio').className.includes('highlighted')).toBeTruthy();
+  expect(screen.getByText('reading list').className.includes('highlighted')).toBeTruthy();
 });
 
 it('highlighted class is removed after hover', () => {
@@ -40,8 +40,8 @@ it('highlighted class is removed after hover', () => {
     </Router>,
   );
 
-  fireEvent.mouseOver(screen.getByText('portfolio'));
-  fireEvent.mouseLeave(screen.getByText('portfolio'));
+  fireEvent.mouseOver(screen.getByText('reading list'));
+  fireEvent.mouseLeave(screen.getByText('reading list'));
 
-  expect(screen.getByText('portfolio').className.includes('highlighted')).toBeFalsy();
+  expect(screen.getByText('reading list').className.includes('highlighted')).toBeFalsy();
 });
