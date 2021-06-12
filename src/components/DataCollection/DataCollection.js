@@ -20,8 +20,7 @@ class DataCollection extends Component {
 
     this.outputSize = props.outputSize;
     this.endpoint = props.endpoint;
-    this.miniCollectionItem = props.miniCollectionItem;
-    this.fullCollectionItem = props.fullCollectionItem;
+    this.itemTag = props.itemTag;
   }
 
   /**
@@ -50,11 +49,10 @@ class DataCollection extends Component {
    * @returns {React.Component} JSX DataCollection component
    */
   render() {
-    const FullItem = this.fullCollectionItem;
-    const MiniItem = this.miniCollectionItem;
+    const Item = this.itemTag;
 
     const collectionData = this.state.data
-      ? this.state.data.map((item) => (this.outputSize === 'full' ? <FullItem {...item} /> : <MiniItem {...item} />))
+      ? this.state.data.slice(0, this.outputSize).map((item) => <Item {...item} />)
       : null;
 
     return (

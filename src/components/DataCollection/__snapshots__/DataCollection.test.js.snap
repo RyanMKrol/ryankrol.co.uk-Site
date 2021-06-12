@@ -5,30 +5,14 @@ exports[`renders DataCollection with full output 1`] = `
   <div
     className="collection"
   >
-    <ListensItemFull
+    <ListensItemMini
       albumLink="test-albumLink-one"
       albumName="test-albumName-one"
       artist="test-artist-one"
       playcount={1}
       thumbnail="test-thumbnail-one"
     />
-  </div>
-</div>
-`;
-
-exports[`renders DataCollection with full output, with multiple values 1`] = `
-<div>
-  <div
-    className="collection"
-  >
-    <ListensItemFull
-      albumLink="test-albumLink-one"
-      albumName="test-albumName-one"
-      artist="test-artist-one"
-      playcount={1}
-      thumbnail="test-thumbnail-one"
-    />
-    <ListensItemFull
+    <ListensItemMini
       albumLink="test-albumLink-two"
       albumName="test-albumName-two"
       artist="test-artist-two"
@@ -44,35 +28,12 @@ exports[`renders DataCollection with reduced output 1`] = `
   <div
     className="collection"
   >
-    <ListensItemMini
+    <ListensItemFull
       albumLink="test-albumLink-one"
       albumName="test-albumName-one"
       artist="test-artist-one"
       playcount={1}
       thumbnail="test-thumbnail-one"
-    />
-  </div>
-</div>
-`;
-
-exports[`renders DataCollection with reduced output, with multiple values 1`] = `
-<div>
-  <div
-    className="collection"
-  >
-    <ListensItemMini
-      albumLink="test-albumLink-one"
-      albumName="test-albumName-one"
-      artist="test-artist-one"
-      playcount={1}
-      thumbnail="test-thumbnail-one"
-    />
-    <ListensItemMini
-      albumLink="test-albumLink-two"
-      albumName="test-albumName-two"
-      artist="test-artist-two"
-      playcount={2}
-      thumbnail="test-thumbnail-two"
     />
   </div>
 </div>

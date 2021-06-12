@@ -2,21 +2,15 @@ import DataCollection from '../DataCollection';
 
 import { ListensItemMini, ListensItemFull } from '../..';
 
-const FULL_OUTPUT_LISTENS_MOCK = (
-  <DataCollection
-    outputSize={'full'}
-    endpoint={'http://ryankrol.co.uk/api/listens'}
-    miniCollectionItem={ListensItemMini}
-    fullCollectionItem={ListensItemFull}
-  />
+const FULL_OUTPUT_MOCK = (
+  <DataCollection endpoint={'http://ryankrol.co.uk/api/listens'} itemTag={ListensItemMini} />
 );
 
-const REDUCED_OUTPUT_LISTENS_MOCK = (
+const REDUCED_OUTPUT_MOCK = (
   <DataCollection
-    outputSize={'reduced'}
+    outputSize={1}
     endpoint={'http://ryankrol.co.uk/api/listens'}
-    miniCollectionItem={ListensItemMini}
-    fullCollectionItem={ListensItemFull}
+    itemTag={ListensItemFull}
   />
 );
 
@@ -37,8 +31,8 @@ const EXAMPLE_LISTENS_MOCK_TWO = {
 };
 
 export {
-  FULL_OUTPUT_LISTENS_MOCK,
-  REDUCED_OUTPUT_LISTENS_MOCK,
+  FULL_OUTPUT_MOCK,
+  REDUCED_OUTPUT_MOCK,
   EXAMPLE_LISTENS_MOCK_ONE,
   EXAMPLE_LISTENS_MOCK_TWO,
 };

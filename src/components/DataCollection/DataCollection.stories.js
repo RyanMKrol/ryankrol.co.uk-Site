@@ -1,9 +1,6 @@
 import React from 'react';
 
-import {
-  REDUCED_OUTPUT_LISTENS_MOCK,
-  FULL_OUTPUT_LISTENS_MOCK,
-} from './__mocks__/DataCollectionMocks';
+import { FULL_OUTPUT_MOCK, REDUCED_OUTPUT_MOCK } from './__mocks__/DataCollectionMocks';
 
 export default {
   title: 'Components/DataCollection',
@@ -14,11 +11,11 @@ export default {
  *
  * @returns {React.Component} JSX for the DataCollection
  */
-export const fullOutput = () => FULL_OUTPUT_LISTENS_MOCK;
+export const fullOutput = () => FULL_OUTPUT_MOCK;
 
 /**
  * story for the reduced output
  *
  * @returns {React.Component} JSX for the DataCollection
  */
-export const reducedOutput = () => REDUCED_OUTPUT_LISTENS_MOCK;
+export const reducedOutput = () => REDUCED_OUTPUT_MOCK;
