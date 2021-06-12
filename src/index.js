@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router, Switch, Route, Redirect,
 } from 'react-router-dom';
-import { Playground, MusicSubPage } from './pages';
+import {
+  Playground, MusicSubPage, RatingsSubPage, BooksSubPage, MoviesSubPage,
+} from './pages';
 import { Header, PageSection } from './components';
 
 import './index.css';
@@ -32,6 +34,15 @@ function AppRouter() {
             </PageSection>
             <PageSection title="Music">
               <MusicSubPage />
+            </PageSection>
+            <PageSection title="Ratings">
+              <RatingsSubPage />
+            </PageSection>
+            <PageSection title="Books">
+              <BooksSubPage />
+            </PageSection>
+            <PageSection title="Movies">
+              <MoviesSubPage />
             </PageSection>
           </Route>
         </Switch>
