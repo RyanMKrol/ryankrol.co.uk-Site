@@ -11,6 +11,7 @@
 
   background-color: rgba(255, 255, 255, 0.9);
   flex-direction: column;
+  border-radius: 4px;
 }
 
 .titleContent {
@@ -38,4 +39,5 @@
 
 .thumbnail {
   max-height: 160px;
+  border-radius: 4px;
 }
