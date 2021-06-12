@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MovieRatingsPage correctly 1`] = `
+<div
+  className="container"
+>
+  <h2>
+    Movies I've Watched
+  </h2>
+  <br />
+  <DataCollection
+    endpoint="http://www.ryankrol.co.uk/api/ratings/movie"
+    itemTag={[Function]}
+    sorter={[Function]}
+  />
+</div>
+`;
