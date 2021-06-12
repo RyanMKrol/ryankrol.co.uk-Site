@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders RatingsGraph without issue 1`] = `
+<div
+  className="container"
+>
+  <ForwardRef
+    data={
+      Object {
+        "datasets": Array [
+          Object {
+            "backgroundColor": "rgba(127.5, 127.5, 127.5, 0.2)",
+            "borderColor": "rgb(127.5, 127.5, 127.5)",
+            "data": Array [
+              10,
+              20,
+              30,
+              40,
+              50,
+            ],
+          },
+        ],
+        "labels": Array [
+          "Label1",
+          "Label2",
+          "Label3",
+          "Label4",
+          "Label5",
+        ],
+      }
+    }
+    options={
+      Object {
+        "plugins": Object {
+          "legend": Object {
+            "display": false,
+          },
+        },
+        "scales": Object {
+          "r": Object {
+            "angleLines": Object {
+              "display": true,
+            },
+            "backgroundColor": "#fff",
+            "suggestedMax": 100,
+            "suggestedMin": 0,
+            "ticks": Object {
+              "count": 5,
+              "display": false,
+            },
+          },
+        },
+      }
+    }
+  />
+</div>
+`;

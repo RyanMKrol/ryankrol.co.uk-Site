@@ -18,10 +18,12 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "chart.js": "^3.3.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "node-fetch": "^2.6.1",
     "react": "^16.13.0",
+    "react-chartjs-2": "^3.0.3",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3"
@@ -32,7 +34,7 @@
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "start-dev": "REACT_APP_LOCAL_API=1 react-scripts start",
-    "test-ci": "CI=true react-scripts test",
+    "test-ci": "CI=true react-scripts test --coverage",
     "lint": "eslint src/ --ext .js",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
@@ -69,16 +71,17 @@
   "jest": {
     "coverageThreshold": {
       "global": {
-        "branches": 95,
-        "functions": 95,
-        "lines": 95,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
         "statements": -10
       }
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       ".*.stories.js",
-      ".*.test.js.snap"
+      ".*.test.js.snap",
+      "src/index.js"
     ]
   }
 }
