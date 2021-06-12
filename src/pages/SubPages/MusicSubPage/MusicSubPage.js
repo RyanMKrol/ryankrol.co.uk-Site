@@ -15,7 +15,6 @@ class MusicSubPage extends Component {
     super();
 
     this.endpoint = `${baseEndpoint()}/listens`;
-    this.outputLimit = undefined;
   }
 
   /**
@@ -41,11 +40,7 @@ class MusicSubPage extends Component {
           doesn't appear to support tracking data via LastFM. I still quite like the data I've
           amassed over the past couple of years though, so I'll keep this section for now.
         </p>
-        <DataCollection
-          outputSize={this.outputLimit}
-          endpoint={this.endpoint}
-          itemTag={ListensItemMini}
-        />
+        <DataCollection endpoint={this.endpoint} itemTag={ListensItemMini} />
       </div>
     );
   }
