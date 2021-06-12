@@ -8,7 +8,3 @@ it('renders playground correctly', () => {
   const header = shallow(<Playground />);
   expect(toJson(header)).toMatchSnapshot();
 });
-
-it('renders playground without throwing', () => {
-  expect(() => mount(<Playground />)).not.toThrow();
-});
