@@ -28,6 +28,30 @@ exports[`renders header correctly 1`] = `
         index={2}
         key="/music"
       />
+      <HeaderItem
+        content="reading list"
+        destination="/ReadingList"
+        index={3}
+        key="/ReadingList"
+      />
+      <HeaderItem
+        content="movies"
+        destination="/MoviesList"
+        index={4}
+        key="/MoviesList"
+      />
+      <HeaderItem
+        content="album ratings"
+        destination="/AlbumRatings"
+        index={5}
+        key="/AlbumRatings"
+      />
+      <HeaderItem
+        content="movie ratings"
+        destination="/MovieRatings"
+        index={6}
+        key="/MovieRatings"
+      />
     </div>
   </div>
 </div>

@@ -12,6 +12,22 @@ const HEADER_ITEMS = [
     destination: '/music',
     title: 'music',
   },
+  {
+    destination: '/ReadingList',
+    title: 'reading list',
+  },
+  {
+    destination: '/MoviesList',
+    title: 'movies',
+  },
+  {
+    destination: '/AlbumRatings',
+    title: 'album ratings',
+  },
+  {
+    destination: '/MovieRatings',
+    title: 'movie ratings',
+  },
 ];
 
 /**
