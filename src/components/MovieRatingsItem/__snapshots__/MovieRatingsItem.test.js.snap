@@ -1,78 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders MovieRatingsItem without issue 1`] = `
-<div>
-  <span
-    className="highlighted"
+<div
+  className="container"
+>
+  <div
+    className="thumbnailContainer"
   >
-    Date:
-  </span>
-  <span>
-    03-05-2021
-  </span>
-  <br />
-  <span
-    className="highlighted"
+    <img
+      alt="Captain Phillips"
+      className="thumbnail"
+      src="https://m.media-amazon.com/images/M/MV5BODhiZWRhMjctNDUyMS00NmUwLTgwYmItMjJhOWNkZWQ3ZTQxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    />
+  </div>
+  <div
+    className="chart"
   >
-    Sound:
-  </span>
-  <span>
-    79
-  </span>
-  <br />
-  <span
-    className="highlighted"
-  >
-    Blind:
-  </span>
-  <span>
-    89
-  </span>
-  <br />
-  <span
-    className="highlighted"
-  >
-    Craftsmanship:
-  </span>
-  <span>
-    82
-  </span>
-  <br />
-  <span
-    className="highlighted"
-  >
-    Gist:
-  </span>
-  <span>
-    A Somali pirate is the captain now
-  </span>
-  <br />
-  <span
-    className="highlighted"
-  >
-    Characters:
-  </span>
-  <span>
-    86
-  </span>
-  <br />
-  <span
-    className="highlighted"
-  >
-    Story:
-  </span>
-  <span>
-    87
-  </span>
-  <br />
-  <span
-    className="highlighted"
-  >
-    Title:
-  </span>
-  <span>
-    Captain Phillips
-  </span>
-  <br />
+    <RatingsGraph
+      data={
+        Array [
+          89,
+          79,
+          82,
+          86,
+          87,
+        ]
+      }
+      labels={
+        Array [
+          "Overall: 89",
+          "Sound: 79",
+          "Craftsmanship: 82",
+          "Characters: 86",
+          "Story: 87",
+        ]
+      }
+    />
+  </div>
 </div>
 `;

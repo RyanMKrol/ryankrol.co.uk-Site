@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  border-style: solid;
+  border-color: 000;
+  max-height: 250px;
+  min-width: 500px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.thumbnail {
+  max-height: 200px;
+  padding: 25px;
+}
+
+.chart {
+}
+
+.thumbnailContainer {
+  justify-content: center;
+  align-items: center;
+}

@@ -11,10 +11,6 @@ it('renders MovieRatingsItem without issue', () => {
   expect(toJson(listensItem)).toMatchSnapshot();
 });
 
-it('renders MovieRatingsItem without throwing', () => {
-  expect(() => mount(DEFAULT_MOCK)).not.toThrow();
-});
-
 it('MovieRatingsItem throws without highlights', () => {
   expect(() => mount(<MovieRatingsItem />)).toThrow();
 });
@@ -66,6 +62,21 @@ it('MovieRatingsItem throws without title', () => {
         gist={1}
         characters={1}
         story={1}
+      />,
+  )).toThrow();
+});
+
+it('MovieRatingsItem throws without thumbnail', () => {
+  expect(() => mount(
+      <MovieRatingsItem
+        date="test-date"
+        sound={1}
+        blind={1}
+        craftsmanship={1}
+        gist={1}
+        characters={1}
+        story={1}
+        title={'test-title'}
       />,
   )).toThrow();
 });

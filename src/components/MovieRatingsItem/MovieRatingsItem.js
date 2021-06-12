@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+import RatingsGraph from '../RatingsGraph';
+
+import styles from './MovieRatingsItem.module.css';
+
 /**
  * A component representing a movie ratings item
  */
@@ -11,6 +15,20 @@ class MovieRatingsItem extends Component {
   constructor(props) {
     super();
 
+    if (
+      typeof props.date === 'undefined'
+      || typeof props.sound === 'undefined'
+      || typeof props.blind === 'undefined'
+      || typeof props.craftsmanship === 'undefined'
+      || typeof props.gist === 'undefined'
+      || typeof props.characters === 'undefined'
+      || typeof props.story === 'undefined'
+      || typeof props.title === 'undefined'
+      || typeof props.thumbnail === 'undefined'
+    ) {
+      throw new Error('Could not create MovieRatingsItem');
+    }
+
     this.date = props.date;
     this.sound = props.sound;
     this.blind = props.blind;
@@ -19,19 +37,18 @@ class MovieRatingsItem extends Component {
     this.characters = props.characters;
     this.story = props.story;
     this.title = props.title;
+    this.thumbnail = props.thumbnail;
 
-    if (
-      typeof this.date === 'undefined'
-      || typeof this.sound === 'undefined'
-      || typeof this.blind === 'undefined'
-      || typeof this.craftsmanship === 'undefined'
-      || typeof this.gist === 'undefined'
-      || typeof this.characters === 'undefined'
-      || typeof this.story === 'undefined'
-      || typeof this.title === 'undefined'
-    ) {
-      throw new Error('Could not create MovieRatingsItem');
-    }
+    const ratingsGraphData = {
+      [`Overall: ${this.blind}`]: this.blind,
+      [`Sound: ${this.sound}`]: this.sound,
+      [`Craftsmanship: ${this.craftsmanship}`]: this.craftsmanship,
+      [`Characters: ${this.characters}`]: this.characters,
+      [`Story: ${this.story}`]: this.story,
+    };
+
+    this.labels = Object.keys(ratingsGraphData);
+    this.data = Object.values(ratingsGraphData);
   }
 
   /**
@@ -41,31 +58,13 @@ class MovieRatingsItem extends Component {
    */
   render() {
     return (
-      <div>
-        <span className="highlighted">Date:</span>
-        <span>{this.date}</span>
-        <br />
-        <span className="highlighted">Sound:</span>
-        <span>{this.sound}</span>
-        <br />
-        <span className="highlighted">Blind:</span>
-        <span>{this.blind}</span>
-        <br />
-        <span className="highlighted">Craftsmanship:</span>
-        <span>{this.craftsmanship}</span>
-        <br />
-        <span className="highlighted">Gist:</span>
-        <span>{this.gist}</span>
-        <br />
-        <span className="highlighted">Characters:</span>
-        <span>{this.characters}</span>
-        <br />
-        <span className="highlighted">Story:</span>
-        <span>{this.story}</span>
-        <br />
-        <span className="highlighted">Title:</span>
-        <span>{this.title}</span>
-        <br />
+      <div className={styles.container}>
+        <div className={styles.thumbnailContainer}>
+          <img className={styles.thumbnail} src={this.thumbnail} alt={this.title} />
+        </div>
+        <div className={styles.chart}>
+          <RatingsGraph data={this.data} labels={this.labels} />
+        </div>
       </div>
     );
   }

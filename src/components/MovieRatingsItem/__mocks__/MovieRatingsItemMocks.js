@@ -10,6 +10,9 @@ const DEFAULT_MOCK = (
     characters={86}
     story={87}
     title={'Captain Phillips'}
+    thumbnail={
+      'https://m.media-amazon.com/images/M/MV5BODhiZWRhMjctNDUyMS00NmUwLTgwYmItMjJhOWNkZWQ3ZTQxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg'
+    }
   />
 );
 
