@@ -2,11 +2,11 @@ import DataCollection from '../DataCollection';
 
 import { ListensItemMini, ListensItemFull } from '../..';
 
-const FULL_OUTPUT_MOCK = (
+const REDUCED_OUTPUT_MOCK = (
   <DataCollection endpoint={'http://ryankrol.co.uk/api/listens'} itemTag={ListensItemMini} />
 );
 
-const REDUCED_OUTPUT_MOCK = (
+const FULL_OUTPUT_MOCK = (
   <DataCollection
     outputSize={1}
     endpoint={'http://ryankrol.co.uk/api/listens'}
