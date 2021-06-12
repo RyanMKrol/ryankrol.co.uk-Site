@@ -8,6 +8,7 @@ import {
   BooksSubPage,
   MoviesSubPage,
   BooksPage,
+  MoviesPage,
 } from './pages';
 import { Header, PageSection } from './components';
 
@@ -26,6 +27,9 @@ function AppRouter() {
         <Switch>
           <Route path="/ReadingList">
             <BooksPage />
+          </Route>
+          <Route path="/MoviesList">
+            <MoviesPage />
           </Route>
           <Route path="/">
             <PageSection>
