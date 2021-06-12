@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { DataCollection, ListensItemMini } from '../../components';
+import { DataCollection, ListensItemMini } from '../../../components';
 
-import { baseEndpoint } from '../../utils/ProdUtils';
+import { baseEndpoint } from '../../../utils/ProdUtils';
 
 /**
  * Page for rendering sub-section of Music content

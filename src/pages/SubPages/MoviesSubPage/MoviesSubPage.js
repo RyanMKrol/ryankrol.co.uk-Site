@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import styles from './BooksSubPage.module.css';
+import styles from './MoviesSubPage.module.css';
 
-import { DataCollection, BooksItem } from '../../components';
-import { baseEndpoint } from '../../utils/ProdUtils';
+import { DataCollection, MoviesItem } from '../../../components';
+import { baseEndpoint } from '../../../utils/ProdUtils';
 
 /**
  * Page for rendering sub-section of Ratings content
  */
-class BooksSubPage extends Component {
+class MoviesSubPage extends Component {
   /**
    * @class
    */
   constructor() {
     super();
 
-    this.endpoint = `${baseEndpoint()}/books`;
+    this.endpoint = `${baseEndpoint()}/movies`;
     this.outputLimit = 20;
   }
 
@@ -28,14 +28,14 @@ class BooksSubPage extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h2>My never-ending reading list!</h2>
-        <br />
+        <h2>Ryan's Movies</h2> <br />
+        <p>Literally just a bunch of movies I own, idk</p>
         <DataCollection
           outputSize={this.outputLimit}
           endpoint={this.endpoint}
-          itemTag={BooksItem}
+          itemTag={MoviesItem}
         />
-        <Link className={styles.seeMore} to={'/ReadingList'}>
+        <Link className={styles.seeMore} to={'/MoviesList'}>
           <h2>...</h2>
         </Link>
       </div>
@@ -43,4 +43,4 @@ class BooksSubPage extends Component {
   }
 }
 
-export default BooksSubPage;
+export default MoviesSubPage;

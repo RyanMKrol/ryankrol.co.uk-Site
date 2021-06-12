@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { DataCollection, MovieRatingsItem, AlbumRatingsItem } from '../../components';
+import { DataCollection, MovieRatingsItem, AlbumRatingsItem } from '../../../components';
 import styles from './RatingsSubPage.module.css';
 
-import { baseEndpoint, generateCustomSorter } from '../../utils/ProdUtils';
+import { baseEndpoint, generateCustomSorter } from '../../../utils/ProdUtils';
 
 /**
  * Page for rendering sub-section of Ratings content

@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router, Switch, Route, Redirect,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   Playground, MusicSubPage, RatingsSubPage, BooksSubPage, MoviesSubPage,
 } from './pages';
@@ -21,14 +19,7 @@ function AppRouter() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/">
-            <Redirect
-              to={{
-                pathname: '/playground',
-              }}
-            />
-          </Route>
-          <Route path="/playground">
+          <Route path="/">
             <PageSection>
               <Playground />
             </PageSection>
