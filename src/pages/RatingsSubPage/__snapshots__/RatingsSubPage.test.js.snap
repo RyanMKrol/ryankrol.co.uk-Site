@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders playground correctly 1`] = `
+<div
+  className="container"
+>
+  <h2>
+    Movies I've Watched
+  </h2>
+  <br />
+  <DataCollection
+    endpoint="http://www.ryankrol.co.uk/api/ratings/movie"
+    itemTag={[Function]}
+    outputSize={6}
+    sorter={[Function]}
+  />
+  <Link
+    className="seeMore"
+    to="/MovieRatings"
+  >
+    <h2>
+      ...
+    </h2>
+  </Link>
+  <h2>
+    Albums I've Listened To
+  </h2>
+  <br />
+  <DataCollection
+    endpoint="http://www.ryankrol.co.uk/api/ratings/album"
+    itemTag={[Function]}
+    outputSize={6}
+    sorter={[Function]}
+  />
+  <Link
+    className="seeMore"
+    to="/AlbumRatings"
+  >
+    <h2>
+      ...
+    </h2>
+  </Link>
+</div>
+`;
