@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json';
 
 import RatingsSubPage from './RatingsSubPage';
 
-it('renders playground correctly', () => {
+it('renders RatingsSubPage correctly', () => {
   const header = shallow(<RatingsSubPage />);
   expect(toJson(header)).toMatchSnapshot();
 });

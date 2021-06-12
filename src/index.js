@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
-  Playground, MusicSubPage, RatingsSubPage, BooksSubPage, MoviesSubPage,
+  Playground,
+  MusicSubPage,
+  RatingsSubPage,
+  BooksSubPage,
+  MoviesSubPage,
+  BooksPage,
 } from './pages';
 import { Header, PageSection } from './components';
 
@@ -19,6 +24,9 @@ function AppRouter() {
       <Router>
         <Header />
         <Switch>
+          <Route path="/ReadingList">
+            <BooksPage />
+          </Route>
           <Route path="/">
             <PageSection>
               <Playground />

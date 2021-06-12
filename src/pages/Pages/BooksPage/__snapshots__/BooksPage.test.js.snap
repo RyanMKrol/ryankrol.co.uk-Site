@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders BooksSubPage correctly 1`] = `
+exports[`renders BooksPage correctly 1`] = `
 <div
   className="container"
 >
@@ -11,15 +11,6 @@ exports[`renders BooksSubPage correctly 1`] = `
   <DataCollection
     endpoint="http://www.ryankrol.co.uk/api/books"
     itemTag={[Function]}
-    outputSize={20}
   />
-  <Link
-    className="seeMore"
-    to="/ReadingList"
-  >
-    <h2>
-      ...
-    </h2>
-  </Link>
 </div>
 `;
