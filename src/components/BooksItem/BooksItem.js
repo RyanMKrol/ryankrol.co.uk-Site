@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import styles from './BooksItem.module.css';
+
 /**
  * A component representing a books item
  */
@@ -39,24 +41,12 @@ class BooksItem extends Component {
    */
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <img
-          className="book-item-image"
+          className={styles.thumbnail}
           src={this.images.thumbnail}
           alt={`${this.title} - ${this.authors}`}
         />
-        <span className="highlighted">Title:</span>
-        <span>{this.title}</span>
-        <br />
-        <span className="highlighted">Authors:</span>
-        <span>{this.authors}</span>
-        <br />
-        <span className="highlighted">Isbn:</span>
-        <span>{this.isbn}</span>
-        <br />
-        <span className="highlighted">Link:</span>
-        <span>{this.link}</span>
-        <br />
       </div>
     );
   }

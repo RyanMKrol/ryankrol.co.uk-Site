@@ -1,47 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders BooksItem without issue 1`] = `
-<div>
+<div
+  className="container"
+>
   <img
     alt="The Humans - Matt Haig"
-    className="book-item-image"
+    className="thumbnail"
     src="http://books.google.com/books/content?id=4mZ1XoSpR9UC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
   />
-  <span
-    className="highlighted"
-  >
-    Title:
-  </span>
-  <span>
-    The Humans
-  </span>
-  <br />
-  <span
-    className="highlighted"
-  >
-    Authors:
-  </span>
-  <span>
-    Matt Haig
-  </span>
-  <br />
-  <span
-    className="highlighted"
-  >
-    Isbn:
-  </span>
-  <span>
-    9780857868770
-  </span>
-  <br />
-  <span
-    className="highlighted"
-  >
-    Link:
-  </span>
-  <span>
-    https://www.amazon.co.uk/s?k=9780857868770
-  </span>
-  <br />
 </div>
 `;
