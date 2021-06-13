@@ -11,13 +11,21 @@ import { baseEndpoint } from '../../../utils/ProdUtils';
  */
 class BooksSubPage extends Component {
   /**
+   * @param {object} props object containing a single prop - fullSize,
+   *                       which dictates how much data to display
    * @class
    */
-  constructor() {
+  constructor(props) {
     super();
 
     this.endpoint = `${baseEndpoint()}/books`;
-    this.outputLimit = 20;
+
+    this.outputLimit = props.fullSize ? undefined : 20;
+    this.readMore = props.fullSize ? (
+      <Link className={styles.seeMore} to={'/ReadingList'}>
+        <h2>...</h2>
+      </Link>
+    ) : null;
   }
 
   /**
@@ -40,9 +48,7 @@ class BooksSubPage extends Component {
           endpoint={this.endpoint}
           itemTag={BooksItem}
         />
-        <Link className={styles.seeMore} to={'/ReadingList'}>
-          <h2>...</h2>
-        </Link>
+        {this.readMore}
       </div>
     );
   }

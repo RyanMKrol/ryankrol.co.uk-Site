@@ -2,9 +2,13 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import BooksSubPage from './BooksSubPage';
+import { FULL_SIZE_MOCK, LIMITED_SIZE_MOCK } from './__mocks__/BooksSubPageMocks';
 
-it('renders BooksSubPage correctly', () => {
-  const header = shallow(<BooksSubPage />);
+it('renders BooksSubPage correctly with full size', () => {
+  const header = shallow(FULL_SIZE_MOCK);
+  expect(toJson(header)).toMatchSnapshot();
+});
+it('renders BooksSubPage correctly with reduced size', () => {
+  const header = shallow(LIMITED_SIZE_MOCK);
   expect(toJson(header)).toMatchSnapshot();
 });
