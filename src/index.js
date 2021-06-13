@@ -67,6 +67,7 @@ function AppRouter() {
                 </PageSection>
               </Route>
             </Switch>
+            <div id="root-page-footer" />
           </div>
           <div id="root-page-social">
             <SocialList />
