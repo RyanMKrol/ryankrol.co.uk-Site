@@ -35,7 +35,7 @@ class MoviesPage extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h2>Ryan's Movies</h2> <br />
+        <h2>My Films</h2> <br />
         <p>Literally just a bunch of movies I own, idk</p>
         <DataCollection
           outputSize={this.outputLimit}

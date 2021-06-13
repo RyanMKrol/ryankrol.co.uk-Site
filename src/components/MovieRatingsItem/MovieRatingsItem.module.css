@@ -20,6 +20,8 @@
 
 .titleContent {
   margin-bottom: 4px;
+  padding: 0 4px;
+  text-align: center;
 }
 
 .titleUnderline {
@@ -71,5 +73,15 @@
 
   .graph {
     padding: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .thumbnailContainer {
+    display: none;
+  }
+
+  .container {
+    width: 320px;
   }
 }

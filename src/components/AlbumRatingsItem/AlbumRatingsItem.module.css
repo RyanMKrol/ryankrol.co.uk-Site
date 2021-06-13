@@ -23,6 +23,7 @@
 
 .titleContent {
   margin-bottom: 4px;
+  text-align: center;
 }
 
 .titleUnderline {
@@ -70,5 +71,11 @@
 
   .container {
     width: 410px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: 320px;
   }
 }

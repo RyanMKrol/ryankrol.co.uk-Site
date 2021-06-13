@@ -5,7 +5,7 @@ exports[`renders MoviesPage correctly with full size 1`] = `
   className="container"
 >
   <h2>
-    Ryan's Movies
+    My Films
   </h2>
    
   <br />
@@ -24,7 +24,7 @@ exports[`renders MoviesPage correctly with reduced size 1`] = `
   className="container"
 >
   <h2>
-    Ryan's Movies
+    My Films
   </h2>
    
   <br />
