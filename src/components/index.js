@@ -7,3 +7,4 @@ export { default as ListensItemFull } from './ListensItemFull';
 export { default as ListensItemMini } from './ListensItemMini';
 export { default as AlbumRatingsItem } from './AlbumRatingsItem';
 export { default as MovieRatingsItem } from './MovieRatingsItem';
+export { default as SocialList } from './SocialList';

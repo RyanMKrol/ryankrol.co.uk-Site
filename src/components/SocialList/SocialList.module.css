@@ -1,0 +1,35 @@
+.outerContainer {
+  width: 75px;
+  height: 400px;
+
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin-top: -200px;
+}
+
+.innerContainer {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: cell;
+}
+
+.item:hover {
+  transform: translateY(-6px);
+  color: #64ffda;
+}
