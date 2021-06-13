@@ -17,25 +17,25 @@ exports[`renders header correctly 1`] = `
       className="links"
     >
       <HeaderItem
-        content="reading list"
+        content="Books"
         destination="/ReadingList"
         index={1}
         key="/ReadingList"
       />
       <HeaderItem
-        content="movies"
+        content="Movies"
         destination="/MoviesList"
         index={2}
         key="/MoviesList"
       />
       <HeaderItem
-        content="album ratings"
+        content="Album Ratings"
         destination="/AlbumRatings"
         index={3}
         key="/AlbumRatings"
       />
       <HeaderItem
-        content="movie ratings"
+        content="Movie Ratings"
         destination="/MovieRatings"
         index={4}
         key="/MovieRatings"
