@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import styles from './AboutMeSubPage.module.css';
 /**
  * Page to mess around
  */
@@ -10,14 +11,21 @@ class AboutMeSubPage extends Component {
   constructor() {
     super();
     this.content = (
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        <span className="highlighted"> sed do eiusmod tempor incididunt ut</span> labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-        sunt in culpa qui officia deserunt mollit anim id est laborum
-      </p>
+      <>
+        <p>
+          I'm a London-based software engineer, currently working at Amazon UK building and
+          maintaining acquisition experiences for PrimeVideo. If you have ever paid for a film/tv
+          show that was streamed on Amazon, the chances are you've used my code!
+        </p>
+        <p>
+          In my spare time, I like to hack together side projects just like this website, and many
+          others that will no doubt be detailed somewhere on this site.
+        </p>
+        <p>
+          I've recently been enjoying keeping track of the films and albums I've been enjoying, so
+          if you care about my opinion on anything, you can find what I think of those here too :D
+        </p>
+      </>
     );
   }
 
@@ -29,8 +37,9 @@ class AboutMeSubPage extends Component {
   render() {
     return (
       <div>
-        <h1>Ryan Krol.</h1>
-        <h2>Welcome to my new website!</h2>
+        <p className={'highlighted'}> Hi! My name is </p>
+        <h1 className={styles.name}>Ryan Krol.</h1>
+        <h2>Welcome to my website!</h2>
         {this.content}
       </div>
     );
