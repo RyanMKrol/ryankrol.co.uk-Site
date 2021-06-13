@@ -37,6 +37,7 @@
   display: flex;
   align-items: center;
   font-size: 12px;
+  padding: 4px;
 }
 
 .thumbnailContainer {
@@ -49,4 +50,18 @@
 .thumbnail {
   max-height: 160px;
   border-radius: 4px;
+}
+
+@media (max-width: 580px) {
+  .thumbnailContainer {
+    max-height: 120px;
+  }
+
+  .thumbnail {
+    max-height: 120px;
+  }
+
+  .container {
+    width: 410px;
+  }
 }

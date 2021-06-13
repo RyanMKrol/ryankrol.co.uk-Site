@@ -67,10 +67,13 @@ a {
   display: flex;
   flex-direction: row;
 }
-
-#root-page-social {
-  width: 75px;
+#root-page-content {
+  overflow: auto;
 }
+#root-page-social {
+  min-width: 75px;
+}
+
 #root-page-footer {
   height: 100px;
 }
