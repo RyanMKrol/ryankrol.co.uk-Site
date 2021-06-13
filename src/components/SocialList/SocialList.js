@@ -49,8 +49,12 @@ class SocialList extends Component {
    */
   render() {
     return (
-      <div className={styles.outerContainer}>
-        <div className={styles.innerContainer}>{this.content}</div>
+      <div>
+        <div className={`${styles.topLine} ${styles.verticalLine}`} />
+        <div className={styles.outerContainer}>
+          <div className={styles.innerContainer}>{this.content}</div>
+        </div>
+        <div className={`${styles.bottomLine} ${styles.verticalLine}`} />
       </div>
     );
   }
