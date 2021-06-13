@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MoviesPage correctly with full size 1`] = `
+<div
+  className="container"
+>
+  <h2>
+    Ryan's Movies
+  </h2>
+   
+  <br />
+  <p>
+    Literally just a bunch of movies I own, idk
+  </p>
+  <DataCollection
+    endpoint="http://www.ryankrol.co.uk/api/movies"
+    itemTag={[Function]}
+  />
+</div>
+`;
+
+exports[`renders MoviesPage correctly with reduced size 1`] = `
+<div
+  className="container"
+>
+  <h2>
+    Ryan's Movies
+  </h2>
+   
+  <br />
+  <p>
+    Literally just a bunch of movies I own, idk
+  </p>
+  <DataCollection
+    endpoint="http://www.ryankrol.co.uk/api/movies"
+    itemTag={[Function]}
+    outputSize={20}
+  />
+  <Link
+    className="seeMore"
+    to="/MoviesList"
+  >
+    <h2>
+      ...
+    </h2>
+  </Link>
+</div>
+`;

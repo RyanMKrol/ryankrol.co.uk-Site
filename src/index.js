@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
-  AboutMeSubPage, MusicSubPage, RatingsSubPage, BooksSubPage, MoviesSubPage,
+  AboutMePage, MusicPage, RatingsPage, BooksPage, MoviesPage,
 } from './pages';
 import { Header, PageSection, SocialList } from './components';
 
@@ -23,17 +23,17 @@ function AppRouter() {
             <Switch>
               <Route path="/ReadingList">
                 <PageSection title="Books">
-                  <BooksSubPage fullSize={true} />
+                  <BooksPage fullSize={true} />
                 </PageSection>
               </Route>
               <Route path="/MoviesList">
                 <PageSection title="Movies">
-                  <MoviesSubPage fullSize={true} />
+                  <MoviesPage fullSize={true} />
                 </PageSection>
               </Route>
               <Route path="/AlbumRatings">
                 <PageSection key="albumRatings" title="Ratings">
-                  <RatingsSubPage
+                  <RatingsPage
                     showMovieRatings={false}
                     showAlbumRatings={true}
                     fullMovieRatings={false}
@@ -43,7 +43,7 @@ function AppRouter() {
               </Route>
               <Route path="/MovieRatings">
                 <PageSection key="movieRatings" title="Ratings">
-                  <RatingsSubPage
+                  <RatingsPage
                     showMovieRatings={true}
                     showAlbumRatings={false}
                     fullMovieRatings={true}
@@ -53,13 +53,13 @@ function AppRouter() {
               </Route>
               <Route path="/">
                 <PageSection>
-                  <AboutMeSubPage />
+                  <AboutMePage />
                 </PageSection>
                 <PageSection title="Music">
-                  <MusicSubPage />
+                  <MusicPage />
                 </PageSection>
                 <PageSection title="Ratings">
-                  <RatingsSubPage
+                  <RatingsPage
                     showMovieRatings={true}
                     showAlbumRatings={true}
                     fullMovieRatings={false}
@@ -67,10 +67,10 @@ function AppRouter() {
                   />
                 </PageSection>
                 <PageSection title="Books">
-                  <BooksSubPage fullSize={false} />
+                  <BooksPage fullSize={false} />
                 </PageSection>
                 <PageSection title="Movies">
-                  <MoviesSubPage fullSize={false} />
+                  <MoviesPage fullSize={false} />
                 </PageSection>
               </Route>
             </Switch>
