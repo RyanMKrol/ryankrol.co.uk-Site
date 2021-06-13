@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Radar } from 'react-chartjs-2';
 
-import styles from './RatingsGraph.module.css';
-
 /**
  * Component to display ratings data
  */
@@ -33,43 +31,41 @@ class RatingsGraph extends Component {
    */
   render() {
     return (
-      <div className={styles.container}>
-        <Radar
-          data={{
-            labels: this.labels,
-            datasets: [
-              {
-                data: this.data,
-                backgroundColor: `rgba(${this.colour1}, ${this.colour2}, ${this.colour3}, 0.2)`,
-                borderColor: `rgb(${this.colour1}, ${this.colour2}, ${this.colour3})`,
-              },
-            ],
-          }}
-          options={{
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: {
+      <Radar
+        data={{
+          labels: this.labels,
+          datasets: [
+            {
+              data: this.data,
+              backgroundColor: `rgba(${this.colour1}, ${this.colour2}, ${this.colour3}, 0.2)`,
+              borderColor: `rgb(${this.colour1}, ${this.colour2}, ${this.colour3})`,
+            },
+          ],
+        }}
+        options={{
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+          scales: {
+            r: {
+              ticks: {
                 display: false,
+                count: 5,
               },
-            },
-            scales: {
-              r: {
-                ticks: {
-                  display: false,
-                  count: 5,
-                },
-                backgroundColor: '#fff',
-                angleLines: {
-                  display: true,
-                },
-                suggestedMin: 0,
-                suggestedMax: 100,
+              backgroundColor: '#fff',
+              angleLines: {
+                display: true,
               },
+              suggestedMin: 0,
+              suggestedMax: 100,
             },
-          }}
-        />
-      </div>
+          },
+        }}
+      />
     );
   }
 }
