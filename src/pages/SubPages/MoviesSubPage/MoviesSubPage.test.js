@@ -2,9 +2,13 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import MoviesSubPage from './MoviesSubPage';
+import { FULL_SIZE_MOCK, LIMITED_SIZE_MOCK } from './__mocks__/MoviesSubPageMocks';
 
-it('renders MoviesSubPage correctly', () => {
-  const header = shallow(<MoviesSubPage />);
+it('renders MoviesSubPage correctly with full size', () => {
+  const header = shallow(FULL_SIZE_MOCK);
+  expect(toJson(header)).toMatchSnapshot();
+});
+it('renders MoviesSubPage correctly with reduced size', () => {
+  const header = shallow(LIMITED_SIZE_MOCK);
   expect(toJson(header)).toMatchSnapshot();
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import MoviesSubPage from './MoviesSubPage';
+import { FULL_SIZE_MOCK, LIMITED_SIZE_MOCK } from './__mocks__/MoviesSubPageMocks';
 
 export default {
   title: 'Pages/MoviesSubPage',
@@ -10,10 +10,21 @@ export default {
 /**
  * default story
  *
- * @returns {React.Component} JSX for the MoviesSubPage
+ * @returns {React.Component} JSX for the MoviesSubPage, with full output
  */
-export const normal = () => (
+export const FullSize = () => (
   <Router>
-    <MoviesSubPage />
+    <FULL_SIZE_MOCK />
+  </Router>
+);
+
+/**
+ * default story
+ *
+ * @returns {React.Component} JSX for the MoviesSubPage, with limited output
+ */
+export const LimitedSize = () => (
+  <Router>
+    <LIMITED_SIZE_MOCK />
   </Router>
 );
