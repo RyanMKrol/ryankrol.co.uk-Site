@@ -47,7 +47,7 @@ class RatingsSubPage extends Component {
           <h2>...</h2>
         </Link>
         <h2>Albums I've Listened To</h2>
-        <p>Like the movie ratings, but this time with music!</p>
+        <p>Like the movie ratings, but this time, with music!</p>
         <br />
         <DataCollection
           outputSize={this.albumsOutputLimit}

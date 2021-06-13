@@ -29,7 +29,7 @@ exports[`renders RatingsSubPage correctly 1`] = `
     Albums I've Listened To
   </h2>
   <p>
-    Like the movie ratings, but this time with music!
+    Like the movie ratings, but this time, with music!
   </p>
   <br />
   <DataCollection

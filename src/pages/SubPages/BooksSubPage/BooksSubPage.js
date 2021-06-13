@@ -29,6 +29,11 @@ class BooksSubPage extends Component {
     return (
       <div className={styles.container}>
         <h2>My never-ending reading list!</h2>
+        <p>
+          I also like to read, but sadly my reading pace is completely outmatched by my ability to
+          buy books I think I'd like. Never-the-less, here are the books I would some day like to
+          read!
+        </p>
         <br />
         <DataCollection
           outputSize={this.outputLimit}
