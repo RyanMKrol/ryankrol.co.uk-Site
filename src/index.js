@@ -2,15 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
-  AlbumRatingsPage,
-  AboutMeSubPage,
-  MusicSubPage,
-  RatingsSubPage,
-  BooksSubPage,
-  MoviesSubPage,
-  MovieRatingsPage,
-  BooksPage,
-  MoviesPage,
+  AboutMeSubPage, MusicSubPage, RatingsSubPage, BooksSubPage, MoviesSubPage,
 } from './pages';
 import { Header, PageSection, SocialList } from './components';
 
@@ -31,22 +23,32 @@ function AppRouter() {
             <Switch>
               <Route path="/ReadingList">
                 <PageSection title="Books">
-                  <BooksPage />
+                  <BooksSubPage fullSize={true} />
                 </PageSection>
               </Route>
               <Route path="/MoviesList">
                 <PageSection title="Movies">
-                  <MoviesPage />
+                  <MoviesSubPage fullSize={true} />
                 </PageSection>
               </Route>
               <Route path="/AlbumRatings">
-                <PageSection title="Ratings">
-                  <AlbumRatingsPage />
+                <PageSection key="albumRatings" title="Ratings">
+                  <RatingsSubPage
+                    showMovieRatings={false}
+                    showAlbumRatings={true}
+                    fullMovieRatings={false}
+                    fullAlbumRatings={true}
+                  />
                 </PageSection>
               </Route>
               <Route path="/MovieRatings">
-                <PageSection title="Ratings">
-                  <MovieRatingsPage />
+                <PageSection key="movieRatings" title="Ratings">
+                  <RatingsSubPage
+                    showMovieRatings={true}
+                    showAlbumRatings={false}
+                    fullMovieRatings={true}
+                    fullAlbumRatings={false}
+                  />
                 </PageSection>
               </Route>
               <Route path="/">
@@ -57,13 +59,18 @@ function AppRouter() {
                   <MusicSubPage />
                 </PageSection>
                 <PageSection title="Ratings">
-                  <RatingsSubPage />
+                  <RatingsSubPage
+                    showMovieRatings={true}
+                    showAlbumRatings={true}
+                    fullMovieRatings={false}
+                    fullAlbumRatings={false}
+                  />
                 </PageSection>
                 <PageSection title="Books">
-                  <BooksSubPage />
+                  <BooksSubPage fullSize={false} />
                 </PageSection>
                 <PageSection title="Movies">
-                  <MoviesSubPage />
+                  <MoviesSubPage fullSize={false} />
                 </PageSection>
               </Route>
             </Switch>

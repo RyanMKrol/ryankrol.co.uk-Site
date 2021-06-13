@@ -11,25 +11,34 @@ import { baseEndpoint, generateCustomSorter } from '../../../utils/ProdUtils';
  */
 class RatingsSubPage extends Component {
   /**
+   * @param {object} props object dictating whether to show each rating type,
+   *                       and whether to show them all
    * @class
    */
-  constructor() {
+  constructor(props) {
     super();
 
     this.moviesEndpoint = `${baseEndpoint()}/ratings/movie`;
     this.albumsEndpoint = `${baseEndpoint()}/ratings/album`;
-    this.moviesOutputLimit = 6;
-    this.albumsOutputLimit = 6;
+
+    this.showMovieRatings = props.showMovieRatings;
+    this.showAlbumRatings = props.showAlbumRatings;
+
+    this.fullMovieRatings = props.fullMovieRatings;
+    this.fullAlbumRatings = props.fullAlbumRatings;
+
+    this.moviesOutputLimit = props.fullMovieRatings ? undefined : 6;
+    this.albumsOutputLimit = props.fullAlbumRatings ? undefined : 6;
   }
 
   /**
-   * Render method
+   * Generate the movie content based on input props
    *
-   * @returns {string} JSX Content
+   * @returns {string} JSX content for movie ratings
    */
-  render() {
-    return (
-      <div className={styles.container}>
+  generateMovieContent() {
+    return this.showMovieRatings ? (
+      <>
         <h2>Movies I've Watched</h2>
         <p>
           Like most humans, I enjoy watching movies! Unlike most humans however, I've taken the time
@@ -43,9 +52,23 @@ class RatingsSubPage extends Component {
           itemTag={MovieRatingsItem}
           sorter={generateCustomSorter('blind')}
         />
-        <Link className={styles.seeMore} to={'/MovieRatings'}>
-          <h2>...</h2>
-        </Link>
+        {this.fullMovieRatings ? null : (
+          <Link className={styles.seeMore} to={'/MovieRatings'}>
+            <h2>...</h2>
+          </Link>
+        )}
+      </>
+    ) : null;
+  }
+
+  /**
+   * Generate the album content based on input props
+   *
+   * @returns {string} JSX content for album ratings
+   */
+  generateAlbumContent() {
+    return this.showAlbumRatings ? (
+      <>
         <h2>Albums I've Listened To</h2>
         <p>Like the movie ratings, but this time, with music!</p>
         <br />
@@ -55,9 +78,25 @@ class RatingsSubPage extends Component {
           itemTag={AlbumRatingsItem}
           sorter={generateCustomSorter('rating')}
         />
-        <Link className={styles.seeMore} to={'/AlbumRatings'}>
-          <h2>...</h2>
-        </Link>
+        {this.fullAlbumRatings ? null : (
+          <Link className={styles.seeMore} to={'/AlbumRatings'}>
+            <h2>...</h2>
+          </Link>
+        )}
+      </>
+    ) : null;
+  }
+
+  /**
+   * Render method
+   *
+   * @returns {string} JSX Content
+   */
+  render() {
+    return (
+      <div className={styles.container}>
+        {this.generateMovieContent()}
+        {this.generateAlbumContent()}
       </div>
     );
   }
