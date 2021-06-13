@@ -25,6 +25,12 @@ body,
   margin: auto;
 }
 
+@media (max-width: 800px) {
+  .page-container {
+    width: 100%;
+  }
+}
+
 /* font styles */
 h1,
 h2 {
