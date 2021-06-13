@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Playground correctly 1`] = `
+exports[`renders AboutMeSubPage correctly 1`] = `
 <div>
   <h1>
     Ryan Krol.

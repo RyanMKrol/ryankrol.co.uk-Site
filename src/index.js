@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   AlbumRatingsPage,
-  Playground,
+  AboutMeSubPage,
   MusicSubPage,
   RatingsSubPage,
   BooksSubPage,
@@ -51,7 +51,7 @@ function AppRouter() {
               </Route>
               <Route path="/">
                 <PageSection>
-                  <Playground />
+                  <AboutMeSubPage />
                 </PageSection>
                 <PageSection title="Music">
                   <MusicSubPage />

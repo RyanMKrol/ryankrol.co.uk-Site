@@ -2,9 +2,9 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import Playground from './Playground';
+import AboutMeSubPage from './AboutMeSubPage';
 
-it('renders Playground correctly', () => {
-  const header = shallow(<Playground />);
+it('renders AboutMeSubPage correctly', () => {
+  const header = shallow(<AboutMeSubPage />);
   expect(toJson(header)).toMatchSnapshot();
 });

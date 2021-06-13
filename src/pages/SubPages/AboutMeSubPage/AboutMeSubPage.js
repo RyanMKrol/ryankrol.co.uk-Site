@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 /**
  * Page to mess around
  */
-class Playground extends Component {
+class AboutMeSubPage extends Component {
   /**
    * @class
    */
@@ -37,4 +37,4 @@ class Playground extends Component {
   }
 }
 
-export default Playground;
+export default AboutMeSubPage;

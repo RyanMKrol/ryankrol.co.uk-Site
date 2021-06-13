@@ -1,6 +1,10 @@
 export {
-  AlbumRatingsPage, BooksPage, MoviesPage, MovieRatingsPage, Playground,
+  AlbumRatingsPage, BooksPage, MoviesPage, MovieRatingsPage,
 } from './Pages';
 export {
-  BooksSubPage, MoviesSubPage, MusicSubPage, RatingsSubPage,
+  AboutMeSubPage,
+  BooksSubPage,
+  MoviesSubPage,
+  MusicSubPage,
+  RatingsSubPage,
 } from './SubPages';
