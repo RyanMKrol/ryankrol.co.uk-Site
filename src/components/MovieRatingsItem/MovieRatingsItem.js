@@ -64,6 +64,7 @@ class MovieRatingsItem extends Component {
             <p className={styles.titleContent}>{this.title}</p>
             <div className={styles.titleUnderline} />
           </div>
+          <p className={styles.gist}>"{this.gist}"</p>
           <div className={styles.content}>
             <div className={styles.thumbnailContainer}>
               <img className={styles.thumbnail} src={this.thumbnail} alt={this.title} />
@@ -72,6 +73,7 @@ class MovieRatingsItem extends Component {
               <RatingsGraph data={this.data} labels={this.labels} />
             </div>
           </div>
+          <p className={styles.date}>{this.date}</p>
         </div>
       </div>
     );

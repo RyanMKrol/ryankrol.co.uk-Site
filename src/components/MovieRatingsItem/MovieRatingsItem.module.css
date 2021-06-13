@@ -30,6 +30,16 @@
   height: auto;
 }
 
+.gist {
+  font-size: 12px;
+  margin: 4px;
+}
+
+.date {
+  font-size: 10px;
+  margin: 4px;
+}
+
 .content {
   display: flex;
   align-items: center;

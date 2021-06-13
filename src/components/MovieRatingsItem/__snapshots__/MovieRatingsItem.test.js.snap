@@ -17,6 +17,13 @@ exports[`renders MovieRatingsItem without issue 1`] = `
         className="titleUnderline"
       />
     </div>
+    <p
+      className="gist"
+    >
+      "
+      A Somali pirate is the captain now
+      "
+    </p>
     <div
       className="content"
     >
@@ -54,6 +61,11 @@ exports[`renders MovieRatingsItem without issue 1`] = `
         />
       </div>
     </div>
+    <p
+      className="date"
+    >
+      03-05-2021
+    </p>
   </div>
 </div>
 `;
