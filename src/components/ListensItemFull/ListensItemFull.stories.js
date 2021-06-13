@@ -1,14 +1,7 @@
-import React from 'react';
-
 import DEFAULT_MOCK from './__mocks__/ListensItemFullMocks';
 
 export default {
   title: 'Components/ListensItemFull',
 };
 
-/**
- * default story
- *
- * @returns {React.Component} JSX for the ListensItemFull
- */
-export const normal = () => DEFAULT_MOCK;
+export const Default = () => DEFAULT_MOCK;

@@ -6,4 +6,4 @@ export default {
   title: 'Pages/AboutMePage',
 };
 
-export const normal = () => <AboutMePage />;
+export const Default = () => <AboutMePage />;

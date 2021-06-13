@@ -7,7 +7,7 @@ export default {
   title: 'Pages/MusicPage',
 };
 
-export const normal = () => (
+export const Default = () => (
   <Router>
     <MusicPage />
   </Router>

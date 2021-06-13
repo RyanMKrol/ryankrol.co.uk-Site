@@ -7,12 +7,7 @@ export default {
   title: 'Components/Header',
 };
 
-/**
- * default story
- *
- * @returns {React.Component} JSX for the Header
- */
-export const normal = () => (
+export const Default = () => (
   <Router>
     <Header />
   </Router>
