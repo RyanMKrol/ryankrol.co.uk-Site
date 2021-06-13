@@ -7,6 +7,9 @@ exports[`renders RatingsSubPage correctly 1`] = `
   <h2>
     Movies I've Watched
   </h2>
+  <p>
+    Like most humans, I enjoy watching movies! Unlike most humans however, I've taken the time to setup a system to track what I think of the movies I watch. If you'd like to see how I've rated anything I've watched since December 2020, then look no further!
+  </p>
   <br />
   <DataCollection
     endpoint="http://www.ryankrol.co.uk/api/ratings/movie"
@@ -25,6 +28,9 @@ exports[`renders RatingsSubPage correctly 1`] = `
   <h2>
     Albums I've Listened To
   </h2>
+  <p>
+    Like the movie ratings, but this time with music!
+  </p>
   <br />
   <DataCollection
     endpoint="http://www.ryankrol.co.uk/api/ratings/album"

@@ -31,6 +31,11 @@ class RatingsSubPage extends Component {
     return (
       <div className={styles.container}>
         <h2>Movies I've Watched</h2>
+        <p>
+          Like most humans, I enjoy watching movies! Unlike most humans however, I've taken the time
+          to setup a system to track what I think of the movies I watch. If you'd like to see how
+          I've rated anything I've watched since December 2020, then look no further!
+        </p>
         <br />
         <DataCollection
           outputSize={this.moviesOutputLimit}
@@ -41,8 +46,8 @@ class RatingsSubPage extends Component {
         <Link className={styles.seeMore} to={'/MovieRatings'}>
           <h2>...</h2>
         </Link>
-
         <h2>Albums I've Listened To</h2>
+        <p>Like the movie ratings, but this time with music!</p>
         <br />
         <DataCollection
           outputSize={this.albumsOutputLimit}
