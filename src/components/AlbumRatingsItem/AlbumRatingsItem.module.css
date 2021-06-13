@@ -52,6 +52,13 @@
   border-radius: 4px;
 }
 
+.date {
+  margin: 4px;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+}
+
 @media (max-width: 580px) {
   .thumbnailContainer {
     max-height: 120px;

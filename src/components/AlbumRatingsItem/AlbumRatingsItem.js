@@ -59,9 +59,6 @@ class AlbumRatingsItem extends Component {
               <span>Score: </span>
               <span>{this.rating}</span>
               <br />
-              <span>Date: </span>
-              <span>{this.date}</span>
-              <br />
               <span>Mood: </span>
               <span>{this.mood}</span>
               <br />
@@ -71,6 +68,7 @@ class AlbumRatingsItem extends Component {
               <br />
             </div>
           </div>
+          <p className={styles.date}>{this.date}</p>
         </div>
       </div>
     );

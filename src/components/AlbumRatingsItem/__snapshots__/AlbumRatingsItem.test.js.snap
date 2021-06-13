@@ -46,13 +46,6 @@ exports[`renders AlbumRatingsItem without issue 1`] = `
         </span>
         <br />
         <span>
-          Date: 
-        </span>
-        <span>
-          15-03-21
-        </span>
-        <br />
-        <span>
           Mood: 
         </span>
         <span>
@@ -69,6 +62,11 @@ exports[`renders AlbumRatingsItem without issue 1`] = `
         <br />
       </div>
     </div>
+    <p
+      className="date"
+    >
+      15-03-21
+    </p>
   </div>
 </div>
 `;
