@@ -12,7 +12,7 @@ import {
   BooksPage,
   MoviesPage,
 } from './pages';
-import { Header, PageSection } from './components';
+import { Header, PageSection, SocialList } from './components';
 
 import './index.css';
 
@@ -26,45 +26,52 @@ function AppRouter() {
     <div id="root-container">
       <Router>
         <Header />
-        <Switch>
-          <Route path="/ReadingList">
-            <PageSection title="Books">
-              <BooksPage />
-            </PageSection>
-          </Route>
-          <Route path="/MoviesList">
-            <PageSection title="Movies">
-              <MoviesPage />
-            </PageSection>
-          </Route>
-          <Route path="/AlbumRatings">
-            <PageSection title="Ratings">
-              <AlbumRatingsPage />
-            </PageSection>
-          </Route>
-          <Route path="/MovieRatings">
-            <PageSection title="Ratings">
-              <MovieRatingsPage />
-            </PageSection>
-          </Route>
-          <Route path="/">
-            <PageSection>
-              <Playground />
-            </PageSection>
-            <PageSection title="Music">
-              <MusicSubPage />
-            </PageSection>
-            <PageSection title="Ratings">
-              <RatingsSubPage />
-            </PageSection>
-            <PageSection title="Books">
-              <BooksSubPage />
-            </PageSection>
-            <PageSection title="Movies">
-              <MoviesSubPage />
-            </PageSection>
-          </Route>
-        </Switch>
+        <div id="root-page-container">
+          <div id="root-page-content">
+            <Switch>
+              <Route path="/ReadingList">
+                <PageSection title="Books">
+                  <BooksPage />
+                </PageSection>
+              </Route>
+              <Route path="/MoviesList">
+                <PageSection title="Movies">
+                  <MoviesPage />
+                </PageSection>
+              </Route>
+              <Route path="/AlbumRatings">
+                <PageSection title="Ratings">
+                  <AlbumRatingsPage />
+                </PageSection>
+              </Route>
+              <Route path="/MovieRatings">
+                <PageSection title="Ratings">
+                  <MovieRatingsPage />
+                </PageSection>
+              </Route>
+              <Route path="/">
+                <PageSection>
+                  <Playground />
+                </PageSection>
+                <PageSection title="Music">
+                  <MusicSubPage />
+                </PageSection>
+                <PageSection title="Ratings">
+                  <RatingsSubPage />
+                </PageSection>
+                <PageSection title="Books">
+                  <BooksSubPage />
+                </PageSection>
+                <PageSection title="Movies">
+                  <MoviesSubPage />
+                </PageSection>
+              </Route>
+            </Switch>
+          </div>
+          <div id="root-page-social">
+            <SocialList />
+          </div>
+        </div>
       </Router>
     </div>
   );
