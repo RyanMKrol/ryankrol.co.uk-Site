@@ -7,11 +7,6 @@ export default {
   title: 'Pages/MusicSubPage',
 };
 
-/**
- * default story
- *
- * @returns {React.Component} JSX for the MusicSubPage
- */
 export const normal = () => (
   <Router>
     <MusicSubPage />

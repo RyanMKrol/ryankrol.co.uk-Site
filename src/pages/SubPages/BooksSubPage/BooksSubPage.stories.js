@@ -7,24 +7,5 @@ export default {
   title: 'Pages/BooksSubPage',
 };
 
-/**
- * default story
- *
- * @returns {React.Component} JSX for the BooksSubPage, with full output
- */
-export const FullSize = () => (
-  <Router>
-    <FULL_SIZE_MOCK />
-  </Router>
-);
-
-/**
- * default story
- *
- * @returns {React.Component} JSX for the BooksSubPage, with limited output
- */
-export const LimitedSize = () => (
-  <Router>
-    <LIMITED_SIZE_MOCK />
-  </Router>
-);
+export const FullSize = () => <Router>{FULL_SIZE_MOCK}</Router>;
+export const LimitedSize = () => <Router>{LIMITED_SIZE_MOCK}</Router>;
