@@ -29,7 +29,9 @@ exports[`renders MovieRatingsItem without issue 1`] = `
           src="https://m.media-amazon.com/images/M/MV5BODhiZWRhMjctNDUyMS00NmUwLTgwYmItMjJhOWNkZWQ3ZTQxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
         />
       </div>
-      <div>
+      <div
+        className="graph"
+      >
         <RatingsGraph
           data={
             Array [

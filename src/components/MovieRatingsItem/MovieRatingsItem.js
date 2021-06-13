@@ -68,7 +68,7 @@ class MovieRatingsItem extends Component {
             <div className={styles.thumbnailContainer}>
               <img className={styles.thumbnail} src={this.thumbnail} alt={this.title} />
             </div>
-            <div>
+            <div className={styles.graph}>
               <RatingsGraph data={this.data} labels={this.labels} />
             </div>
           </div>

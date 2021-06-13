@@ -2,6 +2,10 @@
   padding: 4px;
 }
 
+.graph {
+  padding: 25px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -40,4 +44,22 @@
 .thumbnail {
   max-height: 160px;
   border-radius: 4px;
+}
+
+@media (max-width: 580px) {
+  .thumbnailContainer {
+    max-height: 120px;
+  }
+
+  .thumbnail {
+    max-height: 120px;
+  }
+
+  .container {
+    width: 410px;
+  }
+
+  .graph {
+    padding: 10px;
+  }
 }
