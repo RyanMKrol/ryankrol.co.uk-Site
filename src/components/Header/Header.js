@@ -5,20 +5,20 @@ import styles from './Header.module.css';
 
 const HEADER_ITEMS = [
   {
-    destination: '/ReadingList',
-    title: 'Books',
-  },
-  {
-    destination: '/MoviesList',
-    title: 'Movies',
+    destination: '/MovieRatings',
+    title: 'Movie Ratings',
   },
   {
     destination: '/AlbumRatings',
     title: 'Album Ratings',
   },
   {
-    destination: '/MovieRatings',
-    title: 'Movie Ratings',
+    destination: '/ReadingList',
+    title: 'Books',
+  },
+  {
+    destination: '/MoviesList',
+    title: 'Movies',
   },
 ];
 
