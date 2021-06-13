@@ -76,12 +76,15 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .thumbnailContainer {
     display: none;
   }
 
   .container {
     width: 320px;
+  }
+  .graph {
+    padding: 0;
   }
 }
