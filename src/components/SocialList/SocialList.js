@@ -8,12 +8,10 @@ import {
   faSpotify,
 } from '@fortawesome/free-brands-svg-icons';
 
-// import { faCircle } from '@fortawesome/free-solid-svg-icons';
-
 import styles from './SocialList.module.css';
 
 /**
- * A component representing a books item
+ * A component representing a SocialList item
  */
 class SocialList extends Component {
   /**
