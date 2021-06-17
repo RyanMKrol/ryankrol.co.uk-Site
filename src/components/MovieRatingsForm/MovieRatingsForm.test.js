@@ -4,39 +4,16 @@ import toJson from 'enzyme-to-json';
 import { Formik, Form } from 'formik';
 import fetch from 'node-fetch';
 
-import { validateFormValues, onSubmitHandler } from './MovieRatingsForm';
-
-import {
-  TEXT_INPUT_MOCK,
-  PASSWORD_INPUT_MOCK,
-  RANGE_INPUT_MOCK,
-  DEFAULT_CUSTOM_ERROR_MOCK,
-} from './__mocks__/MovieRatingsFormMocks';
+import MovieRatingsForm, { validateFormValues, onSubmitHandler } from './MovieRatingsForm';
 
 jest.mock('node-fetch');
 
-it('renders MovieRatingsForm text field', () => {
+it('renders MovieRatingsForm', () => {
   const listensItem = mount(
     <Formik>
-      <Form>{TEXT_INPUT_MOCK}</Form>
-    </Formik>,
-  );
-  expect(toJson(listensItem)).toMatchSnapshot();
-});
-
-it('renders MovieRatingsForm password field', () => {
-  const listensItem = mount(
-    <Formik>
-      <Form>{PASSWORD_INPUT_MOCK}</Form>
-    </Formik>,
-  );
-  expect(toJson(listensItem)).toMatchSnapshot();
-});
-
-it('renders MovieRatingsForm range field', () => {
-  const listensItem = mount(
-    <Formik>
-      <Form>{RANGE_INPUT_MOCK}</Form>
+      <Form>
+        <MovieRatingsForm />
+      </Form>
     </Formik>,
   );
   expect(toJson(listensItem)).toMatchSnapshot();
