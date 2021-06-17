@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders AlbumRatingsInputPage correctly 1`] = `
+<div
+  className="container"
+>
+  <h2>
+    Rate an album!
+  </h2>
+  <MovieRatingsForm />
+</div>
+`;
