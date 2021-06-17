@@ -1,5 +1,7 @@
-import { Component } from 'react';
+import React from 'react';
 import { Field, ErrorMessage } from 'formik';
+
+import styles from './RatingsFormItem.module.css';
 
 const RANGE_TYPE = 'range';
 const PASSWORD_TYPE = 'password';
@@ -7,9 +9,9 @@ const PASSWORD_TYPE = 'password';
 /**
  * Class used to display errors on form validation
  */
-export class CustomError extends Component {
+export class CustomError extends React.Component {
   /**
-   * @param {Component} args Children to render in error
+   * @param {object} args Children to render in error
    */
   constructor(args) {
     super();
@@ -23,7 +25,7 @@ export class CustomError extends Component {
    * @returns {string} The HTML for the validation error
    */
   render() {
-    return <div className="validation-error">{this.children}</div>;
+    return <div className={styles.validationError}>{this.children}</div>;
   }
 }
 
@@ -68,7 +70,7 @@ function generateFieldTag(fieldName, fieldType) {
  */
 function RatingsFormItem(props) {
   return (
-    <div key={props.fieldName} className="form-item">
+    <div key={props.fieldName} className={`${styles.formItem} highlighted`}>
       {generateFieldTitle(props.fieldTitle, props.fieldType, props.currentValue)}
       <br />
       {generateFieldTag(props.fieldName, props.fieldType)}

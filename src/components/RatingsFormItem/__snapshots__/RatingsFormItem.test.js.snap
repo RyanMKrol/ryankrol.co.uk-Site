@@ -3,7 +3,7 @@
 exports[`renders CustomError 1`] = `
 <CustomError>
   <div
-    className="validation-error"
+    className="validationError"
   >
     <p>
       Test
@@ -27,7 +27,7 @@ exports[`renders RatingsFormItem password field 1`] = `
         fieldType="password"
       >
         <div
-          className="form-item"
+          className="formItem highlighted"
           key="test-password-input-fieldName"
         >
           test-password-input-fieldTitle
@@ -118,7 +118,7 @@ exports[`renders RatingsFormItem range field 1`] = `
         fieldType="range"
       >
         <div
-          className="form-item"
+          className="formItem highlighted"
           key="test-range-input-fieldName"
         >
           test-range-input-fieldTitle - 50
@@ -211,7 +211,7 @@ exports[`renders RatingsFormItem text field 1`] = `
         fieldType="text"
       >
         <div
-          className="form-item"
+          className="formItem highlighted"
           key="test-text-input-fieldName"
         >
           test-text-input-fieldTitle

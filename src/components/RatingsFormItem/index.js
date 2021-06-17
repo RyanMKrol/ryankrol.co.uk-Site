@@ -1,1 +1,1 @@
-export { default } from './RatingsFormItem';
+export { RANGE_TYPE, PASSWORD_TYPE, RatingsFormItem } from './RatingsFormItem';
