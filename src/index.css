@@ -72,10 +72,16 @@ a {
 #root-page-container {
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
 }
+
 #root-page-content {
   overflow: auto;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
 }
+
 #root-page-social {
   min-width: 75px;
 }

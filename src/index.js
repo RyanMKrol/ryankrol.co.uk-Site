@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
-  AboutMePage, MusicPage, RatingsPage, BooksPage, MoviesPage,
+  AboutMePage,
+  MusicPage,
+  RatingsPage,
+  BooksPage,
+  MoviesPage,
+  MovieRatingsInputPage,
 } from './pages';
 import { Header, PageSection, SocialList } from './components';
 
@@ -21,6 +26,11 @@ function AppRouter() {
         <div id="root-page-container">
           <div id="root-page-content">
             <Switch>
+              <Route path="/NewRatings/Movie">
+                <PageSection title="Ratings">
+                  <MovieRatingsInputPage />
+                </PageSection>
+              </Route>
               <Route path="/ReadingList">
                 <PageSection title="Books">
                   <BooksPage fullSize={true} />
