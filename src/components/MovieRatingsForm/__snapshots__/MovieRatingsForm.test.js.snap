@@ -1,0 +1,2533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MovieRatingsForm password field 1`] = `
+<Formik>
+  <Form>
+    <form
+      action="#"
+      onReset={[Function]}
+      onSubmit={[Function]}
+    >
+      <MovieRatingsForm
+        currentValue="test-password-input-currentValue"
+        fieldName="test-password-input-fieldName"
+        fieldTitle="test-password-input-fieldTitle"
+        fieldType="password"
+      >
+        <Formik
+          initialValues={
+            Object {
+              "blind": 50,
+              "characters": 50,
+              "craftsmanship": 50,
+              "gist": "",
+              "password": "",
+              "sound": 50,
+              "story": 50,
+              "title": "",
+            }
+          }
+          onSubmit={[Function]}
+          validate={[Function]}
+        >
+          <Form
+            className="form"
+          >
+            <form
+              action="#"
+              className="form"
+              onReset={[Function]}
+              onSubmit={[Function]}
+            >
+              <RatingsFormItem
+                currentValue=""
+                fieldName="title"
+                fieldTitle="Title"
+                fieldType="text"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="title"
+                >
+                  Title
+                  <br />
+                  <Field
+                    autocomplete="off"
+                    name="title"
+                    type="text"
+                  >
+                    <input
+                      autocomplete="off"
+                      name="title"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="title"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="title"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue=""
+                fieldName="gist"
+                fieldTitle="The Gist"
+                fieldType="text"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="gist"
+                >
+                  The Gist
+                  <br />
+                  <Field
+                    autocomplete="off"
+                    name="gist"
+                    type="text"
+                  >
+                    <input
+                      autocomplete="off"
+                      name="gist"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="gist"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="gist"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="craftsmanship"
+                fieldTitle="Craftsmanship"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="craftsmanship"
+                >
+                  Craftsmanship - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="craftsmanship"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="craftsmanship"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="craftsmanship"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="craftsmanship"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="characters"
+                fieldTitle="Characters"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="characters"
+                >
+                  Characters - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="characters"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="characters"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="characters"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="characters"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="story"
+                fieldTitle="Story"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="story"
+                >
+                  Story - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="story"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="story"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="story"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="story"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="sound"
+                fieldTitle="Sound"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="sound"
+                >
+                  Sound - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="sound"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="sound"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="sound"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="sound"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="blind"
+                fieldTitle="Blind Score"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="blind"
+                >
+                  Blind Score - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="blind"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="blind"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="blind"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="blind"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue=""
+                fieldName="password"
+                fieldTitle="Password"
+                fieldType="password"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="password"
+                >
+                  Password
+                  <br />
+                  <Field
+                    autoComplete="current-password"
+                    name="password"
+                    type="password"
+                  >
+                    <input
+                      autoComplete="current-password"
+                      name="password"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="password"
+                      value=""
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="password"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="password"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <div
+                className="formItem"
+              >
+                <button
+                  disabled={false}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </Form>
+        </Formik>
+      </MovieRatingsForm>
+    </form>
+  </Form>
+</Formik>
+`;
+
+exports[`renders MovieRatingsForm range field 1`] = `
+<Formik>
+  <Form>
+    <form
+      action="#"
+      onReset={[Function]}
+      onSubmit={[Function]}
+    >
+      <MovieRatingsForm
+        currentValue={50}
+        fieldName="test-range-input-fieldName"
+        fieldTitle="test-range-input-fieldTitle"
+        fieldType="range"
+      >
+        <Formik
+          initialValues={
+            Object {
+              "blind": 50,
+              "characters": 50,
+              "craftsmanship": 50,
+              "gist": "",
+              "password": "",
+              "sound": 50,
+              "story": 50,
+              "title": "",
+            }
+          }
+          onSubmit={[Function]}
+          validate={[Function]}
+        >
+          <Form
+            className="form"
+          >
+            <form
+              action="#"
+              className="form"
+              onReset={[Function]}
+              onSubmit={[Function]}
+            >
+              <RatingsFormItem
+                currentValue=""
+                fieldName="title"
+                fieldTitle="Title"
+                fieldType="text"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="title"
+                >
+                  Title
+                  <br />
+                  <Field
+                    autocomplete="off"
+                    name="title"
+                    type="text"
+                  >
+                    <input
+                      autocomplete="off"
+                      name="title"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="title"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="title"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue=""
+                fieldName="gist"
+                fieldTitle="The Gist"
+                fieldType="text"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="gist"
+                >
+                  The Gist
+                  <br />
+                  <Field
+                    autocomplete="off"
+                    name="gist"
+                    type="text"
+                  >
+                    <input
+                      autocomplete="off"
+                      name="gist"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="gist"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="gist"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="craftsmanship"
+                fieldTitle="Craftsmanship"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="craftsmanship"
+                >
+                  Craftsmanship - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="craftsmanship"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="craftsmanship"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="craftsmanship"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="craftsmanship"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="characters"
+                fieldTitle="Characters"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="characters"
+                >
+                  Characters - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="characters"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="characters"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="characters"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="characters"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="story"
+                fieldTitle="Story"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="story"
+                >
+                  Story - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="story"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="story"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="story"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="story"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="sound"
+                fieldTitle="Sound"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="sound"
+                >
+                  Sound - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="sound"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="sound"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="sound"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="sound"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="blind"
+                fieldTitle="Blind Score"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="blind"
+                >
+                  Blind Score - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="blind"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="blind"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="blind"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="blind"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue=""
+                fieldName="password"
+                fieldTitle="Password"
+                fieldType="password"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="password"
+                >
+                  Password
+                  <br />
+                  <Field
+                    autoComplete="current-password"
+                    name="password"
+                    type="password"
+                  >
+                    <input
+                      autoComplete="current-password"
+                      name="password"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="password"
+                      value=""
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="password"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="password"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <div
+                className="formItem"
+              >
+                <button
+                  disabled={false}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </Form>
+        </Formik>
+      </MovieRatingsForm>
+    </form>
+  </Form>
+</Formik>
+`;
+
+exports[`renders MovieRatingsForm text field 1`] = `
+<Formik>
+  <Form>
+    <form
+      action="#"
+      onReset={[Function]}
+      onSubmit={[Function]}
+    >
+      <MovieRatingsForm
+        currentValue="test-text-input-currentValue"
+        fieldName="test-text-input-fieldName"
+        fieldTitle="test-text-input-fieldTitle"
+        fieldType="text"
+      >
+        <Formik
+          initialValues={
+            Object {
+              "blind": 50,
+              "characters": 50,
+              "craftsmanship": 50,
+              "gist": "",
+              "password": "",
+              "sound": 50,
+              "story": 50,
+              "title": "",
+            }
+          }
+          onSubmit={[Function]}
+          validate={[Function]}
+        >
+          <Form
+            className="form"
+          >
+            <form
+              action="#"
+              className="form"
+              onReset={[Function]}
+              onSubmit={[Function]}
+            >
+              <RatingsFormItem
+                currentValue=""
+                fieldName="title"
+                fieldTitle="Title"
+                fieldType="text"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="title"
+                >
+                  Title
+                  <br />
+                  <Field
+                    autocomplete="off"
+                    name="title"
+                    type="text"
+                  >
+                    <input
+                      autocomplete="off"
+                      name="title"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="title"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="title"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue=""
+                fieldName="gist"
+                fieldTitle="The Gist"
+                fieldType="text"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="gist"
+                >
+                  The Gist
+                  <br />
+                  <Field
+                    autocomplete="off"
+                    name="gist"
+                    type="text"
+                  >
+                    <input
+                      autocomplete="off"
+                      name="gist"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="gist"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="gist"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="craftsmanship"
+                fieldTitle="Craftsmanship"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="craftsmanship"
+                >
+                  Craftsmanship - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="craftsmanship"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="craftsmanship"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="craftsmanship"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="craftsmanship"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="characters"
+                fieldTitle="Characters"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="characters"
+                >
+                  Characters - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="characters"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="characters"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="characters"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="characters"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="story"
+                fieldTitle="Story"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="story"
+                >
+                  Story - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="story"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="story"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="story"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="story"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="sound"
+                fieldTitle="Sound"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="sound"
+                >
+                  Sound - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="sound"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="sound"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="sound"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="sound"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue={50}
+                fieldName="blind"
+                fieldTitle="Blind Score"
+                fieldType="range"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="blind"
+                >
+                  Blind Score - 50
+                  <br />
+                  <Field
+                    max="100"
+                    min="0"
+                    name="blind"
+                    type="range"
+                  >
+                    <input
+                      max="100"
+                      min="0"
+                      name="blind"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="range"
+                      value={50}
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="blind"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="blind"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <RatingsFormItem
+                currentValue=""
+                fieldName="password"
+                fieldTitle="Password"
+                fieldType="password"
+              >
+                <div
+                  className="formItem highlighted"
+                  key="password"
+                >
+                  Password
+                  <br />
+                  <Field
+                    autoComplete="current-password"
+                    name="password"
+                    type="password"
+                  >
+                    <input
+                      autoComplete="current-password"
+                      name="password"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      type="password"
+                      value=""
+                    />
+                  </Field>
+                  <FormikConnect(ErrorMessageImpl)
+                    component={[Function]}
+                    name="password"
+                  >
+                    <ErrorMessageImpl
+                      component={[Function]}
+                      formik={
+                        Object {
+                          "dirty": false,
+                          "errors": Object {},
+                          "getFieldHelpers": [Function],
+                          "getFieldMeta": [Function],
+                          "getFieldProps": [Function],
+                          "handleBlur": [Function],
+                          "handleChange": [Function],
+                          "handleReset": [Function],
+                          "handleSubmit": [Function],
+                          "initialErrors": Object {},
+                          "initialStatus": undefined,
+                          "initialTouched": Object {},
+                          "initialValues": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                          "isSubmitting": false,
+                          "isValid": true,
+                          "isValidating": false,
+                          "registerField": [Function],
+                          "resetForm": [Function],
+                          "setErrors": [Function],
+                          "setFieldError": [Function],
+                          "setFieldTouched": [Function],
+                          "setFieldValue": [Function],
+                          "setFormikState": [Function],
+                          "setStatus": [Function],
+                          "setSubmitting": [Function],
+                          "setTouched": [Function],
+                          "setValues": [Function],
+                          "status": undefined,
+                          "submitCount": 0,
+                          "submitForm": [Function],
+                          "touched": Object {},
+                          "unregisterField": [Function],
+                          "validateField": [Function],
+                          "validateForm": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                          "validateOnMount": false,
+                          "values": Object {
+                            "blind": 50,
+                            "characters": 50,
+                            "craftsmanship": 50,
+                            "gist": "",
+                            "password": "",
+                            "sound": 50,
+                            "story": 50,
+                            "title": "",
+                          },
+                        }
+                      }
+                      name="password"
+                    />
+                  </FormikConnect(ErrorMessageImpl)>
+                </div>
+              </RatingsFormItem>
+              <div
+                className="formItem"
+              >
+                <button
+                  disabled={false}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </Form>
+        </Formik>
+      </MovieRatingsForm>
+    </form>
+  </Form>
+</Formik>
+`;
