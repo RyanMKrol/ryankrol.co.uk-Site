@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   AboutMePage,
+  AlbumRatingsInputPage,
+  BooksPage,
+  MovieRatingsInputPage,
+  MoviesPage,
   MusicPage,
   RatingsPage,
-  BooksPage,
-  MoviesPage,
-  MovieRatingsInputPage,
 } from './pages';
 import { Header, PageSection, SocialList } from './components';
 
@@ -26,6 +27,11 @@ function AppRouter() {
         <div id="root-page-container">
           <div id="root-page-content">
             <Switch>
+              <Route path="/ratings/album/new">
+                <PageSection title="Ratings">
+                  <AlbumRatingsInputPage />
+                </PageSection>
+              </Route>
               <Route path="/ratings/movie/new">
                 <PageSection title="Ratings">
                   <MovieRatingsInputPage />

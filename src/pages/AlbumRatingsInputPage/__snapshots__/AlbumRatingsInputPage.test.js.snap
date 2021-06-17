@@ -7,6 +7,6 @@ exports[`renders AlbumRatingsInputPage correctly 1`] = `
   <h2>
     Rate an album!
   </h2>
-  <MovieRatingsForm />
+  <AlbumRatingsForm />
 </div>
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MovieRatingsForm } from '../../components';
+import { AlbumRatingsForm } from '../../components';
 
 import styles from './AlbumRatingsInputPage.module.css';
 
@@ -13,7 +13,7 @@ function AlbumRatingsInputPage() {
   return (
     <div className={styles.container}>
       <h2>Rate an album!</h2>
-      <MovieRatingsForm />
+      <AlbumRatingsForm />
     </div>
   );
 }
