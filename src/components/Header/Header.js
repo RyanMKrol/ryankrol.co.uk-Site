@@ -5,19 +5,19 @@ import styles from './Header.module.css';
 
 const HEADER_ITEMS = [
   {
-    destination: '/MovieRatings',
+    destination: '/ratings/movie',
     title: 'Movie Ratings',
   },
   {
-    destination: '/AlbumRatings',
+    destination: '/ratings/album',
     title: 'Album Ratings',
   },
   {
-    destination: '/ReadingList',
+    destination: '/reading',
     title: 'Books',
   },
   {
-    destination: '/MoviesList',
+    destination: '/movies',
     title: 'Movies',
   },
 ];

@@ -38,7 +38,7 @@ exports[`renders MoviesPage correctly with reduced size 1`] = `
   />
   <Link
     className="seeMore"
-    to="/MoviesList"
+    to="/movies"
   >
     <h2>
       ...

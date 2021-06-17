@@ -26,22 +26,22 @@ function AppRouter() {
         <div id="root-page-container">
           <div id="root-page-content">
             <Switch>
-              <Route path="/NewRatings/Movie">
+              <Route path="/ratings/movie/new">
                 <PageSection title="Ratings">
                   <MovieRatingsInputPage />
                 </PageSection>
               </Route>
-              <Route path="/ReadingList">
+              <Route path="/reading">
                 <PageSection title="Books">
                   <BooksPage fullSize={true} />
                 </PageSection>
               </Route>
-              <Route path="/MoviesList">
+              <Route path="/movies">
                 <PageSection title="Movies">
                   <MoviesPage fullSize={true} />
                 </PageSection>
               </Route>
-              <Route path="/AlbumRatings">
+              <Route path="/ratings/album">
                 <PageSection key="albumRatings" title="Ratings">
                   <RatingsPage
                     showMovieRatings={false}
@@ -51,7 +51,7 @@ function AppRouter() {
                   />
                 </PageSection>
               </Route>
-              <Route path="/MovieRatings">
+              <Route path="/ratings/movie">
                 <PageSection key="movieRatings" title="Ratings">
                   <RatingsPage
                     showMovieRatings={true}

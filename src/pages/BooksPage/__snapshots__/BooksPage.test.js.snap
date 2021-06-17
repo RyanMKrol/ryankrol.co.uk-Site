@@ -36,7 +36,7 @@ exports[`renders BooksPage correctly with reduced size 1`] = `
   />
   <Link
     className="seeMore"
-    to="/ReadingList"
+    to="/reading"
   >
     <h2>
       ...

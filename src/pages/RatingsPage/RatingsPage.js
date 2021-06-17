@@ -53,7 +53,7 @@ class RatingsPage extends Component {
           sorter={generateCustomSorter('blind')}
         />
         {this.fullMovieRatings ? null : (
-          <Link className={styles.seeMore} to={'/MovieRatings'}>
+          <Link className={styles.seeMore} to={'/ratings/movie'}>
             <h2>...</h2>
           </Link>
         )}
@@ -79,7 +79,7 @@ class RatingsPage extends Component {
           sorter={generateCustomSorter('rating')}
         />
         {this.fullAlbumRatings ? null : (
-          <Link className={styles.seeMore} to={'/AlbumRatings'}>
+          <Link className={styles.seeMore} to={'/ratings/album'}>
             <h2>...</h2>
           </Link>
         )}

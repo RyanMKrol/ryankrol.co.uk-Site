@@ -57,7 +57,7 @@ exports[`renders RatingsPage correctly with limited size album ratings 1`] = `
   />
   <Link
     className="seeMore"
-    to="/AlbumRatings"
+    to="/ratings/album"
   >
     <h2>
       ...
@@ -85,7 +85,7 @@ exports[`renders RatingsPage correctly with limited size movie ratings 1`] = `
   />
   <Link
     className="seeMore"
-    to="/MovieRatings"
+    to="/ratings/movie"
   >
     <h2>
       ...

@@ -22,7 +22,7 @@ class BooksPage extends Component {
 
     this.outputLimit = props.fullSize ? undefined : 20;
     this.readMore = props.fullSize ? null : (
-      <Link className={styles.seeMore} to={'/ReadingList'}>
+      <Link className={styles.seeMore} to={'/reading'}>
         <h2>...</h2>
       </Link>
     );
