@@ -1,7 +1,8 @@
 .seeMore {
   align-self: center;
 }
+
 .container {
-  display: flex;
+  display       : flex;
   flex-direction: column;
 }

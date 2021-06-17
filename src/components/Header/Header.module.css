@@ -4,16 +4,16 @@
 
 .container {
   display: flex;
-  width: 100%;
+  width  : 100%;
 }
 
 .logo {
   font-family: 'Monoton', cursive;
-  font-size: 42px;
+  font-size  : 42px;
 }
 
 .links {
-  display: flex;
+  display    : flex;
   margin-left: auto;
   align-items: center;
 }

@@ -1,4 +1,4 @@
-.thumbnail,
-.container {
+.container,
+.thumbnail {
   max-height: 180px;
 }
