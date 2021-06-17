@@ -22,7 +22,7 @@ class MoviesPage extends Component {
     this.outputLimit = props.fullSize ? undefined : 20;
     this.readMore = props.fullSize ? null : (
       <Link className={styles.seeMore} to={'/movies'}>
-        <h2>...</h2>
+        <h1 className="highlighted">...</h1>
       </Link>
     );
   }
@@ -35,7 +35,7 @@ class MoviesPage extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h2>My Films</h2> <br />
+        <h1 className="light">My Films</h1> <br />
         <p>Literally just a bunch of movies I own, idk</p>
         <DataCollection
           outputSize={this.outputLimit}

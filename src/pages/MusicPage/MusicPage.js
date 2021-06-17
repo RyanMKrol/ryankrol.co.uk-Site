@@ -25,7 +25,7 @@ class MusicPage extends Component {
   render() {
     return (
       <div>
-        <h2>Tune in to Ryan.FM</h2>
+        <h1 className="light">Tune in to Ryan.FM</h1>
         <p>
           I spend a decent amount of time cultivating my interest in music, finding new artists, and
           expanding my tastes. You can find my account on

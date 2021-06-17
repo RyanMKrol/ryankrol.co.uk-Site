@@ -4,9 +4,11 @@ exports[`renders AlbumRatingsInputPage correctly 1`] = `
 <div
   className="container"
 >
-  <h2>
+  <h1
+    className="light"
+  >
     Rate an album!
-  </h2>
+  </h1>
   <AlbumRatingsForm />
 </div>
 `;

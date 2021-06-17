@@ -23,7 +23,7 @@ class BooksPage extends Component {
     this.outputLimit = props.fullSize ? undefined : 20;
     this.readMore = props.fullSize ? null : (
       <Link className={styles.seeMore} to={'/reading'}>
-        <h2>...</h2>
+        <h1 className="highlighted">...</h1>
       </Link>
     );
   }
@@ -36,7 +36,7 @@ class BooksPage extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h2>My never-ending reading list!</h2>
+        <h1 className="light">My never-ending reading list!</h1>
         <p>
           I also like to read, but sadly my reading pace is completely outmatched by my ability to
           buy books I think I'd like. Never-the-less, here are the books I would some day like to

@@ -4,9 +4,11 @@ exports[`renders RatingsPage correctly with full size album ratings 1`] = `
 <div
   className="container"
 >
-  <h2>
+  <h1
+    className="light"
+  >
     Albums I've Listened To
-  </h2>
+  </h1>
   <p>
     Like the movie ratings, but this time, with music!
   </p>
@@ -23,9 +25,11 @@ exports[`renders RatingsPage correctly with full size movie ratings 1`] = `
 <div
   className="container"
 >
-  <h2>
+  <h1
+    className="light"
+  >
     Movies I've Watched
-  </h2>
+  </h1>
   <p>
     Like most humans, I enjoy watching movies! Unlike most humans however, I've taken the time to setup a system to track what I think of the movies I watch. If you'd like to see how I've rated anything I've watched since December 2020, then look no further!
   </p>
@@ -42,9 +46,11 @@ exports[`renders RatingsPage correctly with limited size album ratings 1`] = `
 <div
   className="container"
 >
-  <h2>
+  <h1
+    className="light"
+  >
     Albums I've Listened To
-  </h2>
+  </h1>
   <p>
     Like the movie ratings, but this time, with music!
   </p>
@@ -59,9 +65,11 @@ exports[`renders RatingsPage correctly with limited size album ratings 1`] = `
     className="seeMore"
     to="/ratings/album"
   >
-    <h2>
+    <h1
+      className="highlighted"
+    >
       ...
-    </h2>
+    </h1>
   </Link>
 </div>
 `;
@@ -70,9 +78,11 @@ exports[`renders RatingsPage correctly with limited size movie ratings 1`] = `
 <div
   className="container"
 >
-  <h2>
+  <h1
+    className="light"
+  >
     Movies I've Watched
-  </h2>
+  </h1>
   <p>
     Like most humans, I enjoy watching movies! Unlike most humans however, I've taken the time to setup a system to track what I think of the movies I watch. If you'd like to see how I've rated anything I've watched since December 2020, then look no further!
   </p>
@@ -87,9 +97,11 @@ exports[`renders RatingsPage correctly with limited size movie ratings 1`] = `
     className="seeMore"
     to="/ratings/movie"
   >
-    <h2>
+    <h1
+      className="highlghted"
+    >
       ...
-    </h2>
+    </h1>
   </Link>
 </div>
 `;

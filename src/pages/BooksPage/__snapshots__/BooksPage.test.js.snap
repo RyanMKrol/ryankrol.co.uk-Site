@@ -4,9 +4,11 @@ exports[`renders BooksPage correctly with full size 1`] = `
 <div
   className="container"
 >
-  <h2>
+  <h1
+    className="light"
+  >
     My never-ending reading list!
-  </h2>
+  </h1>
   <p>
     I also like to read, but sadly my reading pace is completely outmatched by my ability to buy books I think I'd like. Never-the-less, here are the books I would some day like to read!
   </p>
@@ -22,9 +24,11 @@ exports[`renders BooksPage correctly with reduced size 1`] = `
 <div
   className="container"
 >
-  <h2>
+  <h1
+    className="light"
+  >
     My never-ending reading list!
-  </h2>
+  </h1>
   <p>
     I also like to read, but sadly my reading pace is completely outmatched by my ability to buy books I think I'd like. Never-the-less, here are the books I would some day like to read!
   </p>
@@ -38,9 +42,11 @@ exports[`renders BooksPage correctly with reduced size 1`] = `
     className="seeMore"
     to="/reading"
   >
-    <h2>
+    <h1
+      className="highlighted"
+    >
       ...
-    </h2>
+    </h1>
   </Link>
 </div>
 `;

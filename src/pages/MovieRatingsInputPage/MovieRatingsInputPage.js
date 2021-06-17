@@ -12,7 +12,7 @@ import styles from './MovieRatingsInputPage.module.css';
 function MovieRatingsInputPage() {
   return (
     <div className={styles.container}>
-      <h2>Rate a movie!</h2>
+      <h1 className="light">Rate a movie!</h1>
       <MovieRatingsForm />
     </div>
   );

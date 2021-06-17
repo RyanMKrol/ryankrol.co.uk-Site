@@ -11,8 +11,8 @@ function AboutMePage() {
   return (
     <div>
       <p className={'highlighted'}> Hi! My name is </p>
-      <h1 className={styles.name}>Ryan Krol.</h1>
-      <h2>Welcome to my website!</h2>
+      <h1 className={`light ${styles.name}`}>Ryan Krol.</h1>
+      <h1 className={'highlighted'}>Welcome to my website!</h1>
       <p>
         I'm a London-based software engineer, currently working at Amazon UK building and
         maintaining acquisition experiences for PrimeVideo. If you have ever paid for a film/tv show

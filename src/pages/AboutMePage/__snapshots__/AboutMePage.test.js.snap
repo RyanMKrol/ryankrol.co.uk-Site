@@ -8,13 +8,15 @@ exports[`renders AboutMePage correctly 1`] = `
      Hi! My name is 
   </p>
   <h1
-    className="name"
+    className="light name"
   >
     Ryan Krol.
   </h1>
-  <h2>
+  <h1
+    className="highlighted"
+  >
     Welcome to my website!
-  </h2>
+  </h1>
   <p>
     I'm a London-based software engineer, currently working at Amazon UK building and maintaining acquisition experiences for PrimeVideo. If you have ever paid for a film/tv show that was streamed on Amazon, the chances are you've used my code!
   </p>

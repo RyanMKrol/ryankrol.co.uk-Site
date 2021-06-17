@@ -12,7 +12,7 @@ import styles from './AlbumRatingsInputPage.module.css';
 function AlbumRatingsInputPage() {
   return (
     <div className={styles.container}>
-      <h2>Rate an album!</h2>
+      <h1 className="light">Rate an album!</h1>
       <AlbumRatingsForm />
     </div>
   );
