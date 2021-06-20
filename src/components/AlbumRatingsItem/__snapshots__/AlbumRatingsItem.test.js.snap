@@ -14,7 +14,7 @@ exports[`renders AlbumRatingsItem without issue 1`] = `
         className="innerTitleContainer"
       >
         <p
-          className="titleContent"
+          className="dark titleContent"
         >
           Gorillaz
            - 
@@ -38,32 +38,44 @@ exports[`renders AlbumRatingsItem without issue 1`] = `
         />
       </div>
       <div>
-        <span>
+        <span
+          className="dark"
+        >
           Score: 
         </span>
-        <span>
+        <span
+          className="dark"
+        >
           84
         </span>
         <br />
-        <span>
+        <span
+          className="dark"
+        >
           Mood: 
         </span>
-        <span>
+        <span
+          className="dark"
+        >
           Upbeat
         </span>
         <br />
         <br />
-        <span>
+        <span
+          className="dark"
+        >
           Highlights: 
         </span>
-        <span>
+        <span
+          className="dark"
+        >
           Dirty Harry, Feel Good Inc., White Light, Dare, Fire Coming Out of the Monkey's Head
         </span>
         <br />
       </div>
     </div>
     <p
-      className="date"
+      className="dark date"
     >
       15-03-21
     </p>

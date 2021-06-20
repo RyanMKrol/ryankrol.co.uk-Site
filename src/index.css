@@ -49,6 +49,10 @@ p {
   color: #d4d5d6;
 }
 
+.dark {
+  color: #4e4e4e;
+}
+
 .highlighted {
   color: #64ffda;
 }

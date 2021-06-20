@@ -9,7 +9,7 @@ exports[`renders MovieRatingsItem without issue 1`] = `
   >
     <div>
       <p
-        className="titleContent"
+        className="dark titleContent"
       >
         Captain Phillips
       </p>
@@ -18,7 +18,7 @@ exports[`renders MovieRatingsItem without issue 1`] = `
       />
     </div>
     <p
-      className="gist"
+      className="dark gist"
     >
       "
       A Somali pirate is the captain now
@@ -62,7 +62,7 @@ exports[`renders MovieRatingsItem without issue 1`] = `
       </div>
     </div>
     <p
-      className="date"
+      className="dark date"
     >
       03-05-2021
     </p>

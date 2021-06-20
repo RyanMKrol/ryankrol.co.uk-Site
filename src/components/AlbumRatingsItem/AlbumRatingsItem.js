@@ -45,7 +45,7 @@ class AlbumRatingsItem extends Component {
         <div className={styles.container}>
           <div className={styles.titleContainer}>
             <div className={styles.innerTitleContainer}>
-              <p className={styles.titleContent}>
+              <p className={`dark ${styles.titleContent}`}>
                 {this.artist} - {this.title}
               </p>
               <div className={styles.titleUnderline} />
@@ -56,19 +56,19 @@ class AlbumRatingsItem extends Component {
               <img className={styles.thumbnail} src={this.thumbnail} alt={this.title} />
             </div>
             <div>
-              <span>Score: </span>
-              <span>{this.rating}</span>
+              <span className="dark">Score: </span>
+              <span className="dark">{this.rating}</span>
               <br />
-              <span>Mood: </span>
-              <span>{this.mood}</span>
+              <span className="dark">Mood: </span>
+              <span className="dark">{this.mood}</span>
               <br />
               <br />
-              <span>Highlights: </span>
-              <span>{this.highlights}</span>
+              <span className="dark">Highlights: </span>
+              <span className="dark">{this.highlights}</span>
               <br />
             </div>
           </div>
-          <p className={styles.date}>{this.date}</p>
+          <p className={`dark ${styles.date}`}>{this.date}</p>
         </div>
       </div>
     );
