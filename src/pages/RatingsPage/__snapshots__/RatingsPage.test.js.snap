@@ -98,7 +98,7 @@ exports[`renders RatingsPage correctly with limited size movie ratings 1`] = `
     to="/ratings/movie"
   >
     <h1
-      className="highlghted"
+      className="highlighted"
     >
       ...
     </h1>

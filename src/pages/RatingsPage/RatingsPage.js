@@ -54,7 +54,7 @@ class RatingsPage extends Component {
         />
         {this.fullMovieRatings ? null : (
           <Link className={styles.seeMore} to={'/ratings/movie'}>
-            <h1 className="highlghted">...</h1>
+            <h1 className="highlighted">...</h1>
           </Link>
         )}
       </>
