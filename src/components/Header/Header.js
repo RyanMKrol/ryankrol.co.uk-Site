@@ -9,6 +9,10 @@ const HEADER_ITEMS = [
     title: 'Movie Ratings',
   },
   {
+    destination: '/ratings/tv',
+    title: 'Television Ratings',
+  },
+  {
     destination: '/ratings/album',
     title: 'Album Ratings',
   },
