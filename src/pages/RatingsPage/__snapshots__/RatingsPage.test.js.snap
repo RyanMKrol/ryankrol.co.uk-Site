@@ -42,6 +42,27 @@ exports[`renders RatingsPage correctly with full size movie ratings 1`] = `
 </div>
 `;
 
+exports[`renders RatingsPage correctly with full size television ratings 1`] = `
+<div
+  className="container"
+>
+  <h1
+    className="light"
+  >
+    TV shows I've watched
+  </h1>
+  <p>
+    Like the movie ratings, but this time, with TV!
+  </p>
+  <br />
+  <DataCollection
+    endpoint="http://www.ryankrol.co.uk/api/ratings/tv"
+    itemTag={[Function]}
+    sorter={[Function]}
+  />
+</div>
+`;
+
 exports[`renders RatingsPage correctly with limited size album ratings 1`] = `
 <div
   className="container"
@@ -96,6 +117,38 @@ exports[`renders RatingsPage correctly with limited size movie ratings 1`] = `
   <Link
     className="seeMore"
     to="/ratings/movie"
+  >
+    <h1
+      className="highlighted"
+    >
+      ...
+    </h1>
+  </Link>
+</div>
+`;
+
+exports[`renders RatingsPage correctly with limited size television ratings 1`] = `
+<div
+  className="container"
+>
+  <h1
+    className="light"
+  >
+    TV shows I've watched
+  </h1>
+  <p>
+    Like the movie ratings, but this time, with TV!
+  </p>
+  <br />
+  <DataCollection
+    endpoint="http://www.ryankrol.co.uk/api/ratings/tv"
+    itemTag={[Function]}
+    outputSize={6}
+    sorter={[Function]}
+  />
+  <Link
+    className="seeMore"
+    to="/ratings/tv"
   >
     <h1
       className="highlighted"

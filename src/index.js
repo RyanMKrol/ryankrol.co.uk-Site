@@ -58,8 +58,10 @@ function AppRouter() {
                   <RatingsPage
                     showMovieRatings={false}
                     showAlbumRatings={true}
+                    showTelevisionRatings={false}
                     fullMovieRatings={false}
                     fullAlbumRatings={true}
+                    fullTelevisionRatings={false}
                   />
                 </PageSection>
               </Route>
@@ -68,8 +70,22 @@ function AppRouter() {
                   <RatingsPage
                     showMovieRatings={true}
                     showAlbumRatings={false}
+                    showTelevisionRatings={false}
                     fullMovieRatings={true}
                     fullAlbumRatings={false}
+                    fullTelevisionRatings={false}
+                  />
+                </PageSection>
+              </Route>
+              <Route path="/ratings/tv">
+                <PageSection key="TelevisionRatings" title="Ratings">
+                  <RatingsPage
+                    showMovieRatings={false}
+                    showAlbumRatings={false}
+                    showTelevisionRatings={true}
+                    fullMovieRatings={false}
+                    fullAlbumRatings={false}
+                    fullTelevisionRatings={true}
                   />
                 </PageSection>
               </Route>
@@ -84,8 +100,10 @@ function AppRouter() {
                   <RatingsPage
                     showMovieRatings={true}
                     showAlbumRatings={true}
+                    showTelevisionRatings={true}
                     fullMovieRatings={false}
                     fullAlbumRatings={false}
+                    fullTelevisionRatings={false}
                   />
                 </PageSection>
                 <PageSection title="Books">

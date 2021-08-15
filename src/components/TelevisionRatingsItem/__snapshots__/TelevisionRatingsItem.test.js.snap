@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TelevisionRatingsItem without issue 1`] = `
+<div
+  className="outerContainer"
+>
+  <div
+    className="container"
+  >
+    <div>
+      <p
+        className="dark titleContent"
+      >
+        Captain Phillips
+      </p>
+      <div
+        className="titleUnderline"
+      />
+    </div>
+    <p
+      className="dark gist"
+    >
+      "
+      A Somali pirate is the captain now
+      "
+    </p>
+    <div
+      className="content"
+    >
+      <div
+        className="thumbnailContainer"
+      >
+        <img
+          alt="Captain Phillips"
+          className="thumbnail"
+          src="https://m.media-amazon.com/images/M/MV5BODhiZWRhMjctNDUyMS00NmUwLTgwYmItMjJhOWNkZWQ3ZTQxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+        />
+      </div>
+      <div
+        className="graph"
+      >
+        <RatingsGraph
+          data={
+            Array [
+              89,
+              79,
+              87,
+              82,
+              86,
+            ]
+          }
+          labels={
+            Array [
+              "Overall: 89",
+              "Sound: 79",
+              "Story: 87",
+              "Craftsmanship: 82",
+              "Characters: 86",
+            ]
+          }
+        />
+      </div>
+    </div>
+    <p
+      className="dark date"
+    >
+      03-05-2021
+    </p>
+  </div>
+</div>
+`;

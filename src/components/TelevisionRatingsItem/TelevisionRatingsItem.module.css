@@ -1,0 +1,91 @@
+.outerContainer {
+  padding: 4px;
+}
+
+.graph {
+  padding: 25px;
+}
+
+.container {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+
+  width           : 500px;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  flex-direction  : column;
+  border-radius   : 4px;
+}
+
+.titleContent {
+  margin-bottom: 4px;
+  padding      : 0 4px;
+  text-align   : center;
+}
+
+.titleUnderline {
+  border-top-style: solid;
+  border-top-color: black;
+  border-top-width: 1px;
+  width           : 100%;
+  height          : auto;
+}
+
+.gist {
+  font-size: 12px;
+  margin   : 4px;
+}
+
+.date {
+  font-size: 10px;
+  margin   : 4px;
+}
+
+.content {
+  display    : flex;
+  align-items: center;
+}
+
+.thumbnailContainer {
+  justify-content: center;
+  align-items    : center;
+  max-height     : 160px;
+}
+
+.thumbnail {
+  max-height   : 160px;
+  border-radius: 4px;
+}
+
+@media (max-width: 580px) {
+  .thumbnailContainer {
+    max-height: 120px;
+  }
+
+  .thumbnail {
+    max-height: 120px;
+  }
+
+  .container {
+    width: 410px;
+  }
+
+  .graph {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .thumbnailContainer {
+    display: none;
+  }
+
+  .container {
+    width: 320px;
+  }
+
+  .graph {
+    padding: 0;
+  }
+}

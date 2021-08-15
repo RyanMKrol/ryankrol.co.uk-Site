@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { DataCollection, MovieRatingsItem, AlbumRatingsItem } from '../../components';
+import {
+  DataCollection,
+  MovieRatingsItem,
+  AlbumRatingsItem,
+  TelevisionRatingsItem,
+} from '../../components';
 import styles from './RatingsPage.module.css';
 
 import { baseEndpoint, generateCustomSorter } from '../../utils/ProdUtils';
@@ -20,15 +25,19 @@ class RatingsPage extends Component {
 
     this.moviesEndpoint = `${baseEndpoint()}/ratings/movie`;
     this.albumsEndpoint = `${baseEndpoint()}/ratings/album`;
+    this.televisionEndpoint = `${baseEndpoint()}/ratings/tv`;
 
     this.showMovieRatings = props.showMovieRatings;
     this.showAlbumRatings = props.showAlbumRatings;
+    this.showTelevisionRatings = props.showTelevisionRatings;
 
     this.fullMovieRatings = props.fullMovieRatings;
     this.fullAlbumRatings = props.fullAlbumRatings;
+    this.fullTelevisionRatings = props.fullTelevisionRatings;
 
     this.moviesOutputLimit = props.fullMovieRatings ? undefined : 6;
     this.albumsOutputLimit = props.fullAlbumRatings ? undefined : 6;
+    this.televisionOutputLimit = props.fullTelevisionRatings ? undefined : 6;
   }
 
   /**
@@ -88,6 +97,32 @@ class RatingsPage extends Component {
   }
 
   /**
+   * Generate the album content based on input props
+   *
+   * @returns {string} JSX content for television ratings
+   */
+  generateTelevisionContent() {
+    return this.showTelevisionRatings ? (
+      <>
+        <h1 className="light">TV shows I've watched</h1>
+        <p>Like the movie ratings, but this time, with TV!</p>
+        <br />
+        <DataCollection
+          outputSize={this.televisionOutputLimit}
+          endpoint={this.televisionEndpoint}
+          itemTag={TelevisionRatingsItem}
+          sorter={generateCustomSorter('blind')}
+        />
+        {this.fullTelevisionRatings ? null : (
+          <Link className={styles.seeMore} to={'/ratings/tv'}>
+            <h1 className="highlighted">...</h1>
+          </Link>
+        )}
+      </>
+    ) : null;
+  }
+
+  /**
    * Render method
    *
    * @returns {string} JSX Content
@@ -97,6 +132,7 @@ class RatingsPage extends Component {
       <div className={styles.container}>
         {this.generateMovieContent()}
         {this.generateAlbumContent()}
+        {this.generateTelevisionContent()}
       </div>
     );
   }
