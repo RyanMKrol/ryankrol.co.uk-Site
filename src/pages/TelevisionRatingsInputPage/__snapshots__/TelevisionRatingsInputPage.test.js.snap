@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TelevisionRatingsInputPage correctly 1`] = `
+<div
+  className="container"
+>
+  <h1
+    className="light"
+  >
+    Rate a TV show!
+  </h1>
+  <TelevisionRatingsForm />
+</div>
+`;
