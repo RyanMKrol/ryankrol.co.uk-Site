@@ -1,4 +1,3 @@
-import React from 'react';
 import fetch from 'node-fetch';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';

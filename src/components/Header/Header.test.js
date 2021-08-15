@@ -1,9 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import {
-  render, screen, fireEvent, waitFor,
-} from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './Header';

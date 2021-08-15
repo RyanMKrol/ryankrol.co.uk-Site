@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 /**
- * @param {string} message The message to not print
+ * Overrides the console.error method
  */
-console.error = (message) => {};
+console.error = () => {};
 
 configure({ adapter: new Adapter() });

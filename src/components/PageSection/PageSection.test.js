@@ -1,12 +1,5 @@
-import React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import {
-  render, screen, fireEvent, waitFor,
-} from '@testing-library/react';
-
-import { BrowserRouter as Router } from 'react-router-dom';
-import PageSection from './PageSection';
 
 import { MOCK_WITH_TITLE, MOCK_WITHOUT_TITLE } from './__mocks__/PageSectionMocks';
 

@@ -5,3 +5,4 @@ export { default as MovieRatingsInputPage } from './MovieRatingsInputPage';
 export { default as MoviesPage } from './MoviesPage';
 export { default as MusicPage } from './MusicPage';
 export { default as RatingsPage } from './RatingsPage';
+export { default as TelevisionRatingsInputPage } from './TelevisionRatingsInputPage';

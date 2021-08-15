@@ -9,6 +9,7 @@ import {
   MoviesPage,
   MusicPage,
   RatingsPage,
+  TelevisionRatingsInputPage,
 } from './pages';
 import { Header, PageSection, SocialList } from './components';
 
@@ -35,6 +36,11 @@ function AppRouter() {
               <Route path="/ratings/movie/new">
                 <PageSection title="Ratings">
                   <MovieRatingsInputPage />
+                </PageSection>
+              </Route>
+              <Route path="/ratings/tv/new">
+                <PageSection title="Ratings">
+                  <TelevisionRatingsInputPage />
                 </PageSection>
               </Route>
               <Route path="/reading">

@@ -10,3 +10,4 @@ export { default as MovieRatingsItem } from './MovieRatingsItem';
 export { default as MoviesItem } from './MoviesItem';
 export { default as PageSection } from './PageSection';
 export { default as SocialList } from './SocialList';
+export { default as TelevisionRatingsForm } from './TelevisionRatingsForm';

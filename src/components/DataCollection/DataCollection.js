@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import fetch from 'node-fetch';
 
 import styles from './DataCollection.module.css';
@@ -55,7 +55,7 @@ class DataCollection extends Component {
   /**
    * Renders the component
    *
-   * @returns {React.Component} JSX DataCollection component
+   * @returns {Component} JSX DataCollection component
    */
   render() {
     const Item = this.itemTag;

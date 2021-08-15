@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { Formik, Form } from 'formik';
 import fetch from 'node-fetch';
@@ -54,7 +54,7 @@ it('fetches data correctly', async () => {
   };
 
   const values = [1, 2, 3];
-  const result = await onSubmitHandler(values, setSubmittingBlob);
+  await onSubmitHandler(values, setSubmittingBlob);
 
   expect(windowAlertMock).toBeCalledWith('test-message');
   expect(setSubmittingMock).toBeCalled();

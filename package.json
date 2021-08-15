@@ -35,11 +35,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    "build": "npm run lint && react-scripts build",
+    "test": "npm run lint && react-scripts test --coverage",
     "eject": "react-scripts eject",
     "start-dev": "REACT_APP_LOCAL_API=1 react-scripts start",
-    "test-ci": "CI=true react-scripts test --coverage",
+    "test-ci": "npm run lint && CI=true react-scripts test --coverage",
     "lint": "eslint src/ --ext .js",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
