@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders VinylInputPage correctly 1`] = `
+exports[`renders VinylCollectionInputPage correctly 1`] = `
 <div
   className="container"
 >

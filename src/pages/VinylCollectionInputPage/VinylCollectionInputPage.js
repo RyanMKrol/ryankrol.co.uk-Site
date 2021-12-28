@@ -2,14 +2,14 @@ import React from 'react';
 
 import { VinylCollectionForm } from '../../components';
 
-import styles from './VinylInputPage.module.css';
+import styles from './VinylCollectionInputPage.module.css';
 
 /**
  * Page introducing the site
  *
  * @returns {string} JSX Content
  */
-function VinylInputPage() {
+function VinylCollectionInputPage() {
   return (
     <div className={styles.container}>
       <h1 className="light">Add to the collection!</h1>
@@ -18,4 +18,4 @@ function VinylInputPage() {
   );
 }
 
-export default VinylInputPage;
+export default VinylCollectionInputPage;

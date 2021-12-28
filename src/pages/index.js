@@ -6,4 +6,5 @@ export { default as MoviesPage } from './MoviesPage';
 export { default as MusicPage } from './MusicPage';
 export { default as RatingsPage } from './RatingsPage';
 export { default as TelevisionRatingsInputPage } from './TelevisionRatingsInputPage';
-export { default as VinylInputPage } from './VinylInputPage';
+export { default as VinylCollectionInputPage } from './VinylCollectionInputPage';
+export { default as VinylCollectionPage } from './VinylCollectionPage';

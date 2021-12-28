@@ -10,7 +10,8 @@ import {
   MusicPage,
   RatingsPage,
   TelevisionRatingsInputPage,
-  VinylInputPage,
+  VinylCollectionInputPage,
+  VinylCollectionPage,
 } from './pages';
 import { Header, PageSection, SocialList } from './components';
 
@@ -36,7 +37,7 @@ function AppRouter() {
               </Route>
               <Route path="/vinyl/new">
                 <PageSection title="Vinyl">
-                  <VinylInputPage />
+                  <VinylCollectionInputPage />
                 </PageSection>
               </Route>
               <Route path="/ratings/movie/new">
@@ -57,6 +58,11 @@ function AppRouter() {
               <Route path="/movies">
                 <PageSection title="Movies">
                   <MoviesPage fullSize={true} />
+                </PageSection>
+              </Route>
+              <Route path="/vinyl">
+                <PageSection title="Vinyl">
+                  <VinylCollectionPage />
                 </PageSection>
               </Route>
               <Route path="/ratings/album">
