@@ -10,6 +10,7 @@ import {
   MusicPage,
   RatingsPage,
   TelevisionRatingsInputPage,
+  VinylInputPage,
 } from './pages';
 import { Header, PageSection, SocialList } from './components';
 
@@ -31,6 +32,11 @@ function AppRouter() {
               <Route path="/ratings/album/new">
                 <PageSection title="Ratings">
                   <AlbumRatingsInputPage />
+                </PageSection>
+              </Route>
+              <Route path="/vinyl/new">
+                <PageSection title="Vinyl">
+                  <VinylInputPage />
                 </PageSection>
               </Route>
               <Route path="/ratings/movie/new">

@@ -12,3 +12,4 @@ export { default as PageSection } from './PageSection';
 export { default as SocialList } from './SocialList';
 export { default as TelevisionRatingsForm } from './TelevisionRatingsForm';
 export { default as TelevisionRatingsItem } from './TelevisionRatingsItem';
+export { default as VinylCollectionForm } from './VinylCollectionForm';
