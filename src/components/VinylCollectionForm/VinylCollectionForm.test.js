@@ -23,7 +23,6 @@ it('validates values correctly', () => {
   const testItems = {
     title: 'test-title',
     artist: 'test-artist',
-    mood: 'test-mood',
     password: undefined,
   };
   const result = validateFormValues(testItems);
