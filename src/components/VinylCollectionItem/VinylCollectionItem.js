@@ -16,7 +16,6 @@ class VinylCollectionItem extends Component {
     if (
       typeof props.artist === 'undefined'
       || typeof props.date === 'undefined'
-      || typeof props.mood === 'undefined'
       || typeof props.title === 'undefined'
       || typeof props.thumbnail === 'undefined'
     ) {
@@ -25,7 +24,6 @@ class VinylCollectionItem extends Component {
 
     this.artist = props.artist;
     this.date = props.date;
-    this.mood = props.mood;
     this.title = props.title;
     this.thumbnail = props.thumbnail;
   }
