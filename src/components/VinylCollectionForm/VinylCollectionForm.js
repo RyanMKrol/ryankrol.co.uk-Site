@@ -14,7 +14,6 @@ const VINYL_API_ENDPOINT = `${baseEndpoint()}/vinyl`;
 const VINYL_INPUT_CONFIG = [
   { itemName: 'title', itemTitle: 'Record Title', itemType: 'text' },
   { itemName: 'artist', itemTitle: 'Artist', itemType: 'text' },
-  { itemName: 'mood', itemTitle: 'Mood', itemType: 'text' },
   { itemName: 'password', itemTitle: 'Password', itemType: PASSWORD_TYPE },
 ];
 
