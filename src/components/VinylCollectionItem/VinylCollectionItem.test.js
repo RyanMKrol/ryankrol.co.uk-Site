@@ -19,12 +19,8 @@ it('VinylCollectionItem throws without date', () => {
   expect(() => mount(<VinylCollectionItem artist="test-artist" />)).toThrow();
 });
 
-it('VinylCollectionItem throws without mood', () => {
-  expect(() => mount(<VinylCollectionItem artist="test-artist" date="test-date" />)).toThrow();
-});
-
 it('VinylCollectionItem throws without title', () => {
-  expect(() => mount(<VinylCollectionItem artist="test-artist" date="test-date" mood="test-mood" />)).toThrow();
+  expect(() => mount(<VinylCollectionItem artist="test-artist" date="test-date" />)).toThrow();
 });
 
 it('VinylCollectionItem throws without thumbnail', () => {
@@ -32,7 +28,6 @@ it('VinylCollectionItem throws without thumbnail', () => {
       <VinylCollectionItem
         artist="test-artist"
         date="test-date"
-        mood="test-mood"
         title="test-title"
       />,
   )).toThrow();
