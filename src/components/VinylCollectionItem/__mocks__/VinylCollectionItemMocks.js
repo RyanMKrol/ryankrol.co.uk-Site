@@ -7,7 +7,6 @@ const DEFAULT_MOCK = (
     highlights={
       "Dirty Harry, Feel Good Inc., White Light, Dare, Fire Coming Out of the Monkey's Head"
     }
-    mood={'Upbeat'}
     rating={84}
     title={'Demon Days'}
     thumbnail={'https://lastfm.freetls.fastly.net/i/u/300x300/271483e955d2b255160f3361a7f5fb78.png'}
