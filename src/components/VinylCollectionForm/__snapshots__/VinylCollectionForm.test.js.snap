@@ -13,7 +13,6 @@ exports[`renders VinylCollectionForm 1`] = `
           initialValues={
             Object {
               "artist": "",
-              "mood": "",
               "password": "",
               "title": "",
             }
@@ -78,7 +77,6 @@ exports[`renders VinylCollectionForm 1`] = `
                           "initialTouched": Object {},
                           "initialValues": Object {
                             "artist": "",
-                            "mood": "",
                             "password": "",
                             "title": "",
                           },
@@ -108,7 +106,6 @@ exports[`renders VinylCollectionForm 1`] = `
                           "validateOnMount": false,
                           "values": Object {
                             "artist": "",
-                            "mood": "",
                             "password": "",
                             "title": "",
                           },
@@ -167,7 +164,6 @@ exports[`renders VinylCollectionForm 1`] = `
                           "initialTouched": Object {},
                           "initialValues": Object {
                             "artist": "",
-                            "mood": "",
                             "password": "",
                             "title": "",
                           },
@@ -197,7 +193,6 @@ exports[`renders VinylCollectionForm 1`] = `
                           "validateOnMount": false,
                           "values": Object {
                             "artist": "",
-                            "mood": "",
                             "password": "",
                             "title": "",
                           },
@@ -256,7 +251,6 @@ exports[`renders VinylCollectionForm 1`] = `
                           "initialTouched": Object {},
                           "initialValues": Object {
                             "artist": "",
-                            "mood": "",
                             "password": "",
                             "title": "",
                           },
@@ -286,7 +280,6 @@ exports[`renders VinylCollectionForm 1`] = `
                           "validateOnMount": false,
                           "values": Object {
                             "artist": "",
-                            "mood": "",
                             "password": "",
                             "title": "",
                           },
