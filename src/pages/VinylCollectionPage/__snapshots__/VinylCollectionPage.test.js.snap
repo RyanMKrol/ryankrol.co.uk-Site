@@ -17,6 +17,7 @@ exports[`renders VinylCollectionPage correctly 1`] = `
   <DataCollection
     endpoint="http://www.ryankrol.co.uk/api/vinyl"
     itemTag={[Function]}
+    sorter={[Function]}
   />
 </div>
 `;

@@ -28,10 +28,28 @@ class VinylCollectionPage extends Component {
       <div className={styles.container}>
         <h1 className="light">My Vinyl Collection</h1> <br />
         <p>Literally just a bunch of vinyl I own, idk</p>
-        <DataCollection endpoint={this.endpoint} itemTag={VinylCollectionItem} />
+        <DataCollection sorter={sortVinyl} endpoint={this.endpoint} itemTag={VinylCollectionItem} />
       </div>
     );
   }
+}
+
+/**
+ * Sorter for vinyl items
+ *
+ * @param {object} a Vinyl collection item A
+ * @param {object} b Vinyl collection item B
+ * @returns {boolean} Whether a < b
+ */
+export function sortVinyl(a, b) {
+  if (a.artist.toLowerCase() < b.artist.toLowerCase()) {
+    return -1;
+  }
+  if (a.artist.toLowerCase() > b.artist.toLowerCase()) {
+    return 1;
+  }
+
+  return 0;
 }
 
 export default VinylCollectionPage;
