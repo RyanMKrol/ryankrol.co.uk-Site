@@ -26,7 +26,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "formik": "^2.2.9",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "react": "^16.13.0",
     "react-chartjs-2": "^3.0.3",
     "react-dom": "^16.13.0",
