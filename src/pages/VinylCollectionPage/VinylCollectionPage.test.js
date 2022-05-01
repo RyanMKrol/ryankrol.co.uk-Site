@@ -32,9 +32,38 @@ describe('sortVinyl', () => {
     expect(sortVinyl(b, a)).toEqual(1);
   });
 
-  it('return a == b', () => {
+  it('return a == b, title a < b', () => {
     const a = {
       artist: 'akon',
+      title: 'akon',
+    };
+
+    const b = {
+      artist: 'akon',
+      title: 'bkon',
+    };
+
+    expect(sortVinyl(a, b)).toEqual(-1);
+  });
+
+  it('return a == b, title a > b', () => {
+    const a = {
+      artist: 'akon',
+      title: 'bkon',
+    };
+
+    const b = {
+      artist: 'akon',
+      title: 'akon',
+    };
+
+    expect(sortVinyl(a, b)).toEqual(1);
+  });
+
+  it('return a == b, title a == b', () => {
+    const a = {
+      artist: 'akon',
+      title: 'akon',
     };
 
     expect(sortVinyl(a, a)).toEqual(0);

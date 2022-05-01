@@ -42,10 +42,19 @@ class VinylCollectionPage extends Component {
  * @returns {boolean} Whether a < b
  */
 export function sortVinyl(a, b) {
+  // sort by artist
   if (a.artist.toLowerCase() < b.artist.toLowerCase()) {
     return -1;
   }
   if (a.artist.toLowerCase() > b.artist.toLowerCase()) {
+    return 1;
+  }
+
+  // if artist's are equal, sort by title
+  if (a.title.toLowerCase() < b.title.toLowerCase()) {
+    return -1;
+  }
+  if (a.title.toLowerCase() > b.title.toLowerCase()) {
     return 1;
   }
 
