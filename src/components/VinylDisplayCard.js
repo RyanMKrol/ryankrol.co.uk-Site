@@ -14,8 +14,8 @@ export default function VinylDisplayCard({ artist, date, thumbnail, title }) {
             height: 250,
             width: 250,
             margin: 'auto',
-            'margin-top': 15,
-            'border-radius': 4,
+            marginTop: '15px',
+            borderRadius: '4px',
           }}
           image={thumbnail}
         />

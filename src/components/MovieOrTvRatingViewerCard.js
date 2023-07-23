@@ -30,7 +30,7 @@ export default function MovieOrTvRatingViewerCard({
             height: 400,
             width: 260,
             margin: 'auto',
-            'margin-top': 20,
+            marginTop: '20px',
           }}
           image={thumbnail}
         />
