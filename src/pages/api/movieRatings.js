@@ -2,6 +2,10 @@ import NodeCache from 'node-cache';
 import { ONE_HOUR_S } from '@/lib/constants';
 import { cacheReadthrough } from '@/lib/utilities/cache';
 import { scanTable } from '@/lib/utilities/dynamo';
+import {
+  handlerWithOptionalMiddleware,
+  authMiddleware,
+} from '@/lib/utilities/middleware';
 
 const MOVIE_RATINGS_TABLE = 'MovieRatings';
 const CACHE = new NodeCache({ stdTTL: ONE_HOUR_S });
@@ -14,10 +18,10 @@ const CACHE = new NodeCache({ stdTTL: ONE_HOUR_S });
 export default async function handler(req, res) {
   switch (req.method) {
     case 'GET':
-      await handleGet(req, res);
+      await handlerWithOptionalMiddleware(req, res, handleGet);
       break;
     case 'POST':
-      await handlePost(req, res);
+      await handlerWithOptionalMiddleware(req, res, authMiddleware, handlePost);
       break;
     default:
       res.status(405).end(`${req.method} Not Allowed`);
@@ -29,27 +33,24 @@ export default async function handler(req, res) {
  * Handles GET requests to this API
  * @param {Request} req request
  * @param {Response} res response
+ * @returns {object} The response object
  */
 async function handleGet(req, res) {
   // can use filename as the key here because this is the only file interacting with this cache object
-  cacheReadthrough(CACHE, __filename, async () => {
-    return scanTable(MOVIE_RATINGS_TABLE).catch(() => {
-      throw new Error('something went wrong');
-    });
-  })
-    .then((data) => {
-      res.status(200).json({ data });
-    })
-    .catch((err) => {
-      res.status(500).send(new String(err));
-    });
+  return cacheReadthrough(CACHE, __filename, async () =>
+    scanTable(MOVIE_RATINGS_TABLE)
+  );
 }
 
 /**
  * Handles POST requests to this API
  * @param {Request} req request
  * @param {Response} res response
+ * @returns {object} The response object
  */
 async function handlePost(req, res) {
-  res.status(200).json({});
+  return {
+    status: 200,
+    message: 'Successful POST',
+  };
 }

@@ -4,7 +4,7 @@ import {
 } from '@/lib/utilities/middleware';
 
 /**
- * Handles API calls for handling movie ratings
+ * Handles API calls for handling TV ratings
  * @param {Request} req request
  * @param {Response} res response
  */
