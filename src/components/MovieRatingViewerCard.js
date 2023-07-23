@@ -11,7 +11,16 @@ import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 
 import styles from './MovieRatingViewerCard.module.css';
 
-export default function MovieRatingViewerCard() {
+export default function MovieRatingViewerCard({
+  overallScore,
+  storyScore,
+  characterScore,
+  musicScore,
+  craftsmanshipScore,
+  thumbnail,
+  title,
+  gist,
+}) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -20,44 +29,43 @@ export default function MovieRatingViewerCard() {
           width: 300,
           margin: 'auto',
         }}
-        image="https://m.media-amazon.com/images/M/MV5BMTAxNDkxODIyMDZeQTJeQWpwZ15BbWU4MDQ2Mjg4NDIy._V1_SX300.jpg"
-        title="green iguana"
+        image={thumbnail}
       />
       <CardContent className={styles.descriptionContainer}>
         <Typography gutterBottom variant="h5" component="div">
-          Insert Title Here
+          {title}
         </Typography>
-        <Typography variant="body2">Insert Description Here</Typography>
+        <Typography variant="body2">{gist}</Typography>
       </CardContent>
       <CardActions className={styles.iconContainer}>
         <div className={styles.cardButton}>
           <Typography className={styles.buttonTextContainer} variant="body2">
             <ChangeHistoryIcon className={styles.scoreValue} fontSize="small" />{' '}
-            <span className={styles.scoreValue}>75</span>
+            <span className={styles.scoreValue}>{overallScore}</span>
           </Typography>
         </div>
         <div className={styles.cardButton}>
           <Typography className={styles.buttonTextContainer} variant="body2">
             <MenuBookIcon className={styles.scoreValue} fontSize="small" />{' '}
-            <span className={styles.scoreValue}>75</span>
+            <span className={styles.scoreValue}>{storyScore}</span>
           </Typography>
         </div>
         <div className={styles.cardButton}>
           <Typography className={styles.buttonTextContainer} variant="body2">
             <ManIcon className={styles.scoreValue} fontSize="small" />{' '}
-            <span className={styles.scoreValue}>75</span>
+            <span className={styles.scoreValue}>{characterScore}</span>
           </Typography>
         </div>
         <div className={styles.cardButton}>
           <Typography className={styles.buttonTextContainer} variant="body2">
             <MusicNoteIcon className={styles.scoreValue} fontSize="small" />{' '}
-            <span className={styles.scoreValue}>75</span>
+            <span className={styles.scoreValue}>{musicScore}</span>
           </Typography>
         </div>
         <div className={styles.cardButton}>
           <Typography className={styles.buttonTextContainer} variant="body2">
             <ConstructionIcon className={styles.scoreValue} fontSize="small" />{' '}
-            <span className={styles.scoreValue}>75</span>
+            <span className={styles.scoreValue}>{craftsmanshipScore}</span>
           </Typography>
         </div>
       </CardActions>
