@@ -1,0 +1,7 @@
+{
+    "extends": ["next/core-web-vitals", "plugin:jsdoc/recommended", "prettier"],
+    "plugins": ["jsdoc", "prettier"],
+    "rules": {
+        "prettier/prettier": ["error"]
+      }
+}

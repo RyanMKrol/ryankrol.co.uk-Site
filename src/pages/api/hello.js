@@ -1,5 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
+/**
+ * Handles the hello api calls
+ * @param {Request} req request
+ * @param {Response} res response
+ */
 export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+    res.status(200).json({ name: 'John Doe' })
 }
