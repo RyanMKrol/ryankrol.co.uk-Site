@@ -20,6 +20,7 @@ export default function MovieOrTvRatingViewerCard({
   thumbnail,
   title,
   gist,
+  date,
 }) {
   return (
     <div className={styles.card}>
@@ -38,6 +39,8 @@ export default function MovieOrTvRatingViewerCard({
             {title}
           </Typography>
           <Typography variant="body2">{gist}</Typography>
+          <br />
+          <Typography variant="caption">{date}</Typography>
         </CardContent>
         <CardActions className={styles.iconContainer}>
           <div>

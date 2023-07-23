@@ -22,6 +22,7 @@ export default function Page({ data }) {
             thumbnail={item.thumbnail}
             title={item.title}
             gist={item.gist}
+            date={item.date}
           />
         ))}
       </div>
