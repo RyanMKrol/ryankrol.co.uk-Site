@@ -1,0 +1,21 @@
+.descriptionContainer {
+    padding-bottom: 4px;
+}
+
+.iconContainer {
+    justify-content: center;
+    padding-top:0px;
+}
+
+.cardButton {
+    padding: 4px;
+}
+
+.buttonTextContainer {
+    display: flex;
+}
+
+.scoreValue {
+    margin: auto;
+    padding:4px;
+}

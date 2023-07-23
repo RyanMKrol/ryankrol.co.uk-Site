@@ -1,7 +1,9 @@
+import MovieRatingViewerCard from '@/components/MovieRatingViewerCard';
+
 export default function Home() {
   return (
     <main>
-      <p>Heres ryan</p>
+      <MovieRatingViewerCard />
     </main>
   );
 }
