@@ -2,13 +2,9 @@
     padding: 8px;
 }
 
-.descriptionContainer {
-    padding-bottom: 4px;
-}
-
 .iconContainer {
     justify-content: center;
-    padding-top:0px;
+    padding-top: 0px;
 }
 
 .buttonTextContainer {
@@ -17,5 +13,5 @@
 
 .scoreValue {
     margin: auto;
-    padding:4px;
+    padding: 1px;
 }

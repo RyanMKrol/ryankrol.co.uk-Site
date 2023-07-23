@@ -23,17 +23,18 @@ export default function MovieOrTvRatingViewerCard({
 }) {
   return (
     <div className={styles.card}>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 300 }}>
         <CardMedia
           sx={{
             height: 400,
-            width: 300,
+            width: 260,
             margin: 'auto',
+            'margin-top': 20,
           }}
           image={thumbnail}
         />
-        <CardContent className={styles.descriptionContainer}>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent>
+          <Typography gutterBottom variant="h6" component="div">
             {title}
           </Typography>
           <Typography variant="body2">{gist}</Typography>
