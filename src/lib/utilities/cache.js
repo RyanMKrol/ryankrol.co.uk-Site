@@ -8,14 +8,16 @@ import NodeCache from 'node-cache';
  * @returns {any} Anything we care to store in the cache
  */
 function cacheReadthrough(cache, key, fn) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     if (cache.has(key)) {
       resolve(cache.get(key));
     } else {
-      fn().then((result) => {
-        cache.set(key, result);
-        resolve(result);
-      });
+      fn()
+        .then((result) => {
+          cache.set(key, result);
+          resolve(result);
+        })
+        .catch(reject);
     }
   });
 }

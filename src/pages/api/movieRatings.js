@@ -1,7 +1,9 @@
 import NodeCache from 'node-cache';
 import { ONE_HOUR_S } from '@/lib/constants';
 import { cacheReadthrough } from '@/lib/utilities/cache';
+import { scanTable } from '@/lib/utilities/dynamo';
 
+const MOVIE_RATINGS_TABLE = 'MovieRatings';
 const CACHE = new NodeCache({ stdTTL: ONE_HOUR_S });
 
 /**
@@ -30,12 +32,17 @@ export default async function handler(req, res) {
  */
 async function handleGet(req, res) {
   // can use filename as the key here because this is the only file interacting with this cache object
-  const value = await cacheReadthrough(CACHE, __filename, async () => {
-    console.log('fetch the movie ratings');
-    return 'hello!';
-  });
-
-  res.status(200).json({ value });
+  cacheReadthrough(CACHE, __filename, async () => {
+    return scanTable(MOVIE_RATINGS_TABLE).catch(() => {
+      throw new Error('something went wrong');
+    });
+  })
+    .then((data) => {
+      res.status(200).json({ data });
+    })
+    .catch((err) => {
+      res.status(500).send(new String(err));
+    });
 }
 
 /**
@@ -43,6 +50,6 @@ async function handleGet(req, res) {
  * @param {Request} req request
  * @param {Response} res response
  */
-function handlePost(req, res) {
+async function handlePost(req, res) {
   res.status(200).json({});
 }
