@@ -82,5 +82,6 @@ function sortTitles(a, b) {
  * @returns {string} the formatted string
  */
 function formatStringForSort(value) {
-  return value.toLowerCase().startsWith('the ') ? value.substring(4) : value;
+  const source = value.toLowerCase();
+  return source.startsWith('the ') ? source.substring(4) : source;
 }
