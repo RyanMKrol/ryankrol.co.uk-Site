@@ -1,6 +1,9 @@
 import Head from 'next/head';
 
 import Layout from '@/components/Layout';
+import VinylDisplayCard from '@/components/VinylDisplayCard';
+
+import styles from './index.module.css';
 
 export default function Page({ data }) {
   return (
@@ -8,7 +11,17 @@ export default function Page({ data }) {
       <Head>
         <title>Where movies have been rated...</title>
       </Head>
-      <h1>Vinyl Collection</h1>
+      <div className={styles.cardContainer}>
+        {data.map((item) => (
+          <VinylDisplayCard
+            key={`${item.title}-${item.artist}`}
+            artist={item.artist}
+            date={item.date}
+            thumbnail={item.thumbnail}
+            title={item.title}
+          />
+        ))}
+      </div>
     </Layout>
   );
 }
