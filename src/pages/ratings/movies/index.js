@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import MovieRatingViewerCard from '@/components/MovieRatingViewerCard';
 import Layout from '@/components/Layout';
+import styles from './index.module.css';
 
 export default function Page({ data }) {
   console.log(data.data);
@@ -10,20 +11,21 @@ export default function Page({ data }) {
       <Head>
         <title>Where movies have been rated...</title>
       </Head>
-      {data.data.map((item) => (
-        <MovieRatingViewerCard
-          key={item.title}
-          overallScore={item.blind}
-          storyScore={item.story}
-          characterScore={item.characters}
-          musicScore={item.sound}
-          craftsmanshipScore={item.craftsmanship}
-          thumbnail={item.thumbnail}
-          title={item.title}
-          gist={item.gist}
-        />
-      ))}
-      <h1>View some ratings</h1>
+      <div className={styles.cardContainer}>
+        {data.data.map((item) => (
+          <MovieRatingViewerCard
+            key={item.title}
+            overallScore={item.blind}
+            storyScore={item.story}
+            characterScore={item.characters}
+            musicScore={item.sound}
+            craftsmanshipScore={item.craftsmanship}
+            thumbnail={item.thumbnail}
+            title={item.title}
+            gist={item.gist}
+          />
+        ))}
+      </div>
     </Layout>
   );
 }
