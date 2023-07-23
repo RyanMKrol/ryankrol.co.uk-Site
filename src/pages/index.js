@@ -1,4 +1,4 @@
-import MovieRatingViewerCard from '@/components/MovieRatingViewerCard';
+import MovieRatingViewerCard from '@/components/MovieOrTvRatingViewerCard';
 
 export default function Home() {
   return (

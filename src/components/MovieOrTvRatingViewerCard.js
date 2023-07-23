@@ -9,9 +9,9 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 
-import styles from './MovieRatingViewerCard.module.css';
+import styles from './MovieOrTvRatingViewerCard.module.css';
 
-export default function MovieRatingViewerCard({
+export default function MovieOrTvRatingViewerCard({
   overallScore,
   storyScore,
   characterScore,

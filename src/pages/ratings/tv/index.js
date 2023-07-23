@@ -31,7 +31,7 @@ export default function Page({ data }) {
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`http://localhost:3000/api/movieRatings`).catch(
+  const res = await fetch(`http://localhost:3000/api/tvRatings`).catch(
     (err) => {
       // decide what to do here when the API call fails
     }
