@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import MovieOrTvRatingViewerCard from '@/components/MovieOrTvRatingViewerCard';
+import MovieOrTvRatingDisplayCard from '@/components/MovieOrTvRatingDisplayCard';
 import Layout from '@/components/Layout';
 import styles from './../index.module.css';
 
@@ -12,7 +12,7 @@ export default function Page({ data }) {
       </Head>
       <div className={styles.cardContainer}>
         {data.map((item) => (
-          <MovieOrTvRatingViewerCard
+          <MovieOrTvRatingDisplayCard
             key={item.title}
             overallScore={item.blind}
             storyScore={item.story}
