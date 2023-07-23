@@ -1,10 +1,5 @@
-import { ConfigProvider } from 'antd';
-import theme from '@/styles/theme/themeConfig';
+import '@/styles/globals.css';
 
-const App = ({ Component, pageProps }) => (
-  <ConfigProvider theme={theme}>
-    <Component {...pageProps} />
-  </ConfigProvider>
-);
-
-export default App;
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
