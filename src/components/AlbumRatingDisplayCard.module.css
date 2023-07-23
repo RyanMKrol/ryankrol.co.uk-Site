@@ -1,0 +1,17 @@
+.card{
+    padding: 8px;
+}
+
+.iconContainer {
+    justify-content: center;
+    padding-top: 0px;
+}
+
+.buttonTextContainer {
+    display: flex;
+}
+
+.scoreValue {
+    margin: auto;
+    padding: 1px;
+}

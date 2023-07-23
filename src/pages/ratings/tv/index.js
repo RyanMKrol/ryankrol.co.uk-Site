@@ -31,7 +31,6 @@ export default function Page({ data }) {
 }
 
 export async function getServerSideProps() {
-  // Fetch data from external API
   const res = await fetch(
     `http://localhost:${process.env.PORT}/api/ratings/tv`
   ).catch((err) => {
