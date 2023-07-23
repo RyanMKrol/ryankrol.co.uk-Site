@@ -39,7 +39,7 @@ export default function MovieOrTvRatingViewerCard({
           <Typography variant="body2">{gist}</Typography>
         </CardContent>
         <CardActions className={styles.iconContainer}>
-          <div className={styles.cardButton}>
+          <div>
             <Typography className={styles.buttonTextContainer} variant="body2">
               <ChangeHistoryIcon
                 className={styles.scoreValue}
@@ -48,25 +48,25 @@ export default function MovieOrTvRatingViewerCard({
               <span className={styles.scoreValue}>{overallScore}</span>
             </Typography>
           </div>
-          <div className={styles.cardButton}>
+          <div>
             <Typography className={styles.buttonTextContainer} variant="body2">
               <MenuBookIcon className={styles.scoreValue} fontSize="small" />{' '}
               <span className={styles.scoreValue}>{storyScore}</span>
             </Typography>
           </div>
-          <div className={styles.cardButton}>
+          <div>
             <Typography className={styles.buttonTextContainer} variant="body2">
               <ManIcon className={styles.scoreValue} fontSize="small" />{' '}
               <span className={styles.scoreValue}>{characterScore}</span>
             </Typography>
           </div>
-          <div className={styles.cardButton}>
+          <div>
             <Typography className={styles.buttonTextContainer} variant="body2">
               <MusicNoteIcon className={styles.scoreValue} fontSize="small" />{' '}
               <span className={styles.scoreValue}>{musicScore}</span>
             </Typography>
           </div>
-          <div className={styles.cardButton}>
+          <div>
             <Typography className={styles.buttonTextContainer} variant="body2">
               <ConstructionIcon
                 className={styles.scoreValue}
