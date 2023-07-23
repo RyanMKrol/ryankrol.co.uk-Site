@@ -1,7 +1,14 @@
+import NodeCache from 'node-cache';
+import { ONE_HOUR_S } from '@/lib/constants';
+import { cacheReadthrough } from '@/lib/utilities/cache';
+import { scanTable } from '@/lib/utilities/dynamo';
 import {
   handlerWithOptionalMiddleware,
   authMiddleware,
 } from '@/lib/utilities/middleware';
+
+const TV_RATINGS_TABLE = 'TelevisionRatings';
+const CACHE = new NodeCache({ stdTTL: ONE_HOUR_S });
 
 /**
  * Handles API calls for handling TV ratings
@@ -29,10 +36,10 @@ export default async function handler(req, res) {
  * @returns {object} The response object
  */
 async function handleGet(req, res) {
-  return {
-    status: 200,
-    message: 'Successful GET',
-  };
+  // can use filename as the key here because this is the only file interacting with this cache object
+  return cacheReadthrough(CACHE, __filename, async () =>
+    scanTable(TV_RATINGS_TABLE)
+  );
 }
 
 /**
