@@ -22,9 +22,9 @@ async function handlerWithOptionalMiddleware(req, res, ...handlerMethods) {
     })
     .catch((err) => {
       if (err.status && err.name) {
-        res.status(err.status).json({ Error: err.name });
+        res.status(err.status).json({ message: err.name });
       } else {
-        res.status(500).json({ Error: 'Something went wrong' });
+        res.status(500).json({ message: 'Something went wrong' });
       }
     });
 }
@@ -34,7 +34,7 @@ async function handlerWithOptionalMiddleware(req, res, ...handlerMethods) {
  * @param {Request} req request
  */
 function authMiddleware(req) {
-  if (req.body.token !== process.env.RYANKROL_SITE_KEY) {
+  if (req.body.password !== process.env.RYANKROL_SITE_KEY) {
     throw new RequestNotAuthorised();
   }
 }

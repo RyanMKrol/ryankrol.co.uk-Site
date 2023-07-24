@@ -10,8 +10,23 @@ export default function Page() {
         <title>Where movies will be rated...</title>
       </Head>
       <div>
-        <MovieOrTvRatingsInputForm />
+        <MovieOrTvRatingsInputForm onFormSubmit={onFormSubmit} />
       </div>
     </Layout>
   );
+}
+
+async function onFormSubmit(body) {
+  const response = await fetch(`http://localhost:3000/api/ratings/movie`, {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  const { data } = await response.json();
+
+  return {
+    status: response.status,
+    message: data.message,
+  };
 }
