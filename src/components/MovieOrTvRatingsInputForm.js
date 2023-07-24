@@ -14,7 +14,7 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
   const [password, setPassword] = useState('');
   const [total, setTotal] = useState(0);
   const [story, setStory] = useState(0);
-  const [craftmanship, setCraftmanship] = useState(0);
+  const [craftsmanship, setCraftsmanship] = useState(0);
   const [sound, setSound] = useState(0);
   const [characters, setCharacters] = useState(0);
 
@@ -36,9 +36,9 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
         title,
         gist,
         password,
-        total,
+        blind: total,
         story,
-        craftmanship,
+        craftsmanship,
         sound,
         characters,
       }).then((alertData) => {
@@ -123,7 +123,7 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
           onChange={(event) => setStory(event.target.value)}
         />
         <br />
-        <Typography>Craftmanship</Typography>
+        <Typography>Craftsmanship</Typography>
         <Slider
           marks
           max={10}
@@ -133,7 +133,7 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
           sx={{
             color: 'green',
           }}
-          onChange={(event) => setCraftmanship(event.target.value)}
+          onChange={(event) => setCraftsmanship(event.target.value)}
         />
         <br />
         <Typography>Sound</Typography>
