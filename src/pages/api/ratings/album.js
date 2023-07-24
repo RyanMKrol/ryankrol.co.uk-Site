@@ -4,7 +4,8 @@ import { cacheReadthrough } from '@/lib/utilities/cache';
 import { scanTable } from '@/lib/utilities/dynamo';
 import {
   handlerWithOptionalMiddleware,
-  authMiddleware,
+  withAuthentication,
+  withDateTracking,
 } from '@/lib/utilities/middleware';
 
 const ALBUM_RATINGS_TABLE = 'AlbumRatings';
@@ -21,7 +22,13 @@ export default async function handler(req, res) {
       await handlerWithOptionalMiddleware(req, res, handleGet);
       break;
     case 'POST':
-      await handlerWithOptionalMiddleware(req, res, authMiddleware, handlePost);
+      await handlerWithOptionalMiddleware(
+        req,
+        res,
+        withAuthentication,
+        withDateTracking,
+        handlePost
+      );
       break;
     default:
       res.status(405).end(`${req.method} Not Allowed`);

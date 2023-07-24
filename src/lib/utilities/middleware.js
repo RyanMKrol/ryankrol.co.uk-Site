@@ -1,4 +1,5 @@
 import { RequestNotAuthorised } from '@/lib/errors';
+import date from 'date-and-time';
 
 /**
  * A method to run a series of methods to handle a request, which can include middleware. Each method
@@ -33,10 +34,19 @@ async function handlerWithOptionalMiddleware(req, res, ...handlerMethods) {
  * Middleware to stop unauthorised requests from going through
  * @param {Request} req request
  */
-function authMiddleware(req) {
+function withAuthentication(req) {
   if (req.body.password !== process.env.RYANKROL_SITE_KEY) {
     throw new RequestNotAuthorised();
   }
+  delete req.body.password;
 }
 
-export { handlerWithOptionalMiddleware, authMiddleware };
+/**
+ * Middleware to add a date to the request body
+ * @param {Request} req request
+ */
+function withDateTracking(req) {
+  req.body.date = date.format(new Date(), 'DD-MM-YYYY');
+}
+
+export { handlerWithOptionalMiddleware, withAuthentication, withDateTracking };
