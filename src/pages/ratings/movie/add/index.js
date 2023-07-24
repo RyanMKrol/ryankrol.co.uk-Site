@@ -1,14 +1,17 @@
 import Head from 'next/head';
 
 import Layout from '@/components/Layout';
+import MovieOrTvRatingsInputForm from '@/components/MovieOrTvRatingsInputForm';
 
-export default function Page({ postData }) {
+export default function Page() {
   return (
     <Layout>
       <Head>
-        <title>Where movies are rated...</title>
+        <title>Where movies will be rated...</title>
       </Head>
-      <h1>Rate a movie</h1>
+      <div>
+        <MovieOrTvRatingsInputForm />
+      </div>
     </Layout>
   );
 }
