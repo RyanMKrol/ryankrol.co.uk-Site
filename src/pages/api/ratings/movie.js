@@ -1,5 +1,6 @@
 import NodeCache from 'node-cache';
 import { ONE_HOUR_S } from '@/lib/constants';
+import { fetchThumbnailForMovie } from '@/lib/remote/omdb';
 import { cacheReadthrough } from '@/lib/utilities/cache';
 import { getWriteQueueInstance, scanTable } from '@/lib/utilities/dynamo';
 import {
@@ -56,6 +57,8 @@ async function handleGet(req, res) {
  * @returns {object} The response object
  */
 async function handlePost(req, res) {
+  req.body.thumbnail = await fetchThumbnailForMovie(req.body.title);
+
   return new Promise((resolve) => {
     const writeQueue = getWriteQueueInstance(MOVIE_RATINGS_TABLE);
     writeQueue.push(req.body, () => {
