@@ -23,7 +23,7 @@ async function onFormSubmit(body) {
     headers: { 'Content-Type': 'application/json' },
   });
 
-  const { data } = await response.json();
+  const data = await response.json();
 
   return {
     status: response.status,

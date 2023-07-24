@@ -18,7 +18,7 @@ async function handlerWithOptionalMiddleware(req, res, ...handlerMethods) {
         });
     }, Promise.resolve())
     .then((data) => {
-      res.status(200).json({ data });
+      res.status(200).json(data);
     })
     .catch((err) => {
       if (err.status && err.name) {
