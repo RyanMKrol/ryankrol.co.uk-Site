@@ -33,7 +33,9 @@ async function fetchThumbnail(apiEndpoint) {
   const response = await fetch(apiEndpoint);
   const data = await response.json();
 
-  throw new ThumbnailNotFound();
+  if (!isThumbnailValid(data)) {
+    throw new ThumbnailNotFound();
+  }
 
   return data.Poster;
 }
