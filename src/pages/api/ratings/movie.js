@@ -56,8 +56,10 @@ async function handleGet(req, res) {
  * @returns {object} The response object
  */
 async function handlePost(req, res) {
-  return {
-    status: 200,
-    message: 'Successful POST',
-  };
+  return new Promise((resolve) => {
+    const writeQueue = getWriteQueueInstance(MOVIE_RATINGS_TABLE);
+    writeQueue.push(req.body, () => {
+      resolve({ status: 200, message: 'Successful POST' });
+    });
+  });
 }
