@@ -1,7 +1,8 @@
 import NodeCache from 'node-cache';
 import { ONE_HOUR_S } from '@/lib/constants';
+import { fetchThumbnailForTvSeries } from '@/lib/remote/omdb';
 import { cacheReadthrough } from '@/lib/utilities/cache';
-import { scanTable } from '@/lib/utilities/dynamo';
+import { getWriteQueueInstance, scanTable } from '@/lib/utilities/dynamo';
 import {
   handlerWithOptionalMiddleware,
   withAuthentication,
@@ -56,8 +57,12 @@ async function handleGet(req, res) {
  * @returns {object} The response object
  */
 async function handlePost(req, res) {
-  return {
-    status: 200,
-    message: 'Successful POST',
-  };
+  req.body.thumbnail = await fetchThumbnailForTvSeries(req.body.title);
+
+  return new Promise((resolve) => {
+    const writeQueue = getWriteQueueInstance(TV_RATINGS_TABLE);
+    writeQueue.push(req.body, () => {
+      resolve({ status: 200, message: 'Successful POST' });
+    });
+  });
 }
