@@ -39,11 +39,9 @@ export default async function handler(req, res) {
 
 /**
  * Handles GET requests to this API
- * @param {Request} req request
- * @param {Response} res response
  * @returns {object} The response object
  */
-async function handleGet(req, res) {
+async function handleGet() {
   // can use filename as the key here because this is the only file interacting with this cache object
   return cacheReadthrough(CACHE, __filename, async () =>
     scanTable(MOVIE_RATINGS_TABLE)
@@ -53,10 +51,9 @@ async function handleGet(req, res) {
 /**
  * Handles POST requests to this API
  * @param {Request} req request
- * @param {Response} res response
  * @returns {object} The response object
  */
-async function handlePost(req, res) {
+async function handlePost(req) {
   req.body.thumbnail = await fetchThumbnailForMovie(req.body.title);
 
   return new Promise((resolve) => {

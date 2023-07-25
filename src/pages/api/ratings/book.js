@@ -38,11 +38,9 @@ export default async function handler(req, res) {
 
 /**
  * Handles GET requests to this API
- * @param {Request} req request
- * @param {Response} res response
  * @returns {object} The response object
  */
-async function handleGet(req, res) {
+async function handleGet() {
   // can use filename as the key here because this is the only file interacting with this cache object
   return cacheReadthrough(CACHE, __filename, async () =>
     scanTable(BOOK_RATINGS_TABLE)
@@ -51,11 +49,9 @@ async function handleGet(req, res) {
 
 /**
  * Handles POST requests to this API
- * @param {Request} req request
- * @param {Response} res response
  * @returns {object} The response object
  */
-async function handlePost(req, res) {
+async function handlePost() {
   return {
     status: 200,
     message: 'Successful POST',

@@ -1,7 +1,8 @@
 import NodeCache from 'node-cache';
 import { ONE_HOUR_S } from '@/lib/constants';
+import fetchThumbnailForAlbum from '@/lib/remote/lastFm';
 import { cacheReadthrough } from '@/lib/utilities/cache';
-import { scanTable } from '@/lib/utilities/dynamo';
+import { getWriteQueueInstance, scanTable } from '@/lib/utilities/dynamo';
 import {
   handlerWithOptionalMiddleware,
   withAuthentication,
@@ -38,11 +39,9 @@ export default async function handler(req, res) {
 
 /**
  * Handles GET requests to this API
- * @param {Request} req request
- * @param {Response} res response
  * @returns {object} The response object
  */
-async function handleGet(req, res) {
+async function handleGet() {
   // can use filename as the key here because this is the only file interacting with this cache object
   return cacheReadthrough(CACHE, __filename, async () =>
     scanTable(ALBUM_RATINGS_TABLE)
@@ -52,12 +51,18 @@ async function handleGet(req, res) {
 /**
  * Handles POST requests to this API
  * @param {Request} req request
- * @param {Response} res response
  * @returns {object} The response object
  */
-async function handlePost(req, res) {
-  return {
-    status: 200,
-    message: 'Successful POST',
-  };
+async function handlePost(req) {
+  req.body.thumbnail = await fetchThumbnailForAlbum(
+    req.body.artist,
+    req.body.title
+  );
+
+  return new Promise((resolve) => {
+    const writeQueue = getWriteQueueInstance(ALBUM_RATINGS_TABLE);
+    writeQueue.push(req.body, () => {
+      resolve({ status: 200, message: 'Successful POST' });
+    });
+  });
 }
