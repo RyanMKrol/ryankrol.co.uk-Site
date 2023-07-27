@@ -9,7 +9,7 @@ export default function Page({ data }) {
   return (
     <Layout>
       <Head>
-        <title>Where movies have been rated...</title>
+        <title>My Vinyl!</title>
       </Head>
       <div className={styles.cardContainer}>
         {data.map((item) => (
