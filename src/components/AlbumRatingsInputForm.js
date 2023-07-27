@@ -93,6 +93,7 @@ export default function AlbumRatingsInputForm({ onFormSubmit }) {
       <br />
       <TextField
         required
+        type="password"
         variant="standard"
         fullWidth
         label="Password"

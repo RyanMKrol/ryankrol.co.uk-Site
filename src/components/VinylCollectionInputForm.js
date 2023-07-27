@@ -65,6 +65,7 @@ export default function VinylCollectionInputForm({ onFormSubmit }) {
       <br />
       <TextField
         required
+        type="password"
         variant="standard"
         fullWidth
         label="Password"
