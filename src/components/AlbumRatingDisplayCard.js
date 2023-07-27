@@ -34,7 +34,9 @@ export default function AlbumRatingDisplayCard({
           </Typography>
           <Typography variant="body1">{artist}</Typography>
           <br />
-          <Typography variant="body2">Highlights: {highlights}</Typography>
+          <Typography variant="body2">
+            <b>Highlights</b>: {highlights}
+          </Typography>
           <br />
           <Typography variant="caption">{date}</Typography>
         </CardContent>
