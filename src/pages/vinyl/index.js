@@ -33,7 +33,7 @@ export async function getServerSideProps() {
     // decide what to do here when the API call fails
   });
 
-  const { data } = await res.json();
+  const data = await res.json();
 
   // sort data in ascending order using artist title. artists starting with "the ", do
   // not start with "T"
