@@ -9,7 +9,7 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 
-import styles from './MovieOrTvRatingDisplayCard.module.css';
+import styles from './styles/CardStyles.module.css';
 
 export default function MovieOrTvRatingDisplayCard({
   overallScore,

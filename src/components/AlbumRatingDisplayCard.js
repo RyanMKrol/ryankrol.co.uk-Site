@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 import Typography from '@mui/material/Typography';
 
-import styles from './AlbumRatingDisplayCard.module.css';
+import styles from './styles/CardStyles.module.css';
 
 export default function AlbumRatingDisplayCard({
   highlights,
