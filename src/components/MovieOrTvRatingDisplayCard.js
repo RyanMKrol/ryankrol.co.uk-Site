@@ -1,7 +1,6 @@
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ManIcon from '@mui/icons-material/Man';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
@@ -9,7 +8,7 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 
-import styles from './styles/CardStyles.module.css';
+import styles from './MovieOrTvRatingDisplayCard.module.css';
 
 export default function MovieOrTvRatingDisplayCard({
   overallScore,
@@ -23,18 +22,9 @@ export default function MovieOrTvRatingDisplayCard({
   date,
 }) {
   return (
-    <div className={styles.card}>
-      <Card sx={{ maxWidth: 300 }}>
-        <CardMedia
-          sx={{
-            height: 400,
-            width: 260,
-            margin: 'auto',
-            marginTop: '20px',
-            borderRadius: '4px',
-          }}
-          image={thumbnail}
-        />
+    <div className={styles.cardContainer}>
+      <Card className={styles.card}>
+        <img src={thumbnail} className={styles.image} />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
             {title}

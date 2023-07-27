@@ -1,11 +1,10 @@
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 import Typography from '@mui/material/Typography';
 
-import styles from './styles/CardStyles.module.css';
+import styles from './AlbumRatingDisplayCard.module.css';
 
 export default function AlbumRatingDisplayCard({
   highlights,
@@ -16,18 +15,9 @@ export default function AlbumRatingDisplayCard({
   title,
 }) {
   return (
-    <div className={styles.card}>
-      <Card sx={{ width: 280 }}>
-        <CardMedia
-          sx={{
-            height: 250,
-            width: 250,
-            margin: 'auto',
-            marginTop: '15px',
-            borderRadius: '4px',
-          }}
-          image={thumbnail}
-        />
+    <div className={styles.cardContainer}>
+      <Card className={styles.card}>
+        <img src={thumbnail} className={styles.image} />
         <CardContent>
           <Typography gutterBottom variant="h6">
             {title}
