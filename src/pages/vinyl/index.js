@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import VinylDisplayCard from '@/components/VinylDisplayCard';
 
+import { formatStringForTitleSort } from '@/lib/utilities/string';
+
 import styles from './index.module.css';
 
 export default function Page({ data }) {
@@ -37,7 +39,7 @@ export async function getServerSideProps() {
 
   // sort data in ascending order using artist title. artists starting with "the ", do
   // not start with "T"
-  data.sort(sortArtists);
+  data.sort(sortByArtist);
 
   // Pass data to the page via props
   return { props: { data } };
@@ -49,13 +51,13 @@ export async function getServerSideProps() {
  * @param {Object} b the second vinyl object
  * @returns {boolean} Whether a is before b
  */
-function sortArtists(a, b) {
-  const formattedArtistA = formatStringForSort(a.artist);
-  const formattedArtistB = formatStringForSort(b.artist);
+function sortByArtist(a, b) {
+  const formattedArtistA = formatStringForTitleSort(a.artist);
+  const formattedArtistB = formatStringForTitleSort(b.artist);
   return formattedArtistA < formattedArtistB
     ? -1
     : formattedArtistA === formattedArtistB
-    ? sortTitles(a, b)
+    ? sortByTitle(a, b)
     : 1;
 }
 
@@ -65,22 +67,12 @@ function sortArtists(a, b) {
  * @param {Object} b the second vinyl object
  * @returns {boolean} Whether a is before b
  */
-function sortTitles(a, b) {
-  const formattedTitleA = formatStringForSort(a.title);
-  const formattedTitleB = formatStringForSort(b.title);
+function sortByTitle(a, b) {
+  const formattedTitleA = formatStringForTitleSort(a.title);
+  const formattedTitleB = formatStringForTitleSort(b.title);
   return formattedTitleA < formattedTitleB
     ? -1
     : formattedTitleA === formattedTitleB
     ? 0
     : 1;
-}
-
-/**
- * Formats a value to remove "The " from the beginning, if it is present
- * @param {string} value The string to format
- * @returns {string} the formatted string
- */
-function formatStringForSort(value) {
-  const source = value.toLowerCase();
-  return source.startsWith('the ') ? source.substring(4) : source;
 }
