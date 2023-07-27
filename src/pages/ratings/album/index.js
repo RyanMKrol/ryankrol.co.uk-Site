@@ -8,7 +8,7 @@ export default function Page({ data }) {
   return (
     <Layout>
       <Head>
-        <title>Where movies have been rated...</title>
+        <title>Where albums have been rated...</title>
       </Head>
       <div className={styles.cardContainer}>
         {data.map((item) => (
