@@ -6,7 +6,7 @@ import Slider from '@mui/material/Slider';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
+export default function AlbumRatingsInputForm({ onFormSubmit }) {
   const [title, setTitle] = useState('');
   const [artist, setArtist] = useState('');
   const [highlights, setHighlights] = useState('');
