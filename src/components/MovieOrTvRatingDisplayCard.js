@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -24,7 +26,11 @@ export default function MovieOrTvRatingDisplayCard({
   return (
     <div className={styles.cardContainer}>
       <Card className={styles.card}>
-        <img src={thumbnail} className={styles.image} />
+        <img
+          alt="Movie or Tv Series Thumbnail"
+          src={thumbnail}
+          className={styles.image}
+        />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
             {title}
