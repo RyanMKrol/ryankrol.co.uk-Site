@@ -10,7 +10,7 @@ export default function Page({ data }) {
   return (
     <Layout>
       <Head>
-        <title>Where albums have been rated...</title>
+        <title>Where books have been rated...</title>
       </Head>
       <div className={styles.cardContainer}>
         {data.map((item) => (
@@ -52,10 +52,10 @@ export async function getServerSideProps() {
  */
 function sortByRating(a, b) {
   return a.rating < b.rating
-    ? -1
+    ? 1
     : a.rating === b.rating
     ? sortByTitle(a, b)
-    : 1;
+    : -1;
 }
 
 /**
