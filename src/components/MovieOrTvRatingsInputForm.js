@@ -6,8 +6,6 @@ import Slider from '@mui/material/Slider';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-import styles from './MovieOrTvRatingsInputForm.module.css';
-
 export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
   const [title, setTitle] = useState('');
   const [gist, setGist] = useState('');
@@ -52,7 +50,6 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
       <TextField
         required
         variant="standard"
-        className={styles.textInput}
         fullWidth
         label="Title"
         id="title"
@@ -67,7 +64,6 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
       <TextField
         required
         variant="standard"
-        className={styles.textInput}
         fullWidth
         label="The Gist"
         id="gist"
@@ -82,7 +78,6 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
       <TextField
         required
         variant="standard"
-        className={styles.textInput}
         fullWidth
         type="password"
         label="Password"
