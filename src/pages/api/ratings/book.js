@@ -30,15 +30,9 @@ export default async function handler(req, res) {
         res,
         withAuthentication,
         withDateTracking,
+        withRequiredBodyKeys(['title', 'author', 'date', 'rating']),
         withRequestBodyModification(addBookInfo),
-        withRequiredBodyKeys([
-          'title',
-          'author',
-          'date',
-          'infoLink',
-          'publishedDate',
-          'thumbnail',
-        ]),
+        withRequiredBodyKeys(['thumbnail']),
         handlePost
       );
       break;

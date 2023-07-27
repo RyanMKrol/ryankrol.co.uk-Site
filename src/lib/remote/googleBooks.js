@@ -18,16 +18,13 @@ async function fetchRemoteInfoForBook(title, author) {
   const targetBookInfo = response.items[0];
 
   const { thumbnail } = targetBookInfo.volumeInfo.imageLinks;
-  const { infoLink, publishedDate } = targetBookInfo.volumeInfo;
 
-  if (!thumbnail || !infoLink || !publishedDate) {
+  if (!thumbnail) {
     throw new BookInformationNotFound();
   }
 
   return {
     thumbnail,
-    infoLink,
-    publishedDate,
   };
 }
 
