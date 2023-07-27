@@ -6,7 +6,10 @@ import {
   handlerWithOptionalMiddleware,
   withAuthentication,
   withDateTracking,
+  withRequestBodyModification,
+  withRequiredBodyKeys,
 } from '@/lib/utilities/middleware';
+import fetchRemoteInfoForBook from '@/lib/remote/googleBooks';
 
 const BOOK_RATINGS_TABLE = 'BookRatings';
 const CACHE = new NodeCache({ stdTTL: ONE_HOUR_S });
@@ -27,6 +30,15 @@ export default async function handler(req, res) {
         res,
         withAuthentication,
         withDateTracking,
+        withRequestBodyModification(addBookInfo),
+        withRequiredBodyKeys([
+          'title',
+          'author',
+          'date',
+          'infoLink',
+          'publishedDate',
+          'thumbnail',
+        ]),
         handlePost
       );
       break;
@@ -56,4 +68,14 @@ async function handlePost() {
     status: 200,
     message: 'Successful POST',
   };
+}
+
+/**
+ * Calls the GoogleBooks API to find information like the thumbnail,
+ * and publish date for the book
+ * @param {Request} req request
+ */
+async function addBookInfo(req) {
+  const book = await fetchRemoteInfoForBook(req.body.title, req.body.author);
+  req.body = Object.assign({}, req.body, book);
 }
