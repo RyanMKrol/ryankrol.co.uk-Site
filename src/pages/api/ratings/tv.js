@@ -7,6 +7,8 @@ import {
   handlerWithOptionalMiddleware,
   withAuthentication,
   withDateTracking,
+  withRequestBodyModification,
+  withRequiredBodyKeys,
 } from '@/lib/utilities/middleware';
 
 const TV_RATINGS_TABLE = 'TelevisionRatings';
@@ -28,6 +30,17 @@ export default async function handler(req, res) {
         res,
         withAuthentication,
         withDateTracking,
+        withRequiredBodyKeys([
+          'title',
+          'blind',
+          'characters',
+          'craftsmanship',
+          'gist',
+          'sound',
+          'story',
+        ]),
+        withRequestBodyModification(addThumbnail),
+        withRequiredBodyKeys(['thumbnail']),
         handlePost
       );
       break;
@@ -54,12 +67,18 @@ async function handleGet() {
  * @returns {object} The response object
  */
 async function handlePost(req) {
-  req.body.thumbnail = await fetchThumbnailForTvSeries(req.body.title);
-
   return new Promise((resolve) => {
     const writeQueue = getWriteQueueInstance(TV_RATINGS_TABLE);
     writeQueue.push(req.body, () => {
       resolve({ status: 200, message: 'Successful POST' });
     });
   });
+}
+
+/**
+ * Add a thumbnail for the tv series to the request
+ * @param {Request} req request
+ */
+async function addThumbnail(req) {
+  req.body.thumbnail = await fetchThumbnailForTvSeries(req.body.title);
 }
