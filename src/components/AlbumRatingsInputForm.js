@@ -10,37 +10,39 @@ import styles from './MovieOrTvRatingsInputForm.module.css';
 
 export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
   const [title, setTitle] = useState('');
-  const [gist, setGist] = useState('');
+  const [artist, setArtist] = useState('');
+  const [highlights, setHighlights] = useState('');
   const [password, setPassword] = useState('');
-  const [total, setTotal] = useState(0);
-  const [story, setStory] = useState(0);
-  const [craftsmanship, setCraftsmanship] = useState(0);
-  const [sound, setSound] = useState(0);
-  const [characters, setCharacters] = useState(0);
+  const [rating, setRating] = useState(0);
 
   const [titleMissing, setTitleMissing] = useState(false);
-  const [gistMissing, setGistMissing] = useState(false);
+  const [artistMissing, setArtistMissing] = useState(false);
+  const [highlightsMissing, setHighlightsMissing] = useState(false);
   const [passwordMissing, setPasswordMissing] = useState(false);
 
   const formSubmit = () => {
     const isTitleMissing = title === '';
-    const isGistMissing = gist === '';
+    const isArtistMissing = artist === '';
+    const isHighlightsMissing = highlights === '';
     const isPasswordMissing = password === '';
 
-    if (isTitleMissing || isGistMissing || isPasswordMissing) {
+    if (
+      isTitleMissing ||
+      isArtistMissing ||
+      isHighlightsMissing ||
+      isPasswordMissing
+    ) {
       setTitleMissing(isTitleMissing);
-      setGistMissing(isGistMissing);
+      setArtistMissing(isArtistMissing);
+      setHighlightsMissing(isHighlightsMissing);
       setPasswordMissing(isPasswordMissing);
     } else {
       onFormSubmit({
         title,
-        gist,
+        artist,
+        highlights,
         password,
-        blind: total,
-        story,
-        craftsmanship,
-        sound,
-        characters,
+        rating,
       }).then((alertData) => {
         alert(`${alertData.status} - ${alertData.message}`);
       });
@@ -69,13 +71,13 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
         variant="standard"
         className={styles.textInput}
         fullWidth
-        label="The Gist"
-        id="gist"
+        label="Artist"
+        id="artist"
         onChange={(event) => {
-          setGist(event.target.value);
-          setGistMissing(event.target.value === '');
+          setArtist(event.target.value);
+          setArtistMissing(event.target.value === '');
         }}
-        error={gistMissing}
+        error={artistMissing}
       />
       <br />
       <br />
@@ -84,7 +86,21 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
         variant="standard"
         className={styles.textInput}
         fullWidth
-        type="password"
+        label="Highlights"
+        id="highlights"
+        onChange={(event) => {
+          setHighlights(event.target.value);
+          setHighlightsMissing(event.target.value === '');
+        }}
+        error={highlightsMissing}
+      />
+      <br />
+      <br />
+      <TextField
+        required
+        variant="standard"
+        className={styles.textInput}
+        fullWidth
         label="Password"
         id="password"
         onChange={(event) => {
@@ -97,69 +113,13 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
       <br />
       <br />
       <Container maxWidth="sm">
-        <Typography>Total</Typography>
+        <Typography>Rating</Typography>
         <Slider
-          marks
-          max={10}
+          max={100}
           min={0}
           size="small"
           valueLabelDisplay="auto"
-          sx={{
-            color: 'red',
-          }}
-          onChange={(event) => setTotal(event.target.value)}
-        />
-        <br />
-        <Typography>Story</Typography>
-        <Slider
-          marks
-          max={10}
-          min={0}
-          size="small"
-          valueLabelDisplay="auto"
-          sx={{
-            color: 'orange',
-          }}
-          onChange={(event) => setStory(event.target.value)}
-        />
-        <br />
-        <Typography>Craftsmanship</Typography>
-        <Slider
-          marks
-          max={10}
-          min={0}
-          size="small"
-          valueLabelDisplay="auto"
-          sx={{
-            color: 'green',
-          }}
-          onChange={(event) => setCraftsmanship(event.target.value)}
-        />
-        <br />
-        <Typography>Sound</Typography>
-        <Slider
-          marks
-          max={10}
-          min={0}
-          size="small"
-          valueLabelDisplay="auto"
-          sx={{
-            color: 'blue',
-          }}
-          onChange={(event) => setSound(event.target.value)}
-        />
-        <br />
-        <Typography>Characters</Typography>
-        <Slider
-          marks
-          max={10}
-          min={0}
-          size="small"
-          valueLabelDisplay="auto"
-          sx={{
-            color: 'purple',
-          }}
-          onChange={(event) => setCharacters(event.target.value)}
+          onChange={(event) => setRating(event.target.value)}
         />
       </Container>
       <br />

@@ -35,7 +35,6 @@ export default async function handler(req, res) {
           'artist',
           'date',
           'highlights',
-          'mood',
           'rating',
         ]),
         withRequestBodyModification(addThumbnail),

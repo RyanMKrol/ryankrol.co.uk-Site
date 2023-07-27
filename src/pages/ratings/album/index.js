@@ -34,7 +34,7 @@ export async function getServerSideProps() {
     // decide what to do here when the API call fails
   });
 
-  const { data } = await res.json();
+  const data = await res.json();
 
   data.sort((a, b) =>
     a.rating < b.rating ? 1 : a.rating === b.rating ? 0 : -1
