@@ -7,6 +7,8 @@ import {
   handlerWithOptionalMiddleware,
   withAuthentication,
   withDateTracking,
+  withRequestBodyModification,
+  withRequiredBodyKeys,
 } from '@/lib/utilities/middleware';
 
 const ALBUM_RATINGS_TABLE = 'AlbumRatings';
@@ -28,6 +30,16 @@ export default async function handler(req, res) {
         res,
         withAuthentication,
         withDateTracking,
+        withRequiredBodyKeys([
+          'title',
+          'artist',
+          'date',
+          'highlights',
+          'mood',
+          'rating',
+        ]),
+        withRequestBodyModification(addThumbnail),
+        withRequiredBodyKeys(['thumbnail']),
         handlePost
       );
       break;
@@ -54,15 +66,22 @@ async function handleGet() {
  * @returns {object} The response object
  */
 async function handlePost(req) {
-  req.body.thumbnail = await fetchThumbnailForAlbum(
-    req.body.artist,
-    req.body.title
-  );
-
   return new Promise((resolve) => {
     const writeQueue = getWriteQueueInstance(ALBUM_RATINGS_TABLE);
     writeQueue.push(req.body, () => {
       resolve({ status: 200, message: 'Successful POST' });
     });
   });
+}
+
+/**
+ * Method to be run by middleware to add a thumbnail to the request
+ * @param {Request} req request
+ */
+async function addThumbnail(req) {
+  const thumbnail = await fetchThumbnailForAlbum(
+    req.body.artist,
+    req.body.title
+  );
+  req.body.thumbnail = thumbnail;
 }

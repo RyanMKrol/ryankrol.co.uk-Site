@@ -1,4 +1,7 @@
-import { RequestNotAuthorised } from '@/lib/errors';
+import {
+  RequestNotAuthorised,
+  PostBodyMissingRequiredData,
+} from '@/lib/errors';
 import date from 'date-and-time';
 
 /**
@@ -49,4 +52,39 @@ function withDateTracking(req) {
   req.body.date = date.format(new Date(), 'DD-MM-YYYY');
 }
 
-export { handlerWithOptionalMiddleware, withAuthentication, withDateTracking };
+/**
+ * Middleware to alter the request body dynamically. Typical use for this would be to
+ * modify the body in the middleware layer, and then enforce checks on the body via
+ * withRequiredBodyKeys. This method makes it easier to maintain a chain of methods
+ * @param {Function} fn The method you want to alter the request body with
+ * @returns {Function} A middleware function
+ */
+function withRequestBodyModification(fn) {
+  return (req) => fn(req);
+}
+
+/**
+ * Middleware to enforce request structure for our POST requests
+ * @param {Array<string>} keys The keys you want to be present in the request body
+ * @returns {Function} A middleware function
+ */
+function withRequiredBodyKeys(keys) {
+  return (req) => {
+    if (
+      !keys.reduce(
+        (acc, key) => acc && Object.keys(req.body).includes(key),
+        true
+      )
+    ) {
+      throw new PostBodyMissingRequiredData();
+    }
+  };
+}
+
+export {
+  handlerWithOptionalMiddleware,
+  withAuthentication,
+  withDateTracking,
+  withRequestBodyModification,
+  withRequiredBodyKeys,
+};
