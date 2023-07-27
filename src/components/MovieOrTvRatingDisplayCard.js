@@ -31,6 +31,7 @@ export default function MovieOrTvRatingDisplayCard({
             width: 260,
             margin: 'auto',
             marginTop: '20px',
+            borderRadius: '4px',
           }}
           image={thumbnail}
         />
