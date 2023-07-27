@@ -1,7 +1,7 @@
 import NodeCache from 'node-cache';
 import { ONE_HOUR_S } from '@/lib/constants';
 import { cacheReadthrough } from '@/lib/utilities/cache';
-import { scanTable } from '@/lib/utilities/dynamo';
+import { getWriteQueueInstance, scanTable } from '@/lib/utilities/dynamo';
 import {
   handlerWithOptionalMiddleware,
   withAuthentication,
@@ -55,13 +55,16 @@ async function handleGet() {
 
 /**
  * Handles POST requests to this API
+ * @param {Request} req request
  * @returns {object} The response object
  */
-async function handlePost() {
-  return {
-    status: 200,
-    message: 'Successful POST',
-  };
+async function handlePost(req) {
+  return new Promise((resolve) => {
+    const writeQueue = getWriteQueueInstance(BOOK_RATINGS_TABLE);
+    writeQueue.push(req.body, () => {
+      resolve({ status: 200, message: 'Successful POST' });
+    });
+  });
 }
 
 /**
