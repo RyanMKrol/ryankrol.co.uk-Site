@@ -1,12 +1,13 @@
 import SiteHeaderRatingsButton from './SiteHeaderRatingsButton';
 import SiteHeaderVinylButton from './SiteHeaderVinylButton';
+import SiteHeaderHeaderText from './SiteHeaderHeaderText';
 
 import styles from './SiteHeader.module.css';
 
-export default function BasicMenu() {
+export default function SiteHeader() {
   return (
     <div className={styles.container}>
-      <span className={styles.headerText}>Ryan Krol</span>
+      <SiteHeaderHeaderText />
       <div className={styles.headerButtons}>
         <span className={styles.buttonContainer}>
           <SiteHeaderRatingsButton />

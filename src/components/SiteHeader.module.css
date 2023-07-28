@@ -10,11 +10,6 @@
     display: flex;
 }
 
-.headerText {
-    font-family: 'IBM Plex Mono', sans-serif;
-    font-size: 26px;
-}
-
 .buttonContainer {
     margin: 0 10px;
 }
