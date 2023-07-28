@@ -7,8 +7,8 @@ import styles from './VinylDisplayCard.module.css';
 
 export default function VinylDisplayCard({ artist, date, thumbnail, title }) {
   return (
-    <div className={styles.card}>
-      <Card sx={{ width: 280 }}>
+    <div className={styles.cardContainer}>
+      <Card className={styles.card} sx={{ width: 280 }}>
         <CardMedia
           sx={{
             height: 250,
