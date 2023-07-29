@@ -9,7 +9,7 @@ export default function Page({ data }) {
   return (
     <Layout>
       <Head>
-        <title>What I've been listening to!</title>
+        <title>What I&apos;ve been listening to!</title>
       </Head>
       <div className={styles.cardContainer}>
         {data.map((item) => (

@@ -29,7 +29,7 @@ export default function Page({
         <br />
         <div className={styles.descriptionContainer}>
           <span className={styles.description}>
-            What I've been listening to this month! Click{' '}
+            What I&apos;ve been listening to this month! Click{' '}
             <Link href="/listens">here</Link> to see more
           </span>
         </div>
@@ -53,7 +53,7 @@ export default function Page({
         <br />
         <div className={styles.descriptionContainer}>
           <span className={styles.description}>
-            A bunch of movies I've seen and judged! Click{' '}
+            A bunch of movies I&apos;ve seen and judged! Click{' '}
             <Link href="/ratings/movie">here</Link> to see more
           </span>
         </div>
@@ -82,7 +82,7 @@ export default function Page({
         <br />
         <div className={styles.descriptionContainer}>
           <span className={styles.description}>
-            A bunch of TV I've watched and rated! Click{' '}
+            A bunch of TV I&apos;ve watched and rated! Click{' '}
             <Link href="/ratings/tv">here</Link> to see more
           </span>
         </div>
@@ -111,7 +111,7 @@ export default function Page({
         <br />
         <div className={styles.descriptionContainer}>
           <span className={styles.description}>
-            A bunch of albums I've heard and critiqued! Click{' '}
+            A bunch of albums I&apos;ve heard and critiqued! Click{' '}
             <Link href="/ratings/album">here</Link> to see more
           </span>
         </div>
@@ -137,8 +137,8 @@ export default function Page({
         <br />
         <div className={styles.descriptionContainer}>
           <span className={styles.description}>
-            A small handful of books I've actually got around to reading! Click{' '}
-            <Link href="/ratings/book">here</Link> to see more
+            A small handful of books I&apos;ve actually got around to reading!
+            Click <Link href="/ratings/book">here</Link> to see more
           </span>
         </div>
         <div className={styles.dataContainer}>
