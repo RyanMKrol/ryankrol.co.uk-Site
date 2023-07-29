@@ -31,11 +31,11 @@ export default function Page({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(
-    `http://localhost:${process.env.PORT}/api/ratings/tv`
-  ).catch((err) => {
-    // decide what to do here when the API call fails
-  });
+  const res = await fetch(`http://ryankrol.co.uk/api/ratings/tv`).catch(
+    (err) => {
+      // decide what to do here when the API call fails
+    }
+  );
 
   const data = await res.json();
 

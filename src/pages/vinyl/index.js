@@ -29,9 +29,7 @@ export default function Page({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(
-    `http://localhost:${process.env.PORT}/api/vinyl`
-  ).catch((err) => {
+  const res = await fetch(`http://ryankrol.co.uk/api/vinyl`).catch((err) => {
     // decide what to do here when the API call fails
   });
 

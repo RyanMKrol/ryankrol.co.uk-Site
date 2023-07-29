@@ -17,7 +17,7 @@ export default function Page() {
 }
 
 async function onFormSubmit(body) {
-  const response = await fetch(`http://localhost:3000/api/ratings/book`, {
+  const response = await fetch(`http://ryankrol.co.uk/api/ratings/book`, {
     method: 'POST',
     body: JSON.stringify(body),
     headers: { 'Content-Type': 'application/json' },

@@ -154,23 +154,23 @@ export default function Page({
 
 export async function getServerSideProps() {
   const movieRatings = await fetchAndShuffle(
-    `http://localhost:${process.env.PORT}/api/ratings/movie`
+    `http://ryankrol.co.uk/api/ratings/movie`
   );
 
   const tvRatings = await fetchAndShuffle(
-    `http://localhost:${process.env.PORT}/api/ratings/tv`
+    `http://ryankrol.co.uk/api/ratings/tv`
   );
 
   const albumRatings = await fetchAndShuffle(
-    `http://localhost:${process.env.PORT}/api/ratings/album`
+    `http://ryankrol.co.uk/api/ratings/album`
   );
 
   const bookRatings = await fetchAndShuffle(
-    `http://localhost:${process.env.PORT}/api/ratings/book`
+    `http://ryankrol.co.uk/api/ratings/book`
   );
 
   const vinylCollection = await fetchAndShuffle(
-    `http://localhost:${process.env.PORT}/api/vinyl`
+    `http://ryankrol.co.uk/api/vinyl`
   );
 
   return {
