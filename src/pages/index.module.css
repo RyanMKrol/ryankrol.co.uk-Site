@@ -13,8 +13,11 @@
     justify-content: center;
 }
 
-.description {
+.descriptionContainer {
     margin: 0 5% 0 5%;
+}
+
+.description {
     font-family: 'IBM Plex Mono', sans-serif;
     font-size: 16px;
 }

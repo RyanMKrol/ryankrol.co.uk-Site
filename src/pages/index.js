@@ -25,10 +25,12 @@ export default function Page({
       <div>
         <br />
         <br />
-        <span className={styles.description}>
-          A bunch of movie ratings! Click{' '}
-          <Link href="/ratings/movie">here</Link> to see more
-        </span>
+        <div className={styles.descriptionContainer}>
+          <span className={styles.description}>
+            A bunch of movie ratings! Click{' '}
+            <Link href="/ratings/movie">here</Link> to see more
+          </span>
+        </div>
         <div className={styles.dataContainer}>
           <div
             className={
@@ -52,10 +54,12 @@ export default function Page({
           </div>
         </div>
         <br />
-        <span className={styles.description}>
-          A bunch of TV series ratings! Click{' '}
-          <Link href="/ratings/tv">here</Link> to see more
-        </span>
+        <div className={styles.descriptionContainer}>
+          <span className={styles.description}>
+            A bunch of TV series ratings! Click{' '}
+            <Link href="/ratings/tv">here</Link> to see more
+          </span>
+        </div>
         <div className={styles.dataContainer}>
           <div
             className={
@@ -79,10 +83,12 @@ export default function Page({
           </div>
         </div>
         <br />
-        <span className={styles.description}>
-          A bunch of album ratings! Click{' '}
-          <Link href="/ratings/album">here</Link> to see more
-        </span>
+        <div className={styles.descriptionContainer}>
+          <span className={styles.description}>
+            A bunch of album ratings! Click{' '}
+            <Link href="/ratings/album">here</Link> to see more
+          </span>
+        </div>
         <div className={styles.dataContainer}>
           <div
             className={
@@ -103,10 +109,12 @@ export default function Page({
           </div>
         </div>
         <br />
-        <span className={styles.description}>
-          A bunch of book ratings! Click <Link href="/ratings/book">here</Link>{' '}
-          to see more
-        </span>
+        <div className={styles.descriptionContainer}>
+          <span className={styles.description}>
+            A bunch of book ratings! Click{' '}
+            <Link href="/ratings/book">here</Link> to see more
+          </span>
+        </div>
         <div className={styles.dataContainer}>
           <div
             className={
@@ -127,9 +135,12 @@ export default function Page({
           </div>
         </div>
         <br />
-        <span className={styles.description}>
-          My vinyl collection! Click <Link href="/vinyl">here</Link> to see more
-        </span>
+        <div className={styles.descriptionContainer}>
+          <span className={styles.description}>
+            My vinyl collection! Click <Link href="/vinyl">here</Link> to see
+            more
+          </span>
+        </div>
         <div className={styles.dataContainer}>
           <div
             className={
