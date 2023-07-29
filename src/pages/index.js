@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import MovieOrTvRatingDisplayCard from '@/components/MovieOrTvRatingDisplayCard';
 import AlbumRatingDisplayCard from '@/components/AlbumRatingDisplayCard';
+import BookRatingDisplayCard from '@/components/BookRatingDisplayCard';
 import VinylDisplayCard from '@/components/VinylDisplayCard';
 
 import Layout from '@/components/Layout';
@@ -13,6 +14,7 @@ export default function Page({
   movieRatings,
   tvRatings,
   albumRatings,
+  bookRatings,
   vinylCollection,
 }) {
   return (
@@ -83,6 +85,23 @@ export default function Page({
       </div>
       <br />
       <span className={styles.description}>
+        A bunch of book ratings! Click <Link href="/ratings/book">here</Link> to
+        see more
+      </span>
+      <div className={styles.dataContainer}>
+        {bookRatings.map((item) => (
+          <BookRatingDisplayCard
+            key={`${item.title}-${item.author}`}
+            title={item.title}
+            author={item.author}
+            rating={item.rating}
+            date={item.date}
+            thumbnail={item.thumbnail}
+            overview={item.overview}
+          />
+        ))}
+      </div>
+      <span className={styles.description}>
         My vinyl collection! Click <Link href="/vinyl">here</Link> to see more
       </span>
       <div className={styles.dataContainer}>
@@ -114,6 +133,10 @@ export async function getServerSideProps() {
     `http://localhost:${process.env.PORT}/api/ratings/album`
   );
 
+  const bookRatings = await fetchAndShuffle(
+    `http://localhost:${process.env.PORT}/api/ratings/book`
+  );
+
   const vinylCollection = await fetchAndShuffle(
     `http://localhost:${process.env.PORT}/api/vinyl`
   );
@@ -123,6 +146,7 @@ export async function getServerSideProps() {
       movieRatings,
       tvRatings,
       albumRatings,
+      bookRatings,
       vinylCollection,
     },
   };
