@@ -22,100 +22,132 @@ export default function Page({
       <Head>
         <title>Home!</title>
       </Head>
-      <br />
-      <br />
-      <span className={styles.description}>
-        A bunch of movie ratings! Click <Link href="/ratings/movie">here</Link>{' '}
-        to see more
-      </span>
-      <div className={styles.dataContainer}>
-        {movieRatings.map((item) => (
-          <MovieOrTvRatingDisplayCard
-            key={item.title}
-            overallScore={item.blind}
-            storyScore={item.story}
-            characterScore={item.characters}
-            musicScore={item.sound}
-            craftsmanshipScore={item.craftsmanship}
-            thumbnail={item.thumbnail}
-            title={item.title}
-            gist={item.gist}
-            date={item.date}
-          />
-        ))}
+      <div>
+        <br />
+        <br />
+        <span className={styles.description}>
+          A bunch of movie ratings! Click{' '}
+          <Link href="/ratings/movie">here</Link> to see more
+        </span>
+        <div className={styles.dataContainer}>
+          <div
+            className={
+              styles.innerDataContainer + ' ' + styles.movieOrTvCardContainer
+            }
+          >
+            {movieRatings.map((item) => (
+              <MovieOrTvRatingDisplayCard
+                key={item.title}
+                overallScore={item.blind}
+                storyScore={item.story}
+                characterScore={item.characters}
+                musicScore={item.sound}
+                craftsmanshipScore={item.craftsmanship}
+                thumbnail={item.thumbnail}
+                title={item.title}
+                gist={item.gist}
+                date={item.date}
+              />
+            ))}
+          </div>
+        </div>
+        <br />
+        <span className={styles.description}>
+          A bunch of TV series ratings! Click{' '}
+          <Link href="/ratings/tv">here</Link> to see more
+        </span>
+        <div className={styles.dataContainer}>
+          <div
+            className={
+              styles.innerDataContainer + ' ' + styles.movieOrTvCardContainer
+            }
+          >
+            {tvRatings.map((item) => (
+              <MovieOrTvRatingDisplayCard
+                key={item.title}
+                overallScore={item.blind}
+                storyScore={item.story}
+                characterScore={item.characters}
+                musicScore={item.sound}
+                craftsmanshipScore={item.craftsmanship}
+                thumbnail={item.thumbnail}
+                title={item.title}
+                gist={item.gist}
+                date={item.date}
+              />
+            ))}
+          </div>
+        </div>
+        <br />
+        <span className={styles.description}>
+          A bunch of album ratings! Click{' '}
+          <Link href="/ratings/album">here</Link> to see more
+        </span>
+        <div className={styles.dataContainer}>
+          <div
+            className={
+              styles.innerDataContainer + ' ' + styles.albumCardContainer
+            }
+          >
+            {albumRatings.map((item) => (
+              <AlbumRatingDisplayCard
+                key={`${item.title}-${item.artist}`}
+                highlights={item.highlights}
+                artist={item.artist}
+                date={item.date}
+                rating={item.rating}
+                thumbnail={item.thumbnail}
+                title={item.title}
+              />
+            ))}
+          </div>
+        </div>
+        <br />
+        <span className={styles.description}>
+          A bunch of book ratings! Click <Link href="/ratings/book">here</Link>{' '}
+          to see more
+        </span>
+        <div className={styles.dataContainer}>
+          <div
+            className={
+              styles.innerDataContainer + ' ' + styles.bookCardContainer
+            }
+          >
+            {bookRatings.map((item) => (
+              <BookRatingDisplayCard
+                key={`${item.title}-${item.author}`}
+                title={item.title}
+                author={item.author}
+                rating={item.rating}
+                date={item.date}
+                thumbnail={item.thumbnail}
+                overview={item.overview}
+              />
+            ))}
+          </div>
+        </div>
+        <br />
+        <span className={styles.description}>
+          My vinyl collection! Click <Link href="/vinyl">here</Link> to see more
+        </span>
+        <div className={styles.dataContainer}>
+          <div
+            className={
+              styles.innerDataContainer + ' ' + styles.vinylCardContainer
+            }
+          >
+            {vinylCollection.map((item) => (
+              <VinylDisplayCard
+                key={`${item.title}-${item.artist}`}
+                artist={item.artist}
+                date={item.date}
+                thumbnail={item.thumbnail}
+                title={item.title}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-      <br />
-      <span className={styles.description}>
-        A bunch of TV series ratings! Click <Link href="/ratings/tv">here</Link>{' '}
-        to see more
-      </span>
-      <div className={styles.dataContainer}>
-        {tvRatings.map((item) => (
-          <MovieOrTvRatingDisplayCard
-            key={item.title}
-            overallScore={item.blind}
-            storyScore={item.story}
-            characterScore={item.characters}
-            musicScore={item.sound}
-            craftsmanshipScore={item.craftsmanship}
-            thumbnail={item.thumbnail}
-            title={item.title}
-            gist={item.gist}
-            date={item.date}
-          />
-        ))}
-      </div>
-      <br />
-      <span className={styles.description}>
-        A bunch of album ratings! Click <Link href="/ratings/album">here</Link>{' '}
-        to see more
-      </span>
-      <div className={styles.dataContainer}>
-        {albumRatings.map((item) => (
-          <AlbumRatingDisplayCard
-            key={`${item.title}-${item.artist}`}
-            highlights={item.highlights}
-            artist={item.artist}
-            date={item.date}
-            rating={item.rating}
-            thumbnail={item.thumbnail}
-            title={item.title}
-          />
-        ))}
-      </div>
-      <br />
-      <span className={styles.description}>
-        A bunch of book ratings! Click <Link href="/ratings/book">here</Link> to
-        see more
-      </span>
-      <div className={styles.dataContainer}>
-        {bookRatings.map((item) => (
-          <BookRatingDisplayCard
-            key={`${item.title}-${item.author}`}
-            title={item.title}
-            author={item.author}
-            rating={item.rating}
-            date={item.date}
-            thumbnail={item.thumbnail}
-            overview={item.overview}
-          />
-        ))}
-      </div>
-      <span className={styles.description}>
-        My vinyl collection! Click <Link href="/vinyl">here</Link> to see more
-      </span>
-      <div className={styles.dataContainer}>
-        {vinylCollection.map((item) => (
-          <VinylDisplayCard
-            key={`${item.title}-${item.artist}`}
-            artist={item.artist}
-            date={item.date}
-            thumbnail={item.thumbnail}
-            title={item.title}
-          />
-        ))}
-      </div>
-      <br />
     </Layout>
   );
 }

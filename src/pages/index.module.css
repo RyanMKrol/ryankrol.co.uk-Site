@@ -1,15 +1,44 @@
 .dataContainer {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 20px;
+}
+
+.innerDataContainer {
+    scale: 75%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .description {
     margin: 0 5% 0 5%;
     font-family: 'IBM Plex Mono', sans-serif;
     font-size: 16px;
+}
+
+/* Annoyingly, the height of the inner container keeps it's original
+height before the scale is applied. This means we have to manually
+force the height of the container back down to restore the layout.
+The values here are calculated by taking the difference between the
+height of each .innerDataContainer, and .dataContainer class, and then
+adding 10 to make sure the drop shadow doesn't clip. I have to do this
+for each different card container, because some cards are bigger/smaller
+than others, and require different margins */
+.movieOrTvCardContainer {
+    margin: -55px 0;
+}
+
+.albumCardContainer {
+    margin: -45px 0;
+}
+
+.bookCardContainer {
+    margin: -75px 0;
+}
+
+.vinylCardContainer {
+    margin: -44px 0;
 }
