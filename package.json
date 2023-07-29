@@ -1,92 +1,35 @@
 {
-  "name": "ryankrol.co.uk",
-  "version": "1.0.0",
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/node-logger": "^6.2.9",
-    "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.2.9",
-    "enzyme-to-json": "^3.4.3",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^30.4.1",
-    "husky": "^4.2.5"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "chart.js": "^3.3.2",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "formik": "^2.2.9",
-    "node-fetch": "^2.6.1",
-    "react": "^16.13.0",
-    "react-chartjs-2": "^3.0.3",
-    "react-dom": "^16.13.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "npm run lint && react-scripts build",
-    "test": "npm run lint && react-scripts test --coverage",
-    "eject": "react-scripts eject",
-    "start-dev": "REACT_APP_LOCAL_API=1 react-scripts start",
-    "test-ci": "npm run lint && CI=true react-scripts test --coverage",
-    "lint": "eslint src/ --ext .js",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "./scripts/husky"
-    }
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": -10
-      }
+    "name": "ryankrol.co.uk",
+    "version": "2.0.0",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
     },
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      ".*.stories.js",
-      ".*.test.js.snap",
-      "src/index.js"
-    ]
-  }
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@fontsource/ibm-plex-mono": "^5.0.5",
+        "@fontsource/roboto": "^5.0.5",
+        "@mui/icons-material": "^5.14.1",
+        "@mui/material": "^5.14.1",
+        "autoprefixer": "10.4.14",
+        "date-and-time": "^3.0.2",
+        "dotenv": "^16.3.1",
+        "next": "13.4.12",
+        "node-cache": "^5.1.2",
+        "noodle-utils": "^3.4.1",
+        "postcss": "8.4.27",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "eslint": "8.45.0",
+        "eslint-config-next": "13.4.12",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-jsdoc": "^46.4.4",
+        "eslint-plugin-prettier": "^5.0.0",
+        "prettier": "3.0.0"
+    }
 }

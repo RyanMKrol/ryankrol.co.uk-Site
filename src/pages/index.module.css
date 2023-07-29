@@ -1,0 +1,15 @@
+.dataContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.description {
+    margin: 0 5% 0 5%;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 16px;
+}
