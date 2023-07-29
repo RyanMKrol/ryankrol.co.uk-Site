@@ -45,3 +45,7 @@ than others, and require different margins */
 .vinylCardContainer {
     margin: -44px 0;
 }
+
+.listensCardContainer {
+    margin: -42px 0;
+}

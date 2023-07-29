@@ -4,6 +4,7 @@ import MovieOrTvRatingDisplayCard from '@/components/MovieOrTvRatingDisplayCard'
 import AlbumRatingDisplayCard from '@/components/AlbumRatingDisplayCard';
 import BookRatingDisplayCard from '@/components/BookRatingDisplayCard';
 import VinylDisplayCard from '@/components/VinylDisplayCard';
+import ListenDisplayCard from '@/components/ListenDisplayCard';
 
 import Layout from '@/components/Layout';
 
@@ -16,6 +17,7 @@ export default function Page({
   albumRatings,
   bookRatings,
   vinylCollection,
+  listensData,
 }) {
   return (
     <Layout>
@@ -158,6 +160,30 @@ export default function Page({
             ))}
           </div>
         </div>
+        <br />
+        <div className={styles.descriptionContainer}>
+          <span className={styles.description}>
+            What I've been listening to this month! Click{' '}
+            <Link href="/listens">here</Link> to see more
+          </span>
+        </div>
+        <div className={styles.dataContainer}>
+          <div
+            className={
+              styles.innerDataContainer + ' ' + styles.listensCardContainer
+            }
+          >
+            {listensData.map((item) => (
+              <ListenDisplayCard
+                key={`${item.name}-${item.artist}`}
+                artist={item.artist}
+                name={item.name}
+                thumbnail={item.thumbnail}
+                plays={item.plays}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </Layout>
   );
@@ -184,6 +210,10 @@ export async function getServerSideProps() {
     `http://ryankrol.co.uk/api/vinyl`
   );
 
+  const listensData = await fetchAndShuffle(
+    `http://ryankrol.co.uk/api/listens`
+  );
+
   return {
     props: {
       movieRatings,
@@ -191,6 +221,7 @@ export async function getServerSideProps() {
       albumRatings,
       bookRatings,
       vinylCollection,
+      listensData,
     },
   };
 }
