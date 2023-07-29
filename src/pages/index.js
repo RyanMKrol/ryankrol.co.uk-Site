@@ -29,7 +29,31 @@ export default function Page({
         <br />
         <div className={styles.descriptionContainer}>
           <span className={styles.description}>
-            A bunch of movie ratings! Click{' '}
+            What I've been listening to this month! Click{' '}
+            <Link href="/listens">here</Link> to see more
+          </span>
+        </div>
+        <div className={styles.dataContainer}>
+          <div
+            className={
+              styles.innerDataContainer + ' ' + styles.listensCardContainer
+            }
+          >
+            {listensData.map((item) => (
+              <ListenDisplayCard
+                key={`${item.name}-${item.artist}`}
+                artist={item.artist}
+                name={item.name}
+                thumbnail={item.thumbnail}
+                plays={item.plays}
+              />
+            ))}
+          </div>
+        </div>
+        <br />
+        <div className={styles.descriptionContainer}>
+          <span className={styles.description}>
+            A bunch of movies I've seen and judged! Click{' '}
             <Link href="/ratings/movie">here</Link> to see more
           </span>
         </div>
@@ -58,7 +82,7 @@ export default function Page({
         <br />
         <div className={styles.descriptionContainer}>
           <span className={styles.description}>
-            A bunch of TV series ratings! Click{' '}
+            A bunch of TV I've watched and rated! Click{' '}
             <Link href="/ratings/tv">here</Link> to see more
           </span>
         </div>
@@ -87,7 +111,7 @@ export default function Page({
         <br />
         <div className={styles.descriptionContainer}>
           <span className={styles.description}>
-            A bunch of album ratings! Click{' '}
+            A bunch of albums I've heard and critiqued! Click{' '}
             <Link href="/ratings/album">here</Link> to see more
           </span>
         </div>
@@ -113,7 +137,7 @@ export default function Page({
         <br />
         <div className={styles.descriptionContainer}>
           <span className={styles.description}>
-            A bunch of book ratings! Click{' '}
+            A small handful of books I've actually got around to reading! Click{' '}
             <Link href="/ratings/book">here</Link> to see more
           </span>
         </div>
@@ -156,30 +180,6 @@ export default function Page({
                 date={item.date}
                 thumbnail={item.thumbnail}
                 title={item.title}
-              />
-            ))}
-          </div>
-        </div>
-        <br />
-        <div className={styles.descriptionContainer}>
-          <span className={styles.description}>
-            What I've been listening to this month! Click{' '}
-            <Link href="/listens">here</Link> to see more
-          </span>
-        </div>
-        <div className={styles.dataContainer}>
-          <div
-            className={
-              styles.innerDataContainer + ' ' + styles.listensCardContainer
-            }
-          >
-            {listensData.map((item) => (
-              <ListenDisplayCard
-                key={`${item.name}-${item.artist}`}
-                artist={item.artist}
-                name={item.name}
-                thumbnail={item.thumbnail}
-                plays={item.plays}
               />
             ))}
           </div>
