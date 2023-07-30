@@ -3,7 +3,7 @@ import Head from 'next/head';
 import AlbumRatingDisplayCard from '@/components/AlbumRatingDisplayCard';
 import Layout from '@/components/Layout';
 
-import fetchAlbumRatings from '@/lib/remote/ryankrol';
+import { fetchAlbumRatings } from '@/lib/remote/ryankrol';
 
 import styles from './../index.module.css';
 

@@ -3,7 +3,8 @@ import Head from 'next/head';
 import MovieOrTvRatingDisplayCard from '@/components/MovieOrTvRatingDisplayCard';
 import Layout from '@/components/Layout';
 import styles from './../index.module.css';
-import sortByRating from '@/lib/utilities/sort';
+
+import { movieAndTvRatingSort } from '@/lib/utilities/sort';
 
 export default function Page({ tvRatings }) {
   return (
@@ -40,7 +41,7 @@ export async function getServerSideProps() {
 
   const tvRatings = await res.json();
 
-  tvRatings.sort(sortByRating);
+  tvRatings.sort(movieAndTvRatingSort);
 
   // Pass data to the page via props
   return { props: { tvRatings } };
