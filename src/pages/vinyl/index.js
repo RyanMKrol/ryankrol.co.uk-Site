@@ -7,14 +7,14 @@ import { formatStringForTitleSort } from '@/lib/utilities/string';
 
 import styles from './index.module.css';
 
-export default function Page({ data }) {
+export default function Page({ vinylItems }) {
   return (
     <Layout>
       <Head>
         <title>My Vinyl!</title>
       </Head>
       <div className={styles.cardContainer}>
-        {data.map((item) => (
+        {vinylItems.map((item) => (
           <VinylDisplayCard
             key={`${item.title}-${item.artist}`}
             artist={item.artist}
@@ -33,14 +33,14 @@ export async function getServerSideProps() {
     // decide what to do here when the API call fails
   });
 
-  const data = await res.json();
+  const vinylItems = await res.json();
 
   // sort data in ascending order using artist title. artists starting with "the ", do
   // not start with "T"
-  data.sort(sortByArtist);
+  vinylItems.sort(sortByArtist);
 
   // Pass data to the page via props
-  return { props: { data } };
+  return { props: { vinylItems } };
 }
 
 /**

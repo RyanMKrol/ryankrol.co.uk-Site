@@ -6,14 +6,14 @@ import styles from './../index.module.css';
 
 import { formatStringForTitleSort } from '@/lib/utilities/string';
 
-export default function Page({ data }) {
+export default function Page({ bookRatings }) {
   return (
     <Layout>
       <Head>
         <title>Where books have been rated...</title>
       </Head>
       <div className={styles.cardContainer}>
-        {data.map((item) => (
+        {bookRatings.map((item) => (
           <BookRatingDisplayCard
             key={`${item.title}-${item.author}`}
             title={item.title}
@@ -36,12 +36,12 @@ export async function getServerSideProps() {
     }
   );
 
-  const data = await res.json();
+  const bookRatings = await res.json();
 
-  data.sort(sortByRating);
+  bookRatings.sort(sortByRating);
 
   // Pass data to the page via props
-  return { props: { data } };
+  return { props: { bookRatings } };
 }
 
 /**

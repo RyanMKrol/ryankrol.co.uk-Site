@@ -5,14 +5,14 @@ import Layout from '@/components/Layout';
 import styles from './../index.module.css';
 import sortByRating from '@/lib/utilities/sort';
 
-export default function Page({ data }) {
+export default function Page({ movieRatings }) {
   return (
     <Layout>
       <Head>
         <title>Where movies have been rated...</title>
       </Head>
       <div className={styles.cardContainer}>
-        {data.map((item) => (
+        {movieRatings.map((item) => (
           <MovieOrTvRatingDisplayCard
             key={item.title + ' - ' + item.gist}
             title={item.title}
@@ -38,10 +38,10 @@ export async function getServerSideProps() {
     }
   );
 
-  const data = await res.json();
+  const movieRatings = await res.json();
 
-  data.sort(sortByRating);
+  movieRatings.sort(sortByRating);
 
   // Pass data to the page via props
-  return { props: { data } };
+  return { props: { movieRatings } };
 }

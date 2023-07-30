@@ -5,14 +5,14 @@ import ListenDisplayCard from '@/components/ListenDisplayCard';
 
 import styles from './index.module.css';
 
-export default function Page({ data }) {
+export default function Page({ listenItems }) {
   return (
     <Layout>
       <Head>
         <title>What I&apos;ve been listening to!</title>
       </Head>
       <div className={styles.cardContainer}>
-        {data.map((item) => (
+        {listenItems.map((item) => (
           <ListenDisplayCard
             key={`${item.name}-${item.artist}`}
             artist={item.artist}
@@ -33,8 +33,8 @@ export async function getServerSideProps() {
 
   const data = await res.json();
 
-  const displayData = data.filter((item) => item.plays > 10);
+  const listenItems = data.filter((item) => item.plays > 10);
 
   // Pass data to the page via props
-  return { props: { data: displayData } };
+  return { props: { listenItems } };
 }

@@ -4,14 +4,14 @@ import AlbumRatingDisplayCard from '@/components/AlbumRatingDisplayCard';
 import Layout from '@/components/Layout';
 import styles from './../index.module.css';
 
-export default function Page({ data }) {
+export default function Page({ albumRatings }) {
   return (
     <Layout>
       <Head>
         <title>Where albums have been rated...</title>
       </Head>
       <div className={styles.cardContainer}>
-        {data.map((item) => (
+        {albumRatings.map((item) => (
           <AlbumRatingDisplayCard
             key={`${item.title}-${item.artist}`}
             highlights={item.highlights}
@@ -34,12 +34,12 @@ export async function getServerSideProps() {
     }
   );
 
-  const data = await res.json();
+  const albumRatings = await res.json();
 
-  data.sort((a, b) =>
+  albumRatings.sort((a, b) =>
     a.rating < b.rating ? 1 : a.rating === b.rating ? 0 : -1
   );
 
   // Pass data to the page via props
-  return { props: { data } };
+  return { props: { albumRatings } };
 }
