@@ -32,6 +32,5 @@ export default function Page({ albumRatings }) {
 
 export async function getServerSideProps() {
   const albumRatings = await fetchAlbumRatings();
-
   return { props: { albumRatings } };
 }

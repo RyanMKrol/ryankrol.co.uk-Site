@@ -4,7 +4,7 @@ import MovieOrTvRatingDisplayCard from '@/components/MovieOrTvRatingDisplayCard'
 import Layout from '@/components/Layout';
 import styles from './../index.module.css';
 
-import { movieAndTvRatingSort } from '@/lib/utilities/sort';
+import { fetchTvRatings } from '@/lib/remote/ryankrol';
 
 export default function Page({ tvRatings }) {
   return (
@@ -33,16 +33,6 @@ export default function Page({ tvRatings }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://ryankrol.co.uk/api/ratings/tv`).catch(
-    (err) => {
-      // decide what to do here when the API call fails
-    }
-  );
-
-  const tvRatings = await res.json();
-
-  tvRatings.sort(movieAndTvRatingSort);
-
-  // Pass data to the page via props
+  const tvRatings = await fetchTvRatings();
   return { props: { tvRatings } };
 }

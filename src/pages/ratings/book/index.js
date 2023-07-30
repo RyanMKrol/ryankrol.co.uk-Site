@@ -31,6 +31,5 @@ export default function Page({ bookRatings }) {
 
 export async function getServerSideProps() {
   const bookRatings = await fetchBookRatings();
-
   return { props: { bookRatings } };
 }

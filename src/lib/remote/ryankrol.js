@@ -46,4 +46,23 @@ async function fetchMovieRatings() {
   return movieRatings;
 }
 
-export { fetchAlbumRatings, fetchBookRatings, fetchMovieRatings };
+/**
+ * Fetches tv ratings
+ * @returns {Array<object>} array of tv rating objects
+ */
+async function fetchTvRatings() {
+  const res = await fetch(`http://ryankrol.co.uk/api/ratings/tv`);
+
+  const tvRatings = await res.json();
+
+  tvRatings.sort(movieAndTvRatingSort);
+
+  return tvRatings;
+}
+
+export {
+  fetchAlbumRatings,
+  fetchBookRatings,
+  fetchMovieRatings,
+  fetchTvRatings,
+};
