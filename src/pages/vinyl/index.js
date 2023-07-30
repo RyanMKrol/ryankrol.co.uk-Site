@@ -11,7 +11,7 @@ export default function Page({ vinylItems }) {
   return (
     <Layout>
       <Head>
-        <title>My Vinyl!</title>
+        <title>My vinyl collection!</title>
       </Head>
       <div className={styles.cardContainer}>
         {vinylItems.map((item) => (

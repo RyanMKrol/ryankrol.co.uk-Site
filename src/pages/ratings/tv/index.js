@@ -9,7 +9,7 @@ export default function Page({ tvRatings }) {
   return (
     <Layout>
       <Head>
-        <title>Where TV have been rated...</title>
+        <title>Where TV has been rated...</title>
       </Head>
       <div className={styles.cardContainer}>
         {tvRatings.map((item) => (
