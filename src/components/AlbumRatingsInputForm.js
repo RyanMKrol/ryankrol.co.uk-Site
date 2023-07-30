@@ -110,7 +110,7 @@ export default function AlbumRatingsInputForm({ onFormSubmit }) {
       <Container maxWidth="sm">
         <Typography>Rating</Typography>
         <Slider
-          max={100}
+          max={10}
           min={0}
           size="small"
           valueLabelDisplay="auto"
