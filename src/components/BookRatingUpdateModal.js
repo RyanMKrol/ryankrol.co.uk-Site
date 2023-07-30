@@ -19,12 +19,12 @@ const style = {
   p: 4,
 };
 
-export default function AlbumRatingsUpdateModal({
-  initHighlights,
-  initArtist,
+export default function BookRatingUpdateModal({
+  initTitle,
+  initAuthor,
   initRating,
   initThumbnail,
-  initTitle,
+  initOverview,
   editCallback,
   isOpen,
   setModalOpen,
@@ -33,45 +33,45 @@ export default function AlbumRatingsUpdateModal({
   const handleClose = () => setModalOpen(false);
 
   const [title, setTitle] = useState(initTitle);
-  const [artist, setArtist] = useState(initArtist);
-  const [highlights, setHighlights] = useState(initHighlights);
+  const [author, setAuthor] = useState(initAuthor);
+  const [overview, setOverview] = useState(initOverview);
+  const [thumbnail, setThumbnail] = useState(initThumbnail);
   const [password, setPassword] = useState('');
   const [rating, setRating] = useState(initRating);
-  const [thumbnail, setThumbnail] = useState(initThumbnail);
 
   const [titleMissing, setTitleMissing] = useState(false);
-  const [artistMissing, setArtistMissing] = useState(false);
-  const [highlightsMissing, setHighlightsMissing] = useState(false);
-  const [passwordMissing, setPasswordMissing] = useState(false);
+  const [authorMissing, setAuthorMissing] = useState(false);
   const [thumbnailMissing, setThumbnailMissing] = useState(false);
+  const [overviewMissing, setOverviewMissing] = useState(false);
+  const [passwordMissing, setPasswordMissing] = useState(false);
 
   const formSubmit = () => {
     const isTitleMissing = title === '';
-    const isArtistMissing = artist === '';
-    const isHighlightsMissing = highlights === '';
+    const isAuthorMissing = author === '';
+    const isOverviewMissing = overview === '';
     const isPasswordMissing = password === '';
     const isThumbnailMissing = thumbnail === '';
 
     if (
       isTitleMissing ||
-      isArtistMissing ||
-      isHighlightsMissing ||
+      isAuthorMissing ||
+      isOverviewMissing ||
       isPasswordMissing ||
-      isThumbnailMissing
+      thumbnailMissing
     ) {
       setTitleMissing(isTitleMissing);
-      setArtistMissing(isArtistMissing);
-      setHighlightsMissing(isHighlightsMissing);
+      setAuthorMissing(isAuthorMissing);
+      setOverviewMissing(isOverviewMissing);
       setPasswordMissing(isPasswordMissing);
       setThumbnailMissing(isThumbnailMissing);
     } else {
       editCallback({
         title,
-        artist,
-        highlights,
+        author,
+        overview,
+        thumbnail,
         password,
         rating,
-        thumbnail,
         date,
       }).then((alertData) => {
         alert(`${alertData.status} - ${alertData.message}`);
@@ -108,14 +108,14 @@ export default function AlbumRatingsUpdateModal({
             required
             variant="standard"
             fullWidth
-            label="Artist"
-            id="artist"
-            defaultValue={artist}
+            label="Author"
+            id="author"
+            defaultValue={author}
             onChange={(event) => {
-              setArtist(event.target.value);
-              setArtistMissing(event.target.value === '');
+              setAuthor(event.target.value);
+              setAuthorMissing(event.target.value === '');
             }}
-            error={artistMissing}
+            error={authorMissing}
           />
           <br />
           <br />
@@ -123,14 +123,14 @@ export default function AlbumRatingsUpdateModal({
             required
             variant="standard"
             fullWidth
-            label="Highlights"
-            id="highlights"
-            defaultValue={highlights}
+            label="Overview"
+            id="overview"
+            defaultValue={overview}
             onChange={(event) => {
-              setHighlights(event.target.value);
-              setHighlightsMissing(event.target.value === '');
+              setOverview(event.target.value);
+              setOverviewMissing(event.target.value === '');
             }}
-            error={highlightsMissing}
+            error={overviewMissing}
           />
           <br />
           <br />
@@ -145,7 +145,7 @@ export default function AlbumRatingsUpdateModal({
               setThumbnail(event.target.value);
               setThumbnailMissing(event.target.value === '');
             }}
-            error={thumbnailMissing}
+            error={overviewMissing}
           />
           <br />
           <br />
