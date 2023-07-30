@@ -5,7 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 import Typography from '@mui/material/Typography';
-import AlbumRatingsUpdateModal from './AlbumRatingsUpdateModal';
+import AlbumRatingUpdateModal from './AlbumRatingUpdateModal';
 
 import styles from './AlbumRatingDisplayCard.module.css';
 
@@ -63,7 +63,7 @@ function AlbumCardWithModal({
           title={title}
         />
       </a>
-      <AlbumRatingsUpdateModal
+      <AlbumRatingUpdateModal
         initHighlights={highlights}
         initArtist={artist}
         initRating={rating}

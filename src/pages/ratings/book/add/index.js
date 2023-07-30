@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import Layout from '@/components/Layout';
-import BookRatingsInputForm from '@/components/BookRatingsInputForm';
+import BookRatingInputForm from '@/components/BookRatingInputForm';
 
 export default function Page() {
   return (
@@ -10,7 +10,7 @@ export default function Page() {
         <title>Where books will be rated...</title>
       </Head>
       <div>
-        <BookRatingsInputForm onFormSubmit={onFormSubmit} />
+        <BookRatingInputForm onFormSubmit={onFormSubmit} />
       </div>
     </Layout>
   );

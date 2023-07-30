@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import Layout from '@/components/Layout';
-import AlbumRatingsInputForm from '@/components/AlbumRatingsInputForm';
+import AlbumRatingInputForm from '@/components/AlbumRatingInputForm';
 
 export default function Page() {
   return (
@@ -10,7 +10,7 @@ export default function Page() {
         <title>Where albums will be rated...</title>
       </Head>
       <div>
-        <AlbumRatingsInputForm onFormSubmit={onFormSubmit} />
+        <AlbumRatingInputForm onFormSubmit={onFormSubmit} />
       </div>
     </Layout>
   );

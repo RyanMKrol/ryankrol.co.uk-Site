@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import Layout from '@/components/Layout';
-import MovieOrTvRatingsInputForm from '@/components/MovieOrTvRatingsInputForm';
+import MovieOrTvRatingInputForm from '@/components/MovieOrTvRatingInputForm';
 
 export default function Page() {
   return (
@@ -10,7 +10,7 @@ export default function Page() {
         <title>Where movies will be rated...</title>
       </Head>
       <div>
-        <MovieOrTvRatingsInputForm onFormSubmit={onFormSubmit} />
+        <MovieOrTvRatingInputForm onFormSubmit={onFormSubmit} />
       </div>
     </Layout>
   );
