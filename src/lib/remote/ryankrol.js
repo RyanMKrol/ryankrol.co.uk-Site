@@ -1,4 +1,8 @@
-import { bookRatingSort, albumRatingSort } from '../utilities/sort';
+import {
+  bookRatingSort,
+  albumRatingSort,
+  movieAndTvRatingSort,
+} from '../utilities/sort';
 
 /**
  * Fetches album ratings
@@ -28,4 +32,18 @@ async function fetchBookRatings() {
   return bookRatings;
 }
 
-export { fetchAlbumRatings, fetchBookRatings };
+/**
+ * Fetches movie ratings
+ * @returns {Array<object>} array of movie rating objects
+ */
+async function fetchMovieRatings() {
+  const res = await fetch(`http://ryankrol.co.uk/api/ratings/movie`);
+
+  const movieRatings = await res.json();
+
+  movieRatings.sort(movieAndTvRatingSort);
+
+  return movieRatings;
+}
+
+export { fetchAlbumRatings, fetchBookRatings, fetchMovieRatings };
