@@ -35,20 +35,6 @@ function movieAndTvRatingSortByOtherScores(a, b) {
  * @returns {boolean} Whether a is before b
  */
 function bookRatingSort(a, b) {
-  return a.rating < b.rating
-    ? 1
-    : a.rating === b.rating
-    ? movieAndTvRatingSortByTitle(a, b)
-    : -1;
-}
-
-/**
- * Sorter function to sort vinyl items by title
- * @param {object} a the first vinyl object
- * @param {object} b the second vinyl object
- * @returns {boolean} Whether a is before b
- */
-function movieAndTvRatingSortByTitle(a, b) {
   const formattedTitleA = formatStringForTitleSort(a.title);
   const formattedTitleB = formatStringForTitleSort(b.title);
   return formattedTitleA < formattedTitleB
