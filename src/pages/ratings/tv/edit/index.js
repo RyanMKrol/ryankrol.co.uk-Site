@@ -3,18 +3,18 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import MovieOrTvRatingDisplayCard from '@/components/MovieOrTvRatingDisplayCard';
 
-import { fetchMovieRatings } from '@/lib/remote/ryankrol';
+import { fetchTvRatings } from '@/lib/remote/ryankrol';
 
 import styles from './../../index.module.css';
 
-export default function Page({ movieRatings }) {
+export default function Page({ tvRatings }) {
   return (
     <Layout>
       <Head>
-        <title>Where movies have been rated...</title>
+        <title>Where TV has been rated...</title>
       </Head>
       <div className={styles.cardContainer}>
-        {movieRatings.map((item) => (
+        {tvRatings.map((item) => (
           <MovieOrTvRatingDisplayCard
             key={item.title + ' - ' + item.gist}
             title={item.title}
@@ -35,12 +35,12 @@ export default function Page({ movieRatings }) {
 }
 
 export async function getServerSideProps() {
-  const movieRatings = await fetchMovieRatings();
-  return { props: { movieRatings } };
+  const tvRatings = await fetchTvRatings();
+  return { props: { tvRatings } };
 }
 
 async function onFormSubmit(body) {
-  const response = await fetch(`http://ryankrol.co.uk/api/ratings/movie`, {
+  const response = await fetch(`http://ryankrol.co.uk/api/ratings/tv`, {
     method: 'PUT',
     body: JSON.stringify(body),
     headers: { 'Content-Type': 'application/json' },
