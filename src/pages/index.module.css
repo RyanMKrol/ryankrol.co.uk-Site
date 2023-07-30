@@ -6,7 +6,7 @@
 }
 
 .innerDataContainer {
-    scale: 75%;
+    scale: 80%;
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
@@ -30,22 +30,23 @@ height of each .innerDataContainer, and .dataContainer class, and then
 adding 10 to make sure the drop shadow doesn't clip. I have to do this
 for each different card container, because some cards are bigger/smaller
 than others, and require different margins */
+
+.listensCardContainer {
+    margin: -27px 0;
+}
+
 .movieOrTvCardContainer {
-    margin: -55px 0;
+    margin: -40px 0;
 }
 
 .albumCardContainer {
-    margin: -45px 0;
+    margin: -30px 0;
 }
 
 .bookCardContainer {
-    margin: -60px 0;
+    margin: -45px 0;
 }
 
 .vinylCardContainer {
-    margin: -44px 0;
-}
-
-.listensCardContainer {
-    margin: -42px 0;
+    margin: -29px 0;
 }
