@@ -3,6 +3,7 @@ import Head from 'next/head';
 import MovieOrTvRatingDisplayCard from '@/components/MovieOrTvRatingDisplayCard';
 import Layout from '@/components/Layout';
 import styles from './../index.module.css';
+import sortByRating from '@/lib/utilities/sort';
 
 export default function Page({ data }) {
   return (
@@ -39,7 +40,7 @@ export async function getServerSideProps() {
 
   const data = await res.json();
 
-  data.sort((a, b) => (a.blind < b.blind ? 1 : a.blind === b.blind ? 0 : -1));
+  data.sort(sortByRating);
 
   // Pass data to the page via props
   return { props: { data } };
