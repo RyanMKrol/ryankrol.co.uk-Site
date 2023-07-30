@@ -14,16 +14,16 @@ export default function Page({ data }) {
       <div className={styles.cardContainer}>
         {data.map((item) => (
           <MovieOrTvRatingDisplayCard
-            key={item.title}
-            overallScore={item.blind}
-            storyScore={item.story}
-            characterScore={item.characters}
-            musicScore={item.sound}
-            craftsmanshipScore={item.craftsmanship}
-            thumbnail={item.thumbnail}
+            key={item.title + ' - ' + item.gist}
             title={item.title}
-            gist={item.gist}
+            characterScore={item.characterScore}
+            craftsmanshipScore={item.craftsmanshipScore}
             date={item.date}
+            gist={item.gist}
+            overallScore={item.overallScore}
+            soundScore={item.soundScore}
+            storyScore={item.storyScore}
+            thumbnail={item.thumbnail}
           />
         ))}
       </div>

@@ -10,11 +10,11 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
   const [title, setTitle] = useState('');
   const [gist, setGist] = useState('');
   const [password, setPassword] = useState('');
-  const [total, setTotal] = useState(0);
-  const [story, setStory] = useState(0);
-  const [craftsmanship, setCraftsmanship] = useState(0);
-  const [sound, setSound] = useState(0);
-  const [characters, setCharacters] = useState(0);
+  const [overallScore, setOverallScore] = useState(0);
+  const [storyScore, setStoryScore] = useState(0);
+  const [craftsmanshipScore, setCraftsmanshipScore] = useState(0);
+  const [soundScore, setSoundScore] = useState(0);
+  const [characterScore, setCharacterScore] = useState(0);
 
   const [titleMissing, setTitleMissing] = useState(false);
   const [gistMissing, setGistMissing] = useState(false);
@@ -34,11 +34,11 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
         title,
         gist,
         password,
-        blind: total,
-        story,
-        craftsmanship,
-        sound,
-        characters,
+        overallScore,
+        storyScore,
+        craftsmanshipScore,
+        soundScore,
+        characterScore,
       }).then((alertData) => {
         alert(`${alertData.status} - ${alertData.message}`);
       });
@@ -92,7 +92,7 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
       <br />
       <br />
       <Container maxWidth="sm">
-        <Typography>Total</Typography>
+        <Typography>Overall</Typography>
         <Slider
           marks
           max={10}
@@ -102,7 +102,7 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
           sx={{
             color: 'red',
           }}
-          onChange={(event) => setTotal(event.target.value)}
+          onChange={(event) => setOverallScore(event.target.value)}
         />
         <br />
         <Typography>Story</Typography>
@@ -115,7 +115,7 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
           sx={{
             color: 'orange',
           }}
-          onChange={(event) => setStory(event.target.value)}
+          onChange={(event) => setStoryScore(event.target.value)}
         />
         <br />
         <Typography>Craftsmanship</Typography>
@@ -128,7 +128,7 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
           sx={{
             color: 'green',
           }}
-          onChange={(event) => setCraftsmanship(event.target.value)}
+          onChange={(event) => setCraftsmanshipScore(event.target.value)}
         />
         <br />
         <Typography>Sound</Typography>
@@ -141,7 +141,7 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
           sx={{
             color: 'blue',
           }}
-          onChange={(event) => setSound(event.target.value)}
+          onChange={(event) => setSoundScore(event.target.value)}
         />
         <br />
         <Typography>Characters</Typography>
@@ -154,7 +154,7 @@ export default function MovieOrTvRatingsInputForm({ onFormSubmit }) {
           sx={{
             color: 'purple',
           }}
-          onChange={(event) => setCharacters(event.target.value)}
+          onChange={(event) => setCharacterScore(event.target.value)}
         />
       </Container>
       <br />

@@ -5,9 +5,9 @@
  * @returns {number} Whether a is after b
  */
 function sortByRating(a, b) {
-  return a.blind < b.blind
+  return a.overallScore < b.overallScore
     ? 1
-    : a.blind === b.blind
+    : a.overallScore === b.overallScore
     ? sortByOtherScores(a, b)
     : -1;
 }
@@ -19,8 +19,10 @@ function sortByRating(a, b) {
  * @returns {number} Whether a is after b
  */
 function sortByOtherScores(a, b) {
-  const aScore = a.story + a.characters + a.sound + a.craftsmanship;
-  const bScore = b.story + b.characters + b.sound + b.craftsmanship;
+  const aScore =
+    a.storyScore + a.characterScore + a.soundScore + a.craftsmanshipScore;
+  const bScore =
+    b.storyScore + b.characterScore + b.soundScore + b.craftsmanshipScore;
   return aScore < bScore ? 1 : aScore === bScore ? 0 : -1;
 }
 
