@@ -20,7 +20,7 @@ const style = {
 };
 
 export default function BookRatingUpdateModal({
-  initTitle,
+  title,
   initAuthor,
   initRating,
   initThumbnail,
@@ -32,34 +32,29 @@ export default function BookRatingUpdateModal({
 }) {
   const handleClose = () => setModalOpen(false);
 
-  const [title, setTitle] = useState(initTitle);
   const [author, setAuthor] = useState(initAuthor);
   const [overview, setOverview] = useState(initOverview);
   const [thumbnail, setThumbnail] = useState(initThumbnail);
   const [password, setPassword] = useState('');
   const [rating, setRating] = useState(initRating);
 
-  const [titleMissing, setTitleMissing] = useState(false);
   const [authorMissing, setAuthorMissing] = useState(false);
   const [thumbnailMissing, setThumbnailMissing] = useState(false);
   const [overviewMissing, setOverviewMissing] = useState(false);
   const [passwordMissing, setPasswordMissing] = useState(false);
 
   const formSubmit = () => {
-    const isTitleMissing = title === '';
     const isAuthorMissing = author === '';
     const isOverviewMissing = overview === '';
     const isPasswordMissing = password === '';
     const isThumbnailMissing = thumbnail === '';
 
     if (
-      isTitleMissing ||
       isAuthorMissing ||
       isOverviewMissing ||
       isPasswordMissing ||
       thumbnailMissing
     ) {
-      setTitleMissing(isTitleMissing);
       setAuthorMissing(isAuthorMissing);
       setOverviewMissing(isOverviewMissing);
       setPasswordMissing(isPasswordMissing);
@@ -90,17 +85,13 @@ export default function BookRatingUpdateModal({
       <Box sx={style}>
         <Container maxWidth="sm">
           <TextField
+            disabled
             required
             variant="standard"
             fullWidth
             label="Title"
             id="title"
             defaultValue={title}
-            onChange={(event) => {
-              setTitle(event.target.value);
-              setTitleMissing(event.target.value === '');
-            }}
-            error={titleMissing}
           />
           <br />
           <br />

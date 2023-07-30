@@ -68,7 +68,7 @@ function AlbumCardWithModal({
         initArtist={artist}
         initRating={rating}
         initThumbnail={thumbnail}
-        initTitle={title}
+        title={title}
         date={date}
         editCallback={editCallback}
         isOpen={isModalOpen}

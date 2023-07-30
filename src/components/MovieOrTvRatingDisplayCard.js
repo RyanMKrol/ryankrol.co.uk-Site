@@ -89,7 +89,7 @@ function MovieOrTvCardWithModal({
         initSoundScore={soundScore}
         initCraftsmanshipScore={craftsmanshipScore}
         initThumbnail={thumbnail}
-        initTitle={title}
+        title={title}
         initGist={gist}
         date={date}
         editCallback={editCallback}

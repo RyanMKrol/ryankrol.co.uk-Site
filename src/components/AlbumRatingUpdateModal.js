@@ -24,42 +24,37 @@ export default function AlbumRatingsUpdateModal({
   initArtist,
   initRating,
   initThumbnail,
-  initTitle,
   editCallback,
   isOpen,
   setModalOpen,
   date,
+  title,
 }) {
   const handleClose = () => setModalOpen(false);
 
-  const [title, setTitle] = useState(initTitle);
   const [artist, setArtist] = useState(initArtist);
   const [highlights, setHighlights] = useState(initHighlights);
   const [password, setPassword] = useState('');
   const [rating, setRating] = useState(initRating);
   const [thumbnail, setThumbnail] = useState(initThumbnail);
 
-  const [titleMissing, setTitleMissing] = useState(false);
   const [artistMissing, setArtistMissing] = useState(false);
   const [highlightsMissing, setHighlightsMissing] = useState(false);
   const [passwordMissing, setPasswordMissing] = useState(false);
   const [thumbnailMissing, setThumbnailMissing] = useState(false);
 
   const formSubmit = () => {
-    const isTitleMissing = title === '';
     const isArtistMissing = artist === '';
     const isHighlightsMissing = highlights === '';
     const isPasswordMissing = password === '';
     const isThumbnailMissing = thumbnail === '';
 
     if (
-      isTitleMissing ||
       isArtistMissing ||
       isHighlightsMissing ||
       isPasswordMissing ||
       isThumbnailMissing
     ) {
-      setTitleMissing(isTitleMissing);
       setArtistMissing(isArtistMissing);
       setHighlightsMissing(isHighlightsMissing);
       setPasswordMissing(isPasswordMissing);
@@ -91,16 +86,12 @@ export default function AlbumRatingsUpdateModal({
         <Container maxWidth="sm">
           <TextField
             required
+            disabled
             variant="standard"
             fullWidth
             label="Title"
             id="title"
             defaultValue={title}
-            onChange={(event) => {
-              setTitle(event.target.value);
-              setTitleMissing(event.target.value === '');
-            }}
-            error={titleMissing}
           />
           <br />
           <br />

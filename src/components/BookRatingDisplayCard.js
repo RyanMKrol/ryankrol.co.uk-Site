@@ -64,7 +64,7 @@ function BookCardWithModal({
         />
       </a>
       <BookRatingUpdateModal
-        initTitle={title}
+        title={title}
         initAuthor={author}
         initRating={rating}
         initThumbnail={thumbnail}

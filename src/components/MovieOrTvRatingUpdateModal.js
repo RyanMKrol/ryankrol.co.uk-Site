@@ -20,13 +20,13 @@ const style = {
 };
 
 export default function MovieOrTvRatingUpdateModal({
+  title,
   initOverallScore,
   initStoryScore,
   initCharacterScore,
   initSoundScore,
   initCraftsmanshipScore,
   initThumbnail,
-  initTitle,
   initGist,
   date,
   editCallback,
@@ -35,7 +35,6 @@ export default function MovieOrTvRatingUpdateModal({
 }) {
   const handleClose = () => setModalOpen(false);
 
-  const [title, setTitle] = useState(initTitle);
   const [gist, setGist] = useState(initGist);
   const [thumbnail, setThumbnail] = useState(initThumbnail);
   const [password, setPassword] = useState('');
@@ -47,24 +46,16 @@ export default function MovieOrTvRatingUpdateModal({
     initCraftsmanshipScore
   );
 
-  const [titleMissing, setTitleMissing] = useState(false);
   const [gistMissing, setGistMissing] = useState(false);
   const [thumbnailMissing, setThumbnailMissing] = useState(false);
   const [passwordMissing, setPasswordMissing] = useState(false);
 
   const formSubmit = () => {
-    const isTitleMissing = title === '';
     const isGistMissing = gist === '';
     const isThumbnailMissing = thumbnail === '';
     const isPasswordMissing = password === '';
 
-    if (
-      isTitleMissing ||
-      isGistMissing ||
-      isPasswordMissing ||
-      isThumbnailMissing
-    ) {
-      setTitleMissing(isTitleMissing);
+    if (isGistMissing || isPasswordMissing || isThumbnailMissing) {
       setGistMissing(isGistMissing);
       setPasswordMissing(isPasswordMissing);
       setThumbnailMissing(isThumbnailMissing);
@@ -97,17 +88,13 @@ export default function MovieOrTvRatingUpdateModal({
       <Box sx={style}>
         <Container maxWidth="sm">
           <TextField
+            disabled
             required
             variant="standard"
             fullWidth
             label="Title"
             id="title"
             defaultValue={title}
-            onChange={(event) => {
-              setTitle(event.target.value);
-              setTitleMissing(event.target.value === '');
-            }}
-            error={titleMissing}
           />
           <br />
           <br />
