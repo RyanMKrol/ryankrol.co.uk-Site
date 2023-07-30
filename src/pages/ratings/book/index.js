@@ -38,7 +38,7 @@ export async function getServerSideProps() {
 
   const bookRatings = await res.json();
 
-  bookRatings.sort(sortByRating);
+  bookRatings.sort(sortByTitle);
 
   // Pass data to the page via props
   return { props: { bookRatings } };
