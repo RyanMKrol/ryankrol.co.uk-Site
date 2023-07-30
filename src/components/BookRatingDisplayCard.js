@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 import Typography from '@mui/material/Typography';
 import BookRatingUpdateModal from './BookRatingUpdateModal';
+
 import styles from './BookRatingDisplayCard.module.css';
 
 export default function BookRatingDisplayCard({
