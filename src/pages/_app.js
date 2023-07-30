@@ -1,5 +1,6 @@
-import '@/styles/globals.css';
 import '@fontsource/ibm-plex-mono/700.css';
+import '@fontsource/ibm-plex-mono/300.css';
+import '@/styles/globals.css';
 
 import SiteHeader from '@/components/SiteHeader';
 

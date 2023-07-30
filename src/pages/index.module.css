@@ -18,8 +18,8 @@
 }
 
 .description {
-    font-family: 'IBM Plex Mono', sans-serif;
     font-size: 16px;
+    font-weight: 700;
 }
 
 /* Annoyingly, the height of the inner container keeps it's original
