@@ -24,7 +24,7 @@
     border-color: rgb(235 235 235);
     border-style: solid;
     border-width: 1px;
-    box-shadow: 8px 12px 12px 0px rgba(0,0,0,0.2)
+    box-shadow: 8px 12px 12px 0px rgba(0,0,0,0.2) !important;
 }
 
 .image {
