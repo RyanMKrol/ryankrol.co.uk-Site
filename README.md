@@ -6,7 +6,7 @@
 
 * SSH on to the box you want to run this on
 * Run the following to grab the repo:
-  * `git clone https://github.com/RyanMKrol/ryankrol.co.uk-API`
+  * `git clone https://github.com/RyanMKrol/ryankrol.co.uk-Site`
 
 ### Npm Install
 
