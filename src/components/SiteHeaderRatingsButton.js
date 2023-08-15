@@ -30,26 +30,18 @@ export default function SiteHeaderRatingsButton() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>
-          <Link className={styles.buttonLink} href="/ratings/album">
-            Albums
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link className={styles.buttonLink} href="/ratings/book">
-            Books
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link className={styles.buttonLink} href="/ratings/movie">
-            Movies
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link className={styles.buttonLink} href="/ratings/tv">
-            TV
-          </Link>
-        </MenuItem>
+        <Link className={styles.buttonLink} href="/ratings/album">
+          <MenuItem onClick={handleClose}>Albums</MenuItem>
+        </Link>
+        <Link className={styles.buttonLink} href="/ratings/book">
+          <MenuItem onClick={handleClose}>Books</MenuItem>
+        </Link>
+        <Link className={styles.buttonLink} href="/ratings/movie">
+          <MenuItem onClick={handleClose}>Movies</MenuItem>
+        </Link>
+        <Link className={styles.buttonLink} href="/ratings/tv">
+          <MenuItem onClick={handleClose}>TV</MenuItem>
+        </Link>
       </Menu>
     </div>
   );
