@@ -9,6 +9,8 @@ import styles from './index.module.css';
 
 import { concertDataSort } from './../../lib/utilities/sort';
 
+import ConcertItemDisplayCard from './../../components/ConcertItemDisplayCard';
+
 const CONCERT_DATA_DYNAMO_TABLE = 'ConcertDataItems';
 
 export default function Page({ concertData }) {
@@ -17,14 +19,23 @@ export default function Page({ concertData }) {
       <Head>
         <title>Concerts I Might Go To</title>
       </Head>
-      <div className={styles.cardContainer}>
+      <div className={styles.pageContainer}>
         {Object.keys(concertData).map((concertDate) => (
           <div key={concertDate}>
             <h1>{concertDate}</h1>
 
-            {concertData[concertDate].map((concertInfo) => (
-              <p key={concertInfo.id}>{JSON.stringify(concertInfo, null, 2)}</p>
-            ))}
+            <div className={styles.cardContainer}>
+              {concertData[concertDate].map((concertInfo) => (
+                <ConcertItemDisplayCard
+                  key={concertInfo.id}
+                  artist={concertInfo.artist}
+                  date={concertInfo.date}
+                  profileUrl={concertInfo.profileUrl}
+                  venue={concertInfo.venue}
+                  eventUrl={concertInfo.eventUrl}
+                />
+              ))}
+            </div>
           </div>
         ))}
       </div>

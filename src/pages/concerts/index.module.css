@@ -1,0 +1,12 @@
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageContainer {
+    width: 95%;
+    margin: auto;
+}
