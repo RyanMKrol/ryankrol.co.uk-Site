@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import groupBy from 'lodash.groupby';
 
 import Layout from '@/components/Layout';
 
