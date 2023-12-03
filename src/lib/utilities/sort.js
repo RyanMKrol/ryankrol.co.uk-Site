@@ -54,4 +54,22 @@ function albumRatingSort(a, b) {
   return a.rating < b.rating ? 1 : a.rating === b.rating ? 0 : -1;
 }
 
-export { movieAndTvRatingSort, bookRatingSort, albumRatingSort };
+/**
+ * Sorter function to sort concert data by date
+ * @param {object} a the first concert object
+ * @param {object} b the second concert object
+ * @returns {boolean} Whether a is before b
+ */
+function concertDataSort(a, b) {
+  const aDate = new Date(a.date);
+  const bDate = new Date(b.date);
+
+  return aDate < bDate ? -1 : aDate === bDate ? 0 : 1;
+}
+
+export {
+  movieAndTvRatingSort,
+  bookRatingSort,
+  albumRatingSort,
+  concertDataSort,
+};

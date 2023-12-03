@@ -17,7 +17,6 @@ const DYNAMO_CLIENT = new AWS.DynamoDB.DocumentClient();
  */
 async function scanTable(tableName) {
   const params = { TableName: tableName };
-  console.log('scanning the table');
 
   return DYNAMO_CLIENT.scan(params)
     .promise()
