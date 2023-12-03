@@ -60,9 +60,22 @@ async function fetchTvRatings() {
   return tvRatings;
 }
 
+/**
+ * Fetches upcoming concerts
+ * @returns {object} a map of date:{concertInfo}
+ */
+async function fetchUpcomingConcerts() {
+  const res = await fetch(`http://ryankrol.co.uk/api/concerts`);
+
+  const concertData = await res.json();
+
+  return concertData;
+}
+
 export {
   fetchAlbumRatings,
   fetchBookRatings,
   fetchMovieRatings,
   fetchTvRatings,
+  fetchUpcomingConcerts,
 };

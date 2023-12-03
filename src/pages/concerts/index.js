@@ -3,18 +3,14 @@ import groupBy from 'lodash.groupby';
 
 import Layout from '@/components/Layout';
 
-import scanTable from './../../lib/remote/aws';
-
 import styles from './index.module.css';
 
-import { concertDataSort } from './../../lib/utilities/sort';
+import { fetchUpcomingConcerts } from './../../lib/remote/ryankrol';
 
 import ConcertItemDisplayCard from './../../components/ConcertItemDisplayCard';
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
-
-const CONCERT_DATA_DYNAMO_TABLE = 'ConcertDataItems';
 
 export default function Page({ concertData }) {
   return (
@@ -55,16 +51,8 @@ export default function Page({ concertData }) {
 }
 
 export async function getServerSideProps() {
-  const rawConcertData = await scanTable(CONCERT_DATA_DYNAMO_TABLE);
-
-  const filteredRawData = rawConcertData.filter(
-    (item) => new Date(item.date) > new Date()
-  );
-
-  const sortedConcertData = filteredRawData.sort(concertDataSort);
-
-  const groupedConcertData = groupBy(sortedConcertData, 'date');
+  const concertData = await fetchUpcomingConcerts();
 
   // Pass data to the page via props
-  return { props: { concertData: groupedConcertData } };
+  return { props: { concertData } };
 }
