@@ -11,6 +11,9 @@ import { concertDataSort } from './../../lib/utilities/sort';
 
 import ConcertItemDisplayCard from './../../components/ConcertItemDisplayCard';
 
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+
 const CONCERT_DATA_DYNAMO_TABLE = 'ConcertDataItems';
 
 export default function Page({ concertData }) {
@@ -21,8 +24,16 @@ export default function Page({ concertData }) {
       </Head>
       <div className={styles.pageContainer}>
         {Object.keys(concertData).map((concertDate) => (
-          <div key={concertDate}>
-            <h1>{concertDate}</h1>
+          <Accordion
+            className={styles.accordion}
+            key={concertData[concertDate].id}
+          >
+            <AccordionSummary
+              aria-controls="panel1d-content"
+              id="panel1d-header"
+            >
+              <h1>{concertDate}</h1>
+            </AccordionSummary>
 
             <div className={styles.cardContainer}>
               {concertData[concertDate].map((concertInfo) => (
@@ -36,7 +47,7 @@ export default function Page({ concertData }) {
                 />
               ))}
             </div>
-          </div>
+          </Accordion>
         ))}
       </div>
     </Layout>
