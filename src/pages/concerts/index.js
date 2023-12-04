@@ -39,6 +39,7 @@ export default function Page({ concertData }) {
                   profileUrl={concertInfo.profileUrl}
                   venue={concertInfo.venue}
                   eventUrl={concertInfo.eventUrl}
+                  score={concertInfo.score}
                 />
               ))}
             </div>

@@ -10,7 +10,11 @@ export default function ConcertItemDisplayCard({
   profileUrl,
   venue,
   eventUrl,
+  score,
 }) {
+  const classBasedOnScore =
+    score >= 3 ? styles.high : score > 0 ? styles.medium : styles.low;
+
   const profileUrlElement = profileUrl ? (
     <Typography variant="body1">
       <a href={profileUrl}>Artist Profile Link</a>
@@ -19,7 +23,7 @@ export default function ConcertItemDisplayCard({
 
   return (
     <div className={styles.cardContainer}>
-      <Card className={styles.card}>
+      <Card className={`${classBasedOnScore} ${styles.card}`}>
         <CardContent>
           <Typography gutterBottom variant="h6">
             <a href={eventUrl}>{artist}</a>
